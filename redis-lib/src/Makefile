@@ -17,7 +17,7 @@ CCFLAGS = -g
 CCC = gcc
  
 # library paths
-LIBS = -L../ -L/usr/local/lib ../deps/hiredis/libhiredis.a
+LIBS = -L../ -L/usr/local/lib ../deps/hiredis/libhiredis.a -lpthread
  
 # compile flags
 LDFLAGS = -g

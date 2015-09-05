@@ -1,13 +1,14 @@
 #include "../deps/hiredis/hiredis.h"
 #include <string.h>
 #include <stdio.h>
+#include <pthread.h>
 
 #define ASSET_HASH4(ip) ((ip) % BUCKET_SIZE)
 #define BUCKET_SIZE  31337
 
 typedef struct item_t {
-  uint8_t  in_use:1;
   uint64_t cas;
+  pthread_mutex_t mutex;
   void*    key;
   size_t   nkey;
   void*    data;
@@ -33,7 +34,7 @@ void destroy_cache(redis_client *client);
 int create_item(const void* key, size_t nkey, void *data,
 		  size_t size, uint32_t flags, time_t exp);
 
-int free_item(const void*key);
+int free_item(const void* key, size_t nkey);
 
 // returns the client context after setting up the connection
 redisContext *createClient(char *host, int port);
