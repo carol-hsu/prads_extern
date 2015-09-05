@@ -32,7 +32,7 @@ endif
 ifeq (${TCMALLOC},y)
 LDFLAGS+=-ltcmalloc
 endif
-LDFLAGS+=-lpcap -lpcre -lresolv
+LDFLAGS+=-lpcap -lpcre -lresolv ../redis-lib/libredis.a ../redis-lib/deps/hiredis/libhiredis.a
 CFLAGS+=-DCONFDIR='"${CONFDIR}/"'
 
 else
@@ -48,7 +48,7 @@ endif
 
 CFLAGS+=-DCONFDIR='"prads.d/"' -static
 LDFLAGS=-static
-LDFLAGS+=${LIBDIR}/libpcre.a ${PCAPDIR}/libpcap.a ${LIBDIR}/libresolv.a
+LDFLAGS+=${LIBDIR}/libpcre.a ${PCAPDIR}/libpcap.a ${LIBDIR}/libresolv.a ../redis-lib/libredis.a ../redis-lib/deps/hiredis/libhiredis.a
 
 endif
 

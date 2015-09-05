@@ -1,0 +1,1829 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AF_LOCAL	/home/ubuntu/prads/redis-lib/deps/hiredis/net.h	39;"	d
+ARGS	/home/ubuntu/prads/src/prads.c	52;"	d	file:
+ARPOP_InREPLY	/home/ubuntu/prads/src/prads.h	64;"	d
+ARPOP_InREQUEST	/home/ubuntu/prads/src/prads.h	63;"	d
+ARPOP_NAK	/home/ubuntu/prads/src/prads.h	65;"	d
+ARPOP_REPLY	/home/ubuntu/prads/src/prads.h	60;"	d
+ARPOP_REQUEST	/home/ubuntu/prads/src/prads.h	59;"	d
+ARPOP_RREPLY	/home/ubuntu/prads/src/prads.h	62;"	d
+ARPOP_RREQUEST	/home/ubuntu/prads/src/prads.h	61;"	d
+ASSET_ARP	/home/ubuntu/prads/src/prads.h	47;"	d
+ASSET_HASH4	/home/ubuntu/prads/src/assets.h	1;"	d
+ASSET_HASH6	/home/ubuntu/prads/src/assets.h	3;"	d
+ASSET_TIMEOUT	/home/ubuntu/prads/src/prads.h	39;"	d
+ASSET_TYPE_OS	/home/ubuntu/prads/src/prads.h	48;"	d
+ASSET_TYPE_SERVICE	/home/ubuntu/prads/src/prads.h	49;"	d
+B64_ERR	/home/ubuntu/prads/src/bstraux.c	370;"	d	file:
+B64_PAD	/home/ubuntu/prads/src/bstraux.c	369;"	d	file:
+B64_PRADS_CLIENT	/home/ubuntu/prads/src/output-plugins/log_fifo.c	167;"	d	file:
+B64_PRADS_SERVER	/home/ubuntu/prads/src/output-plugins/log_fifo.c	168;"	d	file:
+BOOTP_COOKIE_SIZE	/home/ubuntu/prads/src/dhcp.c	14;"	d	file:
+BOOTP_OPCODE_REPLY	/home/ubuntu/prads/src/dhcp.h	53;"	d
+BOOTP_OPCODE_REQUEST	/home/ubuntu/prads/src/dhcp.h	52;"	d
+BOOTP_OPTION_BOOTFILE_SIZE	/home/ubuntu/prads/src/dhcp.h	30;"	d
+BOOTP_OPTION_BROADCAST	/home/ubuntu/prads/src/dhcp.h	32;"	d
+BOOTP_OPTION_DNS	/home/ubuntu/prads/src/dhcp.h	23;"	d
+BOOTP_OPTION_DOMAIN	/home/ubuntu/prads/src/dhcp.h	31;"	d
+BOOTP_OPTION_GATEWAY	/home/ubuntu/prads/src/dhcp.h	20;"	d
+BOOTP_OPTION_HOSTNAME	/home/ubuntu/prads/src/dhcp.h	29;"	d
+BOOTP_OPTION_NAMESRVS	/home/ubuntu/prads/src/dhcp.h	22;"	d
+BOOTP_OPTION_NETMASK	/home/ubuntu/prads/src/dhcp.h	18;"	d
+BOOTP_OPTION_NISDOMAIN	/home/ubuntu/prads/src/dhcp.h	34;"	d
+BOOTP_OPTION_NTP	/home/ubuntu/prads/src/dhcp.h	21;"	d
+BOOTP_OPTION_RESLOCSRVS	/home/ubuntu/prads/src/dhcp.h	28;"	d
+BOOTP_OPTION_TIME_OFFSET	/home/ubuntu/prads/src/dhcp.h	19;"	d
+BSSSC_BUFF_LEN	/home/ubuntu/prads/src/bstrlib.c	2270;"	d	file:
+BSTRAUX_INCLUDE	/home/ubuntu/prads/src/bstraux.h	17;"	d
+BSTRLIB_INCLUDE	/home/ubuntu/prads/src/bstrlib.h	15;"	d
+BSTRLIB_NOVSNP	/home/ubuntu/prads/src/bstrlib.c	2724;"	d	file:
+BSTRLIB_NOVSNP	/home/ubuntu/prads/src/bstrlib.h	28;"	d
+BSTR_BS_BUFF_LENGTH_GET	/home/ubuntu/prads/src/bstrlib.h	34;"	d
+BSTR_ERR	/home/ubuntu/prads/src/bstrlib.h	32;"	d
+BSTR_OK	/home/ubuntu/prads/src/bstrlib.h	33;"	d
+BS_BUFF_SZ	/home/ubuntu/prads/src/bstrlib.c	1752;"	d	file:
+BUCKET_SIZE	/home/ubuntu/prads/src/prads.h	40;"	d
+BWS_BUFF_SZ	/home/ubuntu/prads/src/bstraux.c	979;"	d	file:
+CFCLEN	/home/ubuntu/prads/src/bstrlib.c	1273;"	d	file:
+CFCLEN	/home/ubuntu/prads/src/bstrlib.c	1283;"	d	file:
+CLEAR_ADDR	/home/ubuntu/prads/src/prads.h	597;"	d
+CLEAR_CXT	/home/ubuntu/prads/src/prads.h	605;"	d
+CLIENT	/home/ubuntu/prads/src/prads.h	176;"	d
+CMP_ADDR4	/home/ubuntu/prads/src/prads.h	575;"	d
+CMP_ADDR4A	/home/ubuntu/prads/src/prads.h	572;"	d
+CMP_ADDR6	/home/ubuntu/prads/src/prads.h	564;"	d
+CMP_CXT4	/home/ubuntu/prads/src/prads.h	583;"	d
+CMP_CXT6	/home/ubuntu/prads/src/prads.h	591;"	d
+CMP_PORT	/home/ubuntu/prads/src/prads.h	577;"	d
+COMMON_H	/home/ubuntu/prads/src/common.h	3;"	d
+CONFDIR	/home/ubuntu/prads/src/prads.c	49;"	d	file:
+CONFIG_CONNECT	/home/ubuntu/prads/src/config.h	10;"	d
+CONFIG_CXWRITE	/home/ubuntu/prads/src/config.h	11;"	d
+CONFIG_H	/home/ubuntu/prads/src/config.h	2;"	d
+CONFIG_PDNS	/home/ubuntu/prads/src/config.h	12;"	d
+CONFIG_QUIET	/home/ubuntu/prads/src/config.h	9;"	d
+CONFIG_SYSLOG	/home/ubuntu/prads/src/config.h	8;"	d
+CONFIG_UPDATES	/home/ubuntu/prads/src/config.h	7;"	d
+CONFIG_VERBOSE	/home/ubuntu/prads/src/config.h	6;"	d
+CONN_FD	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^    CONN_FD$/;"	e	enum:connection_type	file:
+CONN_TCP	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^    CONN_TCP,$/;"	e	enum:connection_type	file:
+CONN_UNIX	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^    CONN_UNIX,$/;"	e	enum:connection_type	file:
+CO_ACK	/home/ubuntu/prads/src/config.h	26;"	d
+CO_DHCP	/home/ubuntu/prads/src/config.h	32;"	d
+CO_FIN	/home/ubuntu/prads/src/config.h	21;"	d
+CO_ICMP	/home/ubuntu/prads/src/config.h	30;"	d
+CO_OTHER	/home/ubuntu/prads/src/config.h	33;"	d
+CO_RST	/home/ubuntu/prads/src/config.h	23;"	d
+CO_SYN	/home/ubuntu/prads/src/config.h	22;"	d
+CO_SYNACK	/home/ubuntu/prads/src/config.h	25;"	d
+CO_UDP	/home/ubuntu/prads/src/config.h	31;"	d
+CS_ARP	/home/ubuntu/prads/src/config.h	42;"	d
+CS_ICMP	/home/ubuntu/prads/src/config.h	41;"	d
+CS_MAC	/home/ubuntu/prads/src/config.h	40;"	d
+CS_TCP_CLIENT	/home/ubuntu/prads/src/config.h	37;"	d
+CS_TCP_SERVER	/home/ubuntu/prads/src/config.h	36;"	d
+CS_UDP_CLIENT	/home/ubuntu/prads/src/config.h	39;"	d
+CS_UDP_SERVICES	/home/ubuntu/prads/src/config.h	38;"	d
+CXT_CLIENT_DONT_CHECK	/home/ubuntu/prads/src/prads.h	539;"	d
+CXT_CLIENT_UNKNOWN_SET	/home/ubuntu/prads/src/prads.h	541;"	d
+CXT_DEFAULT_HASHSIZE	/home/ubuntu/prads/src/prads.h	179;"	d
+CXT_DEFAULT_PREALLOC	/home/ubuntu/prads/src/prads.h	180;"	d
+CXT_DONT_CHECK_CLIENT	/home/ubuntu/prads/src/prads.h	537;"	d
+CXT_DONT_CHECK_SERVER	/home/ubuntu/prads/src/prads.h	536;"	d
+CXT_H	/home/ubuntu/prads/src/cxt.h	2;"	d
+CXT_HASH4	/home/ubuntu/prads/src/cxt.h	6;"	d
+CXT_HASH6	/home/ubuntu/prads/src/cxt.h	9;"	d
+CXT_SERVICE_DONT_CHECK	/home/ubuntu/prads/src/prads.h	538;"	d
+CXT_SERVICE_UNKNOWN_SET	/home/ubuntu/prads/src/prads.h	540;"	d
+CX_ENDED	/home/ubuntu/prads/src/cxt.h	/^enum { CX_NONE, CX_HUMAN, CX_NEW, CX_ENDED, CX_EXPIRE, CX_EXCESSIVE };$/;"	e	enum:__anon5
+CX_EXCESSIVE	/home/ubuntu/prads/src/cxt.h	/^enum { CX_NONE, CX_HUMAN, CX_NEW, CX_ENDED, CX_EXPIRE, CX_EXCESSIVE };$/;"	e	enum:__anon5
+CX_EXPIRE	/home/ubuntu/prads/src/cxt.h	/^enum { CX_NONE, CX_HUMAN, CX_NEW, CX_ENDED, CX_EXPIRE, CX_EXCESSIVE };$/;"	e	enum:__anon5
+CX_HUMAN	/home/ubuntu/prads/src/cxt.h	/^enum { CX_NONE, CX_HUMAN, CX_NEW, CX_ENDED, CX_EXPIRE, CX_EXCESSIVE };$/;"	e	enum:__anon5
+CX_NEW	/home/ubuntu/prads/src/cxt.h	/^enum { CX_NONE, CX_HUMAN, CX_NEW, CX_ENDED, CX_EXPIRE, CX_EXCESSIVE };$/;"	e	enum:__anon5
+CX_NONE	/home/ubuntu/prads/src/cxt.h	/^enum { CX_NONE, CX_HUMAN, CX_NEW, CX_ENDED, CX_EXPIRE, CX_EXCESSIVE };$/;"	e	enum:__anon5
+DEBUG_ON	/home/ubuntu/prads/src/sys_func.h	18;"	d
+DEBUG_ON	/home/ubuntu/prads/src/sys_func.h	25;"	d
+DEFAULT_NETS	/home/ubuntu/prads/src/config.h	14;"	d
+DHCP_CLIENT_IP	/home/ubuntu/prads/src/dhcp.h	4;"	d
+DHCP_CLIENT_PORT	/home/ubuntu/prads/src/dhcp.h	5;"	d
+DHCP_H	/home/ubuntu/prads/src/dhcp.h	2;"	d
+DHCP_OPTION_ARPCACHETIMEOUT	/home/ubuntu/prads/src/dhcp.h	33;"	d
+DHCP_OPTION_CLASS_IDENTIFIER	/home/ubuntu/prads/src/dhcp.h	47;"	d
+DHCP_OPTION_CLIENT_IDENTIFIER	/home/ubuntu/prads/src/dhcp.h	48;"	d
+DHCP_OPTION_COOKIESRVS	/home/ubuntu/prads/src/dhcp.h	25;"	d
+DHCP_OPTION_END	/home/ubuntu/prads/src/dhcp.h	50;"	d
+DHCP_OPTION_IMPRESSSRVS	/home/ubuntu/prads/src/dhcp.h	27;"	d
+DHCP_OPTION_LEASE	/home/ubuntu/prads/src/dhcp.h	39;"	d
+DHCP_OPTION_LOGSRVS	/home/ubuntu/prads/src/dhcp.h	24;"	d
+DHCP_OPTION_LPRSRVS	/home/ubuntu/prads/src/dhcp.h	26;"	d
+DHCP_OPTION_MAXSIZE	/home/ubuntu/prads/src/dhcp.h	44;"	d
+DHCP_OPTION_NTPSRVS	/home/ubuntu/prads/src/dhcp.h	35;"	d
+DHCP_OPTION_OPTIONREQ	/home/ubuntu/prads/src/dhcp.h	43;"	d
+DHCP_OPTION_OVERLOAD	/home/ubuntu/prads/src/dhcp.h	40;"	d
+DHCP_OPTION_PAD	/home/ubuntu/prads/src/dhcp.h	17;"	d
+DHCP_OPTION_RAPID_COMMIT	/home/ubuntu/prads/src/dhcp.h	49;"	d
+DHCP_OPTION_REQADDR	/home/ubuntu/prads/src/dhcp.h	38;"	d
+DHCP_OPTION_SERVER	/home/ubuntu/prads/src/dhcp.h	42;"	d
+DHCP_OPTION_T1	/home/ubuntu/prads/src/dhcp.h	45;"	d
+DHCP_OPTION_T2	/home/ubuntu/prads/src/dhcp.h	46;"	d
+DHCP_OPTION_TYPE	/home/ubuntu/prads/src/dhcp.h	41;"	d
+DHCP_OPTION_XDMSRVS	/home/ubuntu/prads/src/dhcp.h	37;"	d
+DHCP_OPTION_XFNTSRVS	/home/ubuntu/prads/src/dhcp.h	36;"	d
+DHCP_SERVER_IP	/home/ubuntu/prads/src/dhcp.h	6;"	d
+DHCP_SERVER_PORT	/home/ubuntu/prads/src/dhcp.h	7;"	d
+DHCP_SIGHASH	/home/ubuntu/prads/src/dhcp.h	14;"	d
+DHCP_SIG_HASHSIZE	/home/ubuntu/prads/src/dhcp.h	11;"	d
+DHCP_TYPE_ACK	/home/ubuntu/prads/src/dhcp.h	60;"	d
+DHCP_TYPE_DECLINE	/home/ubuntu/prads/src/dhcp.h	59;"	d
+DHCP_TYPE_DISCOVER	/home/ubuntu/prads/src/dhcp.h	56;"	d
+DHCP_TYPE_INFORM	/home/ubuntu/prads/src/dhcp.h	63;"	d
+DHCP_TYPE_NAK	/home/ubuntu/prads/src/dhcp.h	61;"	d
+DHCP_TYPE_OFFER	/home/ubuntu/prads/src/dhcp.h	57;"	d
+DHCP_TYPE_RELEASE	/home/ubuntu/prads/src/dhcp.h	62;"	d
+DHCP_TYPE_REQUEST	/home/ubuntu/prads/src/dhcp.h	58;"	d
+DICT_ERR	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	40;"	d
+DICT_HT_INITIAL_SIZE	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	76;"	d
+DICT_NOTUSED	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	43;"	d
+DICT_OK	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	39;"	d
+ERROR	/home/ubuntu/prads/src/prads.h	161;"	d
+ETHERNET_8021Q_HEADER_LEN	/home/ubuntu/prads/src/prads.h	101;"	d
+ETHERNET_802Q1MT_HEADER_LEN	/home/ubuntu/prads/src/prads.h	102;"	d
+ETHERNET_HEADER_LEN	/home/ubuntu/prads/src/prads.h	100;"	d
+ETHERNET_TYPE_8021AD	/home/ubuntu/prads/src/prads.h	58;"	d
+ETHERNET_TYPE_8021Q	/home/ubuntu/prads/src/prads.h	54;"	d
+ETHERNET_TYPE_802Q1MT	/home/ubuntu/prads/src/prads.h	55;"	d
+ETHERNET_TYPE_802Q1MT2	/home/ubuntu/prads/src/prads.h	56;"	d
+ETHERNET_TYPE_802Q1MT3	/home/ubuntu/prads/src/prads.h	57;"	d
+ETHERNET_TYPE_ARP	/home/ubuntu/prads/src/prads.h	52;"	d
+ETHERNET_TYPE_IP	/home/ubuntu/prads/src/prads.h	51;"	d
+ETHERNET_TYPE_IPV6	/home/ubuntu/prads/src/prads.h	53;"	d
+FINGERPRINT	/home/ubuntu/prads/src/prads.h	/^    enum { SIGNATURE, FINGERPRINT } type;$/;"	e	enum:_packetinfo::__anon12
+FLAG	/home/ubuntu/prads/src/dump_dns.c	144;"	d	file:
+FLAG	/home/ubuntu/prads/src/dump_dns.c	156;"	d	file:
+FLAGS	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { VERBOSE = 0x01, FLAGS } log_flags;$/;"	e	enum:__anon7
+FLOAT_WIDTH_TEST	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	174;"	d	file:
+FROMCLIENT	/home/ubuntu/prads/src/prads.h	178;"	d
+FROMSERVER	/home/ubuntu/prads/src/prads.h	177;"	d
+GET16	/home/ubuntu/prads/src/prads.h	316;"	d
+GREV1_ACK_LEN	/home/ubuntu/prads/src/prads.h	84;"	d
+GREV1_FLAG_ISSET_ACK	/home/ubuntu/prads/src/prads.h	451;"	d
+GREV1_FLAG_ISSET_FLAGS	/home/ubuntu/prads/src/prads.h	450;"	d
+GREV1_HDR_LEN	/home/ubuntu/prads/src/prads.h	85;"	d
+GRE_CHKSUM_LEN	/home/ubuntu/prads/src/prads.h	86;"	d
+GRE_FLAG_ISSET_CHKSUM	/home/ubuntu/prads/src/prads.h	441;"	d
+GRE_FLAG_ISSET_KY	/home/ubuntu/prads/src/prads.h	443;"	d
+GRE_FLAG_ISSET_RECUR	/home/ubuntu/prads/src/prads.h	446;"	d
+GRE_FLAG_ISSET_ROUTE	/home/ubuntu/prads/src/prads.h	442;"	d
+GRE_FLAG_ISSET_SQ	/home/ubuntu/prads/src/prads.h	444;"	d
+GRE_FLAG_ISSET_SSR	/home/ubuntu/prads/src/prads.h	445;"	d
+GRE_GET_FLAGS	/home/ubuntu/prads/src/prads.h	448;"	d
+GRE_GET_PROTO	/home/ubuntu/prads/src/prads.h	449;"	d
+GRE_GET_VERSION	/home/ubuntu/prads/src/prads.h	447;"	d
+GRE_HDR_LEN	/home/ubuntu/prads/src/prads.h	83;"	d
+GRE_HDR_LEN	/home/ubuntu/prads/src/prads.h	98;"	d
+GRE_KEY_LEN	/home/ubuntu/prads/src/prads.h	88;"	d
+GRE_OFFSET_LEN	/home/ubuntu/prads/src/prads.h	87;"	d
+GRE_PROTO_PPP	/home/ubuntu/prads/src/prads.h	91;"	d
+GRE_SEQ_LEN	/home/ubuntu/prads/src/prads.h	89;"	d
+GRE_SRE_HDR_LEN	/home/ubuntu/prads/src/prads.h	90;"	d
+GRE_VERSION_0	/home/ubuntu/prads/src/prads.h	81;"	d
+GRE_VERSION_1	/home/ubuntu/prads/src/prads.h	82;"	d
+HAVE_NS_INITPARSE	/home/ubuntu/prads/src/dump_dns.c	10;"	d	file:
+HAVE_NS_PARSERR	/home/ubuntu/prads/src/dump_dns.c	13;"	d	file:
+HIREDIS_MAJOR	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	38;"	d
+HIREDIS_MINOR	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	39;"	d
+HIREDIS_PATCH	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	40;"	d
+HSIZE	/home/ubuntu/prads/src/sig_tcp.c	1687;"	d	file:
+ICMP6_BIG	/home/ubuntu/prads/src/prads.h	426;"	d
+ICMP6_ECHO	/home/ubuntu/prads/src/prads.h	429;"	d
+ICMP6_MIN_HEADER_LEN	/home/ubuntu/prads/src/prads.h	433;"	d
+ICMP6_PARAMS	/home/ubuntu/prads/src/prads.h	428;"	d
+ICMP6_REPLY	/home/ubuntu/prads/src/prads.h	430;"	d
+ICMP6_TIME	/home/ubuntu/prads/src/prads.h	427;"	d
+ICMP6_UNREACH	/home/ubuntu/prads/src/prads.h	425;"	d
+ICMP_HEADER_LEN	/home/ubuntu/prads/src/prads.h	97;"	d
+INIT_SECURE_INPUT_LENGTH	/home/ubuntu/prads/src/bstraux.c	928;"	d	file:
+INSTALL_SYSCONFDIR	/home/ubuntu/prads/src/prads.h	164;"	d
+INT16SZ	/home/ubuntu/prads/src/dump_dns.c	77;"	d	file:
+INT32SZ	/home/ubuntu/prads/src/dump_dns.c	80;"	d	file:
+INTEGER_WIDTH_TEST	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	165;"	d	file:
+IP4ADDR	/home/ubuntu/prads/src/prads.h	562;"	d
+IP4_HEADER_LEN	/home/ubuntu/prads/src/prads.h	93;"	d
+IP6ADDR	/home/ubuntu/prads/src/prads.h	559;"	d
+IP6ADDR0	/home/ubuntu/prads/src/prads.h	555;"	d
+IP6ADDR1	/home/ubuntu/prads/src/prads.h	556;"	d
+IP6ADDR2	/home/ubuntu/prads/src/prads.h	557;"	d
+IP6ADDR3	/home/ubuntu/prads/src/prads.h	558;"	d
+IP6_FL	/home/ubuntu/prads/src/prads.h	295;"	d
+IP6_HEADER_LEN	/home/ubuntu/prads/src/prads.h	94;"	d
+IP6_PROTO_FRAG	/home/ubuntu/prads/src/prads.h	75;"	d
+IP6_PROTO_HOPOPT	/home/ubuntu/prads/src/prads.h	73;"	d
+IP6_PROTO_ICMP	/home/ubuntu/prads/src/prads.h	76;"	d
+IP6_PROTO_NONXT	/home/ubuntu/prads/src/prads.h	77;"	d
+IP6_PROTO_ROUTE	/home/ubuntu/prads/src/prads.h	74;"	d
+IP6_TC	/home/ubuntu/prads/src/prads.h	294;"	d
+IP6_V	/home/ubuntu/prads/src/prads.h	292;"	d
+IP_DF	/home/ubuntu/prads/src/prads.h	270;"	d
+IP_HL	/home/ubuntu/prads/src/prads.h	273;"	d
+IP_MF	/home/ubuntu/prads/src/prads.h	271;"	d
+IP_OFFMASK	/home/ubuntu/prads/src/prads.h	272;"	d
+IP_PROTO_GRE	/home/ubuntu/prads/src/prads.h	71;"	d
+IP_PROTO_ICMP	/home/ubuntu/prads/src/prads.h	67;"	d
+IP_PROTO_IP4	/home/ubuntu/prads/src/prads.h	72;"	d
+IP_PROTO_IP6	/home/ubuntu/prads/src/prads.h	70;"	d
+IP_PROTO_TCP	/home/ubuntu/prads/src/prads.h	68;"	d
+IP_PROTO_UDP	/home/ubuntu/prads/src/prads.h	69;"	d
+IP_RF	/home/ubuntu/prads/src/prads.h	269;"	d
+IP_V	/home/ubuntu/prads/src/prads.h	274;"	d
+ISSET_CLIENT_UNKNOWN	/home/ubuntu/prads/src/prads.h	548;"	d
+ISSET_CONFIG_QUIET	/home/ubuntu/prads/src/config.h	111;"	d
+ISSET_CONFIG_SYSLOG	/home/ubuntu/prads/src/config.h	110;"	d
+ISSET_CONFIG_UPDATES	/home/ubuntu/prads/src/config.h	109;"	d
+ISSET_CONFIG_VERBOSE	/home/ubuntu/prads/src/config.h	108;"	d
+ISSET_CXT_DONT_CHECK_CLIENT	/home/ubuntu/prads/src/prads.h	543;"	d
+ISSET_CXT_DONT_CHECK_SERVER	/home/ubuntu/prads/src/prads.h	544;"	d
+ISSET_DONT_CHECK_CLIENT	/home/ubuntu/prads/src/prads.h	546;"	d
+ISSET_DONT_CHECK_SERVICE	/home/ubuntu/prads/src/prads.h	545;"	d
+ISSET_SERVICE_UNKNOWN	/home/ubuntu/prads/src/prads.h	547;"	d
+IS_COSET	/home/ubuntu/prads/src/prads.h	836;"	d
+IS_CSSET	/home/ubuntu/prads/src/prads.h	837;"	d
+LOGDIR	/home/ubuntu/prads/src/prads.h	166;"	d
+LOG_FIFO	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { LOG_STDOUT, LOG_FILE, LOG_FIFO, LOG_UNIFIED, LOG_SGUIL, LOG_RINGBUFFER, LOG_MAX } log_types;$/;"	e	enum:__anon6
+LOG_FILE	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { LOG_STDOUT, LOG_FILE, LOG_FIFO, LOG_UNIFIED, LOG_SGUIL, LOG_RINGBUFFER, LOG_MAX } log_types;$/;"	e	enum:__anon6
+LOG_MAX	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { LOG_STDOUT, LOG_FILE, LOG_FIFO, LOG_UNIFIED, LOG_SGUIL, LOG_RINGBUFFER, LOG_MAX } log_types;$/;"	e	enum:__anon6
+LOG_RINGBUFFER	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { LOG_STDOUT, LOG_FILE, LOG_FIFO, LOG_UNIFIED, LOG_SGUIL, LOG_RINGBUFFER, LOG_MAX } log_types;$/;"	e	enum:__anon6
+LOG_SGUIL	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { LOG_STDOUT, LOG_FILE, LOG_FIFO, LOG_UNIFIED, LOG_SGUIL, LOG_RINGBUFFER, LOG_MAX } log_types;$/;"	e	enum:__anon6
+LOG_STDOUT	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { LOG_STDOUT, LOG_FILE, LOG_FIFO, LOG_UNIFIED, LOG_SGUIL, LOG_RINGBUFFER, LOG_MAX } log_types;$/;"	e	enum:__anon6
+LOG_UNIFIED	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { LOG_STDOUT, LOG_FILE, LOG_FIFO, LOG_UNIFIED, LOG_SGUIL, LOG_RINGBUFFER, LOG_MAX } log_types;$/;"	e	enum:__anon6
+LONG_BITS_QTY	/home/ubuntu/prads/src/bstrlib.c	1270;"	d	file:
+LONG_LOG_BITS_QTY	/home/ubuntu/prads/src/bstrlib.c	1269;"	d	file:
+LONG_TYPE	/home/ubuntu/prads/src/bstrlib.c	1271;"	d	file:
+MAC_ADDR_LEN	/home/ubuntu/prads/src/prads.h	99;"	d
+MAC_HASHSIZE	/home/ubuntu/prads/src/mac.h	8;"	d
+MAXDHCPOPTS	/home/ubuntu/prads/src/dhcp.h	10;"	d
+MAXDIST	/home/ubuntu/prads/src/sig_tcp.c	58;"	d	file:
+MAXLINE	/home/ubuntu/prads/src/dhcp.h	9;"	d
+MAXLINE	/home/ubuntu/prads/src/mac.h	7;"	d
+MAXLINE	/home/ubuntu/prads/src/sig_tcp.c	56;"	d	file:
+MAXOPT	/home/ubuntu/prads/src/prads.h	139;"	d
+MAXOPTS	/home/ubuntu/prads/src/dhcp.h	65;"	d
+MAX_APP	/home/ubuntu/prads/src/prads.h	171;"	d
+MAX_BYTE_CHECK	/home/ubuntu/prads/src/prads.h	42;"	d
+MAX_IP_PROTO	/home/ubuntu/prads/src/prads.h	78;"	d
+MAX_MISC	/home/ubuntu/prads/src/prads.h	173;"	d
+MAX_NETS	/home/ubuntu/prads/src/prads.h	174;"	d
+MAX_OB_LEN	/home/ubuntu/prads/src/bstraux.c	786;"	d	file:
+MAX_OPT_LEN	/home/ubuntu/prads/src/dhcp.h	66;"	d
+MAX_PKT_CHECK	/home/ubuntu/prads/src/prads.h	43;"	d
+MAX_PORTS	/home/ubuntu/prads/src/prads.h	79;"	d
+MAX_SERVICE_CHECK	/home/ubuntu/prads/src/prads.h	44;"	d
+MAX_VER	/home/ubuntu/prads/src/prads.h	172;"	d
+MODE_READ	/home/ubuntu/prads/src/prads.h	168;"	d
+MODE_WRITE	/home/ubuntu/prads/src/prads.h	169;"	d
+MOD_CONST	/home/ubuntu/prads/src/prads.h	117;"	d
+MOD_MSS	/home/ubuntu/prads/src/prads.h	118;"	d
+MOD_MTU	/home/ubuntu/prads/src/prads.h	119;"	d
+MOD_NONE	/home/ubuntu/prads/src/prads.h	116;"	d
+MTU_CNT	/home/ubuntu/prads/src/mtu.h	67;"	d
+MY_GET16	/home/ubuntu/prads/src/dump_dns.c	83;"	d	file:
+MY_GET32	/home/ubuntu/prads/src/dump_dns.c	91;"	d	file:
+MY_MAXDNS	/home/ubuntu/prads/src/sig_tcp.c	906;"	d	file:
+NORESPONSE	/home/ubuntu/prads/src/dhcp.h	55;"	d
+NULL_CXT	/home/ubuntu/prads/src/output-plugins/log_fifo.c	/^static connection NULL_CXT;$/;"	v	file:
+OS_DHCP	/home/ubuntu/prads/src/dhcp.c	143;"	d	file:
+PACKET_BIG	/home/ubuntu/prads/src/prads.h	142;"	d
+PAYLOAD_MIN	/home/ubuntu/prads/src/servicefp/servicefp.h	26;"	d
+PI_ECN	/home/ubuntu/prads/src/prads.h	666;"	d
+PI_IP4	/home/ubuntu/prads/src/prads.h	668;"	d
+PI_IP4DST	/home/ubuntu/prads/src/prads.h	670;"	d
+PI_IP4SRC	/home/ubuntu/prads/src/prads.h	669;"	d
+PI_IP6	/home/ubuntu/prads/src/prads.h	672;"	d
+PI_IP6DST	/home/ubuntu/prads/src/prads.h	674;"	d
+PI_IP6SRC	/home/ubuntu/prads/src/prads.h	673;"	d
+PI_TCP_DP	/home/ubuntu/prads/src/prads.h	677;"	d
+PI_TCP_SP	/home/ubuntu/prads/src/prads.h	676;"	d
+PI_TOS	/home/ubuntu/prads/src/prads.h	665;"	d
+PKT_DLEN	/home/ubuntu/prads/src/sig_tcp.c	59;"	d	file:
+PKT_MAXPAY	/home/ubuntu/prads/src/dhcp.c	15;"	d	file:
+PKT_MAXPAY	/home/ubuntu/prads/src/sig_tcp.c	60;"	d	file:
+PRADS_ASSETLOG	/home/ubuntu/prads/src/prads.h	167;"	d
+PRADS_H	/home/ubuntu/prads/src/prads.h	26;"	d
+QUIRK_ACK	/home/ubuntu/prads/src/prads.h	126;"	d
+QUIRK_BROKEN	/home/ubuntu/prads/src/prads.h	130;"	d
+QUIRK_DATA	/home/ubuntu/prads/src/prads.h	129;"	d
+QUIRK_FINACK	/home/ubuntu/prads/src/prads.h	135;"	d
+QUIRK_FLAGS	/home/ubuntu/prads/src/prads.h	128;"	d
+QUIRK_FLOWL	/home/ubuntu/prads/src/prads.h	136;"	d
+QUIRK_IPOPT	/home/ubuntu/prads/src/prads.h	123;"	d
+QUIRK_PAST	/home/ubuntu/prads/src/prads.h	121;"	d
+QUIRK_RSTACK	/home/ubuntu/prads/src/prads.h	131;"	d
+QUIRK_SEQ0	/home/ubuntu/prads/src/prads.h	133;"	d
+QUIRK_SEQEQ	/home/ubuntu/prads/src/prads.h	132;"	d
+QUIRK_T2	/home/ubuntu/prads/src/prads.h	127;"	d
+QUIRK_URG	/home/ubuntu/prads/src/prads.h	124;"	d
+QUIRK_X2	/home/ubuntu/prads/src/prads.h	125;"	d
+QUIRK_ZEROID	/home/ubuntu/prads/src/prads.h	122;"	d
+REDIS_BLOCK	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	57;"	d
+REDIS_CONNECTED	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	61;"	d
+REDIS_DISCONNECTING	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	67;"	d
+REDIS_ERR	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	42;"	d
+REDIS_ERR_EOF	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	50;"	d
+REDIS_ERR_IO	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	49;"	d
+REDIS_ERR_OOM	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	52;"	d
+REDIS_ERR_OTHER	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	53;"	d
+REDIS_ERR_PROTOCOL	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	51;"	d
+REDIS_FREEING	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	71;"	d
+REDIS_HOST	/home/ubuntu/prads/src/config.h	15;"	d
+REDIS_IN_CALLBACK	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	74;"	d
+REDIS_KEEPALIVE_INTERVAL	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	91;"	d
+REDIS_MONITORING	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	80;"	d
+REDIS_OK	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	43;"	d
+REDIS_PORT	/home/ubuntu/prads/src/config.h	16;"	d
+REDIS_READER_MAX_BUF	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	89;"	d
+REDIS_REPLY_ARRAY	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	83;"	d
+REDIS_REPLY_ERROR	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	87;"	d
+REDIS_REPLY_INTEGER	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	84;"	d
+REDIS_REPLY_NIL	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	85;"	d
+REDIS_REPLY_STATUS	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	86;"	d
+REDIS_REPLY_STRING	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	82;"	d
+REDIS_SUBSCRIBED	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	77;"	d
+RELEASE	/home/ubuntu/prads/src/prads.h	34;"	d
+RESETFLAG	/home/ubuntu/prads/src/sys_func.h	40;"	d
+RINGBUFFER_ITEMS	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.h	22;"	d
+SC_CLIENT	/home/ubuntu/prads/src/prads.h	680;"	d
+SC_SERVER	/home/ubuntu/prads/src/prads.h	681;"	d
+SDS_LLSTR_SIZE	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	300;"	d	file:
+SDS_MAX_PREALLOC	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.h	34;"	d
+SERVICE	/home/ubuntu/prads/src/prads.h	175;"	d
+SERVIDEFP_H	/home/ubuntu/prads/src/servicefp/servicefp.h	2;"	d
+SETFLAG	/home/ubuntu/prads/src/sys_func.h	39;"	d
+SIGHASH	/home/ubuntu/prads/src/sig_tcp.c	72;"	d	file:
+SIGNATURE	/home/ubuntu/prads/src/prads.h	/^    enum { SIGNATURE, FINGERPRINT } type;$/;"	e	enum:_packetinfo::__anon12
+SIG_ALRM	/home/ubuntu/prads/src/prads.h	37;"	d
+SIG_HASHSIZE	/home/ubuntu/prads/src/sig.h	25;"	d
+SIG_HASHSIZE	/home/ubuntu/prads/src/sig_tcp.c	57;"	d	file:
+SKIP_SPACES	/home/ubuntu/prads/src/mac.h	28;"	d
+SNAPLENGTH	/home/ubuntu/prads/src/prads.h	41;"	d
+SRV_NONE	/home/ubuntu/prads/src/servicefp/servicefp.h	/^enum {SRV_NONE, SRV_TCP_SERVER=1, SRV_UDP_SERVER, SRV_TCP_CLIENT, SRV_UDP_CLIENT };$/;"	e	enum:__anon17
+SRV_TCP_CLIENT	/home/ubuntu/prads/src/servicefp/servicefp.h	/^enum {SRV_NONE, SRV_TCP_SERVER=1, SRV_UDP_SERVER, SRV_TCP_CLIENT, SRV_UDP_CLIENT };$/;"	e	enum:__anon17
+SRV_TCP_SERVER	/home/ubuntu/prads/src/servicefp/servicefp.h	/^enum {SRV_NONE, SRV_TCP_SERVER=1, SRV_UDP_SERVER, SRV_TCP_CLIENT, SRV_UDP_CLIENT };$/;"	e	enum:__anon17
+SRV_UDP_CLIENT	/home/ubuntu/prads/src/servicefp/servicefp.h	/^enum {SRV_NONE, SRV_TCP_SERVER=1, SRV_UDP_SERVER, SRV_TCP_CLIENT, SRV_UDP_CLIENT };$/;"	e	enum:__anon17
+SRV_UDP_SERVER	/home/ubuntu/prads/src/servicefp/servicefp.h	/^enum {SRV_NONE, SRV_TCP_SERVER=1, SRV_UDP_SERVER, SRV_TCP_CLIENT, SRV_UDP_CLIENT };$/;"	e	enum:__anon17
+START_VSNBUFF	/home/ubuntu/prads/src/bstrlib.c	2736;"	d	file:
+START_VSNBUFF	/home/ubuntu/prads/src/bstrlib.c	2752;"	d	file:
+STATE_EXTERN	/home/ubuntu/prads/src/config.h	17;"	d
+STDBUF	/home/ubuntu/prads/src/prads.h	162;"	d
+SUCCESS	/home/ubuntu/prads/src/prads.h	160;"	d
+SYSFUNC_H	/home/ubuntu/prads/src/sys_func.h	2;"	d
+TCPOPT_EOL	/home/ubuntu/prads/src/prads.h	144;"	d
+TCPOPT_LIMIT	/home/ubuntu/prads/src/sig_tcp.c	63;"	d	file:
+TCPOPT_MAXSEG	/home/ubuntu/prads/src/prads.h	146;"	d
+TCPOPT_NOP	/home/ubuntu/prads/src/prads.h	145;"	d
+TCPOPT_PROXBLUECOAT	/home/ubuntu/prads/src/prads.h	151;"	d
+TCPOPT_PROXCISCO	/home/ubuntu/prads/src/prads.h	152;"	d
+TCPOPT_PROXRIVERBED1	/home/ubuntu/prads/src/prads.h	153;"	d
+TCPOPT_PROXRIVERBED2	/home/ubuntu/prads/src/prads.h	154;"	d
+TCPOPT_SACKOK	/home/ubuntu/prads/src/prads.h	148;"	d
+TCPOPT_TIMESTAMP	/home/ubuntu/prads/src/prads.h	149;"	d
+TCPOPT_WSCALE	/home/ubuntu/prads/src/prads.h	147;"	d
+TCPOPT_WTF1	/home/ubuntu/prads/src/prads.h	156;"	d
+TCPOPT_WTF2	/home/ubuntu/prads/src/prads.h	157;"	d
+TCP_HEADER_LEN	/home/ubuntu/prads/src/prads.h	95;"	d
+TCP_ISFLAGSET	/home/ubuntu/prads/src/prads.h	315;"	d
+TCP_OFFSET	/home/ubuntu/prads/src/prads.h	313;"	d
+TCP_SIGNATURE_LIST	/home/ubuntu/prads/src/prads.h	165;"	d
+TCP_TIMEOUT	/home/ubuntu/prads/src/prads.h	38;"	d
+TCP_X2	/home/ubuntu/prads/src/prads.h	314;"	d
+TF_ACK	/home/ubuntu/prads/src/prads.h	108;"	d
+TF_CWR	/home/ubuntu/prads/src/prads.h	111;"	d
+TF_ECE	/home/ubuntu/prads/src/prads.h	110;"	d
+TF_FIN	/home/ubuntu/prads/src/prads.h	104;"	d
+TF_FLAGS	/home/ubuntu/prads/src/prads.h	114;"	d
+TF_NORESERVED	/home/ubuntu/prads/src/prads.h	113;"	d
+TF_PUSH	/home/ubuntu/prads/src/prads.h	107;"	d
+TF_RST	/home/ubuntu/prads/src/prads.h	106;"	d
+TF_SYN	/home/ubuntu/prads/src/prads.h	105;"	d
+TF_SYNACK	/home/ubuntu/prads/src/prads.h	112;"	d
+TF_URG	/home/ubuntu/prads/src/prads.h	109;"	d
+TOS_CNT	/home/ubuntu/prads/src/tos.h	65;"	d
+UDP_HEADER_LEN	/home/ubuntu/prads/src/prads.h	96;"	d
+UNKNOWN	/home/ubuntu/prads/src/prads.c	/^bstring UNKNOWN = & tUNKNOWN;$/;"	v
+UU_DECODE_BYTE	/home/ubuntu/prads/src/bstraux.c	491;"	d	file:
+UU_ENCODE_BYTE	/home/ubuntu/prads/src/bstraux.c	711;"	d	file:
+UU_MAX_LINELEN	/home/ubuntu/prads/src/bstraux.c	498;"	d	file:
+VEC_FILL	/home/ubuntu/prads/src/cxt.c	420;"	d	file:
+VERBOSE	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { VERBOSE = 0x01, FLAGS } log_flags;$/;"	e	enum:__anon7
+VERSION	/home/ubuntu/prads/src/prads.h	36;"	d
+ZMALLOC_H	/home/ubuntu/prads/redis-lib/deps/hiredis/zmalloc.h	5;"	d
+_ALL_SOURCE	/home/ubuntu/prads/redis-lib/deps/hiredis/fmacros.h	9;"	d
+_BSD_SOURCE	/home/ubuntu/prads/redis-lib/deps/hiredis/fmacros.h	5;"	d
+_EL_ADD_READ	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	44;"	d	file:
+_EL_ADD_WRITE	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	50;"	d	file:
+_EL_CLEANUP	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	56;"	d	file:
+_EL_DEL_READ	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	47;"	d	file:
+_EL_DEL_WRITE	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	53;"	d	file:
+_GNU_SOURCE	/home/ubuntu/prads/src/dump_dns.c	34;"	d	file:
+_HAVE_MAC_H	/home/ubuntu/prads/src/mac.h	5;"	d
+_HAVE_MTU_H	/home/ubuntu/prads/src/mtu.h	13;"	d
+_HAVE_TOS_H	/home/ubuntu/prads/src/tos.h	26;"	d
+_OSX	/home/ubuntu/prads/redis-lib/deps/hiredis/fmacros.h	21;"	d
+_POSIX_C_SOURCE	/home/ubuntu/prads/redis-lib/deps/hiredis/fmacros.h	13;"	d
+_XOPEN_SOURCE	/home/ubuntu/prads/redis-lib/deps/hiredis/fmacros.h	15;"	d
+_XOPEN_SOURCE	/home/ubuntu/prads/redis-lib/deps/hiredis/fmacros.h	17;"	d
+__DICT_H	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	37;"	d
+__HIREDIS_AE_H__	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	32;"	d
+__HIREDIS_ASYNC_H	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	33;"	d
+__HIREDIS_FMACRO_H	/home/ubuntu/prads/redis-lib/deps/hiredis/fmacros.h	2;"	d
+__HIREDIS_H	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	33;"	d
+__HIREDIS_LIBEVENT_H__	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	32;"	d
+__HIREDIS_LIBEV_H__	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	32;"	d
+__HIREDIS_LIBUV_H__	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	2;"	d
+__MAX_MSEC	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	176;"	d	file:
+__NET_H	/home/ubuntu/prads/redis-lib/deps/hiredis/net.h	34;"	d
+__SDS_H	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.h	32;"	d
+__USE_POSIX199309	/home/ubuntu/prads/src/dump_dns.c	36;"	d	file:
+__pad__	/home/ubuntu/prads/src/prads.h	/^    uint8_t  __pad__;             \/* pads struct to alignment *\/$/;"	m	struct:_connection
+__redisAppendCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int __redisAppendCommand(redisContext *c, const char *cmd, size_t len) {$/;"	f
+__redisAsyncCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static int __redisAsyncCommand(redisAsyncContext *ac, redisCallbackFn *fn, void *privdata, char *cmd, size_t len) {$/;"	f	file:
+__redisAsyncCopyError	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static void __redisAsyncCopyError(redisAsyncContext *ac) {$/;"	f	file:
+__redisAsyncDisconnect	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static void __redisAsyncDisconnect(redisAsyncContext *ac) {$/;"	f	file:
+__redisAsyncFree	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static void __redisAsyncFree(redisAsyncContext *ac) {$/;"	f	file:
+__redisAsyncHandleConnect	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static int __redisAsyncHandleConnect(redisAsyncContext *ac) {$/;"	f	file:
+__redisBlockForReply	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void *__redisBlockForReply(redisContext *c) {$/;"	f	file:
+__redisGetSubscribeCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static int __redisGetSubscribeCallback(redisAsyncContext *ac, redisReply *reply, redisCallback *dstcb) {$/;"	f	file:
+__redisPushCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static int __redisPushCallback(redisCallbackList *list, redisCallback *source) {$/;"	f	file:
+__redisReaderSetError	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void __redisReaderSetError(redisReader *r, int type, const char *str) {$/;"	f	file:
+__redisReaderSetErrorOOM	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void __redisReaderSetErrorOOM(redisReader *r) {$/;"	f	file:
+__redisReaderSetErrorProtocolByte	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void __redisReaderSetErrorProtocolByte(redisReader *r, char byte) {$/;"	f	file:
+__redisRunCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static void __redisRunCallback(redisAsyncContext *ac, redisCallback *cb, redisReply *reply) {$/;"	f	file:
+__redisSetError	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^void __redisSetError(redisContext *c, int type, const char *str) {$/;"	f
+__redisSetErrorFromErrno	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^static void __redisSetErrorFromErrno(redisContext *c, int type, const char *prefix) {$/;"	f	file:
+__redisShiftCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static int __redisShiftCallback(redisCallbackList *list, redisCallback *target) {$/;"	f	file:
+_arphdr	/home/ubuntu/prads/src/prads.h	/^typedef struct _arphdr {$/;"	s
+_asset	/home/ubuntu/prads/src/prads.h	/^typedef struct _asset {$/;"	s
+_connection	/home/ubuntu/prads/src/prads.h	/^typedef struct _connection {$/;"	s
+_dhcp_fp_entry	/home/ubuntu/prads/src/prads.h	/^typedef struct _dhcp_fp_entry {$/;"	s
+_dhcp_header	/home/ubuntu/prads/src/dhcp.h	/^typedef struct _dhcp_header {$/;"	s
+_dictClear	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static int _dictClear(dict *ht) {$/;"	f	file:
+_dictExpandIfNeeded	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static int _dictExpandIfNeeded(dict *ht) {$/;"	f	file:
+_dictInit	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static int _dictInit(dict *ht, dictType *type, void *privDataPtr) {$/;"	f	file:
+_dictKeyIndex	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static int _dictKeyIndex(dict *ht, const void *key) {$/;"	f	file:
+_dictNextPower	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static unsigned long _dictNextPower(unsigned long size) {$/;"	f	file:
+_dictReset	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static void _dictReset(dict *ht) {$/;"	f	file:
+_ether_arp	/home/ubuntu/prads/src/prads.h	/^typedef struct _ether_arp {$/;"	s
+_ether_header	/home/ubuntu/prads/src/prads.h	/^typedef struct _ether_header {$/;"	s
+_fmask	/home/ubuntu/prads/src/prads.h	/^typedef struct _fmask { $/;"	s
+_fmask	/home/ubuntu/prads/src/prads.h	/^typedef struct _fmask {$/;"	s
+_fp_entry	/home/ubuntu/prads/src/prads.h	/^typedef struct _fp_entry {$/;"	s
+_globalconfig	/home/ubuntu/prads/src/config.h	/^typedef struct _globalconfig {$/;"	s
+_gre_header	/home/ubuntu/prads/src/prads.h	/^typedef struct _gre_header$/;"	s
+_gre_sre_header	/home/ubuntu/prads/src/prads.h	/^typedef struct _gre_sre_header$/;"	s
+_i4vector	/home/ubuntu/prads/src/prads.h	/^typedef union _i4vector {$/;"	u
+_icmp6_header	/home/ubuntu/prads/src/prads.h	/^typedef struct _icmp6_header {$/;"	s
+_icmp_header	/home/ubuntu/prads/src/prads.h	/^typedef struct _icmp_header {$/;"	s
+_ip4_header	/home/ubuntu/prads/src/prads.h	/^typedef struct _ip4_header {$/;"	s
+_ip6_header	/home/ubuntu/prads/src/prads.h	/^typedef struct _ip6_header {$/;"	s
+_log_file_conf	/home/ubuntu/prads/src/output-plugins/log.h	/^typedef struct _log_file_conf$/;"	s
+_mac_entry	/home/ubuntu/prads/src/prads.h	/^typedef struct _mac_entry {$/;"	s
+_os_asset	/home/ubuntu/prads/src/prads.h	/^typedef struct _os_asset {$/;"	s
+_output_plugin	/home/ubuntu/prads/src/output-plugins/log.h	/^typedef struct _output_plugin {$/;"	s
+_packetinfo	/home/ubuntu/prads/src/prads.h	/^typedef struct _packetinfo {$/;"	s
+_port_t	/home/ubuntu/prads/src/prads.h	/^typedef struct _port_t {$/;"	s
+_prads_stat	/home/ubuntu/prads/src/prads.h	/^typedef struct _prads_stat {$/;"	s
+_redisContextConnectTcp	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^static int _redisContextConnectTcp(redisContext *c, const char *addr, int port,$/;"	f	file:
+_res_opcodes	/home/ubuntu/prads/src/dump_dns.c	/^const char *_res_opcodes[] = {$/;"	v
+_serv_asset	/home/ubuntu/prads/src/prads.h	/^typedef struct _serv_asset {$/;"	s
+_servicelist	/home/ubuntu/prads/src/prads.h	/^typedef struct _servicelist {$/;"	s
+_signature	/home/ubuntu/prads/src/prads.h	/^typedef struct _signature {$/;"	s
+_tcp_header	/home/ubuntu/prads/src/prads.h	/^typedef struct _tcp_header {$/;"	s
+_udp_header	/home/ubuntu/prads/src/prads.h	/^typedef struct _udp_header {$/;"	s
+addRead	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        void (*addRead)(void *privdata);$/;"	m	struct:redisAsyncContext::__anon1
+addWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        void (*addWrite)(void *privdata);$/;"	m	struct:redisAsyncContext::__anon1
+add_asset	/home/ubuntu/prads/src/assets.c	/^void add_asset(packetinfo *pi)$/;"	f
+add_known_services	/home/ubuntu/prads/src/servicefp/servicefp.c	/^void add_known_services(uint8_t proto, uint16_t port, const char *service_name)$/;"	f
+add_service_sig	/home/ubuntu/prads/src/servicefp/servicefp.c	/^int add_service_sig(signature *sig, signature **db)$/;"	f
+addr	/home/ubuntu/prads/src/prads.h	/^            uint32_t addr;$/;"	m	struct:_icmp_header::__anon10::ra_addr
+addr	/home/ubuntu/prads/src/prads.h	/^        struct in6_addr addr;$/;"	m	union:_fmask::__anon15	typeref:struct:_fmask::__anon15::in6_addr
+addr	/home/ubuntu/prads/src/prads.h	/^    struct in6_addr addr;$/;"	m	struct:_fmask	typeref:struct:_fmask::in6_addr
+addr64	/home/ubuntu/prads/src/prads.h	/^        uint64_t addr64[2];$/;"	m	union:_fmask::__anon15
+addr_v	/home/ubuntu/prads/src/prads.h	/^        v4si addr_v;$/;"	m	union:_fmask::__anon15
+af	/home/ubuntu/prads/src/prads.h	/^    int af;                     \/* IP AF_INET *\/$/;"	m	struct:_asset
+af	/home/ubuntu/prads/src/prads.h	/^    uint16_t    af;            $/;"	m	struct:_gre_sre_header
+af	/home/ubuntu/prads/src/prads.h	/^    uint32_t        af;             \/* IP version (4\/6) AF_INET *\/$/;"	m	struct:_packetinfo
+af	/home/ubuntu/prads/src/prads.h	/^    uint32_t af;                  \/* IP version (4\/6) AF_INET *\/$/;"	m	struct:_connection
+alloc_dhcp_sig	/home/ubuntu/prads/src/dhcp.c	/^static dhcp_fp_entry *alloc_dhcp_sig(dhcp_fp_entry *e)$/;"	f	file:
+alloc_mac	/home/ubuntu/prads/src/mac.c	/^static mac_entry *alloc_mac(mac_entry *e)$/;"	f	file:
+alloc_sig	/home/ubuntu/prads/src/sig_tcp.c	/^static fp_entry *alloc_sig(fp_entry *e)$/;"	f	file:
+always_sig	/home/ubuntu/prads/src/sig_tcp.c	/^    always_sig,$/;"	v	file:
+app	/home/ubuntu/prads/src/prads.h	/^        bstring app;            \/* Application *\/$/;"	m	struct:_signature::__anon13
+application	/home/ubuntu/prads/src/prads.h	/^    bstring application;        \/* Asset application (i.e. Apache, ICMP_TYPE etc.) *\/$/;"	m	struct:_serv_asset
+ar_hln	/home/ubuntu/prads/src/prads.h	/^    uint8_t ar_hln;             \/* Length of hardware address.  *\/$/;"	m	struct:_arphdr
+ar_hrd	/home/ubuntu/prads/src/prads.h	/^    uint16_t ar_hrd;            \/* Format of hardware address.  *\/$/;"	m	struct:_arphdr
+ar_op	/home/ubuntu/prads/src/prads.h	/^    uint16_t ar_op;             \/* ARP opcode (command).  *\/$/;"	m	struct:_arphdr
+ar_pln	/home/ubuntu/prads/src/prads.h	/^    uint8_t ar_pln;             \/* Length of protocol address.  *\/$/;"	m	struct:_arphdr
+ar_pro	/home/ubuntu/prads/src/prads.h	/^    uint16_t ar_pro;            \/* Format of protocol address.  *\/$/;"	m	struct:_arphdr
+arp	/home/ubuntu/prads/src/output-plugins/log.h	/^   void (*arp)(struct _output_plugin*, asset *);                   \/* call on arp *\/$/;"	m	struct:_output_plugin
+arp_check	/home/ubuntu/prads/src/mac.c	/^void arp_check(eth_hdr, tstamp)$/;"	f
+arp_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t arp_recv;      \/* number of ARP packets received *\/$/;"	m	struct:_prads_stat
+arp_sha	/home/ubuntu/prads/src/prads.h	/^    uint8_t arp_sha[MAC_ADDR_LEN];      \/* sender hardware address *\/$/;"	m	struct:_ether_arp
+arp_spa	/home/ubuntu/prads/src/prads.h	/^    uint8_t arp_spa[4];         \/* sender protocol address *\/$/;"	m	struct:_ether_arp
+arp_tha	/home/ubuntu/prads/src/prads.h	/^    uint8_t arp_tha[MAC_ADDR_LEN];      \/* target hardware address *\/$/;"	m	struct:_ether_arp
+arp_tpa	/home/ubuntu/prads/src/prads.h	/^    uint8_t arp_tpa[4];         \/* target protocol address *\/$/;"	m	struct:_ether_arp
+arph	/home/ubuntu/prads/src/prads.h	/^    ether_arp       *arph;          \/* ARP header struct pointer *\/$/;"	m	struct:_packetinfo
+arphdr	/home/ubuntu/prads/src/prads.h	/^} arphdr;$/;"	t	typeref:struct:_arphdr
+asset	/home/ubuntu/prads/src/prads.h	/^    struct _asset    *asset;         \/* pointer to the asset for this (src) packet *\/$/;"	m	struct:_packetinfo	typeref:struct:_packetinfo::_asset
+asset	/home/ubuntu/prads/src/prads.h	/^} asset;$/;"	t	typeref:struct:_asset
+asset_lookup	/home/ubuntu/prads/src/assets.c	/^uint8_t asset_lookup(packetinfo *pi)$/;"	f
+assetlog	/home/ubuntu/prads/src/config.h	/^    char       *assetlog;               \/* Filename of prads-asset.log *\/$/;"	m	struct:_globalconfig
+assets	/home/ubuntu/prads/src/prads.h	/^    uint32_t assets;        \/* total number of assets detected *\/$/;"	m	struct:_prads_stat
+b	/home/ubuntu/prads/src/bstrlib.c	/^	bstring b;$/;"	m	struct:genBstrList	file:
+b64ETable	/home/ubuntu/prads/src/bstraux.c	/^static char b64ETable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+\/";$/;"	v	file:
+bAscTime	/home/ubuntu/prads/src/bstraux.h	58;"	d
+bAssign	/home/ubuntu/prads/src/bstraux.h	31;"	d
+bBase64Decode	/home/ubuntu/prads/src/bstraux.h	44;"	d
+bBase64DecodeEx	/home/ubuntu/prads/src/bstraux.c	/^bstring bBase64DecodeEx (const_bstring b, int * boolTruncError) {$/;"	f
+bBase64Encode	/home/ubuntu/prads/src/bstraux.c	/^bstring bBase64Encode (const_bstring b) {$/;"	f
+bBlockCopy	/home/ubuntu/prads/src/bstrlib.c	62;"	d	file:
+bCTime	/home/ubuntu/prads/src/bstraux.h	59;"	d
+bCaselessCmp	/home/ubuntu/prads/src/bstraux.h	42;"	d
+bCaselessNCmp	/home/ubuntu/prads/src/bstraux.h	43;"	d
+bCatBlk	/home/ubuntu/prads/src/bstraux.h	36;"	d
+bCatCstr	/home/ubuntu/prads/src/bstraux.h	35;"	d
+bCatStatic	/home/ubuntu/prads/src/bstraux.h	37;"	d
+bFill	/home/ubuntu/prads/src/bstraux.c	/^int bFill (bstring b, char c, int len) {$/;"	f
+bHead	/home/ubuntu/prads/src/bstraux.c	/^bstring bHead (bstring b, int n) {$/;"	f
+bInsertChrs	/home/ubuntu/prads/src/bstraux.c	/^int bInsertChrs (bstring b, int pos, int len, unsigned char c, unsigned char fill) {$/;"	f
+bJustifyCenter	/home/ubuntu/prads/src/bstraux.c	/^int bJustifyCenter (bstring b, int width, int space) {$/;"	f
+bJustifyLeft	/home/ubuntu/prads/src/bstraux.c	/^int bJustifyLeft (bstring b, int space) {$/;"	f
+bJustifyMargin	/home/ubuntu/prads/src/bstraux.c	/^int bJustifyMargin (bstring b, int width, int space) {$/;"	f
+bJustifyRight	/home/ubuntu/prads/src/bstraux.c	/^int bJustifyRight (bstring b, int width, int space) {$/;"	f
+bLowercase	/home/ubuntu/prads/src/bstraux.h	41;"	d
+bNetStr2Bstr	/home/ubuntu/prads/src/bstraux.c	/^bstring bNetStr2Bstr (const char * buff) {$/;"	f
+bNgetc	/home/ubuntu/prads/src/bstrlib.h	/^typedef int (*bNgetc) (void *parm);$/;"	t
+bNread	/home/ubuntu/prads/src/bstrlib.h	/^typedef size_t (* bNread) (void *buff, size_t elsize, size_t nelem, void *parm);$/;"	t
+bNwrite	/home/ubuntu/prads/src/bstraux.h	/^typedef int (* bNwrite) (const void * buf, size_t elsize, size_t nelem, void * parm);$/;"	t
+bReplaceAll	/home/ubuntu/prads/src/bstraux.h	39;"	d
+bReplicate	/home/ubuntu/prads/src/bstraux.c	/^int bReplicate (bstring b, int n) {$/;"	f
+bReverse	/home/ubuntu/prads/src/bstraux.c	/^int bReverse (bstring b) {$/;"	f
+bSecureDestroy	/home/ubuntu/prads/src/bstraux.h	90;"	d
+bSecureInput	/home/ubuntu/prads/src/bstraux.c	/^bstring bSecureInput (int maxlen, int termchar, bNgetc vgetchar, void * vgcCtx) {$/;"	f
+bSecureWriteProtect	/home/ubuntu/prads/src/bstraux.h	97;"	d
+bSetChar	/home/ubuntu/prads/src/bstraux.c	/^int bSetChar (bstring b, int pos, char c) {$/;"	f
+bSetCstrChar	/home/ubuntu/prads/src/bstraux.c	/^int bSetCstrChar (bstring b, int pos, char c) {$/;"	f
+bStr2NetStr	/home/ubuntu/prads/src/bstraux.c	/^char * bStr2NetStr (const_bstring b) {$/;"	f
+bStrchr	/home/ubuntu/prads/src/bstraux.h	33;"	d
+bStrchrFast	/home/ubuntu/prads/src/bstraux.h	34;"	d
+bStream	/home/ubuntu/prads/src/bstrlib.c	/^struct bStream {$/;"	s	file:
+bStrfTime	/home/ubuntu/prads/src/bstraux.c	/^bstring bStrfTime (const char * fmt, const struct tm * timeptr) {$/;"	f
+bSubs	/home/ubuntu/prads/src/bstraux.h	32;"	d
+bTail	/home/ubuntu/prads/src/bstraux.c	/^bstring bTail (bstring b, int n) {$/;"	f
+bTrunc	/home/ubuntu/prads/src/bstraux.h	38;"	d
+bUppercase	/home/ubuntu/prads/src/bstraux.h	40;"	d
+bUuDecLine	/home/ubuntu/prads/src/bstraux.c	/^static int bUuDecLine (void * parm, int ofs, int len) {$/;"	f	file:
+bUuDecode	/home/ubuntu/prads/src/bstraux.h	45;"	d
+bUuDecodeEx	/home/ubuntu/prads/src/bstraux.c	/^bstring bUuDecodeEx (const_bstring src, int * badlines) {$/;"	f
+bUuEncode	/home/ubuntu/prads/src/bstraux.c	/^bstring bUuEncode (const_bstring src) {$/;"	f
+bUuInOut	/home/ubuntu/prads/src/bstraux.c	/^struct bUuInOut {$/;"	s	file:
+bYDecode	/home/ubuntu/prads/src/bstraux.c	/^bstring bYDecode (const_bstring src) {$/;"	f
+bYEncode	/home/ubuntu/prads/src/bstraux.c	/^bstring bYEncode (const_bstring src) {$/;"	f
+badlines	/home/ubuntu/prads/src/bstraux.c	/^	int * badlines;$/;"	m	struct:bUuInOut	file:
+balloc	/home/ubuntu/prads/src/bstrlib.c	/^int balloc (bstring b, int olen) {$/;"	f
+ballocmin	/home/ubuntu/prads/src/bstrlib.c	/^int ballocmin (bstring b, int len) {$/;"	f
+base64DecodeSymbol	/home/ubuntu/prads/src/bstraux.c	/^static int base64DecodeSymbol (unsigned char alpha) {$/;"	f	file:
+bassign	/home/ubuntu/prads/src/bstrlib.c	/^int bassign (bstring a, const_bstring b) {$/;"	f
+bassignblk	/home/ubuntu/prads/src/bstrlib.c	/^int bassignblk (bstring a, const void * s, int len) {$/;"	f
+bassigncstr	/home/ubuntu/prads/src/bstrlib.c	/^int bassigncstr (bstring a, const char * str) {$/;"	f
+bassignformat	/home/ubuntu/prads/src/bstrlib.c	/^int bassignformat (bstring b, const char * fmt, ...) {$/;"	f
+bassigngets	/home/ubuntu/prads/src/bstrlib.c	/^int bassigngets (bstring b, bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+bassignmidstr	/home/ubuntu/prads/src/bstrlib.c	/^int bassignmidstr (bstring a, const_bstring b, int left, int len) {$/;"	f
+bcatblk	/home/ubuntu/prads/src/bstrlib.c	/^int bcatblk (bstring b, const void * s, int len) {$/;"	f
+bcatcstr	/home/ubuntu/prads/src/bstrlib.c	/^int bcatcstr (bstring b, const char * s) {$/;"	f
+bchar	/home/ubuntu/prads/src/bstrlib.h	201;"	d
+bchare	/home/ubuntu/prads/src/bstrlib.h	200;"	d
+bconcat	/home/ubuntu/prads/src/bstrlib.c	/^int bconcat (bstring b0, const_bstring b1) {$/;"	f
+bconchar	/home/ubuntu/prads/src/bstrlib.c	/^int bconchar (bstring b, char c) {$/;"	f
+bcstrfree	/home/ubuntu/prads/src/bstrlib.c	/^int bcstrfree (char * s) {$/;"	f
+bdata	/home/ubuntu/prads/src/bstrlib.h	199;"	d
+bdatae	/home/ubuntu/prads/src/bstrlib.h	198;"	d
+bdataofs	/home/ubuntu/prads/src/bstrlib.h	197;"	d
+bdataofse	/home/ubuntu/prads/src/bstrlib.h	196;"	d
+bdelete	/home/ubuntu/prads/src/bstrlib.c	/^int bdelete (bstring b, int pos, int len) {$/;"	f
+bdestroy	/home/ubuntu/prads/src/bstrlib.c	/^int bdestroy (bstring b) {$/;"	f
+bfindreplace	/home/ubuntu/prads/src/bstrlib.c	/^int bfindreplace (bstring b, const_bstring find, const_bstring repl, int pos) {$/;"	f
+bfindreplacecaseless	/home/ubuntu/prads/src/bstrlib.c	/^int bfindreplacecaseless (bstring b, const_bstring find, const_bstring repl, int pos) {$/;"	f
+bformat	/home/ubuntu/prads/src/bstrlib.c	/^bstring bformat (const char * fmt, ...) {$/;"	f
+bformata	/home/ubuntu/prads/src/bstrlib.c	/^int bformata (bstring b, const char * fmt, ...) {$/;"	f
+bfromcstr	/home/ubuntu/prads/src/bstrlib.c	/^bstring bfromcstr (const char * str) {$/;"	f
+bfromcstralloc	/home/ubuntu/prads/src/bstrlib.c	/^bstring bfromcstralloc (int mlen, const char * str) {$/;"	f
+bgets	/home/ubuntu/prads/src/bstrlib.c	/^bstring bgets (bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+bgetsa	/home/ubuntu/prads/src/bstrlib.c	/^int bgetsa (bstring b, bNgetc getcPtr, void * parm, char terminator) {$/;"	f
+binchr	/home/ubuntu/prads/src/bstrlib.c	/^int binchr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+binchrCF	/home/ubuntu/prads/src/bstrlib.c	/^static int binchrCF (const unsigned char * data, int len, int pos, const struct charField * cf) {$/;"	f	file:
+binchrr	/home/ubuntu/prads/src/bstrlib.c	/^int binchrr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+binchrrCF	/home/ubuntu/prads/src/bstrlib.c	/^static int binchrrCF (const unsigned char * data, int pos, const struct charField * cf) {$/;"	f	file:
+binsert	/home/ubuntu/prads/src/bstrlib.c	/^int binsert (bstring b1, int pos, const_bstring b2, unsigned char fill) {$/;"	f
+binsertch	/home/ubuntu/prads/src/bstrlib.c	/^int binsertch (bstring b, int pos, int len, unsigned char fill) {$/;"	f
+binstr	/home/ubuntu/prads/src/bstrlib.c	/^int binstr (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrcaseless	/home/ubuntu/prads/src/bstrlib.c	/^int binstrcaseless (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrr	/home/ubuntu/prads/src/bstrlib.c	/^int binstrr (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+binstrrcaseless	/home/ubuntu/prads/src/bstrlib.c	/^int binstrrcaseless (const_bstring b1, int pos, const_bstring b2) {$/;"	f
+biseq	/home/ubuntu/prads/src/bstrlib.c	/^int biseq (const_bstring b0, const_bstring b1) {$/;"	f
+biseqcaseless	/home/ubuntu/prads/src/bstrlib.c	/^int biseqcaseless (const_bstring b0, const_bstring b1) {$/;"	f
+biseqcstr	/home/ubuntu/prads/src/bstrlib.c	/^int biseqcstr (const_bstring b, const char * s) {$/;"	f
+biseqcstrcaseless	/home/ubuntu/prads/src/bstrlib.c	/^int biseqcstrcaseless (const_bstring b, const char * s) {$/;"	f
+bisstemeqblk	/home/ubuntu/prads/src/bstrlib.c	/^int bisstemeqblk (const_bstring b0, const void * blk, int len) {$/;"	f
+bisstemeqcaselessblk	/home/ubuntu/prads/src/bstrlib.c	/^int bisstemeqcaselessblk (const_bstring b0, const void * blk, int len) {$/;"	f
+biswriteprotected	/home/ubuntu/prads/src/bstrlib.h	295;"	d
+bjoin	/home/ubuntu/prads/src/bstrlib.c	/^bstring bjoin (const struct bstrList * bl, const_bstring sep) {$/;"	f
+bl	/home/ubuntu/prads/src/bstrlib.c	/^	struct bstrList * bl;$/;"	m	struct:genBstrList	typeref:struct:genBstrList::bstrList	file:
+blength	/home/ubuntu/prads/src/bstrlib.h	195;"	d
+blengthe	/home/ubuntu/prads/src/bstrlib.h	194;"	d
+blk2bstr	/home/ubuntu/prads/src/bstrlib.c	/^bstring blk2bstr (const void * blk, int len) {$/;"	f
+blk2tbstr	/home/ubuntu/prads/src/bstrlib.h	222;"	d
+bltrim	/home/ubuntu/prads/src/config.c	/^int bltrim (bstring string)$/;"	f
+bltrimws	/home/ubuntu/prads/src/bstrlib.c	/^int bltrimws (bstring b) {$/;"	f
+bmid2tbstr	/home/ubuntu/prads/src/bstrlib.h	228;"	d
+bmidstr	/home/ubuntu/prads/src/bstrlib.c	/^bstring bmidstr (const_bstring b, int left, int len) {$/;"	f
+bninchr	/home/ubuntu/prads/src/bstrlib.c	/^int bninchr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+bninchrr	/home/ubuntu/prads/src/bstrlib.c	/^int bninchrr (const_bstring b0, int pos, const_bstring b1) {$/;"	f
+bpattern	/home/ubuntu/prads/src/bstrlib.c	/^int bpattern (bstring b, int len) {$/;"	f
+bpf_file	/home/ubuntu/prads/src/config.h	/^    char        *bpf_file;              \/* filename of BPF file to load *\/$/;"	m	struct:_globalconfig
+bpff	/home/ubuntu/prads/src/config.h	/^    char        *bpff;                  \/**\/$/;"	m	struct:_globalconfig
+bread	/home/ubuntu/prads/src/bstrlib.c	/^bstring bread (bNread readPtr, void * parm) {$/;"	f
+breada	/home/ubuntu/prads/src/bstrlib.c	/^int breada (bstring b, bNread readPtr, void * parm) {$/;"	f
+breplace	/home/ubuntu/prads/src/bstrlib.c	/^int breplace (bstring b1, int pos, int len, const_bstring b2, $/;"	f
+brtrim	/home/ubuntu/prads/src/config.c	/^int brtrim (bstring string)$/;"	f
+brtrimws	/home/ubuntu/prads/src/bstrlib.c	/^int brtrimws (bstring b) {$/;"	f
+bsFromBstr	/home/ubuntu/prads/src/bstraux.c	/^struct bStream * bsFromBstr (const_bstring b) {$/;"	f
+bsFromBstrRef	/home/ubuntu/prads/src/bstraux.c	/^static struct bStream * bsFromBstrRef (struct tagbstring * t) {$/;"	f	file:
+bsStatic	/home/ubuntu/prads/src/bstrlib.h	206;"	d
+bsStatic	/home/ubuntu/prads/src/bstrlib.h	209;"	d
+bsStaticBlkParms	/home/ubuntu/prads/src/bstrlib.h	213;"	d
+bsStaticMlen	/home/ubuntu/prads/src/bstrlib.h	204;"	d
+bsUuCtx	/home/ubuntu/prads/src/bstraux.c	/^struct bsUuCtx {$/;"	s	file:
+bsUuDecode	/home/ubuntu/prads/src/bstraux.c	/^struct bStream * bsUuDecode (struct bStream * sInp, int * badlines) {$/;"	f
+bsUuDecodePart	/home/ubuntu/prads/src/bstraux.c	/^static size_t bsUuDecodePart (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+bsbufflength	/home/ubuntu/prads/src/bstrlib.c	/^int bsbufflength (struct bStream * s, int sz) {$/;"	f
+bscb	/home/ubuntu/prads/src/bstrlib.c	/^static int bscb (void * parm, int ofs, int len) {$/;"	f	file:
+bsclose	/home/ubuntu/prads/src/bstrlib.c	/^void * bsclose (struct bStream * s) {$/;"	f
+bseof	/home/ubuntu/prads/src/bstrlib.c	/^int bseof (const struct bStream * s) {$/;"	f
+bsetstr	/home/ubuntu/prads/src/bstrlib.c	/^int bsetstr (bstring b0, int pos, const_bstring b1, unsigned char fill) {$/;"	f
+bsopen	/home/ubuntu/prads/src/bstrlib.c	/^struct bStream * bsopen (bNread readPtr, void * parm) {$/;"	f
+bspeek	/home/ubuntu/prads/src/bstrlib.c	/^int bspeek (bstring r, const struct bStream * s) {$/;"	f
+bsplit	/home/ubuntu/prads/src/bstrlib.c	/^struct bstrList * bsplit (const_bstring str, unsigned char splitChar) {$/;"	f
+bsplitcb	/home/ubuntu/prads/src/bstrlib.c	/^int bsplitcb (const_bstring str, unsigned char splitChar, int pos,$/;"	f
+bsplits	/home/ubuntu/prads/src/bstrlib.c	/^struct bstrList * bsplits (const_bstring str, const_bstring splitStr) {$/;"	f
+bsplitscb	/home/ubuntu/prads/src/bstrlib.c	/^int bsplitscb (const_bstring str, const_bstring splitStr, int pos,$/;"	f
+bsplitstr	/home/ubuntu/prads/src/bstrlib.c	/^struct bstrList * bsplitstr (const_bstring str, const_bstring splitStr) {$/;"	f
+bsplitstrcb	/home/ubuntu/prads/src/bstrlib.c	/^int bsplitstrcb (const_bstring str, const_bstring splitStr, int pos,$/;"	f
+bsread	/home/ubuntu/prads/src/bstrlib.c	/^int bsread (bstring r, struct bStream * s, int n) {$/;"	f
+bsreada	/home/ubuntu/prads/src/bstrlib.c	/^int bsreada (bstring r, struct bStream * s, int n) {$/;"	f
+bsreadln	/home/ubuntu/prads/src/bstrlib.c	/^int bsreadln (bstring r, struct bStream * s, char terminator) {$/;"	f
+bsreadlna	/home/ubuntu/prads/src/bstrlib.c	/^int bsreadlna (bstring r, struct bStream * s, char terminator) {$/;"	f
+bsreadlns	/home/ubuntu/prads/src/bstrlib.c	/^int bsreadlns (bstring r, struct bStream * s, const_bstring term) {$/;"	f
+bsreadlnsa	/home/ubuntu/prads/src/bstrlib.c	/^int bsreadlnsa (bstring r, struct bStream * s, const_bstring term) {$/;"	f
+bssplitscb	/home/ubuntu/prads/src/bstrlib.c	/^int bssplitscb (struct bStream * s, const_bstring splitStr, $/;"	f
+bssplitstrcb	/home/ubuntu/prads/src/bstrlib.c	/^int bssplitstrcb (struct bStream * s, const_bstring splitStr, $/;"	f
+bstr2cstr	/home/ubuntu/prads/src/bstrlib.c	/^char * bstr2cstr (const_bstring b, char z) {$/;"	f
+bstrDeclare	/home/ubuntu/prads/src/bstraux.h	27;"	d
+bstrFree	/home/ubuntu/prads/src/bstraux.h	28;"	d
+bstrList	/home/ubuntu/prads/src/bstrlib.h	/^struct bstrList {$/;"	s
+bstrListAlloc	/home/ubuntu/prads/src/bstrlib.c	/^int bstrListAlloc (struct bstrList * sl, int msz) {$/;"	f
+bstrListAllocMin	/home/ubuntu/prads/src/bstrlib.c	/^int bstrListAllocMin (struct bstrList * sl, int msz) {$/;"	f
+bstrListCreate	/home/ubuntu/prads/src/bstrlib.c	/^struct bstrList * bstrListCreate (void) {$/;"	f
+bstrListDestroy	/home/ubuntu/prads/src/bstrlib.c	/^int bstrListDestroy (struct bstrList * sl) {$/;"	f
+bstr__alloc	/home/ubuntu/prads/src/bstrlib.c	29;"	d	file:
+bstr__free	/home/ubuntu/prads/src/bstrlib.c	33;"	d	file:
+bstr__memchr	/home/ubuntu/prads/src/bstrlib.c	57;"	d	file:
+bstr__memcmp	/home/ubuntu/prads/src/bstrlib.c	53;"	d	file:
+bstr__memcpy	/home/ubuntu/prads/src/bstrlib.c	41;"	d	file:
+bstr__memmove	/home/ubuntu/prads/src/bstrlib.c	45;"	d	file:
+bstr__memset	/home/ubuntu/prads/src/bstrlib.c	49;"	d	file:
+bstr__realloc	/home/ubuntu/prads/src/bstrlib.c	37;"	d	file:
+bstrchr	/home/ubuntu/prads/src/bstrlib.h	91;"	d
+bstrchrp	/home/ubuntu/prads/src/bstrlib.c	/^int bstrchrp (const_bstring b, int c, int pos) {$/;"	f
+bstrcmp	/home/ubuntu/prads/src/bstrlib.c	/^int bstrcmp (const_bstring b0, const_bstring b1) {$/;"	f
+bstrcpy	/home/ubuntu/prads/src/bstrlib.c	/^bstring bstrcpy (const_bstring b) {$/;"	f
+bstricmp	/home/ubuntu/prads/src/bstrlib.c	/^int bstricmp (const_bstring b0, const_bstring b1) {$/;"	f
+bstring	/home/ubuntu/prads/src/bstrlib.h	/^typedef struct tagbstring * bstring;$/;"	t	typeref:struct:tagbstring
+bstrncmp	/home/ubuntu/prads/src/bstrlib.c	/^int bstrncmp (const_bstring b0, const_bstring b1, int n) {$/;"	f
+bstrnicmp	/home/ubuntu/prads/src/bstrlib.c	/^int bstrnicmp (const_bstring b0, const_bstring b1, int n) {$/;"	f
+bstrrchr	/home/ubuntu/prads/src/bstrlib.h	92;"	d
+bstrrchrp	/home/ubuntu/prads/src/bstrlib.c	/^int bstrrchrp (const_bstring b, int c, int pos) {$/;"	f
+bsunread	/home/ubuntu/prads/src/bstrlib.c	/^int bsunread (struct bStream * s, const_bstring b) {$/;"	f
+btfromblk	/home/ubuntu/prads/src/bstrlib.h	227;"	d
+btfromblkltrimws	/home/ubuntu/prads/src/bstrlib.h	252;"	d
+btfromblkrtrimws	/home/ubuntu/prads/src/bstrlib.h	264;"	d
+btfromblktrimws	/home/ubuntu/prads/src/bstrlib.h	276;"	d
+btfromcstr	/home/ubuntu/prads/src/bstrlib.h	217;"	d
+btolower	/home/ubuntu/prads/src/bstrlib.c	/^int btolower (bstring b) {$/;"	f
+btoupper	/home/ubuntu/prads/src/bstrlib.c	/^int btoupper (bstring b) {$/;"	f
+btrimws	/home/ubuntu/prads/src/bstrlib.c	/^int btrimws (bstring b) {$/;"	f
+btrunc	/home/ubuntu/prads/src/bstrlib.c	/^int btrunc (bstring b, int n) {$/;"	f
+bucket	/home/ubuntu/prads/src/config.h	/^    connection  *bucket[BUCKET_SIZE];   \/* Pointer to list of ongoing connections *\/$/;"	m	struct:_globalconfig
+bucket	/home/ubuntu/prads/src/cxt.c	/^connection *bucket[BUCKET_SIZE];$/;"	v
+buf	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    char *buf; \/* Read buffer *\/$/;"	m	struct:redisReader
+buf	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.h	/^    char buf[];$/;"	m	struct:sdshdr
+buff	/home/ubuntu/prads/src/bstraux.c	/^    bstring buff;    \/* Buffer for underwrites                   *\/$/;"	m	struct:bwriteStream	file:
+buff	/home/ubuntu/prads/src/bstrlib.c	/^	bstring buff;		\/* Buffer for over-reads *\/$/;"	m	struct:bStream	file:
+buffer_size	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.h	/^    size_t buffer_size;$/;"	m	struct:log_ringbuffer
+buildCharField	/home/ubuntu/prads/src/bstrlib.c	/^static int buildCharField (struct charField * cf, const_bstring b) {$/;"	f	file:
+bulklen	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static size_t bulklen(size_t len) {$/;"	f	file:
+bvcformata	/home/ubuntu/prads/src/bstrlib.c	/^int bvcformata (bstring b, int count, const char * fmt, va_list arg) {$/;"	f
+bvformata	/home/ubuntu/prads/src/bstrlib.h	136;"	d
+bwriteStream	/home/ubuntu/prads/src/bstraux.c	/^struct bwriteStream {$/;"	s	file:
+bwriteallow	/home/ubuntu/prads/src/bstrlib.h	294;"	d
+bwriteprotect	/home/ubuntu/prads/src/bstrlib.h	293;"	d
+bwsBuffLength	/home/ubuntu/prads/src/bstraux.c	/^int bwsBuffLength (struct bwriteStream * ws, int sz) {$/;"	f
+bwsClose	/home/ubuntu/prads/src/bstraux.c	/^void * bwsClose (struct bwriteStream * ws) {$/;"	f
+bwsIsEOF	/home/ubuntu/prads/src/bstraux.c	/^int bwsIsEOF (const struct bwriteStream * ws) {$/;"	f
+bwsOpen	/home/ubuntu/prads/src/bstraux.c	/^struct bwriteStream * bwsOpen (bNwrite writeFn, void * parm) {$/;"	f
+bwsWriteBlk	/home/ubuntu/prads/src/bstraux.c	/^int bwsWriteBlk (struct bwriteStream * ws, void * blk, int len) {$/;"	f
+bwsWriteBstr	/home/ubuntu/prads/src/bstraux.c	/^int bwsWriteBstr (struct bwriteStream * ws, const_bstring b) {$/;"	f
+bwsWriteFlush	/home/ubuntu/prads/src/bstraux.c	/^int bwsWriteFlush (struct bwriteStream * ws) {$/;"	f
+c	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    redisContext c;$/;"	m	struct:redisAsyncContext
+c_asset	/home/ubuntu/prads/src/prads.h	/^    struct   _asset *c_asset;     \/* pointer to src asset *\/$/;"	m	struct:_connection	typeref:struct:_connection::_asset
+callbackDict	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static dictType callbackDict = {$/;"	v	file:
+callbackHash	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static unsigned int callbackHash(const void *key) {$/;"	f	file:
+callbackKeyCompare	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static int callbackKeyCompare(void *privdata, const void *key1, const void *key2) {$/;"	f	file:
+callbackKeyDestructor	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static void callbackKeyDestructor(void *privdata, void *key) {$/;"	f	file:
+callbackValDestructor	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static void callbackValDestructor(void *privdata, void *val) {$/;"	f	file:
+callbackValDup	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static void *callbackValDup(void *privdata, const void *src) {$/;"	f	file:
+cflags	/home/ubuntu/prads/src/config.h	/^    uint8_t     cflags;                 \/* config flags *\/$/;"	m	struct:_globalconfig
+chaddr	/home/ubuntu/prads/src/dhcp.h	/^    char chaddr [16];            \/\/ Client HW address (16)$/;"	m	struct:_dhcp_header
+channels	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        struct dict *channels;$/;"	m	struct:redisAsyncContext::__anon2	typeref:struct:redisAsyncContext::__anon2::dict
+charField	/home/ubuntu/prads/src/bstrlib.c	/^struct charField { LONG_TYPE content[CFCLEN]; };$/;"	s	file:
+charField	/home/ubuntu/prads/src/bstrlib.c	/^struct charField { unsigned char content[CFCLEN]; };$/;"	s	file:
+check	/home/ubuntu/prads/src/prads.h	/^    uint8_t  check;               \/* Flags spesifying checking *\/$/;"	m	struct:_connection
+check_collide	/home/ubuntu/prads/src/sig_tcp.c	/^    check_collide,$/;"	v	file:
+check_interrupt	/home/ubuntu/prads/src/prads.c	/^void check_interrupt()$/;"	f
+check_known_port	/home/ubuntu/prads/src/servicefp/servicefp.c	/^bstring check_known_port(uint8_t proto, uint16_t port)$/;"	f
+check_vlan	/home/ubuntu/prads/src/prads.c	/^void check_vlan (packetinfo *pi)$/;"	f
+checked	/home/ubuntu/prads/src/prads.h	/^        uint32_t    checked;    \/* How many times the sig has been matched for *\/$/;"	m	struct:_signature::__anon14
+chroot_dir	/home/ubuntu/prads/src/config.h	/^    char        *chroot_dir;            \/* Directory to chroot to *\/$/;"	m	struct:_globalconfig
+chrtos	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static size_t chrtos(char *buf, size_t size, char byte) {$/;"	f	file:
+ciaddr	/home/ubuntu/prads/src/dhcp.h	/^    uint32_t ciaddr;             \/\/ client IP (5)$/;"	m	struct:_dhcp_header
+cleanup	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        void (*cleanup)(void *privdata);$/;"	m	struct:redisAsyncContext::__anon1
+clear_asset_list	/home/ubuntu/prads/src/assets.c	/^void clear_asset_list()$/;"	f
+client_tcp4	/home/ubuntu/prads/src/servicefp/tcpc.c	/^void client_tcp4(packetinfo *pi, signature* sig_client_tcp)$/;"	f
+client_tcp6	/home/ubuntu/prads/src/servicefp/tcpc.c	/^void client_tcp6(packetinfo *pi, signature* sig_client_tcp)$/;"	f
+code	/home/ubuntu/prads/src/prads.h	/^    uint8_t code;               \/* code field *\/$/;"	m	struct:_icmp6_header
+code	/home/ubuntu/prads/src/prads.h	/^    uint8_t code;$/;"	m	struct:_icmp_header
+cof	/home/ubuntu/prads/src/config.h	/^    uint8_t     cof;                    \/* Flags for other; icmp,udp,other,.... *\/$/;"	m	struct:_globalconfig
+comment	/home/ubuntu/prads/src/prads.h	/^  char *comment;$/;"	m	struct:_mac_entry
+compare128	/home/ubuntu/prads/src/prads.c	218;"	d	file:
+config	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^struct config {$/;"	s	file:
+config	/home/ubuntu/prads/src/prads.c	/^globalconfig config;$/;"	v
+configpath	/home/ubuntu/prads/src/config.h	/^    char        *configpath;            \/* Path to config dir *\/$/;"	m	struct:_globalconfig
+connect	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static redisContext *connect(struct config config) {$/;"	f	file:
+connectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-ae.c	/^void connectCallback(const redisAsyncContext *c, int status) {$/;"	f
+connectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libev.c	/^void connectCallback(const redisAsyncContext *c, int status) {$/;"	f
+connectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libevent.c	/^void connectCallback(const redisAsyncContext *c, int status) {$/;"	f
+connectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libuv.c	/^void connectCallback(const redisAsyncContext *c, int status) {$/;"	f
+connection	/home/ubuntu/prads/src/output-plugins/log.h	/^   void (*connection)(struct _output_plugin*, connection *ctx, int outputmode); \/* call on connection *\/$/;"	m	struct:_output_plugin
+connection	/home/ubuntu/prads/src/prads.h	/^} connection;$/;"	t	typeref:struct:_connection
+connection_lookup	/home/ubuntu/prads/src/assets.c	/^asset* connection_lookup(packetinfo *pi)$/;"	f
+connection_tracking	/home/ubuntu/prads/src/cxt.c	/^int connection_tracking(packetinfo *pi)$/;"	f
+connection_type	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^enum connection_type {$/;"	g	file:
+const_bstring	/home/ubuntu/prads/src/bstrlib.h	/^typedef const struct tagbstring * const_bstring;$/;"	t	typeref:struct:tagbstring
+content	/home/ubuntu/prads/src/bstrlib.c	/^struct charField { LONG_TYPE content[CFCLEN]; };$/;"	m	struct:charField	file:
+content	/home/ubuntu/prads/src/bstrlib.c	/^struct charField { unsigned char content[CFCLEN]; };$/;"	m	struct:charField	file:
+context	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^    redisAsyncContext *context;$/;"	m	struct:redisAeEvents
+context	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^    redisAsyncContext *context;$/;"	m	struct:redisLibevEvents
+context	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^    redisAsyncContext *context;$/;"	m	struct:redisLibeventEvents
+context	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^  redisAsyncContext* context;$/;"	m	struct:redisLibuvEvents
+context	/home/ubuntu/prads/src/config.h	/^    redisContext *context;              \/* redis context *\/$/;"	m	struct:_globalconfig
+createArray	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createArray)(const redisReadTask*, int);$/;"	m	struct:redisReplyObjectFunctions
+createArrayObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void *createArrayObject(const redisReadTask *task, int elements) {$/;"	f	file:
+createClient	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^redisContext *createClient(char *host, int port) {$/;"	f
+createInteger	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createInteger)(const redisReadTask*, long long);$/;"	m	struct:redisReplyObjectFunctions
+createIntegerObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void *createIntegerObject(const redisReadTask *task, long long value) {$/;"	f	file:
+createNil	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createNil)(const redisReadTask*);$/;"	m	struct:redisReplyObjectFunctions
+createNilObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void *createNilObject(const redisReadTask *task) {$/;"	f	file:
+createReplyObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static redisReply *createReplyObject(int type) {$/;"	f	file:
+createString	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createString)(const redisReadTask*, char*, size_t);$/;"	m	struct:redisReplyObjectFunctions
+createStringObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void *createStringObject(const redisReadTask *task, char *str, size_t len) {$/;"	f	file:
+create_pid_file	/home/ubuntu/prads/src/sys_func.c	/^int create_pid_file(const char *path)$/;"	f
+cstr2bstr	/home/ubuntu/prads/src/bstrlib.h	40;"	d
+cstr2tbstr	/home/ubuntu/prads/src/bstrlib.h	216;"	d
+csum	/home/ubuntu/prads/src/prads.h	/^    uint16_t csum;              \/* checksum *\/$/;"	m	struct:_udp_header
+csum	/home/ubuntu/prads/src/prads.h	/^    uint16_t csum;              \/* checksum field *\/$/;"	m	struct:_icmp6_header
+csum	/home/ubuntu/prads/src/prads.h	/^    uint16_t csum;$/;"	m	struct:_icmp_header
+ctf	/home/ubuntu/prads/src/config.h	/^    uint8_t     ctf;                    \/* Flags for TCP checks, SYN,RST,FIN.... *\/$/;"	m	struct:_globalconfig
+cx_track	/home/ubuntu/prads/src/cxt.c	/^int cx_track(packetinfo *pi) {$/;"	f
+cx_track_simd_ipv4	/home/ubuntu/prads/src/cxt.c	/^inline void cx_track_simd_ipv4(packetinfo *pi)$/;"	f
+cxid	/home/ubuntu/prads/src/prads.h	/^    uint64_t cxid;                \/* connection id *\/$/;"	m	struct:_connection
+cxt	/home/ubuntu/prads/src/prads.h	/^    connection      *cxt;           \/* pointer to the cxt for this packet *\/$/;"	m	struct:_packetinfo
+cxt_init	/home/ubuntu/prads/src/cxt.c	/^void cxt_init()$/;"	f
+cxt_log_buckets	/home/ubuntu/prads/src/cxt.c	/^void cxt_log_buckets(int dummy)$/;"	f
+cxt_new	/home/ubuntu/prads/src/cxt.c	/^connection *cxt_new(packetinfo *pi)$/;"	f
+cxt_update_client	/home/ubuntu/prads/src/cxt.c	/^int cxt_update_client(connection *cxt, packetinfo *pi)$/;"	f
+cxt_update_server	/home/ubuntu/prads/src/cxt.c	/^int cxt_update_server(connection *cxt, packetinfo *pi)$/;"	f
+cxtbuffer	/home/ubuntu/prads/src/config.h	/^    connection  *cxtbuffer;             \/* Pointer to list of expired connections *\/$/;"	m	struct:_globalconfig
+cxtfname	/home/ubuntu/prads/src/config.h	/^    char        cxtfname[4096];         \/* cxtracker\/sancp like output file *\/$/;"	m	struct:_globalconfig
+cxtlogdir	/home/ubuntu/prads/src/config.h	/^    char        cxtlogdir[2048];        \/* log dir for sancp\/cxtracker output *\/$/;"	m	struct:_globalconfig
+cxtrackerid	/home/ubuntu/prads/src/cxt.c	/^uint64_t cxtrackerid;$/;"	v
+d_ip	/home/ubuntu/prads/src/prads.h	/^    struct   in6_addr d_ip;       \/* destination address *\/$/;"	m	struct:_connection	typeref:struct:_connection::in6_addr
+d_port	/home/ubuntu/prads/src/prads.h	/^    uint16_t        d_port;         \/* destination port *\/$/;"	m	struct:_packetinfo
+d_port	/home/ubuntu/prads/src/prads.h	/^    uint16_t d_port;              \/* destination port *\/$/;"	m	struct:_connection
+d_tcpFlags	/home/ubuntu/prads/src/prads.h	/^    uint8_t  d_tcpFlags;          \/* tcpflags sent by destination *\/$/;"	m	struct:_connection
+d_total_bytes	/home/ubuntu/prads/src/prads.h	/^    uint64_t d_total_bytes;       \/* total destination bytes *\/$/;"	m	struct:_connection
+d_total_pkts	/home/ubuntu/prads/src/prads.h	/^    uint64_t d_total_pkts;        \/* total destination packets *\/$/;"	m	struct:_connection
+daemon_flag	/home/ubuntu/prads/src/config.h	/^    uint8_t     daemon_flag;$/;"	m	struct:_globalconfig
+daemonize	/home/ubuntu/prads/src/sys_func.c	/^int daemonize()$/;"	f
+data	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        void *data;$/;"	m	struct:redisAsyncContext::__anon1
+data	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    void *data;$/;"	m	struct:redisAsyncContext
+data	/home/ubuntu/prads/src/bstrlib.h	/^	unsigned char * data;$/;"	m	struct:tagbstring
+data	/home/ubuntu/prads/src/output-plugins/log.h	/^   void *data;                                                 \/* anything else *\/$/;"	m	struct:_output_plugin
+data	/home/ubuntu/prads/src/prads.h	/^        char data[1];$/;"	m	union:_icmp_header::__anon10
+debug	/home/ubuntu/prads/src/sys_func.h	36;"	d
+defaultFunctions	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static redisReplyObjectFunctions defaultFunctions = {$/;"	v	file:
+delRead	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        void (*delRead)(void *privdata);$/;"	m	struct:redisAsyncContext::__anon1
+delWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        void (*delWrite)(void *privdata);$/;"	m	struct:redisAsyncContext::__anon1
+del_asset	/home/ubuntu/prads/src/assets.c	/^void del_asset(asset * passet, asset ** bucket_ptr)$/;"	f
+del_connection	/home/ubuntu/prads/src/cxt.c	/^void del_connection(connection * cxt, connection ** bucket_ptr)$/;"	f
+del_known_services	/home/ubuntu/prads/src/servicefp/servicefp.c	/^void del_known_services()$/;"	f
+del_os_asset	/home/ubuntu/prads/src/assets.c	/^void del_os_asset(os_asset ** head_oa, os_asset * os)$/;"	f
+del_serv_asset	/home/ubuntu/prads/src/assets.c	/^void del_serv_asset(serv_asset ** head_sa, serv_asset * service)$/;"	f
+del_signature_lists	/home/ubuntu/prads/src/servicefp/servicefp.c	/^void del_signature_lists()$/;"	f
+denit	/home/ubuntu/prads/src/output-plugins/log.h	/^   int (*denit)(struct _output_plugin*);                          \/* deinitialize *\/$/;"	m	struct:_output_plugin
+desc	/home/ubuntu/prads/src/prads.h	/^    char *desc;                 \/* OS description *\/$/;"	m	struct:_dhcp_fp_entry
+desc	/home/ubuntu/prads/src/prads.h	/^    char *desc;              \/* OS description *\/$/;"	m	struct:_fp_entry
+desc	/home/ubuntu/prads/src/tos.h	/^  char* desc;$/;"	m	struct:tos_def
+destory_log_ringbuffer	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.c	/^int destory_log_ringbuffer (output_plugin *plugin)$/;"	f
+destroyClient	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int destroyClient(redisContext *context) {$/;"	f
+detection	/home/ubuntu/prads/src/prads.h	/^    uint8_t detection;          \/* Flag describing detection method (SYN\/SYNACK\/UDP\/ICMP...) *\/$/;"	m	struct:_os_asset
+dev	/home/ubuntu/prads/src/config.h	/^    char        *dev;                   \/* Device name to use for sniffing *\/$/;"	m	struct:_globalconfig
+dev	/home/ubuntu/prads/src/mtu.h	/^  char* dev;$/;"	m	struct:mtu_def
+df	/home/ubuntu/prads/src/prads.h	/^    uint8_t ttl, df;            \/* TTL and don't fragment bit *\/$/;"	m	struct:_fp_entry
+dhcp_fingerprint	/home/ubuntu/prads/src/dhcp.c	/^dhcp_fp_entry *dhcp_fingerprint(packetinfo *pi)$/;"	f
+dhcp_fp_entry	/home/ubuntu/prads/src/prads.h	/^} dhcp_fp_entry;$/;"	t	typeref:struct:_dhcp_fp_entry
+dhcp_header	/home/ubuntu/prads/src/dhcp.h	/^} dhcp_header;$/;"	t	typeref:struct:_dhcp_header
+dhcp_os_assets	/home/ubuntu/prads/src/prads.h	/^    uint32_t dhcp_os_assets;\/* total number of dhcp os assets detected *\/$/;"	m	struct:_prads_stat
+dict	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^typedef struct dict {$/;"	s
+dict	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^} dict;$/;"	t	typeref:struct:dict
+dictAdd	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static int dictAdd(dict *ht, void *key, void *val) {$/;"	f	file:
+dictCompareHashKeys	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	101;"	d
+dictCreate	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static dict *dictCreate(dictType *type, void *privDataPtr) {$/;"	f	file:
+dictDelete	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static int dictDelete(dict *ht, const void *key) {$/;"	f	file:
+dictEntry	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^typedef struct dictEntry {$/;"	s
+dictEntry	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^} dictEntry;$/;"	t	typeref:struct:dictEntry
+dictExpand	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static int dictExpand(dict *ht, unsigned long size) {$/;"	f	file:
+dictFind	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static dictEntry *dictFind(dict *ht, const void *key) {$/;"	f	file:
+dictFreeEntryKey	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	90;"	d
+dictFreeEntryVal	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	79;"	d
+dictGenHashFunction	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static unsigned int dictGenHashFunction(const unsigned char *buf, int len) {$/;"	f	file:
+dictGetEntryKey	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	108;"	d
+dictGetEntryVal	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	109;"	d
+dictGetIterator	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static dictIterator *dictGetIterator(dict *ht) {$/;"	f	file:
+dictHashKey	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	106;"	d
+dictIterator	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^typedef struct dictIterator {$/;"	s
+dictIterator	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^} dictIterator;$/;"	t	typeref:struct:dictIterator
+dictNext	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static dictEntry *dictNext(dictIterator *iter) {$/;"	f	file:
+dictRelease	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static void dictRelease(dict *ht) {$/;"	f	file:
+dictReleaseIterator	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static void dictReleaseIterator(dictIterator *iter) {$/;"	f	file:
+dictReplace	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.c	/^static int dictReplace(dict *ht, void *key, void *val) {$/;"	f	file:
+dictSetHashKey	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	94;"	d
+dictSetHashVal	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	83;"	d
+dictSize	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	111;"	d
+dictSlots	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	110;"	d
+dictType	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^typedef struct dictType {$/;"	s
+dictType	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^} dictType;$/;"	t	typeref:struct:dictType
+disconnect	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static int disconnect(redisContext *c, int keep_fd) {$/;"	f	file:
+disconnectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-ae.c	/^void disconnectCallback(const redisAsyncContext *c, int status) {$/;"	f
+disconnectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libev.c	/^void disconnectCallback(const redisAsyncContext *c, int status) {$/;"	f
+disconnectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libevent.c	/^void disconnectCallback(const redisAsyncContext *c, int status) {$/;"	f
+disconnectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libuv.c	/^void disconnectCallback(const redisAsyncContext *c, int status) {$/;"	f
+display_config	/home/ubuntu/prads/src/config.c	/^void display_config(globalconfig *conf)$/;"	f
+dlog	/home/ubuntu/prads/src/sys_func.h	19;"	d
+dlog	/home/ubuntu/prads/src/sys_func.h	33;"	d
+do_resolve	/home/ubuntu/prads/src/sig_tcp.c	/^    do_resolve,$/;"	v	file:
+downcase	/home/ubuntu/prads/src/bstrlib.c	555;"	d	file:
+drop_privs	/home/ubuntu/prads/src/sys_func.c	/^int drop_privs(long userid, long groupid)$/;"	f
+drop_privs_flag	/home/ubuntu/prads/src/config.h	/^    uint8_t     drop_privs_flag;$/;"	m	struct:_globalconfig
+dst	/home/ubuntu/prads/src/bstraux.c	/^	bstring src, dst;$/;"	m	struct:bUuInOut	file:
+dst_port	/home/ubuntu/prads/src/prads.h	/^    uint16_t dst_port;          \/* destination port *\/$/;"	m	struct:_tcp_header
+dst_port	/home/ubuntu/prads/src/prads.h	/^    uint16_t dst_port;          \/* destination port *\/$/;"	m	struct:_udp_header
+dump_dhcp_sigs	/home/ubuntu/prads/src/dhcp.c	/^void dump_dhcp_sigs(dhcp_fp_entry *mysig[], int max)$/;"	f
+dump_dns	/home/ubuntu/prads/src/dump_dns.c	/^dump_dns(const u_char * payload, size_t paylen,$/;"	f
+dump_dns_rr	/home/ubuntu/prads/src/dump_dns.c	/^dump_dns_rr(ns_msg * msg, ns_rr * rr, ns_sect sect, FILE * trace)$/;"	f	file:
+dump_dns_sect	/home/ubuntu/prads/src/dump_dns.c	/^dump_dns_sect(ns_msg * msg, ns_sect sect, FILE * trace,$/;"	f	file:
+dump_macs	/home/ubuntu/prads/src/mac.c	/^void dump_macs(mac_entry **sig, int len)$/;"	f
+dump_packet	/home/ubuntu/prads/src/sig_tcp.c	/^void dump_packet(const uint8_t* pkt,uint16_t plen) {$/;"	f
+dump_payload	/home/ubuntu/prads/src/sig_tcp.c	/^void dump_payload(const uint8_t* data,uint16_t dlen) {$/;"	f
+dump_sig_service	/home/ubuntu/prads/src/servicefp/servicefp.c	/^void dump_sig_service(signature *sig, int len)$/;"	f
+dump_sigs	/home/ubuntu/prads/src/sig_tcp.c	/^void dump_sigs(fp_entry *mysig[], int max)$/;"	f
+ea_hdr	/home/ubuntu/prads/src/prads.h	/^    arphdr ea_hdr;              \/* fixed-size header *\/$/;"	m	struct:_ether_arp
+element	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    struct redisReply **element; \/* elements vector for REDIS_REPLY_ARRAY *\/$/;"	m	struct:redisReply	typeref:struct:redisReply::redisReply
+element_size	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.h	/^    size_t element_size;$/;"	m	struct:log_ringbuffer
+elements	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int elements; \/* number of elements in multibulk container *\/$/;"	m	struct:redisReadTask
+elements	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    size_t elements; \/* number of elements, for REDIS_REPLY_ARRAY *\/$/;"	m	struct:redisReply
+elog	/home/ubuntu/prads/src/sys_func.h	22;"	d
+elog	/home/ubuntu/prads/src/sys_func.h	27;"	d
+end_all_sessions	/home/ubuntu/prads/src/cxt.c	/^void end_all_sessions()$/;"	f
+end_log_stdout	/home/ubuntu/prads/src/output-plugins/log_stdout.c	/^int end_log_stdout (output_plugin *log)$/;"	f
+end_logging	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	/^void end_logging()$/;"	f
+end_output_log_file	/home/ubuntu/prads/src/output-plugins/log_file.c	/^int end_output_log_file (output_plugin* log)$/;"	f
+end_ptr	/home/ubuntu/prads/src/prads.h	/^    const uint8_t   *end_ptr;       \/* Paranoid end pointer of packet *\/$/;"	m	struct:_packetinfo
+end_sessions	/home/ubuntu/prads/src/cxt.c	/^void end_sessions()$/;"	f
+entry	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    dictEntry *entry, *nextEntry;$/;"	m	struct:dictIterator
+entry	/home/ubuntu/prads/src/bstrlib.h	/^    bstring * entry;$/;"	m	struct:bstrList
+err	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    int err;$/;"	m	struct:redisAsyncContext
+err	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int err; \/* Error flags, 0 when there is no error *\/$/;"	m	struct:redisContext
+err	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int err; \/* Error flags, 0 when there is no error *\/$/;"	m	struct:redisReader
+errbuf	/home/ubuntu/prads/src/config.h	/^    char        errbuf[PCAP_ERRBUF_SIZE];   \/**\/$/;"	m	struct:_globalconfig
+errstr	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    char *errstr;$/;"	m	struct:redisAsyncContext
+errstr	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    char errstr[128]; \/* String representation of error when applicable *\/$/;"	m	struct:redisContext
+errstr	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    char errstr[128]; \/* String representation of error when applicable *\/$/;"	m	struct:redisReader
+eth_82_8021	/home/ubuntu/prads/src/prads.h	220;"	d
+eth_82_ip_type	/home/ubuntu/prads/src/prads.h	222;"	d
+eth_82_mvid	/home/ubuntu/prads/src/prads.h	219;"	d
+eth_82_type	/home/ubuntu/prads/src/prads.h	218;"	d
+eth_82_vid	/home/ubuntu/prads/src/prads.h	221;"	d
+eth_8_ip_type	/home/ubuntu/prads/src/prads.h	216;"	d
+eth_8_type	/home/ubuntu/prads/src/prads.h	214;"	d
+eth_8_vid	/home/ubuntu/prads/src/prads.h	215;"	d
+eth_hdr	/home/ubuntu/prads/src/prads.h	/^    ether_header    *eth_hdr;       \/* Ethernet header struct pointer *\/$/;"	m	struct:_packetinfo
+eth_hlen	/home/ubuntu/prads/src/prads.h	/^    uint32_t        eth_hlen;       \/* Ethernet header lenght *\/$/;"	m	struct:_packetinfo
+eth_ip_type	/home/ubuntu/prads/src/prads.h	212;"	d
+eth_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t eth_recv;      \/* number of Ethernet packets received *\/$/;"	m	struct:_prads_stat
+eth_t_8021	/home/ubuntu/prads/src/prads.h	/^            uint16_t eth_t_8021; \/* ethernet type\/802.1Q tag *\/$/;"	m	struct:_ether_header::__anon8::qt
+eth_t_80212	/home/ubuntu/prads/src/prads.h	/^            uint16_t eth_t_80212;        \/* ethernet type\/802.1QinQ *\/$/;"	m	struct:_ether_header::__anon8::qot
+eth_t_82_8021	/home/ubuntu/prads/src/prads.h	/^            uint16_t eth_t_82_8021;$/;"	m	struct:_ether_header::__anon8::qot
+eth_t_82_mvid	/home/ubuntu/prads/src/prads.h	/^            uint16_t eth_t_82_mvid;$/;"	m	struct:_ether_header::__anon8::qot
+eth_t_82_type	/home/ubuntu/prads/src/prads.h	/^            uint16_t eth_t_82_type;$/;"	m	struct:_ether_header::__anon8::qot
+eth_t_82_vid	/home/ubuntu/prads/src/prads.h	/^            uint16_t eth_t_82_vid;$/;"	m	struct:_ether_header::__anon8::qot
+eth_t_8_type	/home/ubuntu/prads/src/prads.h	/^            uint16_t eth_t_8_type;$/;"	m	struct:_ether_header::__anon8::qt
+eth_t_8_vid	/home/ubuntu/prads/src/prads.h	/^            uint16_t eth_t_8_vid;$/;"	m	struct:_ether_header::__anon8::qt
+eth_type	/home/ubuntu/prads/src/prads.h	/^    uint16_t        eth_type;       \/* Ethernet type (IPv4\/IPv6\/etc) *\/$/;"	m	struct:_packetinfo
+ether_arp	/home/ubuntu/prads/src/prads.h	/^} ether_arp;$/;"	t	typeref:struct:_ether_arp
+ether_dst	/home/ubuntu/prads/src/prads.h	/^    uint8_t ether_dst[6];        \/* destination MAC *\/$/;"	m	struct:_ether_header
+ether_header	/home/ubuntu/prads/src/prads.h	/^} ether_header;$/;"	t	typeref:struct:_ether_header
+ether_src	/home/ubuntu/prads/src/prads.h	/^    uint8_t ether_src[6];        \/* source MAC *\/$/;"	m	struct:_ether_header
+ether_type	/home/ubuntu/prads/src/prads.h	/^            uint16_t ether_type; \/* ethernet type (normal) *\/$/;"	m	struct:_ether_header::__anon8::etht
+ether_type	/home/ubuntu/prads/src/prads.h	/^    uint16_t ether_type; \/**< ether type of the encapsulated traffic *\/$/;"	m	struct:_gre_header
+etht	/home/ubuntu/prads/src/prads.h	/^        struct etht {$/;"	s	union:_ether_header::__anon8
+etht	/home/ubuntu/prads/src/prads.h	/^        } etht;$/;"	m	union:_ether_header::__anon8	typeref:struct:_ether_header::__anon8::etht
+ev	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    } ev;$/;"	m	struct:redisAsyncContext	typeref:struct:redisAsyncContext::__anon1
+events	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^  int                events;$/;"	m	struct:redisLibuvEvents
+exvsnprintf	/home/ubuntu/prads/src/bstrlib.c	2730;"	d	file:
+exvsnprintf	/home/ubuntu/prads/src/bstrlib.c	2735;"	d	file:
+exvsnprintf	/home/ubuntu/prads/src/bstrlib.c	2745;"	d	file:
+fails	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static int tests = 0, fails = 0;$/;"	v	file:
+fatal	/home/ubuntu/prads/src/sys_func.h	37;"	d
+fd	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^    int fd;$/;"	m	struct:redisAeEvents
+fd	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int fd;$/;"	m	struct:redisContext
+fifo	/home/ubuntu/prads/src/config.h	/^    char       *fifo;                   \/* Path to FIFO output *\/$/;"	m	struct:_globalconfig
+fifo_arp	/home/ubuntu/prads/src/output-plugins/log_fifo.c	/^void fifo_arp (output_plugin *p, asset *main)$/;"	f
+fifo_end	/home/ubuntu/prads/src/output-plugins/log_fifo.c	/^int fifo_end (output_plugin *p)$/;"	f
+fifo_service	/home/ubuntu/prads/src/output-plugins/log_fifo.c	/^void fifo_service (output_plugin *p, asset *main, serv_asset *service, connection *cxt)$/;"	f
+fifo_stat	/home/ubuntu/prads/src/output-plugins/log_fifo.c	/^void fifo_stat (output_plugin *p, asset *rec, os_asset *os, \/*UNUSED*\/ connection *cxt)$/;"	f
+file	/home/ubuntu/prads/src/config.h	/^    char       *file;                   \/* config file location, if known *\/$/;"	m	struct:_globalconfig
+file	/home/ubuntu/prads/src/dhcp.h	/^    char file [128];             \/\/ Boot file name (128)$/;"	m	struct:_dhcp_header
+file	/home/ubuntu/prads/src/output-plugins/log.h	/^    FILE *file;         \/* File Reference *\/$/;"	m	struct:_log_file_conf
+file	/home/ubuntu/prads/src/output-plugins/log_sguil.h	/^   FILE *file;$/;"	m	struct:log_sguil
+file_arp	/home/ubuntu/prads/src/output-plugins/log_file.c	/^void file_arp (output_plugin *log, asset *main)$/;"	f
+file_os	/home/ubuntu/prads/src/output-plugins/log_file.c	/^file_os (output_plugin *log, asset *main, os_asset *os, connection *cxt)$/;"	f
+file_service	/home/ubuntu/prads/src/output-plugins/log_file.c	/^file_service (output_plugin* log,asset *main, serv_asset *service, connection *cxt)$/;"	f
+filename	/home/ubuntu/prads/src/output-plugins/log.h	/^    bstring filename;   \/* File's OS name *\/$/;"	m	struct:_log_file_conf
+filename	/home/ubuntu/prads/src/output-plugins/log_sguil.h	/^   const char *filename;$/;"	m	struct:log_sguil
+filter_packet	/home/ubuntu/prads/src/prads.c	/^inline int filter_packet(const int af, void *ipptr)$/;"	f
+find_dhcp_match	/home/ubuntu/prads/src/dhcp.c	/^dhcp_fp_entry *find_dhcp_match(dhcp_fp_entry *dhcpfp, packetinfo *pi)$/;"	f
+find_match	/home/ubuntu/prads/src/sig_tcp.c	/^fp_entry *find_match($/;"	f
+findreplaceengine	/home/ubuntu/prads/src/bstrlib.c	/^static int findreplaceengine (bstring b, const_bstring find, const_bstring repl, int pos, instr_fnptr instr) {$/;"	f	file:
+first_seen	/home/ubuntu/prads/src/prads.h	/^    time_t first_seen;          \/* Time at which asset was first seen. *\/$/;"	m	struct:_asset
+first_seen	/home/ubuntu/prads/src/prads.h	/^    time_t first_seen;          \/* Time at which os_asset was first detected. *\/$/;"	m	struct:_os_asset
+first_seen	/home/ubuntu/prads/src/prads.h	/^    time_t first_seen;          \/* Time at which service_asset was first seen. *\/$/;"	m	struct:_serv_asset
+flags	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int flags;$/;"	m	struct:redisContext
+flags	/home/ubuntu/prads/src/dhcp.h	/^    uint16_t flags;              \/\/ flags (3)$/;"	m	struct:_dhcp_header
+flags	/home/ubuntu/prads/src/output-plugins/log.h	/^   int flags;$/;"	m	struct:_output_plugin
+flags	/home/ubuntu/prads/src/prads.h	/^    uint8_t flags; \/**< GRE packet flags *\/$/;"	m	struct:_gre_header
+flip_connection	/home/ubuntu/prads/src/assets.c	/^void flip_connection(packetinfo *pi, asset* masset)$/;"	f
+fmask	/home/ubuntu/prads/src/prads.h	/^} fmask;$/;"	t	typeref:struct:_fmask
+fn	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    redisCallbackFn *fn;$/;"	m	struct:redisCallback
+fn	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    redisReplyObjectFunctions *fn;$/;"	m	struct:redisReader
+fp	/home/ubuntu/prads/src/prads.h	/^    fp_entry fp; $/;"	m	struct:_os_asset
+fp_entry	/home/ubuntu/prads/src/prads.h	/^} fp_entry;$/;"	t	typeref:struct:_fp_entry
+fp_icmp4	/home/ubuntu/prads/src/ipfp/icmp_fp.c	/^void fp_icmp4(packetinfo *pi, ip4_header * ip4, icmp_header * icpmh,$/;"	f
+fp_icmp6	/home/ubuntu/prads/src/ipfp/icmp_fp.c	/^void fp_icmp6(packetinfo *pi, ip6_header * ip6, icmp6_header * icpmh,$/;"	f
+fp_tcp	/home/ubuntu/prads/src/sig_tcp.c	/^fp_entry *fp_tcp(packetinfo *pi, uint8_t ftype)$/;"	f
+fp_udp4	/home/ubuntu/prads/src/ipfp/udp_fp.c	/^void fp_udp4(packetinfo *pi, ip4_header * ip4, udp_header * udph, const uint8_t * end_ptr)$/;"	f
+free	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.h	/^    unsigned int free;$/;"	m	struct:sdshdr
+freeObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void (*freeObject)(void*);$/;"	m	struct:redisReplyObjectFunctions
+freeReplyObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^void freeReplyObject(void *reply) {$/;"	f
+free_config	/home/ubuntu/prads/src/config.c	/^void free_config()$/;"	f
+free_dhcp_sigs	/home/ubuntu/prads/src/dhcp.c	/^static void free_dhcp_sigs(dhcp_fp_entry *e){$/;"	f	file:
+free_signature_list	/home/ubuntu/prads/src/servicefp/servicefp.c	/^void free_signature_list (signature *head)$/;"	f
+free_sigs	/home/ubuntu/prads/src/sig_tcp.c	/^static void free_sigs(fp_entry *e){$/;"	f	file:
+full_dump	/home/ubuntu/prads/src/sig_tcp.c	/^    full_dump, use_fuzzy, payload_dump;$/;"	v	file:
+game_over	/home/ubuntu/prads/src/prads.c	/^void game_over()$/;"	f
+gameover	/home/ubuntu/prads/src/prads.c	/^int inpacket, gameover, intr_flag;$/;"	v
+genBstrList	/home/ubuntu/prads/src/bstrlib.c	/^struct genBstrList {$/;"	s	file:
+gen_fp_icmp	/home/ubuntu/prads/src/ipfp/ipfp.c	/^void gen_fp_icmp(uint8_t type,$/;"	f
+gen_fp_tcp	/home/ubuntu/prads/src/sig_tcp.c	/^bstring gen_fp_tcp(fp_entry *e, uint32_t tstamp, uint8_t tf)$/;"	f
+gen_fp_tcpopt	/home/ubuntu/prads/src/sig_tcp.c	/^bstring gen_fp_tcpopt(uint32_t ocnt, uint8_t op[], uint16_t mss, uint16_t wss, uint16_t wsc, uint32_t tstamp)$/;"	f
+gen_fp_tcpquirks	/home/ubuntu/prads/src/sig_tcp.c	/^bstring gen_fp_tcpquirks(uint32_t quirks)$/;"	f
+gen_fp_udp	/home/ubuntu/prads/src/ipfp/ipfp.c	/^void gen_fp_udp(uint16_t totlen,$/;"	f
+generic	/home/ubuntu/prads/src/prads.h	/^    uint8_t generic;            \/* Generic hit *\/$/;"	m	struct:_fp_entry
+getCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-ae.c	/^void getCallback(redisAsyncContext *c, void *r, void *privdata) {$/;"	f
+getCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libev.c	/^void getCallback(redisAsyncContext *c, void *r, void *privdata) {$/;"	f
+getCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libevent.c	/^void getCallback(redisAsyncContext *c, void *r, void *privdata) {$/;"	f
+getCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libuv.c	/^void getCallback(redisAsyncContext *c, void *r, void *privdata) {$/;"	f
+get_app_name	/home/ubuntu/prads/src/servicefp/servicefp.c	/^bstring get_app_name(signature * sig,$/;"	f
+get_gid	/home/ubuntu/prads/src/sys_func.c	/^long get_gid(const char *group_name)$/;"	f
+get_uid	/home/ubuntu/prads/src/sys_func.c	/^long get_uid(const char *user_name, int *out_gid)$/;"	f
+giaddr	/home/ubuntu/prads/src/dhcp.h	/^    uint32_t giaddr;             \/\/ relay agent IP (5)$/;"	m	struct:_dhcp_header
+globalconfig	/home/ubuntu/prads/src/config.h	/^} globalconfig;$/;"	t	typeref:struct:_globalconfig
+got_packet	/home/ubuntu/prads/src/prads.c	/^void got_packet(u_char * useless, const struct pcap_pkthdr *pheader,$/;"	f
+got_packets	/home/ubuntu/prads/src/prads.h	/^    uint32_t got_packets;   \/* number of packets received by prads *\/$/;"	m	struct:_prads_stat
+grab_name	/home/ubuntu/prads/src/sig_tcp.c	/^static inline char* grab_name(uint8_t* a) {$/;"	f	file:
+gre_header	/home/ubuntu/prads/src/prads.h	/^} gre_header;$/;"	t	typeref:struct:_gre_header
+gre_hlen	/home/ubuntu/prads/src/prads.h	/^    uint16_t        gre_hlen;       \/* Length of dynamic GRE header length *\/$/;"	m	struct:_packetinfo
+gre_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t gre_recv;      \/* number of GRE packets received *\/$/;"	m	struct:_prads_stat
+gre_sre_header	/home/ubuntu/prads/src/prads.h	/^} gre_sre_header;$/;"	t	typeref:struct:_gre_sre_header
+greh	/home/ubuntu/prads/src/prads.h	/^    gre_header      *greh;          \/* GRE header struct pointer *\/$/;"	m	struct:_packetinfo
+group_name	/home/ubuntu/prads/src/config.h	/^    char        *group_name;            \/* Groupe to drop privileges too *\/$/;"	m	struct:_globalconfig
+gwaddr	/home/ubuntu/prads/src/prads.h	/^        struct in_addr gwaddr;$/;"	m	union:_icmp_header::__anon9	typeref:struct:_icmp_header::__anon9::in_addr
+h_port	/home/ubuntu/prads/src/prads.h	/^    uint16_t h_port;            \/* High port *\/$/;"	m	struct:_port_t
+handle	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^  uv_poll_t          handle;$/;"	m	struct:redisLibuvEvents
+handle	/home/ubuntu/prads/src/config.h	/^    pcap_t              *handle;        \/* Pointer to libpcap handle *\/$/;"	m	struct:_globalconfig
+hashFunction	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    unsigned int (*hashFunction)(const void *key);$/;"	m	struct:dictType
+hash_mac	/home/ubuntu/prads/src/mac.h	/^static inline uint32_t hash_mac(const uint8_t mac[], const uint8_t octets)$/;"	f
+head	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    redisCallback *head, *tail;$/;"	m	struct:redisCallbackList
+head	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.h	/^    unsigned int head;$/;"	m	struct:log_ringbuffer
+hex2mac	/home/ubuntu/prads/src/sys_func.c	/^char *hex2mac(const uint8_t *mac)$/;"	f
+hex_digit_to_int	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^int hex_digit_to_int(char c) {$/;"	f
+hlen	/home/ubuntu/prads/src/dhcp.h	/^    uint8_t hlen;$/;"	m	struct:_dhcp_header
+hop_lmt	/home/ubuntu/prads/src/prads.h	/^    uint8_t hop_lmt;            \/* hop limit *\/$/;"	m	struct:_ip6_header
+hops	/home/ubuntu/prads/src/dhcp.h	/^    uint8_t hops;$/;"	m	struct:_dhcp_header
+host	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^        const char *host;$/;"	m	struct:config::__anon3	file:
+ht	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    dict *ht;$/;"	m	struct:dictIterator
+htype	/home/ubuntu/prads/src/dhcp.h	/^    uint8_t htype;$/;"	m	struct:_dhcp_header
+hw_proto	/home/ubuntu/prads/src/prads.h	/^    uint16_t hw_proto;            \/* layer2 protocol *\/$/;"	m	struct:_connection
+i	/home/ubuntu/prads/src/prads.h	/^    uint64_t i[2];$/;"	m	union:_i4vector
+i_attempts	/home/ubuntu/prads/src/prads.h	/^    unsigned short i_attempts;  \/* Attempts at identifying the asset. *\/$/;"	m	struct:_asset
+i_attempts	/home/ubuntu/prads/src/prads.h	/^    unsigned short i_attempts;  \/* Attempts at identifying the service_asset. *\/$/;"	m	struct:_serv_asset
+i_attempts	/home/ubuntu/prads/src/prads.h	/^    unsigned short i_attempts;  \/* Failed attempts at identifying the os_asset. (hench just unknown) *\/$/;"	m	struct:_os_asset
+icmp6_data	/home/ubuntu/prads/src/prads.h	/^    } icmp6_data;$/;"	m	struct:_icmp6_header	typeref:union:_icmp6_header::__anon11
+icmp6_data16	/home/ubuntu/prads/src/prads.h	/^        uint16_t icmp6_data16[2];       \/* type-specific field *\/$/;"	m	union:_icmp6_header::__anon11
+icmp6_data32	/home/ubuntu/prads/src/prads.h	/^        uint32_t icmp6_data32[1];       \/* type-specific field *\/$/;"	m	union:_icmp6_header::__anon11
+icmp6_data8	/home/ubuntu/prads/src/prads.h	/^        uint8_t icmp6_data8[4]; \/* type-specific field *\/$/;"	m	union:_icmp6_header::__anon11
+icmp6_header	/home/ubuntu/prads/src/prads.h	/^} icmp6_header;$/;"	t	typeref:struct:_icmp6_header
+icmp6_id	/home/ubuntu/prads/src/prads.h	421;"	d
+icmp6_seq	/home/ubuntu/prads/src/prads.h	422;"	d
+icmp6h	/home/ubuntu/prads/src/prads.h	/^    icmp6_header    *icmp6h;        \/* icmp6 header struct pointer *\/ $/;"	m	struct:_packetinfo
+icmp_dun	/home/ubuntu/prads/src/prads.h	/^    } icmp_dun;$/;"	m	struct:_icmp_header	typeref:union:_icmp_header::__anon10
+icmp_header	/home/ubuntu/prads/src/prads.h	/^} icmp_header;$/;"	t	typeref:struct:_icmp_header
+icmp_hun	/home/ubuntu/prads/src/prads.h	/^    } icmp_hun;$/;"	m	struct:_icmp_header	typeref:union:_icmp_header::__anon9
+icmp_os_assets	/home/ubuntu/prads/src/prads.h	/^    uint32_t icmp_os_assets;\/* total number of icmp os assets detected *\/$/;"	m	struct:_prads_stat
+icmp_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t icmp_recv;     \/* number of icmp packets received *\/$/;"	m	struct:_prads_stat
+icmph	/home/ubuntu/prads/src/prads.h	/^    icmp_header     *icmph;         \/* icmp header struct pointer *\/$/;"	m	struct:_packetinfo
+id	/home/ubuntu/prads/src/prads.h	/^            uint16_t id;$/;"	m	struct:_icmp_header::__anon9::idseq
+idseq	/home/ubuntu/prads/src/prads.h	/^        struct idseq {$/;"	s	union:_icmp_header::__anon9
+idseq	/home/ubuntu/prads/src/prads.h	/^        } idseq;$/;"	m	union:_icmp_header::__anon9	typeref:struct:_icmp_header::__anon9::idseq
+idx	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int idx; \/* index in parent (array) object *\/$/;"	m	struct:redisReadTask
+ih_ip	/home/ubuntu/prads/src/prads.h	/^        struct ih_ip {$/;"	s	union:_icmp_header::__anon10
+index	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    int index;$/;"	m	struct:dictIterator
+init	/home/ubuntu/prads/src/output-plugins/log.h	/^   int (*init)(struct _output_plugin*, const char*, int);$/;"	m	struct:_output_plugin
+init_log_fifo	/home/ubuntu/prads/src/output-plugins/log_fifo.c	/^output_plugin *init_log_fifo()$/;"	f
+init_log_file	/home/ubuntu/prads/src/output-plugins/log_file.c	/^output_plugin *init_log_file ()$/;"	f
+init_log_ringbuffer	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.c	/^output_plugin *init_log_ringbuffer()$/;"	f
+init_log_sguil	/home/ubuntu/prads/src/output-plugins/log_sguil.c	/^output_plugin *init_log_sguil(){$/;"	f
+init_log_stdout	/home/ubuntu/prads/src/output-plugins/log_stdout.c	/^output_plugin *init_log_stdout()$/;"	f
+init_logging	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	/^int init_logging(int logtype, const char *file, int flags)$/;"	f
+init_output_fifo	/home/ubuntu/prads/src/output-plugins/log_fifo.c	/^int init_output_fifo (output_plugin *p, const char* fifo_file, int flags)$/;"	f
+init_output_log_file	/home/ubuntu/prads/src/output-plugins/log_file.c	/^int init_output_log_file (output_plugin *log, const char *file, int flags)$/;"	f
+init_output_sguil	/home/ubuntu/prads/src/output-plugins/log_sguil.c	/^int init_output_sguil(output_plugin *p, const char* log_prefix, int check_time)$/;"	f
+init_output_stdout	/home/ubuntu/prads/src/output-plugins/log_stdout.c	/^int init_output_stdout(output_plugin *p, const char *f, int flags)$/;"	f
+init_ringbuffer	/home/ubuntu/prads/src/shm-client.c	/^int init_ringbuffer(struct log_ringbuffer **rb) {$/;"	f
+init_services	/home/ubuntu/prads/src/servicefp/servicefp.c	/^void init_services()$/;"	f
+inpacket	/home/ubuntu/prads/src/prads.c	/^int inpacket, gameover, intr_flag;$/;"	v
+instr_fnptr	/home/ubuntu/prads/src/bstrlib.c	/^typedef int (*instr_fnptr) (const_bstring s1, int pos, const_bstring s2);$/;"	t	file:
+integer	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    long long integer; \/* The integer when type is REDIS_REPLY_INTEGER *\/$/;"	m	struct:redisReply
+internal_bwswriteout	/home/ubuntu/prads/src/bstraux.c	1014;"	d	file:
+intlen	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static int intlen(int i) {$/;"	f	file:
+intr_flag	/home/ubuntu/prads/src/prads.c	/^int inpacket, gameover, intr_flag;$/;"	v
+invalid	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        redisCallbackList invalid;$/;"	m	struct:redisAsyncContext::__anon2
+invertCharField	/home/ubuntu/prads/src/bstrlib.c	/^static void invertCharField (struct charField * cf) {$/;"	f	file:
+io	/home/ubuntu/prads/src/bstraux.c	/^	struct bUuInOut io;$/;"	m	struct:bsUuCtx	typeref:struct:bsUuCtx::bUuInOut	file:
+ip	/home/ubuntu/prads/src/prads.h	/^            ip4_header *ip;$/;"	m	struct:_icmp_header::__anon10::ih_ip
+ip	/home/ubuntu/prads/src/prads.h	/^        } ip;$/;"	m	union:_icmp_header::__anon10	typeref:struct:_icmp_header::__anon10::ih_ip
+ip4	/home/ubuntu/prads/src/prads.h	/^    ip4_header      *ip4;           \/* IPv4 header struct pointer *\/$/;"	m	struct:_packetinfo
+ip4_header	/home/ubuntu/prads/src/prads.h	/^} ip4_header;$/;"	t	typeref:struct:_ip4_header
+ip4_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t ip4_recv;      \/* number of IPv4 packets received *\/$/;"	m	struct:_prads_stat
+ip4ip_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t ip4ip_recv;    \/* number of IP4\/6 packets in IPv4 packets *\/$/;"	m	struct:_prads_stat
+ip6	/home/ubuntu/prads/src/prads.h	/^    ip6_header      *ip6;           \/* IPv6 header struct pointer *\/$/;"	m	struct:_packetinfo
+ip6	/home/ubuntu/prads/src/prads.h	/^    struct in6_addr ip6;$/;"	m	union:_i4vector	typeref:struct:_i4vector::in6_addr
+ip6_header	/home/ubuntu/prads/src/prads.h	/^} ip6_header;$/;"	t	typeref:struct:_ip6_header
+ip6_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t ip6_recv;      \/* number of IPv6 packets received *\/$/;"	m	struct:_prads_stat
+ip6ip_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t ip6ip_recv;    \/* number of IP4\/6 packets in IPv6 packets *\/$/;"	m	struct:_prads_stat
+ip6v	/home/ubuntu/prads/src/prads.h	/^} ip6v;$/;"	t	typeref:union:_i4vector
+ip_addr	/home/ubuntu/prads/src/prads.h	/^    struct in6_addr ip_addr;    \/* IP asset address *\/$/;"	m	struct:_asset	typeref:struct:_asset::in6_addr
+ip_csum	/home/ubuntu/prads/src/prads.h	/^    uint16_t ip_csum;           \/* checksum *\/$/;"	m	struct:_ip4_header
+ip_dst	/home/ubuntu/prads/src/prads.h	/^    struct in6_addr ip_dst;     \/* dest address *\/$/;"	m	struct:_ip6_header	typeref:struct:_ip6_header::in6_addr
+ip_dst	/home/ubuntu/prads/src/prads.h	/^    uint32_t ip_dst;            \/* dest address *\/$/;"	m	struct:_ip4_header
+ip_id	/home/ubuntu/prads/src/prads.h	/^    uint16_t ip_id;             \/* identification *\/$/;"	m	struct:_ip4_header
+ip_len	/home/ubuntu/prads/src/prads.h	/^    uint16_t ip_len;            \/* total length *\/$/;"	m	struct:_ip4_header
+ip_off	/home/ubuntu/prads/src/prads.h	/^    uint16_t ip_off;            \/* fragment offset field *\/$/;"	m	struct:_ip4_header
+ip_p	/home/ubuntu/prads/src/prads.h	/^    uint8_t ip_p;               \/* protocol *\/$/;"	m	struct:_ip4_header
+ip_src	/home/ubuntu/prads/src/prads.h	/^    struct in6_addr ip_src;     \/* source address *\/$/;"	m	struct:_ip6_header	typeref:struct:_ip6_header::in6_addr
+ip_src	/home/ubuntu/prads/src/prads.h	/^    uint32_t ip_src;            \/* source address *\/$/;"	m	struct:_ip4_header
+ip_tos	/home/ubuntu/prads/src/prads.h	/^    uint8_t ip_tos;             \/* type of service *\/$/;"	m	struct:_ip4_header
+ip_ttl	/home/ubuntu/prads/src/prads.h	/^    uint8_t ip_ttl;             \/* time to live *\/$/;"	m	struct:_ip4_header
+ip_vhl	/home/ubuntu/prads/src/prads.h	/^    uint8_t ip_vhl;             \/* version << 4 | header length >> 2 *\/$/;"	m	struct:_ip4_header
+ipm_void	/home/ubuntu/prads/src/prads.h	/^            uint16_t ipm_void;$/;"	m	struct:_icmp_header::__anon9::pmtu
+isEOF	/home/ubuntu/prads/src/bstraux.c	/^    int isEOF;       \/* track stream's EOF state                 *\/$/;"	m	struct:bwriteStream	file:
+isEOF	/home/ubuntu/prads/src/bstrlib.c	/^	int isEOF;		\/* track file's EOF state *\/$/;"	m	struct:bStream	file:
+is_hex_digit	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^int is_hex_digit(char c) {$/;"	f
+is_valid_path	/home/ubuntu/prads/src/sys_func.c	/^int is_valid_path(const char *path)$/;"	f
+items	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.h	/^    struct ring_item items[RINGBUFFER_ITEMS];$/;"	m	struct:log_ringbuffer	typeref:struct:log_ringbuffer::ring_item
+key	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    void *key;$/;"	m	struct:dictEntry
+keyCompare	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    int (*keyCompare)(void *privdata, const void *key1, const void *key2);$/;"	m	struct:dictType
+keyDestructor	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    void (*keyDestructor)(void *privdata, void *key);$/;"	m	struct:dictType
+keyDup	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    void *(*keyDup)(void *privdata, const void *key);$/;"	m	struct:dictType
+last_pkt_time	/home/ubuntu/prads/src/prads.h	/^    time_t   last_pkt_time;       \/* last seen packet time *\/$/;"	m	struct:_connection
+last_seen	/home/ubuntu/prads/src/prads.h	/^    time_t last_seen;           \/* Time at which asset was last seen. *\/$/;"	m	struct:_asset
+last_seen	/home/ubuntu/prads/src/prads.h	/^    time_t last_seen;           \/* Time at which os_asset was last detected. *\/$/;"	m	struct:_os_asset
+last_seen	/home/ubuntu/prads/src/prads.h	/^    time_t last_seen;           \/* Time at which service_asset was last seen. *\/$/;"	m	struct:_serv_asset
+len	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int len; \/* Length of string *\/$/;"	m	struct:redisReply
+len	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    size_t len; \/* Buffer length *\/$/;"	m	struct:redisReader
+len	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.h	/^    unsigned int len;$/;"	m	struct:sdshdr
+len	/home/ubuntu/prads/src/prads.h	/^    uint16_t len;               \/* length of the payload *\/$/;"	m	struct:_ip6_header
+len	/home/ubuntu/prads/src/prads.h	/^    uint16_t len;               \/* length of the payload *\/$/;"	m	struct:_udp_header
+lifetime	/home/ubuntu/prads/src/prads.h	/^            uint16_t lifetime;$/;"	m	struct:_icmp_header::__anon9::rtradv
+line	/home/ubuntu/prads/src/prads.h	/^    uint32_t line;              \/* config file line *\/$/;"	m	struct:_dhcp_fp_entry
+line	/home/ubuntu/prads/src/prads.h	/^    uint32_t line;              \/* config file line *\/$/;"	m	struct:_fp_entry
+load_bpf	/home/ubuntu/prads/src/prads.c	/^int load_bpf(globalconfig* conf, const char* file)$/;"	f
+load_dhcp_sigs	/home/ubuntu/prads/src/dhcp.c	/^int load_dhcp_sigs(const char *file, dhcp_fp_entry **dhcpsp[], int hashsize)$/;"	f
+load_foo	/home/ubuntu/prads/src/prads.c	1435;"	d	file:
+load_known_ports_file	/home/ubuntu/prads/src/servicefp/servicefp.c	/^void load_known_ports_file(char *filename, port_t *lports)$/;"	f
+load_mac	/home/ubuntu/prads/src/mac.c	/^int load_mac(const char *file, mac_entry **sigp[], int hashsize)$/;"	f
+load_servicefp_file	/home/ubuntu/prads/src/servicefp/servicefp.c	/^int load_servicefp_file(char *sigfile, signature **db, int len)$/;"	f
+load_sigs	/home/ubuntu/prads/src/sig_tcp.c	/^int load_sigs(const char *file, fp_entry **sigp[], int hashsize)$/;"	f
+log_asset_arp	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	/^void log_asset_arp (asset *masset)$/;"	f
+log_asset_os	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	/^void log_asset_os (asset *main, os_asset *os, connection *cxt)$/;"	f
+log_asset_service	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	/^void log_asset_service (asset *main, serv_asset *service, connection *cxt)$/;"	f
+log_connection	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	/^void log_connection(connection *cxt, int cxstatus)$/;"	f
+log_connection_all	/home/ubuntu/prads/src/cxt.c	/^void log_connection_all()$/;"	f
+log_file_conf	/home/ubuntu/prads/src/output-plugins/log.h	/^}   log_file_conf;$/;"	t	typeref:struct:_log_file_conf
+log_flags	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { VERBOSE = 0x01, FLAGS } log_flags;$/;"	v	typeref:enum:__anon7
+log_foo	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	64;"	d	file:
+log_output	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	/^output_plugin *log_output[LOG_MAX];$/;"	v
+log_ringbuffer	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.h	/^struct log_ringbuffer {$/;"	s
+log_ringbuffer_connection	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.c	/^void log_ringbuffer_connection (output_plugin *plugin, connection *cxt, int outputmode)$/;"	f
+log_rotate	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	/^void log_rotate(time_t t)$/;"	f
+log_sguil	/home/ubuntu/prads/src/output-plugins/log_sguil.h	/^struct log_sguil {$/;"	s
+log_types	/home/ubuntu/prads/src/output-plugins/log.h	/^enum { LOG_STDOUT, LOG_FILE, LOG_FIFO, LOG_UNIFIED, LOG_SGUIL, LOG_RINGBUFFER, LOG_MAX } log_types;$/;"	v	typeref:enum:__anon6
+lookup_link	/home/ubuntu/prads/src/sig_tcp.c	/^uint8_t* lookup_link(uint16_t mss, uint8_t txt) {$/;"	f
+lookup_tos	/home/ubuntu/prads/src/sig_tcp.c	/^static char* lookup_tos(uint8_t t) {$/;"	f	file:
+loop	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^    aeEventLoop *loop;$/;"	m	struct:redisAeEvents
+loop	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^    struct ev_loop *loop;$/;"	m	struct:redisLibevEvents	typeref:struct:redisLibevEvents::ev_loop
+loop	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-ae.c	/^static aeEventLoop *loop;$/;"	v	file:
+lports	/home/ubuntu/prads/src/config.h	/^    port_t      *lports[MAX_IP_PROTO];  \/* Pointer to list of known ports *\/$/;"	m	struct:_globalconfig
+mac_addr	/home/ubuntu/prads/src/prads.h	/^    uint8_t mac_addr[MAC_ADDR_LEN];       \/* Asset MAC address *\/$/;"	m	struct:_asset
+mac_entry	/home/ubuntu/prads/src/prads.h	/^} mac_entry;$/;"	t	typeref:struct:_mac_entry
+mac_hashsize	/home/ubuntu/prads/src/config.h	/^    uint32_t     mac_hashsize;          \/* size of mac hash *\/$/;"	m	struct:_globalconfig
+macentry	/home/ubuntu/prads/src/prads.h	/^    mac_entry *macentry;        \/* Asset MAC vendor name *\/$/;"	m	struct:_asset
+main	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-ae.c	/^int main (int argc, char **argv) {$/;"	f
+main	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libev.c	/^int main (int argc, char **argv) {$/;"	f
+main	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libevent.c	/^int main (int argc, char **argv) {$/;"	f
+main	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example-libuv.c	/^int main (int argc, char **argv) {$/;"	f
+main	/home/ubuntu/prads/redis-lib/deps/hiredis/examples/example.c	/^int main(int argc, char **argv) {$/;"	f
+main	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^int main(void) {$/;"	f
+main	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^int main(int argc, char **argv) {$/;"	f
+main	/home/ubuntu/prads/src/prads.c	/^int main(int argc, char *argv[])$/;"	f
+main	/home/ubuntu/prads/src/shm-client.c	/^int main(int argc, char *argv[])$/;"	f
+main	/home/ubuntu/prads/src/sig_tcp.c	/^int main(int argc, char **argv)$/;"	f
+mask	/home/ubuntu/prads/src/prads.h	/^        struct in6_addr mask;$/;"	m	union:_fmask::__anon16	typeref:struct:_fmask::__anon16::in6_addr
+mask	/home/ubuntu/prads/src/prads.h	/^        uint32_t mask;$/;"	m	union:_icmp_header::__anon10
+mask	/home/ubuntu/prads/src/prads.h	/^    struct in6_addr mask;$/;"	m	struct:_fmask	typeref:struct:_fmask::in6_addr
+mask	/home/ubuntu/prads/src/prads.h	/^  uint8_t mask; \/\/ optional$/;"	m	struct:_mac_entry
+mask64	/home/ubuntu/prads/src/prads.h	/^        uint64_t mask64[2];$/;"	m	union:_fmask::__anon16
+mask_v	/home/ubuntu/prads/src/prads.h	/^        v4si mask_v;$/;"	m	union:_fmask::__anon16
+match_desc	/home/ubuntu/prads/src/prads.h	/^    char *match_desc;$/;"	m	struct:_os_asset
+match_mac	/home/ubuntu/prads/src/mac.c	/^mac_entry *match_mac(mac_entry **db, const uint8_t mac[], uint8_t mask)$/;"	f
+match_os	/home/ubuntu/prads/src/prads.h	/^    char *match_os;$/;"	m	struct:_os_asset
+matched	/home/ubuntu/prads/src/prads.h	/^        uint32_t    matched;    \/* How many times it has matched*\/$/;"	m	struct:_signature::__anon14
+matched_fp	/home/ubuntu/prads/src/prads.h	/^    bstring matched_fp;         \/* The FP that matched [*:*:*:*.*:*:---] *\/$/;"	m	struct:_os_asset
+maxBuffSz	/home/ubuntu/prads/src/bstrlib.c	/^	int maxBuffSz;$/;"	m	struct:bStream	file:
+maxbuf	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    size_t maxbuf; \/* Max length of unused buffer *\/$/;"	m	struct:redisReader
+minBuffSz	/home/ubuntu/prads/src/bstraux.c	/^    int minBuffSz;$/;"	m	struct:bwriteStream	file:
+misc	/home/ubuntu/prads/src/prads.h	/^        bstring misc;           \/* Misc info *\/$/;"	m	struct:_signature::__anon13
+mlen	/home/ubuntu/prads/src/bstrlib.h	/^	int mlen;$/;"	m	struct:tagbstring
+mlen	/home/ubuntu/prads/src/bstrlib.h	/^    int qty, mlen;$/;"	m	struct:bstrList
+mode_oneline	/home/ubuntu/prads/src/sig_tcp.c	/^    mode_oneline,$/;"	v	file:
+moveToNextTask	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void moveToNextTask(redisReader *r) {$/;"	f	file:
+mss	/home/ubuntu/prads/src/prads.h	/^    uint16_t wsc, mss;          \/* value for WSCALE and MSS options *\/$/;"	m	struct:_fp_entry
+mss_mod	/home/ubuntu/prads/src/prads.h	/^    uint8_t wsc_mod, mss_mod;   \/* modulo for WSCALE and MSS (NONE or CONST) *\/$/;"	m	struct:_fp_entry
+mtu	/home/ubuntu/prads/src/mtu.h	/^  uint16_t mtu;$/;"	m	struct:mtu_def
+mtu	/home/ubuntu/prads/src/mtu.h	/^static struct mtu_def mtu[] = {$/;"	v	typeref:struct:mtu_def
+mtu	/home/ubuntu/prads/src/prads.h	/^    uint16_t mtu;               \/* IPv4:MTU = MSS + 40 | IPv6:MTU = MSS + 60 *\/$/;"	m	struct:_os_asset
+mtu_def	/home/ubuntu/prads/src/mtu.h	/^struct mtu_def {$/;"	s
+mvlan	/home/ubuntu/prads/src/prads.h	/^    uint16_t        mvlan;          \/* Metro vlan tag *\/$/;"	m	struct:_packetinfo
+n_outputs	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	/^int n_outputs = 0;$/;"	v
+net_ip_string	/home/ubuntu/prads/src/config.h	/^    char        *net_ip_string;         \/**\/$/;"	m	struct:_globalconfig
+net_mask	/home/ubuntu/prads/src/config.h	/^    bpf_u_int32         net_mask;       \/**\/$/;"	m	struct:_globalconfig
+nets	/home/ubuntu/prads/src/prads.c	/^int nets = 1;$/;"	v
+network	/home/ubuntu/prads/src/config.h	/^    fmask       *network[MAX_NETS];     \/* Struct for fmask *\/$/;"	m	struct:_globalconfig
+network	/home/ubuntu/prads/src/prads.c	/^fmask network[MAX_NETS];$/;"	v
+next	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    struct redisCallback *next; \/* simple singly linked list *\/$/;"	m	struct:redisCallback	typeref:struct:redisCallback::redisCallback
+next	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    struct dictEntry *next;$/;"	m	struct:dictEntry	typeref:struct:dictEntry::dictEntry
+next	/home/ubuntu/prads/src/prads.h	/^    struct   _connection *next;$/;"	m	struct:_connection	typeref:struct:_connection::_connection
+next	/home/ubuntu/prads/src/prads.h	/^    struct _asset *next;        \/* Next ip_asset structure *\/$/;"	m	struct:_asset	typeref:struct:_asset::_asset
+next	/home/ubuntu/prads/src/prads.h	/^    struct _dhcp_fp_entry *next;$/;"	m	struct:_dhcp_fp_entry	typeref:struct:_dhcp_fp_entry::_dhcp_fp_entry
+next	/home/ubuntu/prads/src/prads.h	/^    struct _fp_entry *next;$/;"	m	struct:_fp_entry	typeref:struct:_fp_entry::_fp_entry
+next	/home/ubuntu/prads/src/prads.h	/^    struct _os_asset *next;     \/* Next os_asset structure *\/$/;"	m	struct:_os_asset	typeref:struct:_os_asset::_os_asset
+next	/home/ubuntu/prads/src/prads.h	/^    struct _port_t *next;       \/* Next port_t structure *\/$/;"	m	struct:_port_t	typeref:struct:_port_t::_port_t
+next	/home/ubuntu/prads/src/prads.h	/^    struct _serv_asset *next;   \/* Next serv_asset structure *\/$/;"	m	struct:_serv_asset	typeref:struct:_serv_asset::_serv_asset
+next	/home/ubuntu/prads/src/prads.h	/^    struct _signature *next;    \/* Next record in the list. *\/$/;"	m	struct:_signature	typeref:struct:_signature::_signature
+next	/home/ubuntu/prads/src/prads.h	/^    uint8_t next;               \/* next header$/;"	m	struct:_ip6_header
+next	/home/ubuntu/prads/src/prads.h	/^  struct _mac_entry *next;$/;"	m	struct:_mac_entry	typeref:struct:_mac_entry::_mac_entry
+nextArgument	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static char *nextArgument(char *start, char **str, size_t *len) {$/;"	f	file:
+nextEntry	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    dictEntry *entry, *nextEntry;$/;"	m	struct:dictIterator
+nextmtu	/home/ubuntu/prads/src/prads.h	/^            uint16_t nextmtu;$/;"	m	struct:_icmp_header::__anon9::pmtu
+no_detail	/home/ubuntu/prads/src/prads.h	/^    uint8_t no_detail;          \/* Disable guesstimates *\/$/;"	m	struct:_fp_entry
+no_extra	/home/ubuntu/prads/src/sig_tcp.c	/^static uint8_t no_extra,$/;"	v	file:
+no_known	/home/ubuntu/prads/src/sig_tcp.c	/^    no_known,$/;"	v	file:
+no_osdesc	/home/ubuntu/prads/src/sig_tcp.c	/^    no_osdesc,$/;"	v	file:
+no_unknown	/home/ubuntu/prads/src/sig_tcp.c	/^    no_unknown,$/;"	v	file:
+normalize_ttl	/home/ubuntu/prads/src/sys_func.c	/^uint8_t normalize_ttl (uint8_t ttl)$/;"	f
+num_addrs	/home/ubuntu/prads/src/prads.h	/^            uint8_t num_addrs;$/;"	m	struct:_icmp_header::__anon9::rtradv
+o	/home/ubuntu/prads/src/prads.h	/^  uint8_t o[MAC_ADDR_LEN];$/;"	m	struct:_mac_entry
+obj	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void *obj; \/* holds user-generated value for a read task *\/$/;"	m	struct:redisReadTask
+obuf	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    char *obuf; \/* Write buffer *\/$/;"	m	struct:redisContext
+olog	/home/ubuntu/prads/src/sys_func.h	6;"	d
+onConnect	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    redisConnectCallback *onConnect;$/;"	m	struct:redisAsyncContext
+onDisconnect	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    redisDisconnectCallback *onDisconnect;$/;"	m	struct:redisAsyncContext
+on_close	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^static void on_close(uv_handle_t* handle) {$/;"	f
+op	/home/ubuntu/prads/src/dhcp.h	/^    uint8_t op;$/;"	m	struct:_dhcp_header
+operating_mode	/home/ubuntu/prads/src/sig_tcp.c	/^uint8_t operating_mode;$/;"	v
+opt	/home/ubuntu/prads/src/prads.h	/^    uint8_t opt[MAXOPT];        \/* DHCP Options *\/$/;"	m	struct:_dhcp_fp_entry
+opt	/home/ubuntu/prads/src/prads.h	/^    uint8_t opt[MAXOPT];        \/* TCPOPT_* *\/$/;"	m	struct:_fp_entry
+optcnt	/home/ubuntu/prads/src/prads.h	/^    uint8_t optcnt;             \/* option count *\/$/;"	m	struct:_dhcp_fp_entry
+optcnt	/home/ubuntu/prads/src/prads.h	/^    uint8_t optcnt;             \/* option count *\/$/;"	m	struct:_fp_entry
+optreq	/home/ubuntu/prads/src/prads.h	/^    uint8_t optreq[MAXOPT];     \/* request option counter  *\/$/;"	m	struct:_dhcp_fp_entry
+optreqcnt	/home/ubuntu/prads/src/prads.h	/^    uint8_t optreqcnt;          \/* request option counter (53) *\/$/;"	m	struct:_dhcp_fp_entry
+os	/home/ubuntu/prads/src/output-plugins/log.h	/^   void (*os)(struct _output_plugin*, asset *, os_asset *os, connection *cxt);      \/* call on os *\/$/;"	m	struct:_output_plugin
+os	/home/ubuntu/prads/src/prads.h	/^    bstring os;                 \/* OS (WinXP SP2, 2.4\/2.6, 10.2..) *\/$/;"	m	struct:_os_asset
+os	/home/ubuntu/prads/src/prads.h	/^    char *os;                   \/* OS genre *\/$/;"	m	struct:_dhcp_fp_entry
+os	/home/ubuntu/prads/src/prads.h	/^    char *os;                \/* OS genre *\/$/;"	m	struct:_fp_entry
+os	/home/ubuntu/prads/src/prads.h	/^    os_asset *os;               \/* Linked list with OSes detected *\/$/;"	m	struct:_asset
+os_asset	/home/ubuntu/prads/src/prads.h	/^} os_asset;$/;"	t	typeref:struct:_os_asset
+otherl_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t otherl_recv;   \/* number of other Link layer packets received *\/$/;"	m	struct:_prads_stat
+othert_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t othert_recv;   \/* number of other transport layer packets received *\/$/;"	m	struct:_prads_stat
+otime	/home/ubuntu/prads/src/prads.h	/^            uint32_t otime;$/;"	m	struct:_icmp_header::__anon10::ts
+our	/home/ubuntu/prads/src/prads.h	/^    uint32_t        our;            \/* Is the asset in our defined network *\/$/;"	m	struct:_packetinfo
+output_plugin	/home/ubuntu/prads/src/output-plugins/log.h	/^} output_plugin;$/;"	t	typeref:struct:_output_plugin
+p_fifo	/home/ubuntu/prads/src/output-plugins/log_fifo.c	/^output_plugin p_fifo = {$/;"	v
+p_file	/home/ubuntu/prads/src/output-plugins/log_file.c	/^output_plugin p_file = {$/;"	v
+p_rcode	/home/ubuntu/prads/src/dump_dns.c	66;"	d	file:
+p_ringbuffer	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.c	/^output_plugin p_ringbuffer;$/;"	v
+p_sguil	/home/ubuntu/prads/src/output-plugins/log_sguil.c	/^output_plugin p_sguil = {$/;"	v
+p_stdout	/home/ubuntu/prads/src/output-plugins/log_stdout.c	/^output_plugin p_stdout = {$/;"	v
+packet	/home/ubuntu/prads/src/prads.h	/^    const uint8_t *  packet;         \/* Unsigned char pointer to raw packet *\/$/;"	m	struct:_packetinfo
+packet_bytes	/home/ubuntu/prads/src/prads.h	/^    uint16_t        packet_bytes;   \/* Lenght of IP payload in packet *\/$/;"	m	struct:_packetinfo
+packet_count	/home/ubuntu/prads/src/sig_tcp.c	/^uint32_t packet_count;$/;"	v
+packetinfo	/home/ubuntu/prads/src/prads.h	/^} packetinfo;$/;"	t	typeref:struct:_packetinfo
+parent	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    struct redisReadTask *parent; \/* parent task *\/$/;"	m	struct:redisReadTask	typeref:struct:redisReadTask::redisReadTask
+parm	/home/ubuntu/prads/src/bstraux.c	/^    void * parm;     \/* The stream handle for core stream        *\/$/;"	m	struct:bwriteStream	file:
+parm	/home/ubuntu/prads/src/bstrlib.c	/^	void * parm;		\/* The stream handle for core stream *\/$/;"	m	struct:bStream	file:
+parse_args	/home/ubuntu/prads/src/config.c	/^int parse_args(globalconfig *conf, int argc, char *argv[], char *args)$/;"	f
+parse_arp	/home/ubuntu/prads/src/prads.c	/^void parse_arp (packetinfo *pi)$/;"	f
+parse_config_file	/home/ubuntu/prads/src/config.c	/^void parse_config_file(const char* fname)$/;"	f
+parse_dhcp_sig_optreq	/home/ubuntu/prads/src/dhcp.c	/^static int parse_dhcp_sig_optreq(dhcp_fp_entry *sig, char* p)$/;"	f	file:
+parse_dhcp_sig_opts	/home/ubuntu/prads/src/dhcp.c	/^static int parse_dhcp_sig_opts(dhcp_fp_entry *sig, char* p)$/;"	f	file:
+parse_eth	/home/ubuntu/prads/src/prads.c	/^void parse_eth (packetinfo *pi)$/;"	f
+parse_gre	/home/ubuntu/prads/src/prads.c	/^void parse_gre (packetinfo *pi)$/;"	f
+parse_icmp	/home/ubuntu/prads/src/prads.c	/^void parse_icmp (packetinfo *pi)$/;"	f
+parse_ip4	/home/ubuntu/prads/src/prads.c	/^void parse_ip4 (packetinfo *pi)$/;"	f
+parse_ip6	/home/ubuntu/prads/src/prads.c	/^void parse_ip6 (packetinfo *pi)$/;"	f
+parse_line	/home/ubuntu/prads/src/config.c	/^void parse_line (globalconfig * conf, bstring line)$/;"	f
+parse_netmask	/home/ubuntu/prads/src/prads.c	/^int parse_netmask (char *f, int type, struct in6_addr *netmask)$/;"	f
+parse_nets	/home/ubuntu/prads/src/prads.c	/^void parse_nets(const char *s_net, fmask *network)$/;"	f
+parse_network	/home/ubuntu/prads/src/prads.c	/^int parse_network (char *net_s, struct in6_addr *network)$/;"	f
+parse_other	/home/ubuntu/prads/src/prads.c	/^void parse_other (packetinfo *pi)$/;"	f
+parse_quirks	/home/ubuntu/prads/src/sig_tcp.c	/^static inline void parse_quirks(uint8_t ftype, tcp_header *tcph, uint32_t *quirks)$/;"	f	file:
+parse_raw_report	/home/ubuntu/prads/src/output-plugins/log_file.c	/^int parse_raw_report (bstring line)$/;"	f
+parse_raw_signature	/home/ubuntu/prads/src/servicefp/servicefp.c	/^int parse_raw_signature(bstring line, int lineno, signature **db)$/;"	f
+parse_sig_options	/home/ubuntu/prads/src/sig_tcp.c	/^static int parse_sig_options(fp_entry *sig, char* p)$/;"	f	file:
+parse_sig_quirks	/home/ubuntu/prads/src/sig_tcp.c	/^static int parse_sig_quirks(fp_entry *sig, uint8_t *p)$/;"	f	file:
+parse_sig_wsize	/home/ubuntu/prads/src/sig_tcp.c	/^static int parse_sig_wsize(fp_entry *sig, char* w)$/;"	f	file:
+parse_tcp	/home/ubuntu/prads/src/prads.c	/^void parse_tcp (packetinfo *pi)$/;"	f
+parse_tcpopt	/home/ubuntu/prads/src/sig_tcp.c	/^static inline uint32_t parse_tcpopt(const uint8_t *opt_ptr, int32_t ilen, const uint8_t *end_ptr, fp_entry *e)$/;"	f	file:
+parse_udp	/home/ubuntu/prads/src/prads.c	/^void parse_udp (packetinfo *pi)$/;"	f
+passet	/home/ubuntu/prads/src/assets.c	/^static asset *passet[BUCKET_SIZE];$/;"	v	file:
+passet	/home/ubuntu/prads/src/config.h	/^    asset       *passet[BUCKET_SIZE];   \/* Pointer to list of assets *\/$/;"	m	struct:_globalconfig
+path	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^        const char *path;$/;"	m	struct:config::__anon4	file:
+path	/home/ubuntu/prads/src/output-plugins/log.h	/^   const char *path;                                           \/* file, socket etc *\/$/;"	m	struct:_output_plugin
+patterns	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        struct dict *patterns;$/;"	m	struct:redisAsyncContext::__anon2	typeref:struct:redisAsyncContext::__anon2::dict
+payload	/home/ubuntu/prads/src/config.h	/^    uint32_t    payload;                \/* dump how much of the payload ?  *\/$/;"	m	struct:_globalconfig
+payload	/home/ubuntu/prads/src/prads.h	/^    const uint8_t   *payload;       \/* char pointer to transport payload *\/$/;"	m	struct:_packetinfo
+payload_dump	/home/ubuntu/prads/src/sig_tcp.c	/^    full_dump, use_fuzzy, payload_dump;$/;"	v	file:
+pcap_file	/home/ubuntu/prads/src/config.h	/^    char       *pcap_file;              \/* Filename to pcap too read *\/$/;"	m	struct:_globalconfig
+pheader	/home/ubuntu/prads/src/prads.h	/^    const struct pcap_pkthdr *pheader; \/* Libpcap packet header struct pointer *\/$/;"	m	struct:_packetinfo	typeref:struct:_packetinfo::pcap_pkthdr
+pidfile	/home/ubuntu/prads/src/config.h	/^    char        *pidfile;               \/* pidfile *\/$/;"	m	struct:_globalconfig
+plen	/home/ubuntu/prads/src/prads.h	/^    uint32_t        plen;           \/* transport payload length *\/$/;"	m	struct:_packetinfo
+plog	/home/ubuntu/prads/src/sys_func.h	4;"	d
+pmtu	/home/ubuntu/prads/src/prads.h	/^        struct pmtu {$/;"	s	union:_icmp_header::__anon9
+pmtu	/home/ubuntu/prads/src/prads.h	/^        } pmtu;$/;"	m	union:_icmp_header::__anon9	typeref:struct:_icmp_header::__anon9::pmtu
+port	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^        int port;$/;"	m	struct:config::__anon3	file:
+port	/home/ubuntu/prads/src/prads.h	/^    uint16_t port;              \/* Asset port *\/$/;"	m	struct:_serv_asset
+port	/home/ubuntu/prads/src/prads.h	/^    uint16_t port;              \/* Asset port detected on *\/$/;"	m	struct:_os_asset
+port	/home/ubuntu/prads/src/prads.h	/^    uint16_t port;              \/* Port to check for this service, or 0 for all *\/$/;"	m	struct:_signature
+port_t	/home/ubuntu/prads/src/prads.h	/^} port_t;$/;"	t	typeref:struct:_port_t
+pos	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    size_t pos; \/* Buffer cursor *\/$/;"	m	struct:redisReader
+pptr	/home/ubuntu/prads/src/prads.h	/^        uint8_t pptr;$/;"	m	union:_icmp_header::__anon9
+pr_s	/home/ubuntu/prads/src/config.h	/^    prads_stat          pr_s;           \/* prads stats *\/$/;"	m	struct:_globalconfig
+prads_initialize	/home/ubuntu/prads/src/prads.c	/^int prads_initialize(globalconfig *conf)$/;"	f
+prads_stat	/home/ubuntu/prads/src/prads.h	/^} prads_stat;$/;"	t	typeref:struct:_prads_stat
+prads_version	/home/ubuntu/prads/src/prads.c	/^void prads_version(void)$/;"	f
+preference	/home/ubuntu/prads/src/prads.h	/^            uint32_t preference;$/;"	m	struct:_icmp_header::__anon10::ra_addr
+prefix	/home/ubuntu/prads/src/output-plugins/log_sguil.h	/^   const char *prefix;$/;"	m	struct:log_sguil
+prepare_eth	/home/ubuntu/prads/src/prads.c	/^void prepare_eth (packetinfo *pi)$/;"	f
+prepare_gre	/home/ubuntu/prads/src/prads.c	/^void prepare_gre (packetinfo *pi)$/;"	f
+prepare_greip	/home/ubuntu/prads/src/prads.c	/^void prepare_greip (packetinfo *pi)$/;"	f
+prepare_icmp	/home/ubuntu/prads/src/prads.c	/^void prepare_icmp (packetinfo *pi)$/;"	f
+prepare_ip4	/home/ubuntu/prads/src/prads.c	/^void prepare_ip4 (packetinfo *pi)$/;"	f
+prepare_ip4ip	/home/ubuntu/prads/src/prads.c	/^void prepare_ip4ip (packetinfo *pi)$/;"	f
+prepare_ip6	/home/ubuntu/prads/src/prads.c	/^void prepare_ip6 (packetinfo *pi)$/;"	f
+prepare_ip6ip	/home/ubuntu/prads/src/prads.c	/^void prepare_ip6ip (packetinfo *pi)$/;"	f
+prepare_other	/home/ubuntu/prads/src/prads.c	/^void prepare_other (packetinfo *pi)$/;"	f
+prepare_tcp	/home/ubuntu/prads/src/prads.c	/^void prepare_tcp (packetinfo *pi)$/;"	f
+prepare_udp	/home/ubuntu/prads/src/prads.c	/^void prepare_udp (packetinfo *pi)$/;"	f
+prev	/home/ubuntu/prads/src/prads.h	/^    struct   _connection *prev;$/;"	m	struct:_connection	typeref:struct:_connection::_connection
+prev	/home/ubuntu/prads/src/prads.h	/^    struct _asset *prev;        \/* Prev ip_asset structure *\/$/;"	m	struct:_asset	typeref:struct:_asset::_asset
+prev	/home/ubuntu/prads/src/prads.h	/^    struct _os_asset *prev;     \/* Prev os_asset structure *\/$/;"	m	struct:_os_asset	typeref:struct:_os_asset::_os_asset
+prev	/home/ubuntu/prads/src/prads.h	/^    struct _serv_asset *prev;   \/* Prev serv_asset structure *\/$/;"	m	struct:_serv_asset	typeref:struct:_serv_asset::_serv_asset
+prev	/home/ubuntu/prads/src/prads.h	/^    struct _signature *prev;    \/* Next record in the list. *\/$/;"	m	struct:_signature	typeref:struct:_signature::_signature
+print_data	/home/ubuntu/prads/src/dhcp.c	/^void print_data(const uint8_t* data, uint16_t dlen) {$/;"	f
+print_dhcp_header	/home/ubuntu/prads/src/dhcp.c	/^void print_dhcp_header(dhcp_header *dhcph)$/;"	f
+print_dhcp_sig	/home/ubuntu/prads/src/dhcp.c	/^void print_dhcp_sig(dhcp_fp_entry * e)$/;"	f
+print_dhcp_sigs	/home/ubuntu/prads/src/dhcp.c	/^void print_dhcp_sigs(dhcp_fp_entry * e)$/;"	f
+print_mac	/home/ubuntu/prads/src/mac.c	/^void print_mac(const uint8_t *mac){$/;"	f
+print_mac_entries	/home/ubuntu/prads/src/mac.c	/^void print_mac_entries(mac_entry *e) {$/;"	f
+print_mac_entry	/home/ubuntu/prads/src/mac.c	/^void print_mac_entry(mac_entry *e){$/;"	f
+print_pcap_stats	/home/ubuntu/prads/src/sys_func.c	/^void print_pcap_stats()$/;"	f
+print_prads_stats	/home/ubuntu/prads/src/prads.c	/^void print_prads_stats()$/;"	f
+print_sig	/home/ubuntu/prads/src/sig_tcp.c	/^void print_sig(fp_entry * e)$/;"	f
+print_sigs	/home/ubuntu/prads/src/sig_tcp.c	/^void print_sigs(fp_entry * e)$/;"	f
+print_updates	/home/ubuntu/prads/src/config.h	/^    uint8_t     print_updates;          \/* Prints updates *\/$/;"	m	struct:_globalconfig
+printchars	/home/ubuntu/prads/src/dump_dns.c	/^void printchars(char buf[NS_MAXDNAME], u_char * cdata, u_int16_t dlen)$/;"	f
+privdata	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    void *privdata;$/;"	m	struct:redisCallback
+privdata	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    void *privdata;$/;"	m	struct:dict
+privdata	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void *privdata; \/* user-settable arbitrary field *\/$/;"	m	struct:redisReadTask
+privdata	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void *privdata;$/;"	m	struct:redisReader
+processBulkItem	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static int processBulkItem(redisReader *r) {$/;"	f	file:
+processItem	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static int processItem(redisReader *r) {$/;"	f	file:
+processLineItem	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static int processLineItem(redisReader *r) {$/;"	f	file:
+processMultiBulkItem	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static int processMultiBulkItem(redisReader *r) {$/;"	f	file:
+proto	/home/ubuntu/prads/src/prads.h	/^    uint8_t         proto;          \/* IP protocoll type *\/    $/;"	m	struct:_packetinfo
+proto	/home/ubuntu/prads/src/prads.h	/^    uint8_t     proto;          \/* Flags: TCP=0x01 UDP=0x02 *\/$/;"	m	struct:_servicelist
+proto	/home/ubuntu/prads/src/prads.h	/^    uint8_t  proto;               \/* IP protocoll type *\/$/;"	m	struct:_connection
+proto	/home/ubuntu/prads/src/prads.h	/^    unsigned short proto;       \/* Asset protocol *\/$/;"	m	struct:_serv_asset
+ps	/home/ubuntu/prads/src/config.h	/^    struct pcap_stat    ps;             \/* libpcap stats *\/$/;"	m	struct:_globalconfig	typeref:struct:_globalconfig::pcap_stat
+qot	/home/ubuntu/prads/src/prads.h	/^        struct qot {$/;"	s	union:_ether_header::__anon8
+qot	/home/ubuntu/prads/src/prads.h	/^        } qot;$/;"	m	union:_ether_header::__anon8	typeref:struct:_ether_header::__anon8::qot
+qt	/home/ubuntu/prads/src/prads.h	/^        struct qt {$/;"	s	union:_ether_header::__anon8
+qt	/home/ubuntu/prads/src/prads.h	/^        } qt;$/;"	m	union:_ether_header::__anon8	typeref:struct:_ether_header::__anon8::qt
+qty	/home/ubuntu/prads/src/bstrlib.h	/^    int qty, mlen;$/;"	m	struct:bstrList
+quirks	/home/ubuntu/prads/src/prads.h	/^    uint32_t quirks;            \/* packet quirks and bugs *\/$/;"	m	struct:_fp_entry
+ra_addr	/home/ubuntu/prads/src/prads.h	/^        struct ra_addr {$/;"	s	union:_icmp_header::__anon10
+radv	/home/ubuntu/prads/src/prads.h	/^        } radv;$/;"	m	union:_icmp_header::__anon10	typeref:struct:_icmp_header::__anon10::ra_addr
+raw_fp	/home/ubuntu/prads/src/prads.h	/^    bstring raw_fp;             \/* The raw fingerprint [*:*:*:*:*:*:....] *\/$/;"	m	struct:_os_asset
+readBytes	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static char *readBytes(redisReader *r, unsigned int bytes) {$/;"	f	file:
+readFnPtr	/home/ubuntu/prads/src/bstrlib.c	/^	bNread readFnPtr;	\/* fread compatible fnptr for core stream *\/$/;"	m	struct:bStream	file:
+readLine	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static char *readLine(redisReader *r, int *_len) {$/;"	f	file:
+readLongLong	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static long long readLongLong(char *s) {$/;"	f	file:
+readNothing	/home/ubuntu/prads/src/bstraux.c	/^static size_t readNothing (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+readRef	/home/ubuntu/prads/src/bstraux.c	/^static size_t readRef (void *buff, size_t elsize, size_t nelem, void *parm) {$/;"	f	file:
+read_report_file	/home/ubuntu/prads/src/output-plugins/log_file.c	/^read_report_file (output_plugin *log)$/;"	f
+reader	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    redisReader *reader; \/* Protocol reader *\/$/;"	m	struct:redisContext
+reading	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^    int reading, writing;$/;"	m	struct:redisAeEvents
+reading	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^    int reading, writing;$/;"	m	struct:redisLibevEvents
+redisAeAddRead	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^static void redisAeAddRead(void *privdata) {$/;"	f
+redisAeAddWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^static void redisAeAddWrite(void *privdata) {$/;"	f
+redisAeAttach	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^static int redisAeAttach(aeEventLoop *loop, redisAsyncContext *ac) {$/;"	f
+redisAeCleanup	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^static void redisAeCleanup(void *privdata) {$/;"	f
+redisAeDelRead	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^static void redisAeDelRead(void *privdata) {$/;"	f
+redisAeDelWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^static void redisAeDelWrite(void *privdata) {$/;"	f
+redisAeEvents	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^typedef struct redisAeEvents {$/;"	s
+redisAeEvents	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^} redisAeEvents;$/;"	t	typeref:struct:redisAeEvents
+redisAeReadEvent	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^static void redisAeReadEvent(aeEventLoop *el, int fd, void *privdata, int mask) {$/;"	f
+redisAeWriteEvent	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^static void redisAeWriteEvent(aeEventLoop *el, int fd, void *privdata, int mask) {$/;"	f
+redisAppendCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisAppendCommand(redisContext *c, const char *format, ...) {$/;"	f
+redisAppendCommandArgv	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisAppendCommandArgv(redisContext *c, int argc, const char **argv, const size_t *argvlen) {$/;"	f
+redisAppendFormattedCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisAppendFormattedCommand(redisContext *c, const char *cmd, size_t len) {$/;"	f
+redisAsyncCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^int redisAsyncCommand(redisAsyncContext *ac, redisCallbackFn *fn, void *privdata, const char *format, ...) {$/;"	f
+redisAsyncCommandArgv	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^int redisAsyncCommandArgv(redisAsyncContext *ac, redisCallbackFn *fn, void *privdata, int argc, const char **argv, const size_t *argvlen) {$/;"	f
+redisAsyncConnect	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^redisAsyncContext *redisAsyncConnect(const char *ip, int port) {$/;"	f
+redisAsyncConnectBind	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^redisAsyncContext *redisAsyncConnectBind(const char *ip, int port,$/;"	f
+redisAsyncConnectUnix	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^redisAsyncContext *redisAsyncConnectUnix(const char *path) {$/;"	f
+redisAsyncContext	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^typedef struct redisAsyncContext {$/;"	s
+redisAsyncContext	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^} redisAsyncContext;$/;"	t	typeref:struct:redisAsyncContext
+redisAsyncDisconnect	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^void redisAsyncDisconnect(redisAsyncContext *ac) {$/;"	f
+redisAsyncFree	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^void redisAsyncFree(redisAsyncContext *ac) {$/;"	f
+redisAsyncHandleRead	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^void redisAsyncHandleRead(redisAsyncContext *ac) {$/;"	f
+redisAsyncHandleWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^void redisAsyncHandleWrite(redisAsyncContext *ac) {$/;"	f
+redisAsyncInitialize	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static redisAsyncContext *redisAsyncInitialize(redisContext *c) {$/;"	f	file:
+redisAsyncSetConnectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^int redisAsyncSetConnectCallback(redisAsyncContext *ac, redisConnectCallback *fn) {$/;"	f
+redisAsyncSetDisconnectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^int redisAsyncSetDisconnectCallback(redisAsyncContext *ac, redisDisconnectCallback *fn) {$/;"	f
+redisBufferRead	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisBufferRead(redisContext *c) {$/;"	f
+redisBufferWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisBufferWrite(redisContext *c, int *done) {$/;"	f
+redisCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^typedef struct redisCallback {$/;"	s
+redisCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^} redisCallback;$/;"	t	typeref:struct:redisCallback
+redisCallbackFn	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^typedef void (redisCallbackFn)(struct redisAsyncContext*, void*, void*);$/;"	t
+redisCallbackList	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^typedef struct redisCallbackList {$/;"	s
+redisCallbackList	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^} redisCallbackList;$/;"	t	typeref:struct:redisCallbackList
+redisCheckSocketError	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^int redisCheckSocketError(redisContext *c) {$/;"	f
+redisCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^void *redisCommand(redisContext *c, const char *format, ...) {$/;"	f
+redisCommandArgv	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^void *redisCommandArgv(redisContext *c, int argc, const char **argv, const size_t *argvlen) {$/;"	f
+redisConnect	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^redisContext *redisConnect(const char *ip, int port) {$/;"	f
+redisConnectBindNonBlock	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^redisContext *redisConnectBindNonBlock(const char *ip, int port,$/;"	f
+redisConnectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^typedef void (redisConnectCallback)(const struct redisAsyncContext*, int status);$/;"	t
+redisConnectFd	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^redisContext *redisConnectFd(int fd) {$/;"	f
+redisConnectNonBlock	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^redisContext *redisConnectNonBlock(const char *ip, int port) {$/;"	f
+redisConnectUnix	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^redisContext *redisConnectUnix(const char *path) {$/;"	f
+redisConnectUnixNonBlock	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^redisContext *redisConnectUnixNonBlock(const char *path) {$/;"	f
+redisConnectUnixWithTimeout	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^redisContext *redisConnectUnixWithTimeout(const char *path, const struct timeval tv) {$/;"	f
+redisConnectWithTimeout	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^redisContext *redisConnectWithTimeout(const char *ip, int port, const struct timeval tv) {$/;"	f
+redisContext	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^typedef struct redisContext {$/;"	s
+redisContext	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^} redisContext;$/;"	t	typeref:struct:redisContext
+redisContextCloseFd	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^static void redisContextCloseFd(redisContext *c) {$/;"	f	file:
+redisContextConnectBindTcp	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^int redisContextConnectBindTcp(redisContext *c, const char *addr, int port,$/;"	f
+redisContextConnectTcp	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^int redisContextConnectTcp(redisContext *c, const char *addr, int port,$/;"	f
+redisContextConnectUnix	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^int redisContextConnectUnix(redisContext *c, const char *path, const struct timeval *timeout) {$/;"	f
+redisContextInit	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static redisContext *redisContextInit(void) {$/;"	f	file:
+redisContextSetTimeout	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^int redisContextSetTimeout(redisContext *c, const struct timeval tv) {$/;"	f
+redisContextWaitReady	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^static int redisContextWaitReady(redisContext *c, const struct timeval *timeout) {$/;"	f	file:
+redisCreateSocket	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^static int redisCreateSocket(redisContext *c, int type) {$/;"	f	file:
+redisDisconnectCallback	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^typedef void (redisDisconnectCallback)(const struct redisAsyncContext*, int status);$/;"	t
+redisEnableKeepAlive	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisEnableKeepAlive(redisContext *c) {$/;"	f
+redisFormatCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisFormatCommand(char **target, const char *format, ...) {$/;"	f
+redisFormatCommandArgv	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisFormatCommandArgv(char **target, int argc, const char **argv, const size_t *argvlen) {$/;"	f
+redisFree	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^void redisFree(redisContext *c) {$/;"	f
+redisFreeKeepFd	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisFreeKeepFd(redisContext *c) {$/;"	f
+redisGetReply	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisGetReply(redisContext *c, void **reply) {$/;"	f
+redisGetReplyFromReader	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisGetReplyFromReader(redisContext *c, void **reply) {$/;"	f
+redisKeepAlive	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^int redisKeepAlive(redisContext *c, int interval) {$/;"	f
+redisLibevAddRead	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^static void redisLibevAddRead(void *privdata) {$/;"	f
+redisLibevAddWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^static void redisLibevAddWrite(void *privdata) {$/;"	f
+redisLibevAttach	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^static int redisLibevAttach(EV_P_ redisAsyncContext *ac) {$/;"	f
+redisLibevCleanup	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^static void redisLibevCleanup(void *privdata) {$/;"	f
+redisLibevDelRead	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^static void redisLibevDelRead(void *privdata) {$/;"	f
+redisLibevDelWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^static void redisLibevDelWrite(void *privdata) {$/;"	f
+redisLibevEvents	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^typedef struct redisLibevEvents {$/;"	s
+redisLibevEvents	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^} redisLibevEvents;$/;"	t	typeref:struct:redisLibevEvents
+redisLibevReadEvent	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^static void redisLibevReadEvent(EV_P_ ev_io *watcher, int revents) {$/;"	f
+redisLibevWriteEvent	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^static void redisLibevWriteEvent(EV_P_ ev_io *watcher, int revents) {$/;"	f
+redisLibeventAddRead	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^static void redisLibeventAddRead(void *privdata) {$/;"	f
+redisLibeventAddWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^static void redisLibeventAddWrite(void *privdata) {$/;"	f
+redisLibeventAttach	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^static int redisLibeventAttach(redisAsyncContext *ac, struct event_base *base) {$/;"	f
+redisLibeventCleanup	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^static void redisLibeventCleanup(void *privdata) {$/;"	f
+redisLibeventDelRead	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^static void redisLibeventDelRead(void *privdata) {$/;"	f
+redisLibeventDelWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^static void redisLibeventDelWrite(void *privdata) {$/;"	f
+redisLibeventEvents	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^typedef struct redisLibeventEvents {$/;"	s
+redisLibeventEvents	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^} redisLibeventEvents;$/;"	t	typeref:struct:redisLibeventEvents
+redisLibeventReadEvent	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^static void redisLibeventReadEvent(int fd, short event, void *arg) {$/;"	f
+redisLibeventWriteEvent	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^static void redisLibeventWriteEvent(int fd, short event, void *arg) {$/;"	f
+redisLibuvAddRead	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^static void redisLibuvAddRead(void *privdata) {$/;"	f
+redisLibuvAddWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^static void redisLibuvAddWrite(void *privdata) {$/;"	f
+redisLibuvAttach	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^static int redisLibuvAttach(redisAsyncContext* ac, uv_loop_t* loop) {$/;"	f
+redisLibuvCleanup	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^static void redisLibuvCleanup(void *privdata) {$/;"	f
+redisLibuvDelRead	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^static void redisLibuvDelRead(void *privdata) {$/;"	f
+redisLibuvDelWrite	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^static void redisLibuvDelWrite(void *privdata) {$/;"	f
+redisLibuvEvents	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^typedef struct redisLibuvEvents {$/;"	s
+redisLibuvEvents	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^} redisLibuvEvents;$/;"	t	typeref:struct:redisLibuvEvents
+redisLibuvPoll	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^static void redisLibuvPoll(uv_poll_t* handle, int status, int events) {$/;"	f
+redisProcessCallbacks	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^void redisProcessCallbacks(redisAsyncContext *ac) {$/;"	f
+redisReadTask	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^typedef struct redisReadTask {$/;"	s
+redisReadTask	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^} redisReadTask;$/;"	t	typeref:struct:redisReadTask
+redisReader	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^typedef struct redisReader {$/;"	s
+redisReader	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^} redisReader;$/;"	t	typeref:struct:redisReader
+redisReaderCreate	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^redisReader *redisReaderCreate(void) {$/;"	f
+redisReaderFeed	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisReaderFeed(redisReader *r, const char *buf, size_t len) {$/;"	f
+redisReaderFree	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^void redisReaderFree(redisReader *r) {$/;"	f
+redisReaderGetReply	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisReaderGetReply(redisReader *r, void **reply) {$/;"	f
+redisReply	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^typedef struct redisReply {$/;"	s
+redisReply	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^} redisReply;$/;"	t	typeref:struct:redisReply
+redisReplyObjectFunctions	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^typedef struct redisReplyObjectFunctions {$/;"	s
+redisReplyObjectFunctions	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^} redisReplyObjectFunctions;$/;"	t	typeref:struct:redisReplyObjectFunctions
+redisReplyReaderCreate	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	149;"	d
+redisReplyReaderFeed	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	151;"	d
+redisReplyReaderFree	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	150;"	d
+redisReplyReaderGetError	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	155;"	d
+redisReplyReaderGetObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	154;"	d
+redisReplyReaderGetReply	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	152;"	d
+redisReplyReaderSetPrivdata	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	153;"	d
+redisSetBlocking	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^static int redisSetBlocking(redisContext *c, int blocking) {$/;"	f	file:
+redisSetReuseAddr	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^static int redisSetReuseAddr(redisContext *c) {$/;"	f	file:
+redisSetTcpNoDelay	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^static int redisSetTcpNoDelay(redisContext *c) {$/;"	f	file:
+redisSetTimeout	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisSetTimeout(redisContext *c, const struct timeval tv) {$/;"	f
+redis_asyncGet	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int redis_asyncGet(char *key, int key_len, char *value, int *value_len) {$/;"	f
+redis_asyncSet	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int redis_asyncSet(char *key, int key_len, char *value, int value_len) {$/;"	f
+redis_syncGet	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int redis_syncGet(redisContext *c, char *key, int key_len, char *value, int *value_len) {$/;"	f
+redis_syncSet	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int redis_syncSet(redisContext *c, char *key, int key_len, char *value, int value_len) {$/;"	f
+redisvAppendCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisvAppendCommand(redisContext *c, const char *format, va_list ap) {$/;"	f
+redisvAsyncCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^int redisvAsyncCommand(redisAsyncContext *ac, redisCallbackFn *fn, void *privdata, const char *format, va_list ap) {$/;"	f
+redisvCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^void *redisvCommand(redisContext *c, const char *format, va_list ap) {$/;"	f
+redisvFormatCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisvFormatCommand(char **target, const char *format, va_list ap) {$/;"	f
+regex	/home/ubuntu/prads/src/prads.h	/^    pcre *regex;                \/* Signature - Compiled Regular Expression *\/$/;"	m	struct:_signature
+reparse_conf	/home/ubuntu/prads/src/prads.c	/^void reparse_conf()$/;"	f
+replies	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    redisCallbackList replies;$/;"	m	struct:redisAsyncContext
+reply	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void *reply; \/* Temporary reply pointer *\/$/;"	m	struct:redisReader
+rev	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^    ev_io rev, wev;$/;"	m	struct:redisLibevEvents
+rev	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^    struct event rev, wev;$/;"	m	struct:redisLibeventEvents	typeref:struct:redisLibeventEvents::event
+reverse_pi_cxt	/home/ubuntu/prads/src/cxt.c	/^void reverse_pi_cxt(packetinfo *pi)$/;"	f
+reversed	/home/ubuntu/prads/src/prads.h	/^    uint8_t  reversed;            \/* 1 if the connection is reversed *\/$/;"	m	struct:_connection
+ridx	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int ridx; \/* Index of current read task *\/$/;"	m	struct:redisReader
+ring_item	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.h	/^struct ring_item {$/;"	s
+ringbuffer	/home/ubuntu/prads/src/config.h	/^    uint8_t    ringbuffer;              \/* Enable logging to ringbuffer *\/$/;"	m	struct:_globalconfig
+role	/home/ubuntu/prads/src/prads.h	/^    int role;                   \/* server or client *\/$/;"	m	struct:_serv_asset
+rotate	/home/ubuntu/prads/src/output-plugins/log.h	/^   void (*rotate)(struct _output_plugin*, time_t);$/;"	m	struct:_output_plugin
+routing	/home/ubuntu/prads/src/prads.h	/^    uint8_t     *routing;$/;"	m	struct:_gre_sre_header
+rst_mode	/home/ubuntu/prads/src/sig_tcp.c	/^    rst_mode,$/;"	v	file:
+rstack	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    redisReadTask rstack[9];$/;"	m	struct:redisReader
+rtime	/home/ubuntu/prads/src/prads.h	/^            uint32_t rtime;$/;"	m	struct:_icmp_header::__anon10::ts
+rtradv	/home/ubuntu/prads/src/prads.h	/^        struct rtradv {$/;"	s	union:_icmp_header::__anon9
+rtradv	/home/ubuntu/prads/src/prads.h	/^        } rtradv;$/;"	m	union:_icmp_header::__anon9	typeref:struct:_icmp_header::__anon9::rtradv
+s	/home/ubuntu/prads/src/prads.h	/^    uint16_t s[8];$/;"	m	union:_i4vector
+s6_addr32	/home/ubuntu/prads/src/common.h	30;"	d
+s6_addr32	/home/ubuntu/prads/src/prads.h	552;"	d
+sInp	/home/ubuntu/prads/src/bstraux.c	/^	struct bStream * sInp;$/;"	m	struct:bsUuCtx	typeref:struct:bsUuCtx::bStream	file:
+s_asset	/home/ubuntu/prads/src/prads.h	/^    struct   _asset *s_asset;     \/* pointer to server asset *\/$/;"	m	struct:_connection	typeref:struct:_connection::_asset
+s_icmp_data	/home/ubuntu/prads/src/prads.h	409;"	d
+s_icmp_gwaddr	/home/ubuntu/prads/src/prads.h	363;"	d
+s_icmp_id	/home/ubuntu/prads/src/prads.h	364;"	d
+s_icmp_ip	/home/ubuntu/prads/src/prads.h	406;"	d
+s_icmp_lifetime	/home/ubuntu/prads/src/prads.h	371;"	d
+s_icmp_mask	/home/ubuntu/prads/src/prads.h	408;"	d
+s_icmp_nextmtu	/home/ubuntu/prads/src/prads.h	368;"	d
+s_icmp_num_addrs	/home/ubuntu/prads/src/prads.h	369;"	d
+s_icmp_otime	/home/ubuntu/prads/src/prads.h	403;"	d
+s_icmp_pmvoid	/home/ubuntu/prads/src/prads.h	367;"	d
+s_icmp_pptr	/home/ubuntu/prads/src/prads.h	362;"	d
+s_icmp_radv	/home/ubuntu/prads/src/prads.h	407;"	d
+s_icmp_rtime	/home/ubuntu/prads/src/prads.h	404;"	d
+s_icmp_seq	/home/ubuntu/prads/src/prads.h	365;"	d
+s_icmp_ttime	/home/ubuntu/prads/src/prads.h	405;"	d
+s_icmp_void	/home/ubuntu/prads/src/prads.h	366;"	d
+s_icmp_wpa	/home/ubuntu/prads/src/prads.h	370;"	d
+s_ip	/home/ubuntu/prads/src/prads.h	/^    struct   in6_addr s_ip;       \/* source address *\/$/;"	m	struct:_connection	typeref:struct:_connection::in6_addr
+s_net	/home/ubuntu/prads/src/config.h	/^    char        *s_net;                 \/* Nets to collect assets for *\/$/;"	m	struct:_globalconfig
+s_port	/home/ubuntu/prads/src/prads.h	/^    uint16_t        s_port;         \/* source port *\/$/;"	m	struct:_packetinfo
+s_port	/home/ubuntu/prads/src/prads.h	/^    uint16_t s_port;              \/* source port *\/$/;"	m	struct:_connection
+s_tcpFlags	/home/ubuntu/prads/src/prads.h	/^    uint8_t  s_tcpFlags;          \/* tcpflags sent by source *\/$/;"	m	struct:_connection
+s_total_bytes	/home/ubuntu/prads/src/prads.h	/^    uint64_t s_total_bytes;       \/* total source bytes *\/$/;"	m	struct:_connection
+s_total_pkts	/home/ubuntu/prads/src/prads.h	/^    uint64_t s_total_pkts;        \/* total source packets *\/$/;"	m	struct:_connection
+sc	/home/ubuntu/prads/src/prads.h	/^    uint8_t         sc;             \/* SC_SERVER or SC_CLIENT *\/$/;"	m	struct:_packetinfo
+sds	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.h	/^typedef char *sds;$/;"	t
+sdsAllocSize	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^size_t sdsAllocSize(sds s) {$/;"	f
+sdsIncrLen	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^void sdsIncrLen(sds s, int incr) {$/;"	f
+sdsMakeRoomFor	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdsMakeRoomFor(sds s, size_t addlen) {$/;"	f
+sdsRemoveFreeSpace	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdsRemoveFreeSpace(sds s) {$/;"	f
+sdsavail	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.h	/^static inline size_t sdsavail(const sds s) {$/;"	f
+sdscat	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdscat(sds s, const char *t) {$/;"	f
+sdscatfmt	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdscatfmt(sds s, char const *fmt, ...) {$/;"	f
+sdscatlen	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdscatlen(sds s, const void *t, size_t len) {$/;"	f
+sdscatprintf	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdscatprintf(sds s, const char *fmt, ...) {$/;"	f
+sdscatrepr	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdscatrepr(sds s, const char *p, size_t len) {$/;"	f
+sdscatsds	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdscatsds(sds s, const sds t) {$/;"	f
+sdscatvprintf	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdscatvprintf(sds s, const char *fmt, va_list ap) {$/;"	f
+sdsclear	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^void sdsclear(sds s) {$/;"	f
+sdscmp	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^int sdscmp(const sds s1, const sds s2) {$/;"	f
+sdscpy	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdscpy(sds s, const char *t) {$/;"	f
+sdscpylen	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdscpylen(sds s, const char *t, size_t len) {$/;"	f
+sdsdup	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdsdup(const sds s) {$/;"	f
+sdsempty	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdsempty(void) {$/;"	f
+sdsfree	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^void sdsfree(sds s) {$/;"	f
+sdsfreesplitres	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^void sdsfreesplitres(sds *tokens, int count) {$/;"	f
+sdsfromlonglong	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdsfromlonglong(long long value) {$/;"	f
+sdsgrowzero	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdsgrowzero(sds s, size_t len) {$/;"	f
+sdshdr	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.h	/^struct sdshdr {$/;"	s
+sdsjoin	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdsjoin(char **argv, int argc, char *sep) {$/;"	f
+sdslen	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.h	/^static inline size_t sdslen(const sds s) {$/;"	f
+sdsll2str	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^int sdsll2str(char *s, long long value) {$/;"	f
+sdsmapchars	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdsmapchars(sds s, const char *from, const char *to, size_t setlen) {$/;"	f
+sdsnew	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdsnew(const char *init) {$/;"	f
+sdsnewlen	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdsnewlen(const void *init, size_t initlen) {$/;"	f
+sdsrange	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^void sdsrange(sds s, int start, int end) {$/;"	f
+sdssplitargs	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds *sdssplitargs(const char *line, int *argc) {$/;"	f
+sdssplitlen	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds *sdssplitlen(const char *s, int len, const char *sep, int seplen, int *count) {$/;"	f
+sdstolower	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^void sdstolower(sds s) {$/;"	f
+sdstoupper	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^void sdstoupper(sds s) {$/;"	f
+sdstrim	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^sds sdstrim(sds s, const char *cset) {$/;"	f
+sdsull2str	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^int sdsull2str(char *s, unsigned long long v) {$/;"	f
+sdsupdatelen	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^void sdsupdatelen(sds s) {$/;"	f
+secs	/home/ubuntu/prads/src/dhcp.h	/^    uint16_t secs;               \/\/ elapsed time from trying to boot (3)$/;"	m	struct:_dhcp_header
+seekNewline	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static char *seekNewline(char *s, size_t len) {$/;"	f	file:
+select_database	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static redisContext *select_database(redisContext *c) {$/;"	f	file:
+seq	/home/ubuntu/prads/src/prads.h	/^            uint16_t seq;$/;"	m	struct:_icmp_header::__anon9::idseq
+serv_asset	/home/ubuntu/prads/src/prads.h	/^} serv_asset;$/;"	t	typeref:struct:_serv_asset
+service	/home/ubuntu/prads/src/output-plugins/log.h	/^   void (*service)(struct _output_plugin*, asset*, serv_asset *, connection *cxt);  \/* call on service *\/$/;"	m	struct:_output_plugin
+service	/home/ubuntu/prads/src/prads.h	/^    bstring service;            \/* Asset service (i.e. SSH, WWW, ICMP etc.) *\/$/;"	m	struct:_serv_asset
+service	/home/ubuntu/prads/src/prads.h	/^    bstring service;            \/* Service (i.e. SSH, WWW, etc.) *\/$/;"	m	struct:_signature
+service_name	/home/ubuntu/prads/src/prads.h	/^    bstring     service_name;   \/* Service (@http) etc. *\/$/;"	m	struct:_servicelist
+service_name	/home/ubuntu/prads/src/prads.h	/^    bstring service_name;       \/* Service *\/$/;"	m	struct:_port_t
+service_tcp4	/home/ubuntu/prads/src/servicefp/tcps.c	/^void service_tcp4(packetinfo *pi, signature* sig_serv_tcp)$/;"	f
+service_tcp6	/home/ubuntu/prads/src/servicefp/tcps.c	/^void service_tcp6(packetinfo *pi, signature* sig_serv_tcp)$/;"	f
+service_udp4	/home/ubuntu/prads/src/servicefp/udps.c	/^void service_udp4(packetinfo *pi, signature* sig_serv_udp)$/;"	f
+service_udp6	/home/ubuntu/prads/src/servicefp/udps.c	/^void service_udp6(packetinfo *pi, signature* sig_serv_udp)$/;"	f
+servicelist	/home/ubuntu/prads/src/prads.h	/^} servicelist;$/;"	t	typeref:struct:_servicelist
+services	/home/ubuntu/prads/src/prads.c	/^servicelist *services[MAX_PORTS];$/;"	v
+services	/home/ubuntu/prads/src/prads.h	/^    serv_asset *services;       \/* Linked list with services detected *\/$/;"	m	struct:_asset
+services	/home/ubuntu/prads/src/servicefp/servicefp.c	/^servicelist *services[MAX_PORTS];$/;"	v
+setInCharField	/home/ubuntu/prads/src/bstrlib.c	1276;"	d	file:
+setInCharField	/home/ubuntu/prads/src/bstrlib.c	1286;"	d	file:
+set_chroot	/home/ubuntu/prads/src/sys_func.c	/^int set_chroot(void)$/;"	f
+set_default_config_options	/home/ubuntu/prads/src/config.c	/^void set_default_config_options(globalconfig *conf)$/;"	f
+set_end_sessions	/home/ubuntu/prads/src/prads.c	/^void set_end_sessions()$/;"	f
+set_pkt_end_ptr	/home/ubuntu/prads/src/prads.c	/^void set_pkt_end_ptr (packetinfo *pi)$/;"	f
+setfilter	/home/ubuntu/prads/src/config.h	/^    uint8_t     setfilter;$/;"	m	struct:_globalconfig
+sguil_connection	/home/ubuntu/prads/src/output-plugins/log_sguil.c	/^void sguil_connection (output_plugin *plugin, connection *cxt, int outputmode)$/;"	f
+sguil_end	/home/ubuntu/prads/src/output-plugins/log_sguil.c	/^int sguil_end(output_plugin *p)$/;"	f
+sguil_rotate	/home/ubuntu/prads/src/output-plugins/log_sguil.c	/^void sguil_rotate(output_plugin *plugin, time_t check_time)$/;"	f
+shm_id	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.c	/^static int shm_id;$/;"	v	file:
+shm_id	/home/ubuntu/prads/src/shm-client.c	/^int shm_id;$/;"	v
+siaddr	/home/ubuntu/prads/src/dhcp.h	/^    uint32_t siaddr;             \/\/ Server IP (5)$/;"	m	struct:_dhcp_header
+sig_ack	/home/ubuntu/prads/src/config.h	/^    fp_entry   **sig_ack;               \/* Stray-ACK signature hash *\/$/;"	m	struct:_globalconfig
+sig_client_tcp	/home/ubuntu/prads/src/config.h	/^    signature   *sig_client_tcp;        \/* Pointer to list of tcp client signatures *\/$/;"	m	struct:_globalconfig
+sig_client_udp	/home/ubuntu/prads/src/config.h	/^    signature   *sig_client_udp;        \/* Pointer to list of udp client signatures *\/$/;"	m	struct:_globalconfig
+sig_dhcp	/home/ubuntu/prads/src/config.h	/^    dhcp_fp_entry **sig_dhcp;           \/* DHCP signature hash *\/$/;"	m	struct:_globalconfig
+sig_file_ack	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_ack;           \/* Filename of TCP Stray-ACK sig file *\/$/;"	m	struct:_globalconfig
+sig_file_cli_tcp	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_cli_tcp;       \/* Filename of tcp client sig file *\/$/;"	m	struct:_globalconfig
+sig_file_cli_udp	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_cli_udp;       \/* Filename of udp client sig file *\/$/;"	m	struct:_globalconfig
+sig_file_dhcp	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_dhcp;          \/* Filename of DHCP signature file *\/$/;"	m	struct:_globalconfig
+sig_file_fin	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_fin;           \/* Filename of TCP FIN sig file *\/$/;"	m	struct:_globalconfig
+sig_file_mac	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_mac;           \/* Filename of MAC signature file *\/$/;"	m	struct:_globalconfig
+sig_file_rst	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_rst;           \/* Filename of TCP RST sig file *\/$/;"	m	struct:_globalconfig
+sig_file_serv_tcp	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_serv_tcp;      \/* Filename of tcp server sig file *\/$/;"	m	struct:_globalconfig
+sig_file_serv_udp	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_serv_udp;      \/* Filename of udp server sig file *\/$/;"	m	struct:_globalconfig
+sig_file_syn	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_syn;           \/* Filename of TCP SYN sig file *\/$/;"	m	struct:_globalconfig
+sig_file_synack	/home/ubuntu/prads/src/config.h	/^    char       *sig_file_synack;        \/* Filename of TCP SYNACK sig file *\/$/;"	m	struct:_globalconfig
+sig_fin	/home/ubuntu/prads/src/config.h	/^    fp_entry   **sig_fin;               \/* FIN signature hash *\/$/;"	m	struct:_globalconfig
+sig_hashsize	/home/ubuntu/prads/src/config.h	/^    uint32_t     sig_hashsize;          \/* size of signature hash *\/$/;"	m	struct:_globalconfig
+sig_mac	/home/ubuntu/prads/src/config.h	/^    mac_entry  **sig_mac;               \/* Pointer to hash of mac signatures *\/$/;"	m	struct:_globalconfig
+sig_rst	/home/ubuntu/prads/src/config.h	/^    fp_entry   **sig_rst;               \/* RST signature hash *\/$/;"	m	struct:_globalconfig
+sig_serv_tcp	/home/ubuntu/prads/src/config.h	/^    signature   *sig_serv_tcp;          \/* Pointer to list of tcp service signatures *\/$/;"	m	struct:_globalconfig
+sig_serv_udp	/home/ubuntu/prads/src/config.h	/^    signature   *sig_serv_udp;          \/* Pointer to list of udp service signatures *\/$/;"	m	struct:_globalconfig
+sig_syn	/home/ubuntu/prads/src/config.h	/^    fp_entry   **sig_syn;               \/* SYN signature hash *\/$/;"	m	struct:_globalconfig
+sig_synack	/home/ubuntu/prads/src/config.h	/^    fp_entry   **sig_synack;            \/* SYNACK signature hash *\/$/;"	m	struct:_globalconfig
+sighandler	/home/ubuntu/prads/src/shm-client.c	/^void sighandler(int sig)$/;"	f
+signature	/home/ubuntu/prads/src/prads.h	/^} signature;$/;"	t	typeref:struct:_signature
+sih_void	/home/ubuntu/prads/src/prads.h	/^        int sih_void;$/;"	m	union:_icmp_header::__anon9
+size	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    unsigned long size;$/;"	m	struct:dict
+size	/home/ubuntu/prads/src/prads.h	/^    uint16_t size;              \/* packet size *\/$/;"	m	struct:_fp_entry
+sizemask	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    unsigned long sizemask;$/;"	m	struct:dict
+slen	/home/ubuntu/prads/src/bstrlib.h	/^	int slen;$/;"	m	struct:tagbstring
+sname	/home/ubuntu/prads/src/dhcp.h	/^    char sname [64];             \/\/ Optional server host name (64)$/;"	m	struct:_dhcp_header
+snapUpSize	/home/ubuntu/prads/src/bstrlib.c	/^static int snapUpSize (int i) {$/;"	f	file:
+src	/home/ubuntu/prads/src/bstraux.c	/^	bstring src, dst;$/;"	m	struct:bUuInOut	file:
+src_port	/home/ubuntu/prads/src/prads.h	/^    uint16_t src_port;          \/* source port *\/$/;"	m	struct:_tcp_header
+src_port	/home/ubuntu/prads/src/prads.h	/^    uint16_t src_port;          \/* source port *\/$/;"	m	struct:_udp_header
+sre_length	/home/ubuntu/prads/src/prads.h	/^    uint8_t     sre_length;$/;"	m	struct:_gre_sre_header
+sre_offset	/home/ubuntu/prads/src/prads.h	/^    uint8_t     sre_offset;$/;"	m	struct:_gre_sre_header
+st_time	/home/ubuntu/prads/src/sig_tcp.c	/^uint32_t st_time;$/;"	v
+start_time	/home/ubuntu/prads/src/prads.h	/^    time_t   start_time;          \/* connection start time *\/$/;"	m	struct:_connection
+stats	/home/ubuntu/prads/src/prads.h	/^    uint32_t    stats;          \/* stats on how many times it has matched *\/  $/;"	m	struct:_servicelist
+stats	/home/ubuntu/prads/src/prads.h	/^    } stats;$/;"	m	struct:_signature	typeref:struct:_signature::__anon14
+stdout_arp	/home/ubuntu/prads/src/output-plugins/log_stdout.c	/^void stdout_arp (output_plugin *unused, asset *main)$/;"	f
+stdout_connection	/home/ubuntu/prads/src/output-plugins/log_stdout.c	/^void stdout_connection (output_plugin *plugin, connection *cxt, int outputmode)$/;"	f
+stdout_excessive	/home/ubuntu/prads/src/output-plugins/log_stdout.c	/^void stdout_excessive(connection *cxt)$/;"	f
+stdout_os	/home/ubuntu/prads/src/output-plugins/log_stdout.c	/^void stdout_os (output_plugin *unused, asset *main, os_asset *os, connection* c)$/;"	f
+stdout_service	/home/ubuntu/prads/src/output-plugins/log_stdout.c	/^void stdout_service (output_plugin* unused, asset *main, serv_asset *service, connection *c)$/;"	f
+str	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    char *str; \/* Used for both REDIS_REPLY_ERROR and REDIS_REPLY_STRING *\/$/;"	m	struct:redisReply
+study	/home/ubuntu/prads/src/prads.h	/^    pcre_extra *study;          \/* Studied version of the compiled regex. *\/$/;"	m	struct:_signature
+sub	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    } sub;$/;"	m	struct:redisAsyncContext	typeref:struct:redisAsyncContext::__anon2
+tUNKNOWN	/home/ubuntu/prads/src/prads.c	/^struct tagbstring tUNKNOWN = bsStatic("unknown");$/;"	v	typeref:struct:tagbstring
+t_ack	/home/ubuntu/prads/src/prads.h	/^    uint32_t t_ack;             \/* acknowledgement number *\/$/;"	m	struct:_tcp_header
+t_csum	/home/ubuntu/prads/src/prads.h	/^    uint16_t t_csum;            \/* checksum *\/$/;"	m	struct:_tcp_header
+t_flags	/home/ubuntu/prads/src/prads.h	/^    uint8_t t_flags;            \/* tcp flags *\/$/;"	m	struct:_tcp_header
+t_offx2	/home/ubuntu/prads/src/prads.h	/^    uint8_t t_offx2;            \/* data offset, rsvd *\/$/;"	m	struct:_tcp_header
+t_seq	/home/ubuntu/prads/src/prads.h	/^    uint32_t t_seq;             \/* sequence number *\/$/;"	m	struct:_tcp_header
+t_urgp	/home/ubuntu/prads/src/prads.h	/^    uint16_t t_urgp;            \/* urgent pointer *\/$/;"	m	struct:_tcp_header
+t_win	/home/ubuntu/prads/src/prads.h	/^    uint16_t t_win;             \/* window *\/$/;"	m	struct:_tcp_header
+table	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    dictEntry **table;$/;"	m	struct:dict
+tagbstring	/home/ubuntu/prads/src/bstrlib.h	/^struct tagbstring {$/;"	s
+tail	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    redisCallback *head, *tail;$/;"	m	struct:redisCallbackList
+tcp	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^    } tcp;$/;"	m	struct:config	typeref:struct:config::__anon3	file:
+tcp_clients	/home/ubuntu/prads/src/prads.h	/^    uint32_t tcp_clients;   \/* total number of tcp clients detected *\/$/;"	m	struct:_prads_stat
+tcp_header	/home/ubuntu/prads/src/prads.h	/^} tcp_header;$/;"	t	typeref:struct:_tcp_header
+tcp_os_assets	/home/ubuntu/prads/src/prads.h	/^    uint32_t tcp_os_assets; \/* total number of tcp os assets detected *\/$/;"	m	struct:_prads_stat
+tcp_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t tcp_recv;      \/* number of tcp packets received *\/$/;"	m	struct:_prads_stat
+tcp_services	/home/ubuntu/prads/src/prads.h	/^    uint32_t tcp_services;  \/* total number of tcp services detected *\/$/;"	m	struct:_prads_stat
+tcph	/home/ubuntu/prads/src/prads.h	/^    tcp_header      *tcph;          \/* tcp header struct pointer *\/$/;"	m	struct:_packetinfo
+test	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	37;"	d	file:
+testInCharField	/home/ubuntu/prads/src/bstrlib.c	1275;"	d	file:
+testInCharField	/home/ubuntu/prads/src/bstrlib.c	1285;"	d	file:
+test_append_formatted_commands	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static void test_append_formatted_commands(struct config config) {$/;"	f	file:
+test_blocking_connection	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static void test_blocking_connection(struct config config) {$/;"	f	file:
+test_blocking_connection_errors	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static void test_blocking_connection_errors(void) {$/;"	f	file:
+test_blocking_io_errors	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static void test_blocking_io_errors(struct config config) {$/;"	f	file:
+test_cond	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	38;"	d	file:
+test_format_commands	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static void test_format_commands(void) {$/;"	f	file:
+test_invalid_timeout_errors	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static void test_invalid_timeout_errors(struct config config) {$/;"	f	file:
+test_reply_reader	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static void test_reply_reader(void) {$/;"	f	file:
+test_throughput	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static void test_throughput(struct config config) {$/;"	f	file:
+tests	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static int tests = 0, fails = 0;$/;"	v	file:
+text	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.h	/^    char text[256];$/;"	m	struct:ring_item
+timeout	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^        struct timeval timeout;$/;"	m	struct:config::__anon3	typeref:struct:config::__anon3::timeval	file:
+title	/home/ubuntu/prads/src/prads.h	/^    } title;$/;"	m	struct:_signature	typeref:struct:_signature::__anon13
+tos	/home/ubuntu/prads/src/tos.h	/^  uint8_t tos;$/;"	m	struct:tos_def
+tos	/home/ubuntu/prads/src/tos.h	/^static struct tos_def tos[] = {$/;"	v	typeref:struct:tos_def
+tos_def	/home/ubuntu/prads/src/tos.h	/^struct tos_def {$/;"	s
+touch_pid_file	/home/ubuntu/prads/src/sys_func.c	/^int touch_pid_file(const char *path, long uid, long gid)$/;"	f
+ts	/home/ubuntu/prads/src/prads.h	/^        struct ts {$/;"	s	union:_icmp_header::__anon10
+ts	/home/ubuntu/prads/src/prads.h	/^        } ts;$/;"	m	union:_icmp_header::__anon10	typeref:struct:_icmp_header::__anon10::ts
+tstamp	/home/ubuntu/prads/src/prads.c	/^time_t tstamp;$/;"	v
+ttime	/home/ubuntu/prads/src/prads.h	/^            uint32_t ttime;$/;"	m	struct:_icmp_header::__anon10::ts
+ttl	/home/ubuntu/prads/src/prads.h	/^    uint8_t ttl, df;            \/* TTL and don't fragment bit *\/$/;"	m	struct:_fp_entry
+ttl	/home/ubuntu/prads/src/prads.h	/^    uint8_t ttl;                \/* Asset TTL *\/$/;"	m	struct:_serv_asset
+ttl	/home/ubuntu/prads/src/prads.h	/^    uint8_t ttl;                \/* Asset ttl *\/$/;"	m	struct:_os_asset
+ttl	/home/ubuntu/prads/src/prads.h	/^    uint8_t ttl;                \/* IP TTL *\/$/;"	m	struct:_dhcp_fp_entry
+type	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    dictType *type;$/;"	m	struct:dict
+type	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int type; \/* REDIS_REPLY_* *\/$/;"	m	struct:redisReply
+type	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int type;$/;"	m	struct:redisReadTask
+type	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^    enum connection_type type;$/;"	m	struct:config	typeref:enum:config::connection_type	file:
+type	/home/ubuntu/prads/src/prads.h	/^    enum { SIGNATURE, FINGERPRINT } type;$/;"	m	struct:_packetinfo	typeref:enum:_packetinfo::__anon12
+type	/home/ubuntu/prads/src/prads.h	/^    int type;$/;"	m	struct:_fmask
+type	/home/ubuntu/prads/src/prads.h	/^    uint8_t type;               \/* DHCP type *\/$/;"	m	struct:_dhcp_fp_entry
+type	/home/ubuntu/prads/src/prads.h	/^    uint8_t type;               \/* type field *\/$/;"	m	struct:_icmp6_header
+type	/home/ubuntu/prads/src/prads.h	/^    uint8_t type;$/;"	m	struct:_icmp_header
+u_int16_t	/home/ubuntu/prads/src/dump_dns.c	42;"	d	file:
+u_int32_t	/home/ubuntu/prads/src/dump_dns.c	41;"	d	file:
+u_ntop	/home/ubuntu/prads/src/sys_func.c	/^const char *u_ntop(const struct in6_addr ip_addr, int af, char *dest)$/;"	f
+u_ntop_dst	/home/ubuntu/prads/src/sys_func.c	/^const char *u_ntop_dst(packetinfo *pi, char *dest)$/;"	f
+u_ntop_src	/home/ubuntu/prads/src/sys_func.c	/^const char *u_ntop_src(packetinfo *pi, char *dest)$/;"	f
+udp_clients	/home/ubuntu/prads/src/prads.h	/^    uint32_t udp_clients;   \/* total number of tcp clients detected *\/$/;"	m	struct:_prads_stat
+udp_guess_direction	/home/ubuntu/prads/src/prads.c	/^void udp_guess_direction(packetinfo *pi)$/;"	f
+udp_header	/home/ubuntu/prads/src/prads.h	/^} udp_header;$/;"	t	typeref:struct:_udp_header
+udp_os_assets	/home/ubuntu/prads/src/prads.h	/^    uint32_t udp_os_assets; \/* total number of udp os assets detected *\/$/;"	m	struct:_prads_stat
+udp_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t udp_recv;      \/* number of udp packets received *\/$/;"	m	struct:_prads_stat
+udp_services	/home/ubuntu/prads/src/prads.h	/^    uint32_t udp_services;  \/* total number of udp services detected *\/$/;"	m	struct:_prads_stat
+udph	/home/ubuntu/prads/src/prads.h	/^    udp_header      *udph;          \/* udp header struct pointer *\/$/;"	m	struct:_packetinfo
+unix	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^    } unix;$/;"	m	struct:config	typeref:struct:config::__anon4	file:
+unknown	/home/ubuntu/prads/src/prads.h	/^    int unknown;                \/* 1 = Uknown, 0 = Known "Asset application" *\/$/;"	m	struct:_serv_asset
+unload_dhcp_sigs	/home/ubuntu/prads/src/dhcp.c	/^void unload_dhcp_sigs(dhcp_fp_entry **sigp, int size)$/;"	f
+unload_sigs	/home/ubuntu/prads/src/sig_tcp.c	/^void unload_sigs(fp_entry **sigp, int size)$/;"	f
+unload_tcp_sigs	/home/ubuntu/prads/src/sys_func.c	/^void unload_tcp_sigs()$/;"	f
+up	/home/ubuntu/prads/src/prads.h	/^    uint8_t         up;             \/* Set if the asset has been updated *\/$/;"	m	struct:_packetinfo
+upcase	/home/ubuntu/prads/src/bstrlib.c	554;"	d	file:
+update_asset	/home/ubuntu/prads/src/assets.c	/^void update_asset(packetinfo *pi)$/;"	f
+update_asset_arp	/home/ubuntu/prads/src/assets.c	/^short update_asset_arp(u_int8_t arp_sha[MAC_ADDR_LEN], packetinfo *pi)$/;"	f
+update_asset_list	/home/ubuntu/prads/src/assets.c	/^void update_asset_list()$/;"	f
+update_asset_os	/home/ubuntu/prads/src/assets.c	/^short update_asset_os ($/;"	f
+update_asset_service	/home/ubuntu/prads/src/assets.c	/^short update_asset_service(packetinfo *pi, bstring service, bstring application)$/;"	f
+update_asset_shmem	/home/ubuntu/prads/src/assets.c	/^short update_asset_shmem(packetinfo *pi)$/;"	f
+update_os_stats	/home/ubuntu/prads/src/assets.c	/^void update_os_stats(uint8_t detection)$/;"	f
+update_service_stats	/home/ubuntu/prads/src/assets.c	/^void update_service_stats(int role, uint16_t proto)$/;"	f
+uptime	/home/ubuntu/prads/src/prads.h	/^    uint32_t uptime;            \/* Asset uptime *\/$/;"	m	struct:_os_asset
+usage	/home/ubuntu/prads/src/prads.c	/^static void usage()$/;"	f	file:
+use_fuzzy	/home/ubuntu/prads/src/sig_tcp.c	/^    full_dump, use_fuzzy, payload_dump;$/;"	v	file:
+usec	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static long long usec(void) {$/;"	f	file:
+used	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    unsigned long used;$/;"	m	struct:dict
+user_filter	/home/ubuntu/prads/src/config.h	/^    char        *user_filter;           \/**\/$/;"	m	struct:_globalconfig
+user_name	/home/ubuntu/prads/src/config.h	/^    char        *user_name;             \/* User to drop privileges too *\/$/;"	m	struct:_globalconfig
+userland	/home/ubuntu/prads/src/prads.h	/^    uint8_t userland;           \/* Userland stack *\/$/;"	m	struct:_fp_entry
+v	/home/ubuntu/prads/src/prads.h	/^    v4si v;$/;"	m	union:_i4vector
+v4si	/home/ubuntu/prads/src/prads.h	/^typedef int v4si __attribute__((vector_size(16)));$/;"	t
+val	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    void *val;$/;"	m	struct:dictEntry
+valDestructor	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    void (*valDestructor)(void *privdata, void *obj);$/;"	m	struct:dictType
+valDup	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    void *(*valDup)(void *privdata, const void *obj);$/;"	m	struct:dictType
+vc	/home/ubuntu/prads/src/prads.h	/^    char *vc;                   \/* Vender Code *\/$/;"	m	struct:_dhcp_fp_entry
+vcl	/home/ubuntu/prads/src/prads.h	/^    uint32_t vcl;               \/* version, class, and label *\/$/;"	m	struct:_ip6_header
+vendcookie	/home/ubuntu/prads/src/dhcp.c	/^static const unsigned char vendcookie[] = { 99, 130, 83, 99 };$/;"	v	file:
+vendor	/home/ubuntu/prads/src/prads.h	/^    bstring vendor;             \/* Vendor (MS,Linux,Sun,HP...) *\/$/;"	m	struct:_os_asset
+vendor	/home/ubuntu/prads/src/prads.h	/^  char *vendor;$/;"	m	struct:_mac_entry
+ver	/home/ubuntu/prads/src/prads.h	/^        bstring ver;            \/* Version *\/$/;"	m	struct:_signature::__anon13
+verbose	/home/ubuntu/prads/src/config.h	/^    uint8_t     verbose;                \/* Verbose or not *\/$/;"	m	struct:_globalconfig
+version	/home/ubuntu/prads/src/prads.h	/^    uint8_t version; \/**< GRE version *\/$/;"	m	struct:_gre_header
+vlan	/home/ubuntu/prads/src/prads.h	/^    uint16_t        vlan;           \/* vlan tag *\/$/;"	m	struct:_packetinfo
+vlan	/home/ubuntu/prads/src/prads.h	/^    uint16_t        vlan;       \/* vlan tag *\/$/;"	m	struct:_asset
+vlan_recv	/home/ubuntu/prads/src/prads.h	/^    uint32_t vlan_recv;     \/* number of VLAN packets received *\/$/;"	m	struct:_prads_stat
+vlantag	/home/ubuntu/prads/src/prads.h	/^    } vlantag;$/;"	m	struct:_ether_header	typeref:union:_ether_header::__anon8
+vlog	/home/ubuntu/prads/src/sys_func.h	20;"	d
+vlog	/home/ubuntu/prads/src/sys_func.h	34;"	d
+w	/home/ubuntu/prads/src/prads.h	/^    uint32_t w[4];$/;"	m	union:_i4vector
+wev	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^    ev_io rev, wev;$/;"	m	struct:redisLibevEvents
+wev	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^    struct event rev, wev;$/;"	m	struct:redisLibeventEvents	typeref:struct:redisLibeventEvents::
+wpa	/home/ubuntu/prads/src/prads.h	/^            uint8_t wpa;$/;"	m	struct:_icmp_header::__anon9::rtradv
+writeFn	/home/ubuntu/prads/src/bstraux.c	/^    bNwrite writeFn; \/* fwrite work-a-like fnptr for core stream *\/$/;"	m	struct:bwriteStream	file:
+writing	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^    int reading, writing;$/;"	m	struct:redisAeEvents
+writing	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^    int reading, writing;$/;"	m	struct:redisLibevEvents
+wsc	/home/ubuntu/prads/src/prads.h	/^    uint16_t wsc, mss;          \/* value for WSCALE and MSS options *\/$/;"	m	struct:_fp_entry
+wsc_mod	/home/ubuntu/prads/src/prads.h	/^    uint8_t wsc_mod, mss_mod;   \/* modulo for WSCALE and MSS (NONE or CONST) *\/$/;"	m	struct:_fp_entry
+wsize	/home/ubuntu/prads/src/prads.h	/^    uint16_t wsize;             \/* window size *\/$/;"	m	struct:_fp_entry
+wsize_mod	/home/ubuntu/prads/src/prads.h	/^    uint8_t wsize_mod;          \/* MOD_* for wsize *\/$/;"	m	struct:_fp_entry
+wspace	/home/ubuntu/prads/src/bstrlib.c	556;"	d	file:
+xid	/home/ubuntu/prads/src/dhcp.h	/^    uint32_t xid;                \/\/ transaction id (5)$/;"	m	struct:_dhcp_header
+yiaddr	/home/ubuntu/prads/src/dhcp.h	/^    uint32_t yiaddr;             \/\/ your client IP (5)$/;"	m	struct:_dhcp_header
+zcalloc	/home/ubuntu/prads/redis-lib/deps/hiredis/zmalloc.h	9;"	d
+zero_stamp	/home/ubuntu/prads/src/prads.h	/^    uint8_t zero_stamp;         \/* timestamp option but zero value? *\/$/;"	m	struct:_fp_entry
+zfree	/home/ubuntu/prads/redis-lib/deps/hiredis/zmalloc.h	10;"	d
+zmalloc	/home/ubuntu/prads/redis-lib/deps/hiredis/zmalloc.h	7;"	d
+zrealloc	/home/ubuntu/prads/redis-lib/deps/hiredis/zmalloc.h	8;"	d
+zstrdup	/home/ubuntu/prads/redis-lib/deps/hiredis/zmalloc.h	11;"	d

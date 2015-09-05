@@ -43,6 +43,7 @@
 #include "dhcp.h"
 //#include "output-plugins/log_init.h"
 #include "output-plugins/log.h"
+#include "../redis-lib/src/redis_lib.h"
 
 #ifndef CONFDIR
 #define CONFDIR "/etc/prads/"
@@ -1324,6 +1325,16 @@ int prads_initialize(globalconfig *conf)
            }
         }
     }
+
+    if (STATE_EXTERN) {
+    	conf->context = createClient(REDIS_HOST, REDIS_PORT);
+    	if (NULL == conf->context) {
+       		olog("[*] Unable to connect to redis server %s.  (%s)\n", "10.0.1.4", "6379");
+    	} else {
+       		olog("[*] connected to redis server %s.  (%s)\n", "10.0.1.4", "6379");
+    	}
+    }
+
     return 0;
 }
 

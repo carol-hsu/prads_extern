@@ -1,5 +1,22 @@
 #include "redis_lib.h"
 
+redis_client *create_cache(char *host, int port) {
+	
+	client.context = createClient(host, port);
+
+	if (NULL == client.context) {
+		printf("No connection to server \n");	
+		return NULL;
+	}
+
+	for (i=0; i<BUCKET_SIZE; i++) {
+		client.passet[i] = malloc(sizeof(item));
+		if (client.passet[i]) {
+			memset(client.passet[i], 0, sizeof(item));
+		}
+	}
+	return &client;
+}
 // returns the client context after setting up the connection
 redisContext *createClient(char *host, int port) {
 	redisContext *c;
@@ -20,6 +37,11 @@ redisContext *createClient(char *host, int port) {
 		return 0;
 	}
 	return c;
+}
+
+int create_item(const void* key, size_t nkey, void *data,
+                size_t size, uint32_t flags, time_t exp) {
+	
 }
 
 // Syncronous Get and Set methods. return 0 on failure, > 0 success.
