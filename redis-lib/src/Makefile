@@ -45,15 +45,12 @@ clean:
 
 redis_lib.o: redis_lib.h ../deps/hiredis/hiredis.h /usr/include/stdio.h
 redis_lib.o: /usr/include/features.h /usr/include/stdc-predef.h
-redis_lib.o: /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h
-redis_lib.o: /usr/include/gnu/stubs.h /usr/include/linux/stddef.h
-redis_lib.o: /usr/include/bits/types.h /usr/include/bits/typesizes.h
-redis_lib.o: /usr/include/libio.h /usr/include/_G_config.h
-redis_lib.o: /usr/include/wchar.h /usr/include/c++/4.8/tr1/stdarg.h
+redis_lib.o: /usr/include/linux/stddef.h /usr/include/libio.h
+redis_lib.o: /usr/include/_G_config.h /usr/include/wchar.h
+redis_lib.o: /usr/include/c++/4.8/tr1/stdarg.h
 redis_lib.o: /usr/include/c++/4.8/tr1/cstdarg
-redis_lib.o: /usr/include/c++/4.8/tr1/cstdarg /usr/include/bits/stdio_lim.h
-redis_lib.o: /usr/include/bits/sys_errlist.h /usr/include/sys/time.h
-redis_lib.o: /usr/include/time.h /usr/include/bits/time.h
-redis_lib.o: /usr/include/sys/select.h /usr/include/bits/select.h
-redis_lib.o: /usr/include/bits/sigset.h /usr/include/string.h
-redis_lib.o: /usr/include/xlocale.h
+redis_lib.o: /usr/include/c++/4.8/tr1/cstdarg /usr/include/string.h
+redis_lib.o: /usr/include/xlocale.h /usr/include/stdint.h
+redis_lib.o: /usr/include/stdlib.h /usr/include/alloca.h
+redis_lib.o: /usr/include/pthread.h /usr/include/endian.h
+redis_lib.o: /usr/include/sched.h /usr/include/time.h

@@ -1,6 +1,8 @@
 #include "../deps/hiredis/hiredis.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
 #include <pthread.h>
 
 #define ASSET_HASH4(ip) ((ip) % BUCKET_SIZE)
@@ -15,9 +17,9 @@ typedef struct item_t {
   size_t   size;
   uint32_t flags;
   time_t   exp;
-}item;
+} item;
 
-typdef struct redis_client_t {
+typedef struct redis_client_t {
 	redisContext *context;
 	item *passet[BUCKET_SIZE];
 	// hash
@@ -26,7 +28,7 @@ typdef struct redis_client_t {
 redis_client client;
 
 // Policy should be update with this cache
-redis_client *create_cache(void);
+redis_client *create_cache(char *host, int port);
 
 void destroy_cache(redis_client *client);
 

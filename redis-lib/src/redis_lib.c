@@ -1,6 +1,4 @@
 #include "redis_lib.h"
-#include <string.h>
-#include <pthread.h> 
 
 pthread_t thread_id;
 
@@ -8,6 +6,7 @@ static void *thread_start(void *arg)
 {
 	struct thread_info *tinfo = arg;
         char *uargv, *p;
+	int i;
 
 	sleep(5);
 
@@ -15,16 +14,16 @@ static void *thread_start(void *arg)
 		sleep(1);
 		
 		for (i=0; i<BUCKET_SIZE; i++) {
-			if (client.passet[hash].key != NULL) {
-				pthread_mutex_lock(&client.passet[i].mutex);
+			if (client.passet[i]->key != NULL) {
+				pthread_mutex_lock(&client.passet[i]->mutex);
 
-				redis_syncSet(client.contex,
-				              client.passet[hash].key,
-					      client.passet[hash].nkey,
-					      client.passet[hash].data,
-					      client.passet[hash].size);
+				redis_syncSet(client.context,
+				              client.passet[i]->key,
+					      client.passet[i]->nkey,
+					      client.passet[i]->data,
+					      client.passet[i]->size);
 
-				pthread_mutex_unlock(&client.passet[i].mutex);
+				pthread_mutex_unlock(&client.passet[i]->mutex);
 			}
 		}
 	}
@@ -32,7 +31,8 @@ static void *thread_start(void *arg)
 }
 
 redis_client *create_cache(char *host, int port) {
-	
+	int i;
+
 	client.context = createClient(host, port);
 
 	if (NULL == client.context) {
@@ -44,7 +44,7 @@ redis_client *create_cache(char *host, int port) {
 		client.passet[i] = malloc(sizeof(item));
 		if (client.passet[i]) {
 			memset(client.passet[i], 0, sizeof(item));
-			pthread_mutex_init(&client.passet[i].mutex, NULL);
+			pthread_mutex_init(&client.passet[i]->mutex, NULL);
 		}
 	}
 	pthread_create(&thread_id, NULL, &thread_start, NULL);
@@ -75,47 +75,47 @@ redisContext *createClient(char *host, int port) {
 int create_item(const void* key, size_t nkey, void *data,
                 size_t size, uint32_t flags, time_t exp) {
 
-	uint64_t *hash = key;
+	uint64_t *hash = (uint64_t *) key;
 	// we know the key is uint64_t, so just cast it to uint64_t
 	// this has to be modified to generalize things
 
-	if (client.passet[hash].key) {
+	if (client.passet[(int)*hash]->key) {
 		printf("some one already in this location\n");
 		return 0;
 	}
 
-	pthread_mutex_lock(&client.passet[hash].mutex);	
+	pthread_mutex_lock(&client.passet[(int) *hash]->mutex);	
 	
-	client.passet[hash].key = (char *) malloc(sizeof(uint64_t));
+	client.passet[(int) *hash]->key = (char *) malloc(sizeof(uint64_t));
 
-	if (!client.passet[hash].key) {
+	if (!client.passet[(int) *hash]->key) {
 		printf("no space for data\n");
 		return 0;
 	}
 
-	memcpy(client.passet[hash].key, hash, sizeof(uint64_t));
-	client.passet[hash].nkey = nkey;
+	memcpy(client.passet[(int) *hash]->key, hash, sizeof(uint64_t));
+	client.passet[(int) *hash]->nkey = nkey;
 
-	client.passet[hash].data = (char *) malloc(size);
-	client.passet[hash].size = size;
-	data = client.passet[hash].data;
+	client.passet[(int) *hash]->data = (char *) malloc(size);
+	client.passet[(int) *hash]->size = size;
+	data = client.passet[(int) *hash]->data;
 
-	pthread_mutex_unlock(&client.passet[hash].mutex);	
+	pthread_mutex_unlock(&client.passet[(int) *hash]->mutex);	
 	return 1;
 }
 
 int free_item(const void* key, size_t nkey) {
-	uint64_t *hash = key;
+	uint64_t *hash = (uint64_t *) key;
 
-	pthread_mutex_lock(&client.passet[i].mutex);
+	pthread_mutex_lock(&client.passet[(int) *hash]->mutex);
 
-	free(client.passet[hash].key);
-	client.passet[hash].key = NULL;
+	free(client.passet[(int) *hash]->key);
+	client.passet[(int) *hash]->key = NULL;
 
-	free(client.passet[hash].data);
-	client.passet[hash].data = NULL;
+	free(client.passet[(int) *hash]->data);
+	client.passet[(int) *hash]->data = NULL;
 	
-	pthread_mutex_unlock(&client.passet[i].mutex);
+	pthread_mutex_unlock(&client.passet[(int) *hash]->mutex);
 	return 1;
 }
 
