@@ -100,6 +100,13 @@ int create_item(const void* key, size_t nkey, void *data,
 	client.passet[(int) *hash]->size = size;
 	data = client.passet[(int) *hash]->data;
 
+	// If data is available /* set it */	
+	redis_syncGet(client.context, client.passet[(int) *hash]->key, nkey,
+		                      client.passet[(int) *hash]->data,
+				      &client.passet[(int) *hash]->size);
+
+	// if the data is present in key-value store, update the cache.
+	
 	pthread_mutex_unlock(&client.passet[(int) *hash]->mutex);	
 	return 1;
 }
@@ -134,7 +141,7 @@ int redis_syncSet(redisContext *c, char *key, int key_len, char *value, int valu
 	return 1;
 }
 
-int redis_syncGet(redisContext *c, char *key, int key_len, char *value, int *value_len) {
+int redis_syncGet(redisContext *c, char *key, size_t key_len, char *value, size_t *value_len) {
 	redisReply *reply;
 	
 	if ((!key) || (!key_len) || (!value) || (!value_len)) {
@@ -142,8 +149,13 @@ int redis_syncGet(redisContext *c, char *key, int key_len, char *value, int *val
 	}
 
 	reply = redisCommand(c,"GET %b", key, (size_t) key_len);
-	strncpy(value, reply->str, *value_len);
-	*value_len = strlen(reply->str);
+	if (reply->type != REDIS_REPLY_NIL) {
+		strncpy(value, reply->str, *value_len);
+		*value_len = strlen(reply->str);
+		printf("No data available for key\n");
+		freeReplyObject(reply);
+		return 0;
+	}
 
 	printf("GET foo: %s\n", reply->str);
 	freeReplyObject(reply);

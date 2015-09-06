@@ -437,10 +437,30 @@ void add_asset(packetinfo *pi)
 {
     uint64_t hash;
     asset *masset = NULL;
+    time_t time;
+    uint32_t flags;
+    int ret;
 
     config.pr_s.assets++;
 
-    masset = (asset *) calloc(1, sizeof(asset));
+    if (STATE_EXTERN) {
+
+	if (pi->af == AF_INET) {
+		hash = ASSET_HASH4(PI_IP4SRC(pi));
+	} else if (pi->af == AF_INET6) {
+		hash = ASSET_HASH6(PI_IP6SRC(pi));
+	}
+
+	ret = create_item((void *) &hash, sizeof(uint64_t), (void *) masset,
+                          sizeof(asset), flags, time);
+
+	if ((!ret) || (masset == NULL)) {
+		masset = (asset *) calloc(1, sizeof(asset));
+	}
+    } else {
+	masset = (asset *) calloc(1, sizeof(asset));
+    }
+
     masset->af = pi->af;
     masset->vlan = pi->vlan;
     masset->i_attempts = 0;

@@ -1,7 +1,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#include "../redis-lib/deps/hiredis/hiredis.h"
+#include "../redis-lib/src/redis_lib.h"
 
 #define CONFIG_VERBOSE 0x01
 #define CONFIG_UPDATES 0x02
@@ -14,7 +14,7 @@
 #define DEFAULT_NETS "0.0.0.0/0,::/0"
 #define REDIS_HOST   "10.0.1.4"
 #define REDIS_PORT   6379
-#define STATE_EXTERN 0
+#define STATE_EXTERN 1
 
 /* Flags to set for enabling different OS Fingerprinting checks.
  * Make these compatible with TCP flags!*/
@@ -103,7 +103,7 @@ typedef struct _globalconfig {
     mac_entry  **sig_mac;               /* Pointer to hash of mac signatures */
     dhcp_fp_entry **sig_dhcp;           /* DHCP signature hash */
     char        *bpf_file;              /* filename of BPF file to load */
-    redisContext *context;              /* redis context */
+    redis_client *context;              /* redis context */
 } globalconfig;
 #define ISSET_CONFIG_VERBOSE(config)    ((config).cflags & CONFIG_VERBOSE)
 #define ISSET_CONFIG_UPDATES(config)    ((config).cflags & CONFIG_UPDATES)

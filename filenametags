@@ -1,3 +1,4 @@
+!_TAG_FILE_SORTED	2	/2=foldcase/
 ae.h	./redis-lib/deps/hiredis/adapters/ae.h	1
 assets.c	./src/assets.c	1
 assets.h	./src/assets.h	1

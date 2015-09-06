@@ -1327,7 +1327,7 @@ int prads_initialize(globalconfig *conf)
     }
 
     if (STATE_EXTERN) {
-    	conf->context = createClient(REDIS_HOST, REDIS_PORT);
+    	conf->context = create_cache(REDIS_HOST, REDIS_PORT);
     	if (NULL == conf->context) {
        		olog("[*] Unable to connect to redis server %s.  (%s)\n", "10.0.1.4", "6379");
     	} else {

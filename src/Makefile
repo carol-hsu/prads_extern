@@ -1,7 +1,7 @@
 #Makefile
 #CC=gcc
 UNAME := $(shell uname -s)
-CFLAGS+=-O3
+CFLAGS+=-g -O3
 
 # for finding static libraries
 LIBDIR=/usr/lib/x86_64-linux-gnu
@@ -32,7 +32,7 @@ endif
 ifeq (${TCMALLOC},y)
 LDFLAGS+=-ltcmalloc
 endif
-LDFLAGS+=-lpcap -lpcre -lresolv ../redis-lib/libredis.a ../redis-lib/deps/hiredis/libhiredis.a
+LDFLAGS+=-lpcap -lpcre -lresolv -lpthread ../redis-lib/libredis.a ../redis-lib/deps/hiredis/libhiredis.a
 CFLAGS+=-DCONFDIR='"${CONFDIR}/"'
 
 else
@@ -68,7 +68,7 @@ ifneq (${DEBUG_PACKET},)
 CFLAGS+= -DDEBUG_PACKET
 endif
 ifeq ($(UNAME), FreeBSD)
-LDFLAGS= -L/usr/local/lib -lpcre -lpcap
+LDFLAGS= -L/usr/local/lib -lpcre -lpcap -lpthread
 CPPFLAGS= -I/usr/local/include
 endif
 

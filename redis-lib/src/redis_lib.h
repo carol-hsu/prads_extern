@@ -1,3 +1,6 @@
+#ifndef __REDIS_LIB_H
+#define __REDIS_LIB_H
+
 #include "../deps/hiredis/hiredis.h"
 #include <string.h>
 #include <stdio.h>
@@ -43,10 +46,12 @@ redisContext *createClient(char *host, int port);
 
 // Syncronous Get and Set methods.
 int redis_syncSet(redisContext *c, char *key, int key_len, char *value, int value_len);
-int redis_syncGet(redisContext *c, char *key, int key_len, char *value, int *value_len);
+int redis_syncGet(redisContext *c, char *key, size_t key_len, char *value, size_t *value_len);
 
 // Syncronous Get and Set methods.
 int redis_asyncSet(char *key, int key_len, char *value, int value_len);
 int redis_asyncGet(char *key, int key_len, char *value, int *value_len);
 
 int destroyClient(redisContext *context);
+
+#endif

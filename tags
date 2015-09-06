@@ -14,6 +14,7 @@ ARPOP_REQUEST	/home/ubuntu/prads/src/prads.h	59;"	d
 ARPOP_RREPLY	/home/ubuntu/prads/src/prads.h	62;"	d
 ARPOP_RREQUEST	/home/ubuntu/prads/src/prads.h	61;"	d
 ASSET_ARP	/home/ubuntu/prads/src/prads.h	47;"	d
+ASSET_HASH4	/home/ubuntu/prads/redis-lib/src/redis_lib.h	11;"	d
 ASSET_HASH4	/home/ubuntu/prads/src/assets.h	1;"	d
 ASSET_HASH6	/home/ubuntu/prads/src/assets.h	3;"	d
 ASSET_TIMEOUT	/home/ubuntu/prads/src/prads.h	39;"	d
@@ -47,6 +48,7 @@ BSTR_BS_BUFF_LENGTH_GET	/home/ubuntu/prads/src/bstrlib.h	34;"	d
 BSTR_ERR	/home/ubuntu/prads/src/bstrlib.h	32;"	d
 BSTR_OK	/home/ubuntu/prads/src/bstrlib.h	33;"	d
 BS_BUFF_SZ	/home/ubuntu/prads/src/bstrlib.c	1752;"	d	file:
+BUCKET_SIZE	/home/ubuntu/prads/redis-lib/src/redis_lib.h	12;"	d
 BUCKET_SIZE	/home/ubuntu/prads/src/prads.h	40;"	d
 BWS_BUFF_SZ	/home/ubuntu/prads/src/bstraux.c	979;"	d	file:
 CFCLEN	/home/ubuntu/prads/src/bstrlib.c	1273;"	d	file:
@@ -445,6 +447,7 @@ __HIREDIS_LIBEV_H__	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	3
 __HIREDIS_LIBUV_H__	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	2;"	d
 __MAX_MSEC	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	176;"	d	file:
 __NET_H	/home/ubuntu/prads/redis-lib/deps/hiredis/net.h	34;"	d
+__REDIS_LIB_H	/home/ubuntu/prads/redis-lib/src/redis_lib.h	2;"	d
 __SDS_H	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.h	32;"	d
 __USE_POSIX199309	/home/ubuntu/prads/src/dump_dns.c	36;"	d	file:
 __pad__	/home/ubuntu/prads/src/prads.h	/^    uint8_t  __pad__;             \/* pads struct to alignment *\/$/;"	m	struct:_connection
@@ -754,6 +757,7 @@ callbackKeyCompare	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static in
 callbackKeyDestructor	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static void callbackKeyDestructor(void *privdata, void *key) {$/;"	f	file:
 callbackValDestructor	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static void callbackValDestructor(void *privdata, void *val) {$/;"	f	file:
 callbackValDup	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static void *callbackValDup(void *privdata, const void *src) {$/;"	f	file:
+cas	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^  uint64_t cas;$/;"	m	struct:item_t
 cflags	/home/ubuntu/prads/src/config.h	/^    uint8_t     cflags;                 \/* config flags *\/$/;"	m	struct:_globalconfig
 chaddr	/home/ubuntu/prads/src/dhcp.h	/^    char chaddr [16];            \/\/ Client HW address (16)$/;"	m	struct:_dhcp_header
 channels	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        struct dict *channels;$/;"	m	struct:redisAsyncContext::__anon2	typeref:struct:redisAsyncContext::__anon2::dict
@@ -770,6 +774,7 @@ chrtos	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static size_t chrto
 ciaddr	/home/ubuntu/prads/src/dhcp.h	/^    uint32_t ciaddr;             \/\/ client IP (5)$/;"	m	struct:_dhcp_header
 cleanup	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        void (*cleanup)(void *privdata);$/;"	m	struct:redisAsyncContext::__anon1
 clear_asset_list	/home/ubuntu/prads/src/assets.c	/^void clear_asset_list()$/;"	f
+client	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^redis_client client;$/;"	v
 client_tcp4	/home/ubuntu/prads/src/servicefp/tcpc.c	/^void client_tcp4(packetinfo *pi, signature* sig_client_tcp)$/;"	f
 client_tcp6	/home/ubuntu/prads/src/servicefp/tcpc.c	/^void client_tcp6(packetinfo *pi, signature* sig_client_tcp)$/;"	f
 code	/home/ubuntu/prads/src/prads.h	/^    uint8_t code;               \/* code field *\/$/;"	m	struct:_icmp6_header
@@ -797,7 +802,8 @@ context	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/ae.h	/^    redisAsync
 context	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libev.h	/^    redisAsyncContext *context;$/;"	m	struct:redisLibevEvents
 context	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libevent.h	/^    redisAsyncContext *context;$/;"	m	struct:redisLibeventEvents
 context	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^  redisAsyncContext* context;$/;"	m	struct:redisLibuvEvents
-context	/home/ubuntu/prads/src/config.h	/^    redisContext *context;              \/* redis context *\/$/;"	m	struct:_globalconfig
+context	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^	redisContext *context;$/;"	m	struct:redis_client_t
+context	/home/ubuntu/prads/src/config.h	/^    redis_client *context;              \/* redis context *\/$/;"	m	struct:_globalconfig
 createArray	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createArray)(const redisReadTask*, int);$/;"	m	struct:redisReplyObjectFunctions
 createArrayObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void *createArrayObject(const redisReadTask *task, int elements) {$/;"	f	file:
 createClient	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^redisContext *createClient(char *host, int port) {$/;"	f
@@ -808,6 +814,8 @@ createNilObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static voi
 createReplyObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static redisReply *createReplyObject(int type) {$/;"	f	file:
 createString	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createString)(const redisReadTask*, char*, size_t);$/;"	m	struct:redisReplyObjectFunctions
 createStringObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^static void *createStringObject(const redisReadTask *task, char *str, size_t len) {$/;"	f	file:
+create_cache	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^redis_client *create_cache(char *host, int port) {$/;"	f
+create_item	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int create_item(const void* key, size_t nkey, void *data,$/;"	f
 create_pid_file	/home/ubuntu/prads/src/sys_func.c	/^int create_pid_file(const char *path)$/;"	f
 cstr2bstr	/home/ubuntu/prads/src/bstrlib.h	40;"	d
 cstr2tbstr	/home/ubuntu/prads/src/bstrlib.h	216;"	d
@@ -838,6 +846,7 @@ daemon_flag	/home/ubuntu/prads/src/config.h	/^    uint8_t     daemon_flag;$/;"	m
 daemonize	/home/ubuntu/prads/src/sys_func.c	/^int daemonize()$/;"	f
 data	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^        void *data;$/;"	m	struct:redisAsyncContext::__anon1
 data	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    void *data;$/;"	m	struct:redisAsyncContext
+data	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^  void*    data;$/;"	m	struct:item_t
 data	/home/ubuntu/prads/src/bstrlib.h	/^	unsigned char * data;$/;"	m	struct:tagbstring
 data	/home/ubuntu/prads/src/output-plugins/log.h	/^   void *data;                                                 \/* anything else *\/$/;"	m	struct:_output_plugin
 data	/home/ubuntu/prads/src/prads.h	/^        char data[1];$/;"	m	union:_icmp_header::__anon10
@@ -971,6 +980,7 @@ etht	/home/ubuntu/prads/src/prads.h	/^        struct etht {$/;"	s	union:_ether_h
 etht	/home/ubuntu/prads/src/prads.h	/^        } etht;$/;"	m	union:_ether_header::__anon8	typeref:struct:_ether_header::__anon8::etht
 ev	/home/ubuntu/prads/redis-lib/deps/hiredis/async.h	/^    } ev;$/;"	m	struct:redisAsyncContext	typeref:struct:redisAsyncContext::__anon1
 events	/home/ubuntu/prads/redis-lib/deps/hiredis/adapters/libuv.h	/^  int                events;$/;"	m	struct:redisLibuvEvents
+exp	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^  time_t   exp;$/;"	m	struct:item_t
 exvsnprintf	/home/ubuntu/prads/src/bstrlib.c	2730;"	d	file:
 exvsnprintf	/home/ubuntu/prads/src/bstrlib.c	2735;"	d	file:
 exvsnprintf	/home/ubuntu/prads/src/bstrlib.c	2745;"	d	file:
@@ -1000,6 +1010,7 @@ first_seen	/home/ubuntu/prads/src/prads.h	/^    time_t first_seen;          \/* 
 first_seen	/home/ubuntu/prads/src/prads.h	/^    time_t first_seen;          \/* Time at which os_asset was first detected. *\/$/;"	m	struct:_os_asset
 first_seen	/home/ubuntu/prads/src/prads.h	/^    time_t first_seen;          \/* Time at which service_asset was first seen. *\/$/;"	m	struct:_serv_asset
 flags	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    int flags;$/;"	m	struct:redisContext
+flags	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^  uint32_t flags;$/;"	m	struct:item_t
 flags	/home/ubuntu/prads/src/dhcp.h	/^    uint16_t flags;              \/\/ flags (3)$/;"	m	struct:_dhcp_header
 flags	/home/ubuntu/prads/src/output-plugins/log.h	/^   int flags;$/;"	m	struct:_output_plugin
 flags	/home/ubuntu/prads/src/prads.h	/^    uint8_t flags; \/**< GRE packet flags *\/$/;"	m	struct:_gre_header
@@ -1018,6 +1029,7 @@ freeObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.h	/^    void (*free
 freeReplyObject	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^void freeReplyObject(void *reply) {$/;"	f
 free_config	/home/ubuntu/prads/src/config.c	/^void free_config()$/;"	f
 free_dhcp_sigs	/home/ubuntu/prads/src/dhcp.c	/^static void free_dhcp_sigs(dhcp_fp_entry *e){$/;"	f	file:
+free_item	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int free_item(const void* key, size_t nkey) {$/;"	f
 free_signature_list	/home/ubuntu/prads/src/servicefp/servicefp.c	/^void free_signature_list (signature *head)$/;"	f
 free_sigs	/home/ubuntu/prads/src/sig_tcp.c	/^static void free_sigs(fp_entry *e){$/;"	f	file:
 full_dump	/home/ubuntu/prads/src/sig_tcp.c	/^    full_dump, use_fuzzy, payload_dump;$/;"	v	file:
@@ -1141,8 +1153,11 @@ isEOF	/home/ubuntu/prads/src/bstraux.c	/^    int isEOF;       \/* track stream's
 isEOF	/home/ubuntu/prads/src/bstrlib.c	/^	int isEOF;		\/* track file's EOF state *\/$/;"	m	struct:bStream	file:
 is_hex_digit	/home/ubuntu/prads/redis-lib/deps/hiredis/sds.c	/^int is_hex_digit(char c) {$/;"	f
 is_valid_path	/home/ubuntu/prads/src/sys_func.c	/^int is_valid_path(const char *path)$/;"	f
+item	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^} item;$/;"	t	typeref:struct:item_t
+item_t	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^typedef struct item_t {$/;"	s
 items	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.h	/^    struct ring_item items[RINGBUFFER_ITEMS];$/;"	m	struct:log_ringbuffer	typeref:struct:log_ringbuffer::ring_item
 key	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    void *key;$/;"	m	struct:dictEntry
+key	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^  void*    key;$/;"	m	struct:item_t
 keyCompare	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    int (*keyCompare)(void *privdata, const void *key1, const void *key2);$/;"	m	struct:dictType
 keyDestructor	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    void (*keyDestructor)(void *privdata, void *key);$/;"	m	struct:dictType
 keyDup	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    void *(*keyDup)(void *privdata, const void *key);$/;"	m	struct:dictType
@@ -1224,6 +1239,7 @@ mtu	/home/ubuntu/prads/src/mtu.h	/^  uint16_t mtu;$/;"	m	struct:mtu_def
 mtu	/home/ubuntu/prads/src/mtu.h	/^static struct mtu_def mtu[] = {$/;"	v	typeref:struct:mtu_def
 mtu	/home/ubuntu/prads/src/prads.h	/^    uint16_t mtu;               \/* IPv4:MTU = MSS + 40 | IPv6:MTU = MSS + 60 *\/$/;"	m	struct:_os_asset
 mtu_def	/home/ubuntu/prads/src/mtu.h	/^struct mtu_def {$/;"	s
+mutex	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^  pthread_mutex_t mutex;$/;"	m	struct:item_t
 mvlan	/home/ubuntu/prads/src/prads.h	/^    uint16_t        mvlan;          \/* Metro vlan tag *\/$/;"	m	struct:_packetinfo
 n_outputs	/home/ubuntu/prads/src/output-plugins/log_dispatch.c	/^int n_outputs = 0;$/;"	v
 net_ip_string	/home/ubuntu/prads/src/config.h	/^    char        *net_ip_string;         \/**\/$/;"	m	struct:_globalconfig
@@ -1246,6 +1262,7 @@ next	/home/ubuntu/prads/src/prads.h	/^  struct _mac_entry *next;$/;"	m	struct:_m
 nextArgument	/home/ubuntu/prads/redis-lib/deps/hiredis/async.c	/^static char *nextArgument(char *start, char **str, size_t *len) {$/;"	f	file:
 nextEntry	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    dictEntry *entry, *nextEntry;$/;"	m	struct:dictIterator
 nextmtu	/home/ubuntu/prads/src/prads.h	/^            uint16_t nextmtu;$/;"	m	struct:_icmp_header::__anon9::pmtu
+nkey	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^  size_t   nkey;$/;"	m	struct:item_t
 no_detail	/home/ubuntu/prads/src/prads.h	/^    uint8_t no_detail;          \/* Disable guesstimates *\/$/;"	m	struct:_fp_entry
 no_extra	/home/ubuntu/prads/src/sig_tcp.c	/^static uint8_t no_extra,$/;"	v	file:
 no_known	/home/ubuntu/prads/src/sig_tcp.c	/^    no_known,$/;"	v	file:
@@ -1316,6 +1333,7 @@ parse_sig_wsize	/home/ubuntu/prads/src/sig_tcp.c	/^static int parse_sig_wsize(fp
 parse_tcp	/home/ubuntu/prads/src/prads.c	/^void parse_tcp (packetinfo *pi)$/;"	f
 parse_tcpopt	/home/ubuntu/prads/src/sig_tcp.c	/^static inline uint32_t parse_tcpopt(const uint8_t *opt_ptr, int32_t ilen, const uint8_t *end_ptr, fp_entry *e)$/;"	f	file:
 parse_udp	/home/ubuntu/prads/src/prads.c	/^void parse_udp (packetinfo *pi)$/;"	f
+passet	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^	item *passet[BUCKET_SIZE];$/;"	m	struct:redis_client_t
 passet	/home/ubuntu/prads/src/assets.c	/^static asset *passet[BUCKET_SIZE];$/;"	v	file:
 passet	/home/ubuntu/prads/src/config.h	/^    asset       *passet[BUCKET_SIZE];   \/* Pointer to list of assets *\/$/;"	m	struct:_globalconfig
 path	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^        const char *path;$/;"	m	struct:config::__anon4	file:
@@ -1525,6 +1543,8 @@ redisSetTcpNoDelay	/home/ubuntu/prads/redis-lib/deps/hiredis/net.c	/^static int 
 redisSetTimeout	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisSetTimeout(redisContext *c, const struct timeval tv) {$/;"	f
 redis_asyncGet	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int redis_asyncGet(char *key, int key_len, char *value, int *value_len) {$/;"	f
 redis_asyncSet	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int redis_asyncSet(char *key, int key_len, char *value, int value_len) {$/;"	f
+redis_client	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^} redis_client;$/;"	t	typeref:struct:redis_client_t
+redis_client_t	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^typedef struct redis_client_t {$/;"	s
 redis_syncGet	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int redis_syncGet(redisContext *c, char *key, int key_len, char *value, int *value_len) {$/;"	f
 redis_syncSet	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^int redis_syncSet(redisContext *c, char *key, int key_len, char *value, int value_len) {$/;"	f
 redisvAppendCommand	/home/ubuntu/prads/redis-lib/deps/hiredis/hiredis.c	/^int redisvAppendCommand(redisContext *c, const char *format, va_list ap) {$/;"	f
@@ -1676,6 +1696,7 @@ sighandler	/home/ubuntu/prads/src/shm-client.c	/^void sighandler(int sig)$/;"	f
 signature	/home/ubuntu/prads/src/prads.h	/^} signature;$/;"	t	typeref:struct:_signature
 sih_void	/home/ubuntu/prads/src/prads.h	/^        int sih_void;$/;"	m	union:_icmp_header::__anon9
 size	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    unsigned long size;$/;"	m	struct:dict
+size	/home/ubuntu/prads/redis-lib/src/redis_lib.h	/^  size_t   size;$/;"	m	struct:item_t
 size	/home/ubuntu/prads/src/prads.h	/^    uint16_t size;              \/* packet size *\/$/;"	m	struct:_fp_entry
 sizemask	/home/ubuntu/prads/redis-lib/deps/hiredis/dict.h	/^    unsigned long sizemask;$/;"	m	struct:dict
 slen	/home/ubuntu/prads/src/bstrlib.h	/^	int slen;$/;"	m	struct:tagbstring
@@ -1730,6 +1751,8 @@ test_reply_reader	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static void
 test_throughput	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static void test_throughput(struct config config) {$/;"	f	file:
 tests	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^static int tests = 0, fails = 0;$/;"	v	file:
 text	/home/ubuntu/prads/src/output-plugins/log_ringbuffer.h	/^    char text[256];$/;"	m	struct:ring_item
+thread_id	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^pthread_t thread_id;$/;"	v
+thread_start	/home/ubuntu/prads/redis-lib/src/redis_lib.c	/^static void *thread_start(void *arg)$/;"	f	file:
 timeout	/home/ubuntu/prads/redis-lib/deps/hiredis/test.c	/^        struct timeval timeout;$/;"	m	struct:config::__anon3	typeref:struct:config::__anon3::timeval	file:
 title	/home/ubuntu/prads/src/prads.h	/^    } title;$/;"	m	struct:_signature	typeref:struct:_signature::__anon13
 tos	/home/ubuntu/prads/src/tos.h	/^  uint8_t tos;$/;"	m	struct:tos_def
