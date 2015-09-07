@@ -7,6 +7,7 @@ static void *thread_start(void *arg)
 	struct thread_info *tinfo = arg;
         char *uargv, *p;
 	int i;
+	item *it;
 
 	sleep(5);
 
@@ -14,16 +15,16 @@ static void *thread_start(void *arg)
 		sleep(1);
 		
 		for (i=0; i<BUCKET_SIZE; i++) {
-			if (client.passet[i]->key != NULL) {
-				pthread_mutex_lock(&client.passet[i]->mutex);
-
+			it = client.passet[i];
+			while ((it) && (it->key != NULL)) {
+				pthread_mutex_lock(&it->mutex);
 				redis_syncSet(client.context,
-				              client.passet[i]->key,
-					      client.passet[i]->nkey,
-					      client.passet[i]->data,
-					      client.passet[i]->size);
-
-				pthread_mutex_unlock(&client.passet[i]->mutex);
+				              it->key,
+					      it->nkey,
+					      it->data,
+					      it->size);
+				pthread_mutex_unlock(&it->mutex);
+				it = it->next;
 			}
 		}
 	}
@@ -74,18 +75,24 @@ redisContext *createClient(char *host, int port) {
 
 int create_item(const void* key, size_t nkey, void *data,
                 size_t size, uint32_t flags, time_t exp) {
-
 	uint64_t *hash = (uint64_t *) key;
+	item *it;
 	// we know the key is uint64_t, so just cast it to uint64_t
 	// this has to be modified to generalize things
 
+
 	if (client.passet[(int)*hash]->key) {
 		printf("some one already in this location\n");
-		return 0;
+		it = malloc(sizeof(item));
+		memset(it, 0, sizeof(item));
+		it->next = client.passet[(int)*hash];
+		client.passet[(int)*hash] = it;
+	} else {
+		it = client.passet[(int) *hash];
 	}
 
 	pthread_mutex_lock(&client.passet[(int) *hash]->mutex);	
-	
+
 	client.passet[(int) *hash]->key = (char *) malloc(sizeof(uint64_t));
 
 	if (!client.passet[(int) *hash]->key) {
