@@ -20,7 +20,6 @@ typedef struct item_t {
   size_t   size;
   uint32_t flags;
   time_t   exp;
-  struct item_t *next;
 } item;
 
 typedef struct redis_client_t {
