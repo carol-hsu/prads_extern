@@ -439,7 +439,7 @@ void add_asset(packetinfo *pi)
     asset *masset = NULL;
     time_t time;
     uint32_t flags;
-    int ret;
+    int ret = 0;
 
     config.pr_s.assets++;
 
@@ -461,21 +461,23 @@ void add_asset(packetinfo *pi)
 	masset = (asset *) calloc(1, sizeof(asset));
     }
 
-    masset->af = pi->af;
-    masset->vlan = pi->vlan;
-    masset->i_attempts = 0;
-    masset->first_seen = masset->last_seen = pi->pheader->ts.tv_sec;
+    if (!ret) {
+    	masset->af = pi->af;
+    	masset->vlan = pi->vlan;
+    	masset->i_attempts = 0;
+    	masset->first_seen = masset->last_seen = pi->pheader->ts.tv_sec;
 
-    if (pi->af == AF_INET) {
-        if(pi->arph) // mongo arp check
-            //memcpy(&masset->ip_addr.__u6_addr.__u6_addr32[0], pi->arph->arp_spa, sizeof(uint32_t));
-           IP4ADDR(&masset->ip_addr) = *(uint32_t*) pi->arph->arp_spa;
-        else
-           IP4ADDR(&masset->ip_addr)  = PI_IP4SRC(pi);
-        hash = ASSET_HASH4(IP4ADDR(&masset->ip_addr));
-    } else if (pi->af == AF_INET6) {
-        masset->ip_addr = PI_IP6SRC(pi);
-        hash = ASSET_HASH6(PI_IP6SRC(pi));
+    	if (pi->af == AF_INET) {
+        	if(pi->arph) // mongo arp check
+            		//memcpy(&masset->ip_addr.__u6_addr.__u6_addr32[0], pi->arph->arp_spa, sizeof(uint32_t));
+           		IP4ADDR(&masset->ip_addr) = *(uint32_t*) pi->arph->arp_spa;
+        	else
+           		IP4ADDR(&masset->ip_addr)  = PI_IP4SRC(pi);
+        	hash = ASSET_HASH4(IP4ADDR(&masset->ip_addr));
+    	} else if (pi->af == AF_INET6) {
+        	masset->ip_addr = PI_IP6SRC(pi);
+        	hash = ASSET_HASH6(PI_IP6SRC(pi));
+    	}
     }
 
     masset->next = passet[hash];

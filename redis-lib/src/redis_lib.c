@@ -152,12 +152,12 @@ int redis_syncGet(redisContext *c, char *key, size_t key_len, char *value, size_
 	if (reply->type != REDIS_REPLY_NIL) {
 		strncpy(value, reply->str, *value_len);
 		*value_len = strlen(reply->str);
-		printf("No data available for key\n");
+		printf("Got Value: %s\n", reply->str);
 		freeReplyObject(reply);
 		return 0;
 	}
 
-	printf("GET foo: %s\n", reply->str);
+	printf("No data available for key\n");
 	freeReplyObject(reply);
 
 	return 1;
