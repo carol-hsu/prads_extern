@@ -13,8 +13,10 @@ void update_asset(packetinfo *pi)
 {
     if (asset_lookup(pi) == SUCCESS) {
         if (pi->asset != NULL) {
+	    pthread_mutex_lock(&AssetEntryLock);
             pi->asset->vlan = pi->vlan;
             pi->asset->last_seen = pi->pheader->ts.tv_sec;
+	    pthread_mutex_unlock(&AssetEntryLock);
         } else {
             printf("\nBAD ERROR in update_asset\n");
         }
@@ -130,6 +132,7 @@ uint8_t asset_lookup(packetinfo *pi)
                 ip = PI_IP4SRC(pi);
             }
             hash = ASSET_HASH4(ip);
+	    pthread_mutex_lock(&AssetEntryLock);
             masset = passet[hash];
             while (masset != NULL) {
                 //if (memcmp(&ip_addr,&rec->ip_addr,16)) {
@@ -137,22 +140,27 @@ uint8_t asset_lookup(packetinfo *pi)
                     && CMP_ADDR4( &masset->ip_addr, ip))
                 {
                     pi->asset = masset;
+		    pthread_mutex_unlock(&AssetEntryLock);
                     return SUCCESS;
                 }
                 masset = masset->next;
             }
+	    pthread_mutex_unlock(&AssetEntryLock);
             return ERROR;
         } else if (pi->af == AF_INET6) {
             hash = ASSET_HASH6(PI_IP6SRC(pi));
+	    pthread_mutex_lock(&AssetEntryLock);
             masset = passet[hash];
             while (masset != NULL) {
                 if (masset->af == AF_INET6 &&
                     CMP_ADDR6(&masset->ip_addr, &PI_IP6SRC(pi))){
                     pi->asset = masset;
+		    pthread_mutex_unlock(&AssetEntryLock);
                     return SUCCESS;
                 }
                 masset = masset->next;
             }
+	    pthread_mutex_unlock(&AssetEntryLock);
             return ERROR;
         }
         return ERROR;
@@ -480,6 +488,7 @@ void add_asset(packetinfo *pi)
     	}
     }
 
+    pthread_mutex_lock(&AssetEntryLock);
     masset->next = passet[hash];
 
     if (passet[hash] != NULL)
@@ -489,6 +498,7 @@ void add_asset(packetinfo *pi)
     masset->services = NULL;
     masset->macentry = NULL;
     passet[hash] = masset;
+    pthread_mutex_unlock(&AssetEntryLock);
 
 #ifdef DEBUGG
     /* verbose info for sanity checking */
@@ -708,6 +718,7 @@ void clear_asset_list()
     asset *rec = NULL;
     int akey;
 
+    pthread_mutex_lock(&AssetEntryLock);
     for (akey = 0; akey < BUCKET_SIZE; akey++) {
         rec = passet[akey];
         while (rec != NULL) {
@@ -736,6 +747,7 @@ void clear_asset_list()
             del_asset(tmp, &passet[akey]);
         }
     }
+    pthread_mutex_unlock(&AssetEntryLock);
     dlog("asset memory has been cleared\n");
 }
 

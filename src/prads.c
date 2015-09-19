@@ -1327,6 +1327,12 @@ int prads_initialize(globalconfig *conf)
     }
 
     if (STATE_EXTERN) {
+        // Connection Table Lock
+        pthread_mutex_init(&ConnEntryLock, NULL);
+        // Asset Table Lock
+        pthread_mutex_init(&AssetEntryLock, NULL);
+        setup_serialize_translators();    
+	register_encode_decode(get_key_value, put_value_struct);
     	conf->context = create_cache(REDIS_HOST, REDIS_PORT);
     	if (NULL == conf->context) {
        		olog("[*] Unable to connect to redis server %s.  (%s)\n", "10.0.1.4", "6379");
@@ -1476,6 +1482,7 @@ int main(int argc, char *argv[])
     pcap_freecode(&cfilter);
 
     cxt_init();
+
     olog("[*] Sniffing...\n");
     pcap_loop(config.handle, -1, got_packet, NULL);
 

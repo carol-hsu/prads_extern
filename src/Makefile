@@ -81,13 +81,16 @@ CFLAGS+=-D__USE_GNU
 CONFDIR=../etc
 endif
 
+CFLAGS+=-I./cserialization-0.4/
+
 SERVICE_OBJ = servicefp/servicefp.o servicefp/tcpc.o servicefp/tcps.o servicefp/udps.o 
 
+SER_OBJ = cserialization-0.4/serialize.o
 IPFP_OBJ = ipfp/ipfp.o ipfp/udp_fp.o ipfp/icmp_fp.o
 LOG_OBJ = output-plugins/log_dispatch.o output-plugins/log_stdout.o output-plugins/log_file.o output-plugins/log_fifo.o output-plugins/log_ringbuffer.o output-plugins/log_sguil.o
 CXT_OBJ = cxt.o
-MODULES = dhcp.o dump_dns.o mac.o ${SERVICE_OBJ} ${IPFP_OBJ} ${CXT_OBJ} ${LOG_OBJ}
-OBJECTS = bstrlib.o sig_tcp.o config.o sys_func.o assets.o prads.o ${MODULES}
+MODULES = dhcp.o dump_dns.o mac.o ${SERVICE_OBJ} ${IPFP_OBJ} ${CXT_OBJ} ${LOG_OBJ} $(SER_OBJ)
+OBJECTS = bstrlib.o sig_tcp.o config.o sys_func.o assets.o prads.o ext_state.o ${MODULES}
 SHM_CLIENT_OBJECTS = shm-client.o
 
 all: prads shm-client
@@ -96,10 +99,10 @@ osx:
 	$(MAKE) BUILD=osx
 
 prads: $(OBJECTS)
-	$(CC) $(CFLAGS) -o $@ $(OBJECTS) $(LDFLAGS)
+	$(CC) $(CFLAGS) $(INCFLAGS) -o $@ $(OBJECTS) $(LDFLAGS)
 
 shm-client: $(SHM_CLIENT_OBJECTS)
-	$(CC) $(CFLAGS) -o $@ $(SHM_CLIENT_OBJECTS) $(LDFLAGS)
+	$(CC) $(CFLAGS) $(INCFLAGS) -o $@ $(SHM_CLIENT_OBJECTS) $(LDFLAGS)
 
 static: 
 	$(MAKE) STATIC=y prads

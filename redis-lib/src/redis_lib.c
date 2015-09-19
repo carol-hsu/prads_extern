@@ -2,6 +2,11 @@
 
 pthread_t thread_id;
 
+int register_encode_decode(get_key_val get, put_key_val put) {
+	client.get = get;
+	client.put = put;
+}
+
 static void *thread_start(void *arg)
 {
 	struct thread_info *tinfo = arg;
@@ -51,7 +56,7 @@ redis_client *create_cache(char *host, int port) {
 	return &client;
 }
 // returns the client context after setting up the connection
-redisContext *createClient(char *host, int port) {
+redisContext *createClient(char *host, int prot, char *key_type, size_t key_size) {
 	redisContext *c;
 	struct timeval timeout = { 1, 500000 }; // 1.5 seconds
 
@@ -176,3 +181,5 @@ int redis_asyncGet(char *key, int key_len, char *value, int *value_len) {
 int destroyClient(redisContext *context) {
 	return 0;
 }
+
+

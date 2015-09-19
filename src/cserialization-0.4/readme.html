@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+
+<title>C serialization library</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="author" content="Ulf &Aring;str&ouml;m" />
+<meta name="keywords" content="c serialize serialization deflation inflation conversion translation" />
+<meta name="description" content="C library for serializing structures." /><html>
+
+<link type="text/css" rel="stylesheet" href="_manual.css" />
+
+<style>
+</style>
+
+</head>
+
+<body>
+
+<h1><span class="red">C serialization library</span></h1>
+<p>Author(s):<br/>&nbsp;&nbsp;&nbsp;&nbsp;Ulf &Aring;str&ouml;m (<a href="http://www.happyponyland.net">happyponyland.net</a> / ulf.astrom@gmail.com)</p>
+
+<p><br/>See also: <a href="functions.html">Function reference</a><p>
+
+
+
+<h2><span class="red">Introduction</span></h2>
+
+<p>This is a library for serializing structures in C. It will convert
+a memory range (usually a struct or array) from binary data to a
+human-readable representation. It can later parse the serialized
+format and recreate the same structure in memory.</p>
+
+<p>The code is available under the &quot;zlib license&quot; (free for
+almost any use) and has no dependencies other than the C standard
+library. This documentation
+is <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC-BY-NC-SA</a>.</p>
+
+
+
+<h2><span class="red">Background</span></h2>
+<p>Most programs require file input and output to do anything
+useful. While it is possible to write data directly from memory to
+disk (using <code>fwrite</code>, for example), this has several
+problems:</p>
+
+<ul>
+
+<li>The output will be in binary form. Viewing and editing will
+require special tools (such as a hex editor) and intimate knowledge of
+the byte layout.</li>
+
+<li>It's not portable; it relies on data types being a
+certain length, but these can vary between implementations. It is
+possible to specify byte sizes (<code>int*_t</code> and others) but
+this might not be desirable in all cases. There are also endianness
+issues where bytes appear in different order between
+architectures.</li>
+
+<li>Pointers. These are just arbitrary locations in memory,
+unique to the running process and useless outside it. Invalid pointers
+will corrupt or crash the program. Exporting raw pointers is not an
+option.</li>
+
+</ul>
+
+<p>This library provides a solution to the problems above.</p>
+
+
+
+
+<h2><span class="red">Output format</span></h2>
+
+<p>The serialized format uses a roughly C-like syntax. It can
+represent numbers as well as text and provides backslash \escaping for
+non-printable characters. A shortcut notation (&quot;syntactic
+sugar&quot;) is provided to store strings in a convenient way. The output is in plaintext it should be safe to move between
+different architectures (regular encodings sti).</p>
+
+<p>You can use C-style <code>/* */</code> comments for debugging and
+taking notes; these are ignored during the inflation process.</p>
+
+<p>Pointers will be replaced with hardware-independent identifiers
+when they are saved and restored upon loading. Several pointers can
+address the same memory without creating
+duplicates <a href="#footnote1">[1]</a> in the serialized
+data. Structures can point at each other, at themselves, or at
+specific fields within themselves; for this reason the library is well
+suited for linked lists, trees and even cyclic graphs. (Of course,
+pointers can also be null.)</p>
+
+<p>Arrays can be static (fixed size) or dynamic (pointer + index),
+with facilities for retrieving the element count. It is possible to
+define ragged arrays (pointers to pointers) and null-terminated arrays.</p>
+
+<p>In addition to this each translator can specify a handler function
+for custom output that can not be expressed with the serializer
+syntax. For example, you might want to include a base64-coded image.</p>
+
+<p>Deflation and inflation can be used independently. The library can
+save and load &quot;documents&quot; in an application, but it can also
+be used only for input or output (debug dumps, for example). Some of
+the string functions can also be used on their own, though there are
+probably more complete libraries for that.</p>
+
+<p><a name="footnote1">[1]</a> When using the "string" type no pointer
+substitution is performed and several copies of the same string might
+be created. To get around this, define the field as a reference to a
+null-terminated char array.</p>
+
+
+
+
+
+
+
+<h2><span class="red">Translation</span></h2>
+
+<p><img src="conversion.png" alt="Illustration showing an example conversion process"><br/></p>
+
+<p>To serialize a structure, the programmer must provide one or more
+<em>translator</em>. This is a special structure describing the
+memory layout of the data to be converted. Translators are
+bidirectional; the same rules are used for both deflation (to text)
+and inflation (to binary). A translator can contain any number of
+<em>fields</em>. Each field has:</p>
+
+<ul>
+<li>a <em>tag</em> to identify it</li>
+<li>a memory <em>offset</em> from the start of the structure</li>
+<li>a <em>type</em> that determines how the field will be interpreted</li>
+</ul>
+
+<p>Primitive types (int, char, etc) will treat the offset as the location
+of a member variable of that type. In practice, the address will be
+casted according to the type sizes of the system; if <code>sizeof(int)</code> is
+four bytes it will print the number present at those four bytes.</p>
+
+<p>The primitive types available are: <code>short</code>, <code>ushort</code>, <code>int</code>, <code>uint</code>, <code>long</code>, <code>ulong</code>, <code>size_t</code>, <code>time_t</code>, <code>intptr_t</code>, <code>uint8_t</code>, <code>uint16_t</code>, <code>uint32_t</code>, <code>int8_t</code>, <code>int16_t</code>, <code>int32_t</code>, <code>float</code>, <code>double</code>, <code>ldouble</code>.</p>
+
+<p><code>string</code> is a special type; it will
+convert <code>char</code> arrays to a convenient representation,
+escaping special characters (<code>\</code>, <code>&quot;</code>,
+newline and nonprintable) with backslashes.</p>
+
+<p><em>Static arrays</em> (where the size is known at compile time)
+can be defined by specifying a <code>repeat</code> count for a
+field.</p>
+
+<p>When serializing a fixed-size array, you must provide the size (in
+bytes) of all elements. When serializing a dynamic array you provide
+the size of only one element; inflation will automatically allocate as
+many as are needed.</p>
+
+<p><em>Dynamic arrays</em> must be defined as a type of their
+own. These differ from static arrays in that they can be variable
+length at run-time; thus, they must be declared as pointers. When
+parsing a dynamic array, a field tag with a <code>@</code> followed
+by <em>the same name as the array</em> will be used to store the
+number of elements read. Example: with the fields <code>int
+@array;</code> and <code>char[] array</code>, <code>@array</code> will
+contain the number of characters read into <code>array</code> from
+input.</p>
+
+<p>User-defined types (anything that isn't a primitive) will be
+replaced by <em>references</em>. These follow the
+form <code>#n.f[a]</code> where <code>n</code> is a serial number
+identifying the structure, <code>f</code> a field tag and <code>a</code> an
+array index in that tag. If no <code>a</code> is present it will resolve
+to the first (or only) element of <code>f</code>, if <code>f</code> is omitted
+it will resolve to the starting address of the containing structure
+itself.</p>
+
+
+
+
+
+<h2><span class="red">How it works</span></h2>
+
+<p>Serialization (deflation) takes a pointer to one structure as input and
+will output a deep copy conversion; every reference to other
+structures will include that structure as well (if the destination
+type is included in the translator list). It is easiest to keep
+all data in a hierarchy under a single struct or array. Entirely
+separate structures can be serialized individually, but they will only
+connect references within the same &quot;job&quot;. Serialization will
+not alter the source data in memory.</p>
+
+<p><img src="deflate.png" alt="Illustration showing serialization of a tree structure"></p>
+
+<p>The process will first collapse the input to a flat meta-format
+(internally these are called <em>holders</em>; besides structure
+pointers they also hold some information about types and array
+counts). It will then work through each structure in order, generate a
+text representation that it prints to the job buffer. This utilises a
+variety of type conversions and is also where pointers are converted
+to references.</p>
+
+<p><img style="float:right; padding-left: 20px;" src="inflate.png" alt="Illustration showing deserialization">Deserialization (inflation) works the
+other way. It will read all data into a list of holders, allocate
+memory for the structures and convert primitives from text back to
+binary numbers. References will be gathered in a list
+of <em>substitution pointers</em> that are later used to re-establish
+pointers the way they are intended. If type errors are detected at
+this stage the process will abort.</p>
+
+<p>It will try to preserve type integrity and not link incompatible
+structures. For example, an <code>int</code> pointer will not point to
+a <code>long</code> or to another <code>int</code> pointer (even if C
+itself allows such casts).</p>
+
+<div style="clear:both;"></div>
+
+
+
+<h2><span class="red">Getting started</span></h2>
+
+<p>To use this library, add <code>serialize.c</code> to be compiled
+into your project and <code>#include &quot;serialize.h&quot;</code>
+where you wish to use it.</p>
+
+<p>The <code>example*.c</code> files contain tutorial examples that
+demonstrate the library function.</p>
+
+<p><code>demo.c</code> in the distribution provides more example code
+and a couple of test functions for the library.</p>
+
+
+
+
+
+
+<h2><span class="red">What it doesn't do</span></h2>
+
+<ul>
+
+<li>It's not &quot;intelligent&quot;; it won't magically understand
+data structure but needs to be told how to interpret them.</li>
+
+<li>It's not overly optimized or space conservative. Serializing
+thousands of structures will take a while. However, processing time is
+proportional to the input since each structure only needs to be
+visited once. The output format is verbose, but meant to be readable.</li>
+
+<li>It cannot serialize function pointers, open files and sockets,
+etc.</li>
+
+<li>It doesn't detect overflows; if you are storing really big numbers
+and moving these between systems with differing type sizes, they might
+not fit.</li>
+
+<li><a name="notjson">It's not JSON</a>. JSON has many uses but does
+not fit this purpose; among other things, it lacks a way to represent
+object references. While this format could be adapted to be 90%
+JSON-compatible it would be point(er)less since other JSON
+applications still wouldn't understand what to make of the data.</li>
+
+</ul>
+
+
+<!--
+<pre><div class="codelike">
+</div></pre>
+-->
+
+
+<h2><span class="red">The future (to do)</span></h2>
+
+<ul>
+<li>Resolve subst ptrs into dynamic arrays</li>
+<li>Rewrite/clean up test cases</li>
+<li>Document the ser_ialize() options</li>
+<li>Input and output directly through file pointers</li>
+<li>An easy way to handle unions</li>
+<li>Output formatting flags: bitmask, hex, enumerations...</li>
+<li>Custom field readers</li>
+</ul>
+
+
+<h2><span class="red">History</span></h2>
+
+<p><strong>Version 0.4</strong> (2013-01-13)<br/>Removed pointer redirection (<code>-&gt;</code>); substitution pointers are now resolved in another way. Primitives can be serialized on their own (whatever good that will do). <code>ser_new_field()</code> will only take a single offset instead of dummy pointers. <code>bool</code> can be serialized (<code>true</code> and <code>false</code> are considered 1 and 0). Type safety: <code>ser_parse()</code> must be told what type to expect and will fail if it structure #1 does not match. Pointers will not be re-linked if the destination type does not match the reference. <code>null</code> made case-insensitive. Fixed bugs with <code>uint</code> and <code>time_t</code> (it is now assumed to be signed).</p>
+
+<p><strong>Version 0.3</strong> (2012-12-13)<br/>Pointer redirection (if a pointer points within another serialized structure, the memory won't be duplicated. Fixed a bug with element counts. Added support for floating-point numbers (experimental).</p>
+
+<p><strong>Version 0.2</strong> (2012-12-06)<br/>First public release.</p>
+
+
+</body>
+</html>

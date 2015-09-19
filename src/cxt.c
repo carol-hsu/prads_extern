@@ -146,6 +146,7 @@ int cx_track(packetinfo *pi) {
     } else if (af == AF_INET6) {
         hash = CXT_HASH6(ip_src,ip_dst,src_port,dst_port,pi->proto);
     }
+    pthread_mutex_lock(&ConnEntryLock);
     head = bucket[hash];
 
     // search through the bucket
@@ -182,6 +183,7 @@ int cx_track(packetinfo *pi) {
     }
     bucket[hash] = cxt;
     pi->cxt = cxt;
+    pthread_mutex_unlock(&ConnEntryLock);
 
     /* * Return value should be 1, telling to do client service fingerprinting */
     return 1;
@@ -433,6 +435,7 @@ inline void cx_track_simd_ipv4(packetinfo *pi)
 
     // add to packetinfo ? dont through int32 around :)
     hash = make_hash(pi);
+    pthread_mutex_lock(&ConnEntryLock);  
     cxt = bucket[hash];
     head = cxt;
 
@@ -460,6 +463,7 @@ inline void cx_track_simd_ipv4(packetinfo *pi)
             //ok
             dlog("[*] Updating src connection: %lu\n",cxt->cxid);
             cxt_update_src(cxt,pi);
+	    pthread_mutex_unlock(&ConnEntryLock);
             return;
         }
 
@@ -474,6 +478,7 @@ inline void cx_track_simd_ipv4(packetinfo *pi)
         if(!(compare.i[0] & compare.i[1])){
             dlog("[*] Updating dst connection: %lu\n",cxt->cxid);
             cxt_update_dst(cxt,pi);
+	    pthread_mutex_unlock(&ConnEntryLock);
             return;
         }
         cxt = cxt->next;
@@ -488,8 +493,10 @@ inline void cx_track_simd_ipv4(packetinfo *pi)
         dlog("[*] New connection: %lu\n",cxt->cxid);
         cxt->next = head;
         bucket[hash] = cxt;
+	pthread_mutex_unlock(&ConnEntryLock);
         return;
     }
+    pthread_mutex_unlock(&ConnEntryLock);
     printf("[*] Error in session tracking...\n");
     exit (1);
 }

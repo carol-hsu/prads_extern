@@ -28,6 +28,7 @@
 #include "bstrlib.h"
 #include <netinet/in.h>
 #include <pcre.h>
+#include "serialize.h"
 
 /*  D E F I N E S  ************************************************************/
 #ifndef RELEASE
@@ -800,6 +801,13 @@ typedef struct _prads_stat {
     uint32_t udp_clients;   /* total number of tcp clients detected */
 } prads_stat;
 
+typedef struct _tagstr {
+        int mlen;
+        int slen;
+        unsigned char * data;
+}tagstr;
+
+ser_tra_t *tra0,*head_tra;
 
 #ifdef NO_VECTOR_TYPES
 typedef struct _fmask {
@@ -841,4 +849,10 @@ void free_config();
 // can't declare in sys_func.h because it does not include prads.h!
 const char *u_ntop_src(packetinfo *pi, char* dest);
 const char *u_ntop_dst(packetinfo *pi, char* dest);
+
+pthread_mutex_t ConnEntryLock;
+pthread_mutex_t AssetEntryLock;
+
+int get_key_value(uint64_t key, char *data);
+int put_value_struct(char *data, void *c);
 #endif                          // PRADS_H

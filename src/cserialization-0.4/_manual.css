@@ -1,0 +1,193 @@
+/*
+  ulf.astrom@gmail.com / happyponyland.net
+  
+  Use as you wish.
+*/
+
+p, li
+{
+  font-size: 1em;
+  font-family: sans-serif;
+}
+
+pre
+{
+  margin-left: 3em;
+  margin-bottom: 1em;
+  margin-top: 0.6em;
+}
+
+p
+{
+  max-width: 850px;
+
+  margin-left: 2.5em;
+  margin-bottom: 1em;
+  margin-top: 0.6em;
+}
+
+li
+{
+  max-width: 780px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  padding-left: 0.5em;
+}
+
+ul
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1, h2
+{
+/*  padding-top: 1em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;*/
+
+    padding: 0;
+
+  margin-top: 2em;
+  margin-left: 1em;
+  margin-bottom: 0.8em;
+
+//  background: #FFE0E0;
+//  border-radius: 5px;
+//  display: inline-block;
+}
+
+span.red
+{
+  background: #FFE0E0;
+  border-radius: 5px;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 20px;
+}
+
+h1
+{
+  font-family: monospace;
+  font-size: 1.6em;
+}
+
+h2
+{
+  font-family: sans-serif;
+  font-size: 1.4em;
+}
+
+p.funcdesc
+{
+  margin-left: 3.5em;
+  margin-bottom: 2.5em;
+  width: auto;
+}
+
+h3
+{
+  font-family: monospace;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+span.function
+{
+  background-color: #FFFFE0;
+  border: 1px solid #D0D0B0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 1em;
+  display: inline-block;
+  margin-left: 2.5em;
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+}
+
+h4
+{
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+
+  font-family: sans-serif;
+  font-size: 0.9em;
+}
+
+p.toc
+{
+  margin-left: 60px;
+  padding: 10px;
+  line-height: 1.7em;
+  border: 1px solid #D0D0B0;
+}
+
+div#main
+{
+  float:left;
+  //margin-left: 30px;
+  margin:0;
+}
+
+div#toc
+{
+  display: table;
+  background-color: #FFFFE0;
+  border: 1px solid #D0D0D0;
+  padding-left: 0.4em;
+  padding-right: 0.6em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin-left: 2.5em;
+  margin-right: 0;//3em;
+//  float: left;
+}
+
+div#toc ul
+{
+  list-style-type: none;
+  margin: 0.5em 0 1em 0;
+  padding: 0;
+}
+
+div#toc ul li
+{
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  padding: 0;
+}
+
+a:link
+{
+  color: #2020F0;
+}
+
+div.codelike, code
+{
+  background-color: #F8F8D8;
+  border: 1px solid #EEEEDD;
+  font-family: monospace;
+}
+
+div.codelike
+{
+  display: inline-block;
+  padding: 0.5em 1em 0.5em 0.5em;
+}
+
+code
+{
+  padding-left: 1px;
+  padding-right: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+}

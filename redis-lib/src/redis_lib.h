@@ -11,6 +11,9 @@
 #define ASSET_HASH4(ip) ((ip) % BUCKET_SIZE)
 #define BUCKET_SIZE  31337
 
+typedef int (*get_key_val)(uint64_t, char *);
+typedef int (*put_key_val) (char *, void *);
+
 typedef struct item_t {
   uint64_t cas;
   pthread_mutex_t mutex;
@@ -23,8 +26,12 @@ typedef struct item_t {
 } item;
 
 typedef struct redis_client_t {
-	redisContext *context;
-	item *passet[BUCKET_SIZE];
+	redisContext 	*context;
+	item 		*passet[BUCKET_SIZE];
+	char 		*key_type;
+	size_t		 key_size;
+	get_key_val	 get;
+	put_key_val	 put;
 	// hash
 } redis_client;
 
@@ -53,5 +60,7 @@ int redis_asyncSet(char *key, int key_len, char *value, int value_len);
 int redis_asyncGet(char *key, int key_len, char *value, int *value_len);
 
 int destroyClient(redisContext *context);
+
+int register_encode_decode(get_key_val, put_key_val);
 
 #endif
