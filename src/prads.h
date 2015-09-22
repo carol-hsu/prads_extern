@@ -850,9 +850,18 @@ void free_config();
 const char *u_ntop_src(packetinfo *pi, char* dest);
 const char *u_ntop_dst(packetinfo *pi, char* dest);
 
+typedef struct prads_key_t {
+	uint32_t src;
+	uint32_t dst;
+	uint16_t sport;
+	uint16_t dport;
+	uint8_t  prot;
+} prads_key;
+
 pthread_mutex_t ConnEntryLock;
 pthread_mutex_t AssetEntryLock;
 
 int get_key_value(uint64_t key, char *data);
 int put_value_struct(char *data, void *c);
+uint32_t hash(void *key);
 #endif                          // PRADS_H

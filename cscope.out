@@ -1,4 +1,4 @@
-cscope 15 $HOME/prads_extern               0000822466
+cscope 15 $HOME/prads_extern               0000822275
 	@/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/ae.h
 
 31 #iâdeà
@@ -24812,7 +24812,13 @@ th»ad_¡¬t
 (*
 ho¡
 , 
-pÜt
+´Ù
+, *
+key_ty³
+, 
+size_t
+ 
+key_size
 ) {
 
 60 
@@ -25543,29 +25549,39 @@ cÚ‹xt
 BUCKET_SIZE
 ];
 
-31 
+31 *
+key_ty³
+;
+
+32 
+size_t
+ 
+key_size
+;
+
+33 
 g‘_key_v®
  
 g‘
 ;
 
-32 
+34 
 put_key_v®
  
 put
 ;
 
-34 } 
+36 } 
 	t»dis_ş›Á
 ;
 
-36 
+38 
 »dis_ş›Á
  
 ş›Á
 ;
 
-39 
+41 
 »dis_ş›Á
  *
 	`ü—‹_ÿche
@@ -25575,7 +25591,7 @@ ho¡
 pÜt
 );
 
-41 
+43 
 	`de¡roy_ÿche
 (
 »dis_ş›Á
@@ -25583,7 +25599,7 @@ pÜt
 ş›Á
 );
 
-44 
+46 
 	`ü—‹_™em
 (cÚ¡ * 
 key
@@ -25595,7 +25611,7 @@ nkey
 d©a
 ,
 
-45 
+47 
 size_t
  
 size
@@ -25609,7 +25625,7 @@ time_t
 exp
 );
 
-47 
+49 
 	`ä“_™em
 (cÚ¡ * 
 key
@@ -25619,7 +25635,7 @@ size_t
 nkey
 );
 
-50 
+52 
 »disCÚ‹xt
  *
 	`ü—‹Cl›Á
@@ -25629,7 +25645,7 @@ ho¡
 pÜt
 );
 
-53 
+55 
 	`»dis_syncS‘
 (
 »disCÚ‹xt
@@ -25645,7 +25661,7 @@ v®ue
 v®ue_Ën
 );
 
-54 
+56 
 	`»dis_syncG‘
 (
 »disCÚ‹xt
@@ -25663,7 +25679,7 @@ v®ue
 v®ue_Ën
 );
 
-57 
+59 
 	`»dis_asyncS‘
 (*
 key
@@ -25675,7 +25691,7 @@ v®ue
 v®ue_Ën
 );
 
-58 
+60 
 	`»dis_asyncG‘
 (*
 key
@@ -25687,7 +25703,7 @@ v®ue
 v®ue_Ën
 );
 
-60 
+62 
 	`de¡royCl›Á
 (
 »disCÚ‹xt
@@ -25695,7 +25711,7 @@ v®ue_Ën
 cÚ‹xt
 );
 
-62 
+64 
 	`»gi¡”_’code_decode
 (
 g‘_key_v®
@@ -27634,82 +27650,6 @@ cÚfig
 .
 as£ts
 ++;
-
-454 ià(
-STATE_EXTERN
-) {
-
-456 ià(
-pi
-->
-af
- =ğ
-AF_INET
-) {
-
-457 
-hash
- = 
-	`ASSET_HASH4
-(
-	`PI_IP4SRC
-(
-pi
-));
-
-458 } ià(
-pi
-->
-af
- =ğ
-AF_INET6
-) {
-
-459 
-hash
- = 
-	`ASSET_HASH6
-(
-	`PI_IP6SRC
-(
-pi
-));
-
-462 
-»t
- = 
-	`ü—‹_™em
-((*è&
-hash
-, (
-ušt64_t
-), (*è
-mas£t
-,
-
-463 (
-as£t
-), 
-æags
-, 
-time
-);
-
-465 ià((!
-»t
-è|| (
-mas£t
- =ğ
-NULL
-)) {
-
-466 
-mas£t
- = (
-as£t
- *è
-	`ÿÎoc
-(1, (asset));
 
 469 
 mas£t
@@ -95293,7 +95233,35 @@ ENOENT
 STATE_EXTERN
 ) {
 
-1330 
+1331 
+	`±h»ad_mu‹x_š™
+(&
+CÚnEÁryLock
+, 
+NULL
+);
+
+1333 
+	`±h»ad_mu‹x_š™
+(&
+As£tEÁryLock
+, 
+NULL
+);
+
+1334 
+	`£tup_£rŸlize_Œª¦©Üs
+();
+
+1335 
+	`»gi¡”_’code_decode
+(
+g‘_key_v®ue
+, 
+put_v®ue_¡ruù
+);
+
+1336 
 cÚf
 ->
 cÚ‹xt
@@ -95305,7 +95273,7 @@ REDIS_HOST
 REDIS_PORT
 );
 
-1331 ià(
+1337 ià(
 NULL
  =ğ
 cÚf
@@ -95313,45 +95281,45 @@ cÚf
 cÚ‹xt
 ) {
 
-1332 
+1338 
 	`Şog
 ("[*] Unableo connecto„edis server %s. (%s)\n", "10.0.1.4", "6379");
 
-1334 
+1340 
 	`Şog
 ("[*] connectedo„edis server %s. (%s)\n", "10.0.1.4", "6379");
 
-1339 
+1345 
 	}
 }
 
-1341 
+1347 
 	$´ads_v”siÚ
 ()
 
-1343 
+1349 
 	`Şog
 ("[*]…¿d %s\n", 
 VERSION
 );
 
-1344 
+1350 
 	`Şog
 (" Usšg %s\n", 
 	`pÿp_lib_v”siÚ
 ());
 
-1345 
+1351 
 	`Şog
 (" Usšg PCRE v”siÚ %s\n", 
 	`püe_v”siÚ
 ());
 
-1346 
+1352 
 	}
 }
 
-1349 
+1355 
 	$maš
 (
 ¬gc
@@ -95359,19 +95327,19 @@ VERSION
 ¬gv
 [])
 
-1351 
+1357 
 št32_t
  
 rc
  = 0;
 
-1352 
+1358 
 ch
  = 0, 
 v”bo£_®»ady
  = 0;
 
-1354 
+1360 
 	`vlog
 (2, "%08x =? %08x,ƒndŸÂess: %s\n\n", 0xd—db“f, 
 	`Áohl
@@ -95379,7 +95347,7 @@ v”bo£_®»ady
 	`Áohs
 (0xdead)?"big":"little") );
 
-1356 
+1362 
 	`mem£t
 (&
 cÚfig
@@ -95387,13 +95355,13 @@ cÚfig
 glob®cÚfig
 ));
 
-1357 
+1363 
 	`£t_deçuÉ_cÚfig_İtiÚs
 (&
 cÚfig
 );
 
-1359 
+1365 
 š·ck‘
  = 
 gameov”
@@ -95401,7 +95369,7 @@ gameov”
 šŒ_æag
  = 0;
 
-1361 
+1367 
 	`sigÇl
 (
 SIGTERM
@@ -95409,7 +95377,7 @@ SIGTERM
 game_ov”
 );
 
-1362 
+1368 
 	`sigÇl
 (
 SIGINT
@@ -95417,7 +95385,7 @@ SIGINT
 game_ov”
 );
 
-1363 
+1369 
 	`sigÇl
 (
 SIGQUIT
@@ -95425,7 +95393,7 @@ SIGQUIT
 game_ov”
 );
 
-1364 
+1370 
 	`sigÇl
 (
 SIGALRM
@@ -95433,7 +95401,7 @@ SIGALRM
 £t_’d_£ssiÚs
 );
 
-1365 
+1371 
 	`sigÇl
 (
 SIGHUP
@@ -95441,7 +95409,7 @@ SIGHUP
 »·r£_cÚf
 );
 
-1366 
+1372 
 	`sigÇl
 (
 SIGUSR1
@@ -95449,11 +95417,11 @@ SIGUSR1
 £t_’d_£ssiÚs
 );
 
-1367 #ifdeà
+1373 #ifdeà
 DEBUG
 
 
-1368 
+1374 
 	`sigÇl
 (
 SIGUSR1
@@ -95461,11 +95429,11 @@ SIGUSR1
 cxt_log_buck‘s
 );
 
-1372 
+1378 
 İ‹¼
  = 0;
 
-1373 (
+1379 (
 ch
  = 
 	`g‘İt
@@ -95477,11 +95445,11 @@ ch
 ARGS
 )) != -1)
 
-1374 
+1380 
 ch
 ) {
 
-1376 
+1382 
 cÚfig
 .
 fe
@@ -95489,13 +95457,13 @@ fe
 İrg
 ;
 
-1379 
+1385 
 cÚfig
 .
 v”bo£
 ++;
 
-1382 
+1388 
 cÚfig
 .
 cæags
@@ -95503,25 +95471,25 @@ cæags
 CONFIG_QUIET
 ;
 
-1385 
+1391 
 	`u§ge
 ();
 
-1386 
+1392 
 	`ex™
 (0);
 
-1391 if(
+1397 if(
 cÚfig
 .
 v”bo£
 )
 
-1392 
+1398 
 v”bo£_®»ady
  = 1;
 
-1394 
+1400 
 	`·r£_cÚfig_fe
 (
 cÚfig
@@ -95529,25 +95497,25 @@ cÚfig
 fe
 );
 
-1397 if(
+1403 if(
 v”bo£_®»ady
 )
 
-1398 
+1404 
 cÚfig
 .
 v”bo£
  = 0;
 
-1399 
+1405 
 İtšd
  = 1;
 
-1400 
+1406 
 	`´ads_v”siÚ
 ();
 
-1402 if(
+1408 if(
 	`·r£_¬gs
 (&
 cÚfig
@@ -95559,21 +95527,21 @@ cÚfig
 ARGS
 ) != 0){
 
-1403 
+1409 
 	`u§ge
 ();
 
-1404 
+1410 
 	`ex™
 (0);
 
-1407 if(
+1413 if(
 	`ISSET_CONFIG_SYSLOG
 (
 cÚfig
 )) {
 
-1408 
+1414 
 	`İ’log
 ("´ads", 
 LOG_PID
@@ -95583,13 +95551,13 @@ LOG_CONS
 LOG_DAEMON
 );
 
-1410 ià(
+1416 ià(
 cÚfig
 .
 ršgbufãr
 ) {
 
-1411 
+1417 
 rc
  = 
 	`š™_loggšg
@@ -95603,15 +95571,15 @@ cÚfig
 cæags
 );
 
-1412 ià(
+1418 ià(
 rc
 )
 
-1413 
+1419 
 	`³¼Ü
 ("Loggingo„ingbuffer failed!");
 
-1415 ià(
+1421 ià(
 cÚfig
 .
 cæags
@@ -95623,7 +95591,7 @@ CONFIG_CXWRITE
 CONFIG_CONNECT
 )) {
 
-1416 
+1422 
 rc
  = 
 	`š™_loggšg
@@ -95637,19 +95605,19 @@ cÚfig
 cæags
 );
 
-1417 if(
+1423 if(
 rc
 è
 	`³¼Ü
 ("Loggingo standard out failed!");
 
-1419 if(
+1425 if(
 cÚfig
 .
 as£og
 ) {
 
-1420 
+1426 
 	`Şog
 ("loggšgØf'%s'\n", 
 cÚfig
@@ -95657,7 +95625,7 @@ cÚfig
 as£og
 );
 
-1421 
+1427 
 rc
  = 
 	`š™_loggšg
@@ -95671,19 +95639,19 @@ as£og
 cæags
 );
 
-1422 if(
+1428 if(
 rc
 è
 	`³¼Ü
 ("Loggingo file failed!");
 
-1424 if(
+1430 if(
 cÚfig
 .
 fifo
 ) {
 
-1425 
+1431 
 	`Şog
 ("loggšgØFIFO '%s'\n", 
 cÚfig
@@ -95691,7 +95659,7 @@ cÚfig
 fifo
 );
 
-1426 
+1432 
 rc
  = 
 	`š™_loggšg
@@ -95705,19 +95673,19 @@ fifo
 cæags
 );
 
-1427 if(
+1433 if(
 rc
 è
 	`³¼Ü
 ("Loggingo fifo failed!");
 
-1430 if(
+1436 if(
 cÚfig
 .
 s_Ãt
 ){
 
-1431 
+1437 
 	`·r£_Ãts
 (
 cÚfig
@@ -95727,11 +95695,11 @@ s_Ãt
 ÃtwÜk
 );
 
-1433 
+1439 
 	`Şog
 ("[*] Loading fingerprints:\n");
 
-1435 
+1441 
 	#lßd_foo
 (
 func
@@ -95749,7 +95717,7 @@ hash
 dump
 ) \
 
-1436 if(
+1442 if(
 cÚfig
 . 
 cÚf
@@ -95757,11 +95725,11 @@ cÚf
 æag
 ) { \
 
-1437 
+1443 
 _rc
 ; \
 
-1438 
+1444 
 	`Şog
 (" %-11 %s\n", #æag, (
 cÚfig
@@ -95769,7 +95737,7 @@ cÚfig
 fe
 )); \
 
-1439 
+1445 
 _rc
  = 
 	`func
@@ -95783,23 +95751,23 @@ hash
 Ën
 ); \
 
-1440 if(
+1446 if(
 _rc
 è
 	`³¼Ü
 ( #flag "†oad failed!"); \
 
-1441 if(
+1447 if(
 cÚfig
 .
 v”bo£
  > 1) { \
 
-1442 
+1448 
 	`´štf
 ("[*] Dumping " #flag " signatures:\n"); \
 
-1443 
+1449 
 	`dump
  (
 cÚfig
@@ -95809,15 +95777,15 @@ hash
 Ën
 ); \
 
-1444 
+1450 
 	`´štf
 ("[*] " #flag " signature dumpƒnds.\n"); \
 
-1446 }
+1452 }
 
 	)
 
-1448 
+1454 
 	`lßd_foo
 (
 lßd_mac
@@ -95835,7 +95803,7 @@ mac_hashsize
 dump_macs
 );
 
-1449 
+1455 
 	`lßd_foo
 (
 lßd_sigs
@@ -95853,7 +95821,7 @@ sig_hashsize
 dump_sigs
 );
 
-1450 
+1456 
 	`lßd_foo
 (
 lßd_sigs
@@ -95871,7 +95839,7 @@ sig_hashsize
 dump_sigs
 );
 
-1451 
+1457 
 	`lßd_foo
 (
 lßd_sigs
@@ -95889,7 +95857,7 @@ sig_hashsize
 dump_sigs
 );
 
-1452 
+1458 
 	`lßd_foo
 (
 lßd_sigs
@@ -95907,7 +95875,7 @@ sig_hashsize
 dump_sigs
 );
 
-1453 
+1459 
 	`lßd_foo
 (
 lßd_sigs
@@ -95925,7 +95893,7 @@ sig_hashsize
 dump_sigs
 );
 
-1454 
+1460 
 	`lßd_foo
 (
 lßd_dhı_sigs
@@ -95943,7 +95911,7 @@ sig_hashsize
 dump_dhı_sigs
 );
 
-1455 
+1461 
 	`lßd_foo
 (
 lßd_£rviûå_fe
@@ -95961,7 +95929,7 @@ sig_hashsize
 dump_sig_£rviû
 );
 
-1456 
+1462 
 	`lßd_foo
 (
 lßd_£rviûå_fe
@@ -95979,7 +95947,7 @@ sig_hashsize
 dump_sig_£rviû
 );
 
-1457 
+1463 
 	`lßd_foo
 (
 lßd_£rviûå_fe
@@ -95997,35 +95965,35 @@ sig_hashsize
 dump_sig_£rviû
 );
 
-1458 
+1464 
 	`š™_£rviûs
 ();
 
-1460 
+1466 
 	`di¥Ïy_cÚfig
 (&
 cÚfig
 );
 
-1462 
+1468 
 	`´ads_š™Ÿlize
 (&
 cÚfig
 );
 
-1464 
+1470 
 	`®¬m
 (
 SIG_ALRM
 );
 
-1467 
+1473 
 bpf_´og¿m
  
 cf‹r
 ;
 
-1468 ià((
+1474 ià((
 	`pÿp_compe
 (
 cÚfig
@@ -96039,7 +96007,7 @@ bpff
 Ãt_mask
 )) == -1) {
 
-1469 
+1475 
 	`Şog
 ("[*] E¼Ü…ÿp_compu£r_f‹r: %s\n", 
 	`pÿp_g‘”r
@@ -96049,11 +96017,11 @@ cÚfig
 hªdË
 ));
 
-1470 
+1476 
 	`ex™
 (1);
 
-1473 ià(
+1479 ià(
 	`pÿp_£tf‹r
 (
 cÚfig
@@ -96063,7 +96031,7 @@ hªdË
 cf‹r
 )) {
 
-1474 
+1480 
 	`Şog
 ("[*] UÇbËØ£ˆpÿ°f‹r! %s", 
 	`pÿp_g‘”r
@@ -96073,45 +96041,21 @@ cÚfig
 hªdË
 ));
 
-1476 
+1482 
 	`pÿp_ä“code
 (&
 cf‹r
 );
 
-1478 
+1484 
 	`cxt_š™
 ();
 
-1480 ià(
-STATE_EXTERN
-) {
-
-1482 
-	`±h»ad_mu‹x_š™
-(&
-CÚnEÁryLock
-, 
-NULL
-);
-
-1484 
-	`±h»ad_mu‹x_š™
-(&
-As£tEÁryLock
-, 
-NULL
-);
-
-1485 
-	`£tup_£rŸlize_Œª¦©Üs
-();
-
-1488 
+1486 
 	`Şog
 ("[*] Sniffing...\n");
 
-1489 
+1487 
 	`pÿp_loİ
 (
 cÚfig
@@ -96123,11 +96067,11 @@ gÙ_·ck‘
 NULL
 );
 
-1491 
+1489 
 	`game_ov”
 ();
 
-1493 
+1491 
 	}
 }
 
@@ -100234,6 +100178,24 @@ de¡
  
 	gAs£tEÁryLock
 ;
+
+856 
+g‘_key_v®ue
+(
+ušt64_t
+ 
+key
+, *
+d©a
+);
+
+857 
+put_v®ue_¡ruù
+(*
+d©a
+, *
+c
+);
 
 	@/home/ubuntu/prads_extern/src/servicefp/servicefp.c
 

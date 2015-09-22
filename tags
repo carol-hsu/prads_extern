@@ -834,11 +834,11 @@ context	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/ae.h	/^    red
 context	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/libev.h	/^    redisAsyncContext *context;$/;"	m	struct:redisLibevEvents
 context	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/libevent.h	/^    redisAsyncContext *context;$/;"	m	struct:redisLibeventEvents
 context	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/libuv.h	/^  redisAsyncContext* context;$/;"	m	struct:redisLibuvEvents
-context	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	redisContext *context;$/;"	m	struct:redis_client_t
+context	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	redisContext 	*context;$/;"	m	struct:redis_client_t
 context	/home/ubuntu/prads_extern/src/config.h	/^    redis_client *context;              \/* redis context *\/$/;"	m	struct:_globalconfig
 createArray	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createArray)(const redisReadTask*, int);$/;"	m	struct:redisReplyObjectFunctions
 createArrayObject	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^static void *createArrayObject(const redisReadTask *task, int elements) {$/;"	f	file:
-createClient	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.c	/^redisContext *createClient(char *host, int port) {$/;"	f
+createClient	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.c	/^redisContext *createClient(char *host, int prot, char *key_type, size_t key_size) {$/;"	f
 createInteger	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createInteger)(const redisReadTask*, long long);$/;"	m	struct:redisReplyObjectFunctions
 createIntegerObject	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^static void *createIntegerObject(const redisReadTask *task, long long value) {$/;"	f	file:
 createNil	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createNil)(const redisReadTask*);$/;"	m	struct:redisReplyObjectFunctions
@@ -1129,7 +1129,7 @@ gen_fp_tcpopt	/home/ubuntu/prads_extern/src/sig_tcp.c	/^bstring gen_fp_tcpopt(ui
 gen_fp_tcpquirks	/home/ubuntu/prads_extern/src/sig_tcp.c	/^bstring gen_fp_tcpquirks(uint32_t quirks)$/;"	f
 gen_fp_udp	/home/ubuntu/prads_extern/src/ipfp/ipfp.c	/^void gen_fp_udp(uint16_t totlen,$/;"	f
 generic	/home/ubuntu/prads_extern/src/prads.h	/^    uint8_t generic;            \/* Generic hit *\/$/;"	m	struct:_fp_entry
-get	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	get_key_val get;$/;"	m	struct:redis_client_t
+get	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	get_key_val	 get;$/;"	m	struct:redis_client_t
 getCallback	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/examples/example-ae.c	/^void getCallback(redisAsyncContext *c, void *r, void *privdata) {$/;"	f
 getCallback	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/examples/example-libev.c	/^void getCallback(redisAsyncContext *c, void *r, void *privdata) {$/;"	f
 getCallback	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/examples/example-libevent.c	/^void getCallback(redisAsyncContext *c, void *r, void *privdata) {$/;"	f
@@ -1262,6 +1262,8 @@ key	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^  void*    key;$/;"	m	
 keyCompare	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/dict.h	/^    int (*keyCompare)(void *privdata, const void *key1, const void *key2);$/;"	m	struct:dictType
 keyDestructor	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/dict.h	/^    void (*keyDestructor)(void *privdata, void *key);$/;"	m	struct:dictType
 keyDup	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/dict.h	/^    void *(*keyDup)(void *privdata, const void *key);$/;"	m	struct:dictType
+key_size	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	size_t		 key_size;$/;"	m	struct:redis_client_t
+key_type	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	char 		*key_type;$/;"	m	struct:redis_client_t
 label	/home/ubuntu/prads_extern/src/cserialization-0.4/demo.h	/^  char * label;$/;"	m	struct:demo_dir_t
 label	/home/ubuntu/prads_extern/src/cserialization-0.4/demo.h	/^  char * label;$/;"	m	struct:demo_leaf_t
 label	/home/ubuntu/prads_extern/src/cserialization-0.4/example3.c	/^  char*   label;$/;"	m	struct:node_t	file:
@@ -1282,7 +1284,7 @@ line	/home/ubuntu/prads_extern/src/prads.h	/^    uint32_t line;              \/*
 list_type_sizes	/home/ubuntu/prads_extern/src/cserialization-0.4/demo.c	/^void list_type_sizes()$/;"	f
 load_bpf	/home/ubuntu/prads_extern/src/prads.c	/^int load_bpf(globalconfig* conf, const char* file)$/;"	f
 load_dhcp_sigs	/home/ubuntu/prads_extern/src/dhcp.c	/^int load_dhcp_sigs(const char *file, dhcp_fp_entry **dhcpsp[], int hashsize)$/;"	f
-load_foo	/home/ubuntu/prads_extern/src/prads.c	1435;"	d	file:
+load_foo	/home/ubuntu/prads_extern/src/prads.c	1441;"	d	file:
 load_known_ports_file	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^void load_known_ports_file(char *filename, port_t *lports)$/;"	f
 load_mac	/home/ubuntu/prads_extern/src/mac.c	/^int load_mac(const char *file, mac_entry **sigp[], int hashsize)$/;"	f
 load_servicefp_file	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^int load_servicefp_file(char *sigfile, signature **db, int len)$/;"	f
@@ -1465,7 +1467,7 @@ parse_sig_wsize	/home/ubuntu/prads_extern/src/sig_tcp.c	/^static int parse_sig_w
 parse_tcp	/home/ubuntu/prads_extern/src/prads.c	/^void parse_tcp (packetinfo *pi)$/;"	f
 parse_tcpopt	/home/ubuntu/prads_extern/src/sig_tcp.c	/^static inline uint32_t parse_tcpopt(const uint8_t *opt_ptr, int32_t ilen, const uint8_t *end_ptr, fp_entry *e)$/;"	f	file:
 parse_udp	/home/ubuntu/prads_extern/src/prads.c	/^void parse_udp (packetinfo *pi)$/;"	f
-passet	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	item *passet[BUCKET_SIZE];$/;"	m	struct:redis_client_t
+passet	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	item 		*passet[BUCKET_SIZE];$/;"	m	struct:redis_client_t
 passet	/home/ubuntu/prads_extern/src/assets.c	/^static asset *passet[BUCKET_SIZE];$/;"	v	file:
 passet	/home/ubuntu/prads_extern/src/config.h	/^    asset       *passet[BUCKET_SIZE];   \/* Pointer to list of assets *\/$/;"	m	struct:_globalconfig
 path	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/test.c	/^        const char *path;$/;"	m	struct:config::__anon4	file:
@@ -1538,7 +1540,7 @@ proto	/home/ubuntu/prads_extern/src/prads.h	/^    uint8_t  proto;               
 proto	/home/ubuntu/prads_extern/src/prads.h	/^    unsigned short proto;       \/* Asset protocol *\/$/;"	m	struct:_serv_asset
 ps	/home/ubuntu/prads_extern/src/config.h	/^    struct pcap_stat    ps;             \/* libpcap stats *\/$/;"	m	struct:_globalconfig	typeref:struct:_globalconfig::pcap_stat
 ptr	/home/ubuntu/prads_extern/src/cserialization-0.4/demo.h	/^  int * ptr;$/;"	m	struct:demo_overlap_t
-put	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	put_key_val put;$/;"	m	struct:redis_client_t
+put	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	put_key_val	 put;$/;"	m	struct:redis_client_t
 put_key_val	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^typedef int (*put_key_val) (char *, void *);$/;"	t
 put_value_struct	/home/ubuntu/prads_extern/src/ext_state.c	/^int put_value_struct(char *data, void *c)$/;"	f
 qot	/home/ubuntu/prads_extern/src/prads.h	/^        struct qot {$/;"	s	union:_ether_header::__anon10

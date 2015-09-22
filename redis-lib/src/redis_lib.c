@@ -2,34 +2,42 @@
 
 pthread_t thread_id;
 
-int register_encode_decode(get_key_val get, put_key_val put) {
+int register_encode_decode(get_key_val get, put_key_val put, key_hash hash) {
 	client.get = get;
 	client.put = put;
+	client.hash = hash;
 }
 
 static void *thread_start(void *arg)
 {
 	struct thread_info *tinfo = arg;
-        char *uargv, *p;
+        char *uargv, *p=NULL;
 	int i;
 	item *it = NULL;
 
 	sleep(5);
 
 	while (1) {
-		sleep(1);
+		sleep(5);
 		
 		for (i=0; i<BUCKET_SIZE; i++) {
 			it = client.passet[i];
-			if ((it) && (it->key != NULL)) {
-				pthread_mutex_lock(&it->mutex);
-				redis_syncSet(client.context,
-				              it->key,
-					      it->nkey,
-					      it->data,
-					      it->size);
-				pthread_mutex_unlock(&it->mutex);
+			pthread_mutex_lock(&it->mutex);
+			while ((it) && (it->key != NULL)) {
+				client.get((void *) it->key, p);
+				if (p) {
+					redis_syncSet(client.context,
+				        	      it->key,
+					      	      it->nkey,
+					              p,
+					              strlen(p));
+					free(p);
+					p = NULL;
+				}
+				// move to next item
+				it = it->next;
 			}
+			pthread_mutex_unlock(&it->mutex);
 		}
 	}
 
@@ -55,8 +63,9 @@ redis_client *create_cache(char *host, int port) {
 	pthread_create(&thread_id, NULL, &thread_start, NULL);
 	return &client;
 }
+
 // returns the client context after setting up the connection
-redisContext *createClient(char *host, int prot, char *key_type, size_t key_size) {
+redisContext *createClient(char *host, int port) {
 	redisContext *c;
 	struct timeval timeout = { 1, 500000 }; // 1.5 seconds
 
@@ -77,59 +86,97 @@ redisContext *createClient(char *host, int prot, char *key_type, size_t key_size
 	return c;
 }
 
-int create_item(const void* key, size_t nkey, void *data,
+int create_item(void* key, size_t nkey, void *data,
                 size_t size, uint32_t flags, time_t exp) {
-	uint64_t *hash = (uint64_t *) key;
-	item *it;
+	uint32_t hash = client.hash(key);
+	item *it, *temp_next;
+	redisReply *reply = NULL;
+
 	// we know the key is uint64_t, so just cast it to uint64_t
 	// this has to be modified to generalize things
 
-	if (client.passet[(int)*hash]->key) {
-		printf("hash contention \n");
-		return 0;
+	pthread_mutex_lock(&client.passet[hash]->mutex);
+
+	if (client.passet[hash]->key) {
+		it = malloc(sizeof(item));
+		if (!it) {
+			printf("no space for data\n");
+			return 0;	
+		}
+		memset(it, 0 , sizeof(item));
+		pthread_mutex_init(&it->mutex, NULL);
+		it->prev = client.passet[hash];
+		temp_next = client.passet[hash]->next;
+		client.passet[hash]->next = it;
+		temp_next->prev = it;
+		it->next = temp_next;
+	} else {
+		it = client.passet[hash];
 	}
 
-	pthread_mutex_lock(&client.passet[(int) *hash]->mutex);
+	it->key = (char *) malloc(sizeof(nkey));
 
-	client.passet[(int) *hash]->key = (char *) malloc(sizeof(uint64_t));
-
-	if (!client.passet[(int) *hash]->key) {
-		pthread_mutex_unlock(&client.passet[(int) *hash]->mutex);
+	if (!it->key) {
+		pthread_mutex_unlock(&it->mutex);
 		printf("no space for data\n");
 		return 0;
 	}
 
-	memcpy(client.passet[(int) *hash]->key, hash, sizeof(uint64_t));
-	client.passet[(int) *hash]->nkey = nkey;
+	memcpy(it->key, key, sizeof(nkey));
+	it->nkey = nkey;
 
-	client.passet[(int) *hash]->data = (char *) malloc(size);
-	client.passet[(int) *hash]->size = size;
-	data = client.passet[(int) *hash]->data;
+	it->data = (char *) malloc(size);
+	it->size = size;
+	data = it->data;
 
 	// If data is available /* set it */	
-	redis_syncGet(client.context, client.passet[(int) *hash]->key, nkey,
-		                      client.passet[(int) *hash]->data,
-				      &client.passet[(int) *hash]->size);
+	reply = redis_syncGet(client.context, it->key, nkey);
+	if (reply) {
+		client.put(reply->str, (void *) it->data);	
+	}
+	freeReplyObject(reply);
 
 	// if the data is present in key-value store, update the cache.
 	
-	pthread_mutex_unlock(&client.passet[(int) *hash]->mutex);	
+	pthread_mutex_unlock(&client.passet[hash]->mutex);	
 	return 1;
 }
 
-int free_item(const void* key, size_t nkey) {
-	uint64_t *hash = (uint64_t *) key;
+int free_item(void* key, size_t nkey) {
+	uint32_t hash = client.hash(key);
+	item *it;
 
-	pthread_mutex_lock(&client.passet[(int) *hash]->mutex);
+	pthread_mutex_lock(&client.passet[hash]->mutex);
+	it = client.passet[hash];	
 
-	free(client.passet[(int) *hash]->key);
-	client.passet[(int) *hash]->key = NULL;
+	if ((it) && (it->key)) {
+		if (!memcmp(it->key, key, nkey)) {
+			free(client.passet[hash]->key);
+			client.passet[hash]->key = NULL;
 
-	free(client.passet[(int) *hash]->data);
-	client.passet[(int) *hash]->data = NULL;
+			free(client.passet[hash]->data);
+			client.passet[hash]->data = NULL;
+
+			if (it != client.passet[hash]) {
+				it->prev->next = it->next;
+				if (it->next) {
+					it->next->prev = it->prev;
+				}
+				free(it);
+			}
+
+			pthread_mutex_unlock(&client.passet[hash]->mutex);
+			redis_syncDel(client.context, (char *) key, nkey);
+			return 1;
+		} else {
+			it = it ->next;
+		}
+	}
 	
-	pthread_mutex_unlock(&client.passet[(int) *hash]->mutex);
-	return 1;
+	// just make sure no bogus exist in the store.
+	redis_syncDel(client.context, (char *) key, nkey);
+	pthread_mutex_unlock(&client.passet[hash]->mutex);
+	return 0;
 }
 
 // Syncronous Get and Set methods. return 0 on failure, > 0 success.
@@ -147,23 +194,37 @@ int redis_syncSet(redisContext *c, char *key, int key_len, char *value, int valu
 	return 1;
 }
 
-int redis_syncGet(redisContext *c, char *key, size_t key_len, char *value, size_t *value_len) {
+redisReply* redis_syncGet(redisContext *c, char *key, size_t key_len) {
 	redisReply *reply;
 	
-	if ((!key) || (!key_len) || (!value) || (!value_len)) {
-		return 0;
+	if ((!key) || (!key_len)) {
+		return NULL;
 	}
 
 	reply = redisCommand(c,"GET %b", key, (size_t) key_len);
 	if (reply->type != REDIS_REPLY_NIL) {
-		strncpy(value, reply->str, *value_len);
-		*value_len = strlen(reply->str);
+		//strncpy(value, reply->str, *value_len);
+		//*value_len = strlen(reply->str);
 		printf("Got Value: %s\n", reply->str);
-		freeReplyObject(reply);
-		return 0;
+		//freeReplyObject(reply);
+		return reply;
 	}
 
 	printf("No data available for key\n");
+	freeReplyObject(reply);
+
+	return NULL;
+}
+
+int redis_syncDel(redisContext *c, char *key, size_t key_len) {
+	redisReply *reply;
+
+	if ((!key) || (!key_len)) {
+		return 0;
+	}
+
+	reply = redisCommand(c,"DEL %b", key, (size_t) key_len);
+	printf("DEL: %s\n", reply->str);
 	freeReplyObject(reply);
 
 	return 1;
@@ -181,5 +242,3 @@ int redis_asyncGet(char *key, int key_len, char *value, int *value_len) {
 int destroyClient(redisContext *context) {
 	return 0;
 }
-
-

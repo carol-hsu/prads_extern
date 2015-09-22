@@ -2,6 +2,7 @@
 #include "serialize.h"
 #include "prads.h"
 #include "config.h"
+#include "cxt.h"
 
 #define SERIALIZE_PRINT(...) printf(__VA_ARGS__); printf("\n");
 
@@ -208,4 +209,16 @@ int put_value_struct(char *data, void *c)
    curr->s_asset = NULL;
 
    return 1;
+}
+
+uint32_t hash(void *key) {
+   prads_key *pkey = (prads_key *) key;
+   uint32_t hash;
+
+   if (!key) {
+     return 0;
+   }
+
+   hash = CXT_HASH4(pkey->src,pkey->dst,pkey->sport,pkey->dport,pkey->prot);
+   return hash;
 }

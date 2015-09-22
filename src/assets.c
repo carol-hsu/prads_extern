@@ -451,7 +451,7 @@ void add_asset(packetinfo *pi)
 
     config.pr_s.assets++;
 
-    if (STATE_EXTERN) {
+    /*if (STATE_EXTERN) {
 
 	if (pi->af == AF_INET) {
 		hash = ASSET_HASH4(PI_IP4SRC(pi));
@@ -465,9 +465,9 @@ void add_asset(packetinfo *pi)
 	if ((!ret) || (masset == NULL)) {
 		masset = (asset *) calloc(1, sizeof(asset));
 	}
-    } else {
+    } else { */
 	masset = (asset *) calloc(1, sizeof(asset));
-    }
+    //}
 
     if (!ret) {
     	masset->af = pi->af;
