@@ -861,7 +861,7 @@ typedef struct prads_key_t {
 pthread_mutex_t ConnEntryLock;
 pthread_mutex_t AssetEntryLock;
 
-int get_key_value(uint64_t key, char *data);
+int get_key_value(void *key, char *data);
 int put_value_struct(char *data, void *c);
 uint32_t hash(void *key);
 #endif                          // PRADS_H
