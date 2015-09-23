@@ -12,7 +12,7 @@
 #define CONFIG_PDNS    0x40
 
 #define DEFAULT_NETS "0.0.0.0/0,::/0"
-#define REDIS_HOST   "10.0.1.4"
+#define REDIS_HOST   "10.0.1.5"
 #define REDIS_PORT   6379
 #define STATE_EXTERN 1
 

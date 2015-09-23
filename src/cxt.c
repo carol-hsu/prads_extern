@@ -9,7 +9,6 @@
 extern globalconfig config;
 
 uint64_t cxtrackerid;
-connection *bucket[BUCKET_SIZE];
 
 void cxt_init()
 {
@@ -25,23 +24,26 @@ connection *cxt_new(packetinfo *pi)
     uint32_t flags;
     prads_key pkey;
     connection *cxt = NULL;
-    int ret;
+    int ret = 0;
 
     cxtrackerid++;
     if (STATE_EXTERN) {
-	pkey.src = pi->ip4->ip_src;
-	pkey.dst = pi->ip4->ip_dst;
-	pkey.sport = pi->s_port;
-	pkey.dport = pi->d_port;
-	pkey.prot = pi->proto;
-	ret = create_item((void *) &pkey, sizeof(prads_key), (void *) cxt, sizeof(connection), flags, exp);
+	if (pi->af == AF_INET) {
+		pkey.src = pi->ip4->ip_src;
+		pkey.dst = pi->ip4->ip_dst;
+		pkey.sport = pi->s_port;
+		pkey.dport = pi->d_port;
+		pkey.prot = pi->proto;
+		ret = create_item((void *) &pkey, sizeof(prads_key), (void *) &cxt, sizeof(connection), flags, exp);
+	}
+
 	if (ret && cxt) {
 		return cxt;
 	}
+
 	if (!cxt) {
 		cxt = (connection *) calloc(1, sizeof(connection));
 	}
-	
     } else {
     	cxt = (connection *) calloc(1, sizeof(connection));
     }
@@ -147,6 +149,7 @@ int cx_track(packetinfo *pi) {
     connection *cxt = NULL;
     connection *head = NULL;
     uint32_t hash;
+    int ret;
 
 
     if(af== AF_INET6){
@@ -179,16 +182,24 @@ int cx_track(packetinfo *pi) {
         if (af == AF_INET) {
             if (CMP_CXT4(cxt,IP4ADDR(ip_src),src_port,IP4ADDR(ip_dst),dst_port)){
                 // Client sends first packet (TCP/SYN - UDP?) hence this is a client
-                return cxt_update_client(cxt, pi);
+                ret =  cxt_update_client(cxt, pi);
+    		pthread_mutex_unlock(&ConnEntryLock);
+		return ret;
             } else if (CMP_CXT4(cxt,IP4ADDR(ip_dst),dst_port,IP4ADDR(ip_src),src_port)) {
                 // This is a server (Maybe not when we start up but in the long run)
-                return cxt_update_server(cxt, pi);
+                ret = cxt_update_server(cxt, pi);
+    		pthread_mutex_unlock(&ConnEntryLock);
+		return ret;
             }
         } else if (af == AF_INET6) {
             if (CMP_CXT6(cxt,ip_src,src_port,ip_dst,dst_port)){
-                return cxt_update_client(cxt, pi);
+                ret = cxt_update_client(cxt, pi);
+    		pthread_mutex_unlock(&ConnEntryLock);
+		return ret;
             } else if (CMP_CXT6(cxt,ip_dst,dst_port,ip_src,src_port)){
-                return cxt_update_server(cxt, pi);
+                ret = cxt_update_server(cxt, pi);
+    		pthread_mutex_unlock(&ConnEntryLock);
+		return ret;
             }
         }
     }

@@ -1,4 +1,4 @@
-cscope 15 $HOME/prads_extern               0000824096
+cscope 15 $HOME/prads_extern               0000824954
 	@/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/ae.h
 
 31 #iâdeà
@@ -24719,25 +24719,33 @@ p
 NULL
 ;
 
-38 
+36 
+	`´štf
+("data updated \n");
+
+39 
 ™
  = it->
 Ãxt
 ;
 
-40 
+41 
 	`±h»ad_mu‹x_uÆock
 (&
-™
-->
+ş›Á
+.
+·s£t
+[
+i
+]->
 mu‹x
 );
 
-44 
+45 
 	}
 }
 
-46 
+47 
 »dis_ş›Á
  *
 	$ü—‹_ÿche
@@ -24747,11 +24755,11 @@ ho¡
 pÜt
 ) {
 
-47 
+48 
 i
 ;
 
-49 
+50 
 ş›Á
 .
 cÚ‹xt
@@ -24763,7 +24771,7 @@ ho¡
 pÜt
 );
 
-51 ià(
+52 ià(
 NULL
  =ğ
 ş›Á
@@ -24771,21 +24779,21 @@ NULL
 cÚ‹xt
 ) {
 
-52 
+53 
 	`´štf
 ("No connectiono server \n");
 
-53  
+54  
 NULL
 ;
 
-56 
+57 
 i
 =0; i<
 BUCKET_SIZE
 ; i++) {
 
-57 
+58 
 ş›Á
 .
 ·s£t
@@ -24797,7 +24805,7 @@ i
 ™em
 ));
 
-58 ià(
+59 ià(
 ş›Á
 .
 ·s£t
@@ -24805,7 +24813,7 @@ i
 i
 ]) {
 
-59 
+60 
 	`mem£t
 (
 ş›Á
@@ -24817,7 +24825,7 @@ i
 ™em
 ));
 
-60 
+61 
 	`±h»ad_mu‹x_š™
 (&
 ş›Á
@@ -24831,7 +24839,7 @@ mu‹x
 NULL
 );
 
-63 
+64 
 	`±h»ad_ü—‹
 (&
 th»ad_id
@@ -24841,15 +24849,15 @@ NULL
 th»ad_¡¬t
 , NULL);
 
-64  &
+65  &
 ş›Á
 ;
 
-65 
+66 
 	}
 }
 
-68 
+69 
 »disCÚ‹xt
  *
 	$ü—‹Cl›Á
@@ -24859,25 +24867,25 @@ ho¡
 pÜt
 ) {
 
-69 
+70 
 »disCÚ‹xt
  *
 c
 ;
 
-70 
+71 
 timev®
  
 timeout
  = { 1, 500000 };
 
-72 ià(
+73 ià(
 ho¡
  =ğ
 NULL
 ) {
 
-76 
+77 
 c
  = 
 	`»disCÚÃùW™hTimeout
@@ -24889,7 +24897,7 @@ pÜt
 timeout
 );
 
-77 ià(
+78 ià(
 c
  =ğ
 NULL
@@ -24897,11 +24905,11 @@ NULL
 ”r
 ) {
 
-78 ià(
+79 ià(
 c
 ) {
 
-79 
+80 
 	`´štf
 ("CÚÃùiÚƒ¼Ü: %s\n", 
 c
@@ -24909,25 +24917,25 @@ c
 ”r¡r
 );
 
-80 
+81 
 	`»disF»e
 (
 c
 );
 
-82 
+83 
 	`´štf
 ("Connectionƒrror: can't‡llocate„edis context\n");
 
-86  
+87  
 c
 ;
 
-87 
+88 
 	}
 }
 
-89 
+90 
 	$ü—‹_™em
 (* 
 key
@@ -24935,11 +24943,11 @@ key
 size_t
  
 nkey
-, *
+, **
 d©a
 ,
 
-90 
+91 
 size_t
  
 size
@@ -24953,7 +24961,7 @@ time_t
 exp
 ) {
 
-91 
+92 
 ušt32_t
  
 hash
@@ -24965,7 +24973,7 @@ hash
 key
 );
 
-92 
+93 
 ™em
  *
 ™
@@ -24973,7 +24981,7 @@ key
 ‹mp_Ãxt
 ;
 
-93 
+94 
 »disR•ly
  *
 »¶y
@@ -24981,7 +24989,17 @@ key
 NULL
 ;
 
-98 
+95 
+»t
+ = 0;
+
+97 *
+d©a
+ = 
+NULL
+;
+
+101 
 	`±h»ad_mu‹x_lock
 (&
 ş›Á
@@ -24993,7 +25011,7 @@ hash
 mu‹x
 );
 
-100 ià(
+103 ià(
 ş›Á
 .
 ·s£t
@@ -25003,7 +25021,7 @@ hash
 key
 ) {
 
-101 
+104 
 ™
  = 
 	`m®loc
@@ -25011,15 +25029,15 @@ key
 ™em
 ));
 
-102 ià(!
+105 ià(!
 ™
 ) {
 
-103 
+106 
 	`´štf
 ("no space for data\n");
 
-106 
+109 
 	`mem£t
 (
 ™
@@ -25027,7 +25045,7 @@ key
 ™em
 ));
 
-107 
+110 
 	`±h»ad_mu‹x_š™
 (&
 ™
@@ -25037,7 +25055,7 @@ mu‹x
 NULL
 );
 
-108 
+111 
 ™
 ->
 ´ev
@@ -25049,47 +25067,47 @@ NULL
 hash
 ];
 
-109 
-‹mp_Ãxt
- = 
-ş›Á
-.
-·s£t
-[
-hash
-]->
-Ãxt
-;
-
-110 
-ş›Á
-.
-·s£t
-[
-hash
-]->
-Ãxt
- = 
-™
-;
-
-111 
-‹mp_Ãxt
-->
-´ev
- = 
-™
-;
-
 112 
-™
-->
+‹mp_Ãxt
+ = 
+ş›Á
+.
+·s£t
+[
+hash
+]->
+Ãxt
+;
+
+113 
+ş›Á
+.
+·s£t
+[
+hash
+]->
 Ãxt
  = 
-‹mp_Ãxt
+™
 ;
 
 114 
+‹mp_Ãxt
+->
+´ev
+ = 
+™
+;
+
+115 
+™
+->
+Ãxt
+ = 
+‹mp_Ãxt
+;
+
+117 
 ™
  = 
 ş›Á
@@ -25099,7 +25117,7 @@ hash
 hash
 ];
 
-117 
+120 
 ™
 ->
 key
@@ -25109,13 +25127,13 @@ key
 nkey
 ));
 
-119 ià(!
+122 ià(!
 ™
 ->
 key
 ) {
 
-120 
+123 
 	`±h»ad_mu‹x_uÆock
 (&
 ™
@@ -25123,27 +25141,27 @@ key
 mu‹x
 );
 
-121 
+124 
 	`´štf
 ("no space for data\n");
 
-125 
+128 
 	`memıy
 (
 ™
 ->
 key
-, key, (
+, key, 
 nkey
-));
+);
 
-126 
+129 
 ™
 ->
 nkey
  =‚key;
 
-128 
+131 
 ™
 ->
 d©a
@@ -25153,19 +25171,19 @@ d©a
 size
 );
 
-129 
+132 
 ™
 ->
 size
  = size;
 
-130 
+133 *
 d©a
  = 
 ™
 ->data;
 
-133 
+136 
 »¶y
  = 
 	`»dis_syncG‘
@@ -25181,11 +25199,11 @@ key
 nkey
 );
 
-134 ià(
+137 ià(
 »¶y
 ) {
 
-135 
+138 
 ş›Á
 .
 	`put
@@ -25199,13 +25217,17 @@ nkey
 d©a
 );
 
-137 
+139 
+»t
+ = 1;
+
+140 
 	`ä“R•lyObjeù
 (
 »¶y
 );
 
-141 
+145 
 	`±h»ad_mu‹x_uÆock
 (&
 ş›Á
@@ -25217,11 +25239,15 @@ hash
 mu‹x
 );
 
-143 
+146  
+»t
+;
+
+147 
 	}
 }
 
-145 
+149 
 	$ä“_™em
 (* 
 key
@@ -25231,7 +25257,7 @@ size_t
 nkey
 ) {
 
-146 
+150 
 ušt32_t
  
 hash
@@ -25243,13 +25269,13 @@ hash
 key
 );
 
-147 
+151 
 ™em
  *
 ™
 ;
 
-149 
+153 
 	`±h»ad_mu‹x_lock
 (&
 ş›Á
@@ -25261,7 +25287,7 @@ hash
 mu‹x
 );
 
-150 
+154 
 ™
  = 
 ş›Á
@@ -25271,13 +25297,13 @@ mu‹x
 hash
 ];
 
-152 ià((
+156 ià((
 ™
 è&& (™->
 key
 )) {
 
-153 ià(!
+157 ià(!
 	`memcmp
 (
 ™
@@ -25287,43 +25313,43 @@ key
 nkey
 )) {
 
-154 
-	`ä“
-(
-ş›Á
-.
-·s£t
-[
-hash
-]->
-key
-);
-
-155 
-ş›Á
-.
-·s£t
-[
-hash
-]->
-key
- = 
-NULL
-;
-
-157 
-	`ä“
-(
-ş›Á
-.
-·s£t
-[
-hash
-]->
-d©a
-);
-
 158 
+	`ä“
+(
+ş›Á
+.
+·s£t
+[
+hash
+]->
+key
+);
+
+159 
+ş›Á
+.
+·s£t
+[
+hash
+]->
+key
+ = 
+NULL
+;
+
+161 
+	`ä“
+(
+ş›Á
+.
+·s£t
+[
+hash
+]->
+d©a
+);
+
+162 
 ş›Á
 .
 ·s£t
@@ -25335,7 +25361,7 @@ d©a
 NULL
 ;
 
-160 ià(
+164 ià(
 ™
  !ğ
 ş›Á
@@ -25345,7 +25371,7 @@ NULL
 hash
 ]) {
 
-161 
+165 
 ™
 ->
 ´ev
@@ -25353,13 +25379,13 @@ hash
 Ãxt
  = it->next;
 
-162 ià(
+166 ià(
 ™
 ->
 Ãxt
 ) {
 
-163 
+167 
 ™
 ->
 Ãxt
@@ -25367,13 +25393,13 @@ hash
 ´ev
  = it->prev;
 
-165 
+169 
 	`ä“
 (
 ™
 );
 
-168 
+172 
 	`±h»ad_mu‹x_uÆock
 (&
 ş›Á
@@ -25385,7 +25411,7 @@ hash
 mu‹x
 );
 
-169 
+173 
 	`»dis_syncD–
 (
 ş›Á
@@ -25397,13 +25423,13 @@ key
 nkey
 );
 
-172 
+176 
 ™
  = iˆ->
 Ãxt
 ;
 
-177 
+181 
 	`»dis_syncD–
 (
 ş›Á
@@ -25415,7 +25441,7 @@ key
 nkey
 );
 
-178 
+182 
 	`±h»ad_mu‹x_uÆock
 (&
 ş›Á
@@ -25427,11 +25453,11 @@ hash
 mu‹x
 );
 
-180 
+184 
 	}
 }
 
-183 
+187 
 	$»dis_syncS‘
 (
 »disCÚ‹xt
@@ -25447,13 +25473,13 @@ v®ue
 v®ue_Ën
 ) {
 
-184 
+188 
 »disR•ly
  *
 »¶y
 ;
 
-186 ià((!
+190 ià((!
 key
 è|| (!
 key_Ën
@@ -25463,7 +25489,7 @@ v®ue
 v®ue_Ën
 )) {
 
-190 
+194 
 »¶y
  = 
 	`»disCommªd
@@ -25481,7 +25507,7 @@ v®ue
 v®ue_Ën
 );
 
-191 
+195 
 	`´štf
 ("SET: %s\n", 
 »¶y
@@ -25489,17 +25515,17 @@ v®ue_Ën
 ¡r
 );
 
-192 
+196 
 	`ä“R•lyObjeù
 (
 »¶y
 );
 
-195 
+199 
 	}
 }
 
-197 
+201 
 »disR•ly
 * 
 	$»dis_syncG‘
@@ -25515,23 +25541,23 @@ size_t
 key_Ën
 ) {
 
-198 
+202 
 »disR•ly
  *
 »¶y
 ;
 
-200 ià((!
+204 ià((!
 key
 è|| (!
 key_Ën
 )) {
 
-201  
+205  
 NULL
 ;
 
-204 
+208 
 »¶y
  = 
 	`»disCommªd
@@ -25545,7 +25571,7 @@ size_t
 key_Ën
 );
 
-205 ià(
+209 ià(
 »¶y
 ->
 ty³
@@ -25553,7 +25579,7 @@ ty³
 REDIS_REPLY_NIL
 ) {
 
-208 
+212 
 	`´štf
 ("GÙ V®ue: %s\n", 
 »¶y
@@ -25561,29 +25587,29 @@ REDIS_REPLY_NIL
 ¡r
 );
 
-210  
+214  
 »¶y
 ;
 
-213 
+217 
 	`´štf
 ("No data‡vailable for key\n");
 
-214 
+218 
 	`ä“R•lyObjeù
 (
 »¶y
 );
 
-216  
+220  
 NULL
 ;
 
-217 
+221 
 	}
 }
 
-219 
+223 
 	$»dis_syncD–
 (
 »disCÚ‹xt
@@ -25597,19 +25623,19 @@ size_t
 key_Ën
 ) {
 
-220 
+224 
 »disR•ly
  *
 »¶y
 ;
 
-222 ià((!
+226 ià((!
 key
 è|| (!
 key_Ën
 )) {
 
-226 
+230 
 »¶y
  = 
 	`»disCommªd
@@ -25623,7 +25649,7 @@ size_t
 key_Ën
 );
 
-227 
+231 
 	`´štf
 ("DEL: %s\n", 
 »¶y
@@ -25631,17 +25657,17 @@ key_Ën
 ¡r
 );
 
-228 
+232 
 	`ä“R•lyObjeù
 (
 »¶y
 );
 
-231 
+235 
 	}
 }
 
-234 
+238 
 	$»dis_asyncS‘
 (*
 key
@@ -25653,11 +25679,11 @@ v®ue
 v®ue_Ën
 ) {
 
-236 
+240 
 	}
 }
 
-238 
+242 
 	$»dis_asyncG‘
 (*
 key
@@ -25669,11 +25695,11 @@ v®ue
 v®ue_Ën
 ) {
 
-240 
+244 
 	}
 }
 
-242 
+246 
 	$de¡royCl›Á
 (
 »disCÚ‹xt
@@ -25681,7 +25707,7 @@ v®ue_Ën
 cÚ‹xt
 ) {
 
-244 
+248 
 	}
 }
 
@@ -25911,7 +25937,7 @@ key
 size_t
  
 nkey
-, *
+, **
 d©a
 ,
 
@@ -52243,7 +52269,7 @@ CONFIG_H
 
 15 
 	#REDIS_HOST
- "10.0.1.4"
+ "10.0.1.5"
 
 	)
 
@@ -74503,27 +74529,19 @@ ušt64_t
 	gcxŒack”id
 ;
 
-12 
-cÚÃùiÚ
- *
-	gbuck‘
-[
-BUCKET_SIZE
-];
-
-14 
+13 
 	$cxt_š™
 ()
 
-16 
+15 
 cxŒack”id
  = 0;
 
-17 
+16 
 	}
 }
 
-20 
+19 
 cÚÃùiÚ
  *
 	$cxt_Ãw
@@ -74533,29 +74551,143 @@ cÚÃùiÚ
 pi
 )
 
-22 
+21 
 š6_addr
  
 s
 ;
 
-23 
+22 
 š6_addr
  
 d
 ;
 
+23 
+time_t
+ 
+exp
+;
+
 24 
-cÚÃùiÚ
- *
-cxt
+ušt32_t
+ 
+æags
 ;
 
 25 
+´ads_key
+ 
+pkey
+;
+
+26 
+cÚÃùiÚ
+ *
+cxt
+ = 
+NULL
+;
+
+27 
+»t
+;
+
+29 
 cxŒack”id
 ++;
 
-26 
+30 ià(
+STATE_EXTERN
+) {
+
+31 
+pkey
+.
+¤c
+ = 
+pi
+->
+4
+->
+_¤c
+;
+
+32 
+pkey
+.
+d¡
+ = 
+pi
+->
+4
+->
+_d¡
+;
+
+33 
+pkey
+.
+¥Üt
+ = 
+pi
+->
+s_pÜt
+;
+
+34 
+pkey
+.
+dpÜt
+ = 
+pi
+->
+d_pÜt
+;
+
+35 
+pkey
+.
+´Ù
+ = 
+pi
+->
+´Ùo
+;
+
+36 
+»t
+ = 
+	`ü—‹_™em
+((*è&
+pkey
+, (
+´ads_key
+), (*è&
+cxt
+, (
+cÚÃùiÚ
+), 
+æags
+, 
+exp
+);
+
+37 ià(
+»t
+ && 
+cxt
+) {
+
+38  
+cxt
+;
+
+40 ià(!
+cxt
+) {
+
+41 
 cxt
  = (
 cÚÃùiÚ
@@ -74563,13 +74695,21 @@ cÚÃùiÚ
 	`ÿÎoc
 (1, (connection));
 
-27 
+44 
+cxt
+ = (
+cÚÃùiÚ
+ *è
+	`ÿÎoc
+(1, (connection));
+
+46 
 	`as£¹
 (
 cxt
 );
 
-28 
+47 
 cxt
 ->
 cxid
@@ -74577,7 +74717,7 @@ cxid
 cxŒack”id
 ;
 
-30 
+49 
 cxt
 ->
 af
@@ -74585,7 +74725,7 @@ af
 pi
 ->af;
 
-31 if(
+50 if(
 pi
 ->
 tıh
@@ -74597,7 +74737,7 @@ s_tıFÏgs
 t_æags
 ;
 
-34 
+53 
 cxt
 ->
 s_tÙ®_by‹s
@@ -74607,13 +74747,13 @@ pi
 ·ck‘_by‹s
 ;
 
-35 
+54 
 cxt
 ->
 s_tÙ®_pkts
  = 1;
 
-36 
+55 
 cxt
 ->
 ¡¬t_time
@@ -74627,7 +74767,7 @@ ts
 tv_£c
 ;
 
-37 
+56 
 cxt
 ->
 Ï¡_pkt_time
@@ -74641,7 +74781,7 @@ ts
 tv_£c
 ;
 
-39 if(
+58 if(
 pi
 -> 
 af
@@ -74649,7 +74789,7 @@ af
 AF_INET6
 ){
 
-40 
+59 
 cxt
 ->
 s_
@@ -74659,7 +74799,7 @@ s_
 pi
 );
 
-41 
+60 
 cxt
 ->
 d_
@@ -74669,7 +74809,7 @@ d_
 pi
 );
 
-43 
+62 
 s
 .
 s6_addr32
@@ -74681,7 +74821,7 @@ pi
 _¤c
 ;
 
-44 
+63 
 d
 .
 s6_addr32
@@ -74693,7 +74833,7 @@ pi
 _d¡
 ;
 
-45 
+64 
 cxt
 ->
 s_
@@ -74701,7 +74841,7 @@ s_
 s
 ;
 
-46 
+65 
 cxt
 ->
 d_
@@ -74709,7 +74849,7 @@ d_
 d
 ;
 
-49 
+68 
 cxt
 ->
 s_pÜt
@@ -74717,7 +74857,7 @@ s_pÜt
 pi
 ->s_port;
 
-50 
+69 
 cxt
 ->
 d_pÜt
@@ -74725,7 +74865,7 @@ d_pÜt
 pi
 ->d_port;
 
-51 
+70 
 cxt
 ->
 ´Ùo
@@ -74733,7 +74873,7 @@ cxt
 pi
 ->proto;
 
-52 
+71 
 cxt
 ->
 hw_´Ùo
@@ -74745,13 +74885,13 @@ pi
 ‘h_ty³
 );
 
-54 
+73 
 cxt
 ->
 check
  = 0x00;
 
-55 
+74 
 cxt
 ->
 c_as£t
@@ -74759,7 +74899,7 @@ c_as£t
 NULL
 ;
 
-56 
+75 
 cxt
 ->
 s_as£t
@@ -74767,21 +74907,21 @@ s_as£t
 NULL
 ;
 
-57 
+76 
 cxt
 ->
 »v”£d
  = 0;
 
-59  
+78  
 cxt
 ;
 
-60 
+79 
 	}
 }
 
-62 
+81 
 	$cÚÃùiÚ_Œackšg
 (
 ·ck‘šfo
@@ -74789,25 +74929,25 @@ cxt
 pi
 )
 
-64 
+83 
 _addr_s
 [
 INET6_ADDRSTRLEN
 ];
 
-65 
+84 
 _addr_d
 [
 INET6_ADDRSTRLEN
 ];
 
-66 
+85 
 	`cx_Œack
 (
 pi
 );
 
-68 if(
+87 if(
 cÚfig
 .
 cæags
@@ -74815,7 +74955,7 @@ cæags
 CONFIG_CONNECT
 ){
 
-69 
+88 
 	`log_cÚÃùiÚ
 (
 pi
@@ -74825,120 +74965,12 @@ cxt
 CX_EXCESSIVE
 );
 
-72 
-	}
-}
-
-74 
-	$cxt_upd©e_ş›Á
-(
-cÚÃùiÚ
- *
-cxt
-, 
-·ck‘šfo
- *
-pi
-)
-
-76 
-cxt
-->
-Ï¡_pkt_time
- = 
-pi
-->
-ph—d”
-->
-ts
-.
-tv_£c
-;
-
-78 if(
-pi
-->
-tıh
-è
-cxt
-->
-s_tıFÏgs
- |ğpi->tıh->
-t_æags
-;
-
-79 
-cxt
-->
-s_tÙ®_by‹s
- +ğ
-pi
-->
-·ck‘_by‹s
-;
-
-80 
-cxt
-->
-s_tÙ®_pkts
- += 1;
-
-82 
-pi
-->
-cxt
- = cxt;
-
-83 
-pi
-->
-sc
- = 
-SC_CLIENT
-;
-
-84 if(!
-cxt
-->
-c_as£t
-)
-
-85 
-cxt
-->
-c_as£t
- = 
-pi
-->
-as£t
-;
-
-86 ià(
-cxt
-->
-s_tÙ®_by‹s
- > 
-MAX_BYTE_CHECK
-
-
-87 || 
-cxt
-->
-s_tÙ®_pkts
- > 
-MAX_PKT_CHECK
-) {
-
-90  
-SC_CLIENT
-;
-
 91 
 	}
 }
 
 93 
-	$cxt_upd©e_£rv”
+	$cxt_upd©e_ş›Á
 (
 cÚÃùiÚ
  *
@@ -74970,7 +75002,7 @@ tıh
 è
 cxt
 ->
-d_tıFÏgs
+s_tıFÏgs
  |ğpi->tıh->
 t_æags
 ;
@@ -74978,7 +75010,7 @@ t_æags
 98 
 cxt
 ->
-d_tÙ®_by‹s
+s_tÙ®_by‹s
  +ğ
 pi
 ->
@@ -74988,7 +75020,7 @@ pi
 99 
 cxt
 ->
-d_tÙ®_pkts
+s_tÙ®_pkts
  += 1;
 
 101 
@@ -75002,19 +75034,19 @@ pi
 ->
 sc
  = 
-SC_SERVER
+SC_CLIENT
 ;
 
 103 if(!
 cxt
 ->
-s_as£t
+c_as£t
 )
 
 104 
 cxt
 ->
-s_as£t
+c_as£t
  = 
 pi
 ->
@@ -75024,7 +75056,7 @@ as£t
 105 ià(
 cxt
 ->
-d_tÙ®_by‹s
+s_tÙ®_by‹s
  > 
 MAX_BYTE_CHECK
 
@@ -75032,20 +75064,128 @@ MAX_BYTE_CHECK
 106 || 
 cxt
 ->
-d_tÙ®_pkts
+s_tÙ®_pkts
  > 
 MAX_PKT_CHECK
 ) {
 
 109  
-SC_SERVER
+SC_CLIENT
 ;
 
-111 
+110 
 	}
 }
 
-118 
+112 
+	$cxt_upd©e_£rv”
+(
+cÚÃùiÚ
+ *
+cxt
+, 
+·ck‘šfo
+ *
+pi
+)
+
+114 
+cxt
+->
+Ï¡_pkt_time
+ = 
+pi
+->
+ph—d”
+->
+ts
+.
+tv_£c
+;
+
+116 if(
+pi
+->
+tıh
+è
+cxt
+->
+d_tıFÏgs
+ |ğpi->tıh->
+t_æags
+;
+
+117 
+cxt
+->
+d_tÙ®_by‹s
+ +ğ
+pi
+->
+·ck‘_by‹s
+;
+
+118 
+cxt
+->
+d_tÙ®_pkts
+ += 1;
+
+120 
+pi
+->
+cxt
+ = cxt;
+
+121 
+pi
+->
+sc
+ = 
+SC_SERVER
+;
+
+122 if(!
+cxt
+->
+s_as£t
+)
+
+123 
+cxt
+->
+s_as£t
+ = 
+pi
+->
+as£t
+;
+
+124 ià(
+cxt
+->
+d_tÙ®_by‹s
+ > 
+MAX_BYTE_CHECK
+
+
+125 || 
+cxt
+->
+d_tÙ®_pkts
+ > 
+MAX_PKT_CHECK
+) {
+
+128  
+SC_SERVER
+;
+
+130 
+	}
+}
+
+137 
 	$cx_Œack
 (
 ·ck‘šfo
@@ -75053,31 +75193,31 @@ SC_SERVER
 pi
 ) {
 
-119 
+138 
 š6_addr
  *
 _¤c
 ;
 
-120 
+139 
 š6_addr
  *
 _d¡
 ;
 
-121 
+140 
 š6_addr
  
 s
 ;
 
-122 
+141 
 š6_addr
  
 d
 ;
 
-123 
+142 
 ušt16_t
  
 ¤c_pÜt
@@ -75087,7 +75227,7 @@ pi
 s_pÜt
 ;
 
-124 
+143 
 ušt16_t
  
 d¡_pÜt
@@ -75097,13 +75237,13 @@ pi
 d_pÜt
 ;
 
-125 
+144 
 af
  = 
 pi
 ->af;
 
-126 
+145 
 cÚÃùiÚ
  *
 cxt
@@ -75111,7 +75251,7 @@ cxt
 NULL
 ;
 
-127 
+146 
 cÚÃùiÚ
  *
 h—d
@@ -75119,19 +75259,23 @@ h—d
 NULL
 ;
 
-128 
+147 
 ušt32_t
  
 hash
 ;
 
-131 if(
+148 
+»t
+;
+
+151 if(
 af
 =ğ
 AF_INET6
 ){
 
-132 
+152 
 _¤c
  = &
 	`PI_IP6SRC
@@ -75139,7 +75283,7 @@ AF_INET6
 pi
 );
 
-133 
+153 
 _d¡
  = &
 	`PI_IP6DST
@@ -75147,7 +75291,7 @@ pi
 pi
 );
 
-137 
+157 
 s
 .
 s6_addr32
@@ -75159,7 +75303,7 @@ pi
 _¤c
 ;
 
-138 
+158 
 d
 .
 s6_addr32
@@ -75171,25 +75315,25 @@ pi
 _d¡
 ;
 
-139 
+159 
 _¤c
  = &
 s
 ;
 
-140 
+160 
 _d¡
  = &
 d
 ;
 
-144 ià(
+164 ià(
 af
  =ğ
 AF_INET
 ) {
 
-145 
+165 
 hash
  = 
 	`CXT_HASH4
@@ -75209,13 +75353,13 @@ pi
 ´Ùo
 );
 
-146 } ià(
+166 } ià(
 af
  =ğ
 AF_INET6
 ) {
 
-147 
+167 
 hash
  = 
 	`CXT_HASH6
@@ -75233,13 +75377,13 @@ pi
 ´Ùo
 );
 
-149 
+169 
 	`±h»ad_mu‹x_lock
 (&
 CÚnEÁryLock
 );
 
-150 
+170 
 h—d
  = 
 buck‘
@@ -75247,7 +75391,7 @@ buck‘
 hash
 ];
 
-153 
+173 
 cxt
  = 
 h—d
@@ -75257,19 +75401,19 @@ NULL
 Ãxt
 ) {
 
-154 ià(
+174 ià(
 af
  !ğ
 cxt
 ->af)
 
-158 ià(
+178 ià(
 af
  =ğ
 AF_INET
 ) {
 
-159 ià(
+179 ià(
 	`CMP_CXT4
 (
 cxt
@@ -75285,7 +75429,9 @@ cxt
 d¡_pÜt
 )){
 
-161  
+181 
+»t
+ = 
 	`cxt_upd©e_ş›Á
 (
 cxt
@@ -75293,7 +75439,17 @@ cxt
 pi
 );
 
-162 } ià(
+182 
+	`±h»ad_mu‹x_uÆock
+(&
+CÚnEÁryLock
+);
+
+183  
+»t
+;
+
+184 } ià(
 	`CMP_CXT4
 (
 cxt
@@ -75309,7 +75465,9 @@ d¡_pÜt
 ¤c_pÜt
 )) {
 
-164  
+186 
+»t
+ = 
 	`cxt_upd©e_£rv”
 (
 cxt
@@ -75317,13 +75475,23 @@ cxt
 pi
 );
 
-166 } ià(
+187 
+	`±h»ad_mu‹x_uÆock
+(&
+CÚnEÁryLock
+);
+
+188  
+»t
+;
+
+190 } ià(
 af
  =ğ
 AF_INET6
 ) {
 
-167 ià(
+191 ià(
 	`CMP_CXT6
 (
 cxt
@@ -75337,7 +75505,9 @@ cxt
 d¡_pÜt
 )){
 
-168  
+192 
+»t
+ = 
 	`cxt_upd©e_ş›Á
 (
 cxt
@@ -75345,7 +75515,17 @@ cxt
 pi
 );
 
-169 } ià(
+193 
+	`±h»ad_mu‹x_uÆock
+(&
+CÚnEÁryLock
+);
+
+194  
+»t
+;
+
+195 } ià(
 	`CMP_CXT6
 (
 cxt
@@ -75359,7 +75539,9 @@ d¡_pÜt
 ¤c_pÜt
 )){
 
-170  
+196 
+»t
+ = 
 	`cxt_upd©e_£rv”
 (
 cxt
@@ -75367,7 +75549,17 @@ cxt
 pi
 );
 
-175 
+197 
+	`±h»ad_mu‹x_uÆock
+(&
+CÚnEÁryLock
+);
+
+198  
+»t
+;
+
+203 
 cxt
  = 
 	`cxt_Ãw
@@ -75375,7 +75567,7 @@ cxt
 pi
 );
 
-176 
+204 
 	`log_cÚÃùiÚ
 (
 cxt
@@ -75383,7 +75575,7 @@ cxt
 CX_NEW
 );
 
-179 
+207 
 cxt
 ->
 Ãxt
@@ -75391,13 +75583,13 @@ cxt
 h—d
 ;
 
-180 ià(
+208 ià(
 h—d
  !ğ
 NULL
 ) {
 
-182 
+210 
 h—d
 ->
 ´ev
@@ -75405,7 +75597,7 @@ h—d
 cxt
 ;
 
-184 
+212 
 buck‘
 [
 hash
@@ -75413,23 +75605,23 @@ hash
 cxt
 ;
 
-185 
+213 
 pi
 ->
 cxt
  = cxt;
 
-186 
+214 
 	`±h»ad_mu‹x_uÆock
 (&
 CÚnEÁryLock
 );
 
-190 
+218 
 	}
 }
 
-192 
+220 
 	$»v”£_pi_cxt
 (
 ·ck‘šfo
@@ -75437,49 +75629,49 @@ CÚnEÁryLock
 pi
 )
 
-194 
+222 
 ušt8_t
  
 tmpFÏgs
 ;
 
-195 
+223 
 ušt64_t
  
 tmp_pkts
 ;
 
-196 
+224 
 ušt64_t
  
 tmp_by‹s
 ;
 
-197 
+225 
 š6_addr
  
 tmp_
 ;
 
-198 
+226 
 ušt16_t
  
 tmp_pÜt
 ;
 
-199 
+227 
 cÚÃùiÚ
  *
 cxt
 ;
 
-201 
+229 
 cxt
  = 
 pi
 ->cxt;
 
-205 
+233 
 tmpFÏgs
  = 
 cxt
@@ -75487,7 +75679,7 @@ cxt
 s_tıFÏgs
 ;
 
-206 
+234 
 tmp_pkts
  = 
 cxt
@@ -75495,7 +75687,7 @@ cxt
 s_tÙ®_pkts
 ;
 
-207 
+235 
 tmp_by‹s
  = 
 cxt
@@ -75503,7 +75695,7 @@ cxt
 s_tÙ®_by‹s
 ;
 
-208 
+236 
 tmp_
  = 
 cxt
@@ -75511,7 +75703,7 @@ cxt
 s_
 ;
 
-209 
+237 
 tmp_pÜt
  = 
 cxt
@@ -75519,7 +75711,7 @@ cxt
 s_pÜt
 ;
 
-212 
+240 
 cxt
 ->
 s_tıFÏgs
@@ -75527,7 +75719,7 @@ s_tıFÏgs
 d_tıFÏgs
 ;
 
-213 
+241 
 cxt
 ->
 s_tÙ®_pkts
@@ -75535,7 +75727,7 @@ s_tÙ®_pkts
 d_tÙ®_pkts
 ;
 
-214 
+242 
 cxt
 ->
 s_tÙ®_by‹s
@@ -75543,7 +75735,7 @@ s_tÙ®_by‹s
 d_tÙ®_by‹s
 ;
 
-215 
+243 
 cxt
 ->
 s_
@@ -75551,7 +75743,7 @@ s_
 d_
 ;
 
-216 
+244 
 cxt
 ->
 s_pÜt
@@ -75559,7 +75751,7 @@ s_pÜt
 d_pÜt
 ;
 
-219 
+247 
 cxt
 ->
 d_tıFÏgs
@@ -75567,7 +75759,7 @@ d_tıFÏgs
 tmpFÏgs
 ;
 
-220 
+248 
 cxt
 ->
 d_tÙ®_pkts
@@ -75575,7 +75767,7 @@ d_tÙ®_pkts
 tmp_pkts
 ;
 
-221 
+249 
 cxt
 ->
 d_tÙ®_by‹s
@@ -75583,7 +75775,7 @@ d_tÙ®_by‹s
 tmp_by‹s
 ;
 
-222 
+250 
 cxt
 ->
 d_
@@ -75591,7 +75783,7 @@ d_
 tmp_
 ;
 
-223 
+251 
 cxt
 ->
 d_pÜt
@@ -75599,7 +75791,7 @@ d_pÜt
 tmp_pÜt
 ;
 
-226 
+254 
 cxt
 ->
 c_as£t
@@ -75609,13 +75801,13 @@ s_as£t
 NULL
 ;
 
-227 
+255 
 cxt
 ->
 check
  = 0x00;
 
-230 ià(
+258 ià(
 pi
 ->
 sc
@@ -75623,7 +75815,7 @@ sc
 SC_CLIENT
 )
 
-231 
+259 
 pi
 ->
 sc
@@ -75631,7 +75823,7 @@ sc
 SC_SERVER
 ;
 
-233 
+261 
 pi
 ->
 sc
@@ -75639,31 +75831,31 @@ sc
 SC_CLIENT
 ;
 
-234 
+262 
 	}
 }
 
-242 
+270 
 	$’d_£ssiÚs
 ()
 
-245 
+273 
 cÚÃùiÚ
  *
 cxt
 ;
 
-246 
+274 
 ™”
 ;
 
-247 
+275 
 cx¡©us
  = 
 CX_NONE
 ;
 
-248 
+276 
 time_t
  
 check_time
@@ -75673,19 +75865,19 @@ check_time
 NULL
 );
 
-250 
+278 
 	`log_rÙ©e
 (
 check_time
 );
 
-251 
+279 
 ™”
  = 0; i‹¸< 
 BUCKET_SIZE
 ; iter++) {
 
-252 
+280 
 cxt
  = 
 buck‘
@@ -75693,13 +75885,13 @@ buck‘
 ™”
 ];
 
-253 
+281 
 cxt
  !ğ
 NULL
 ) {
 
-255 ià(
+283 ià(
 cxt
 ->
 ´Ùo
@@ -75707,7 +75899,7 @@ cxt
 IP_PROTO_TCP
 ) {
 
-257 ià(
+285 ià(
 cxt
 ->
 s_tıFÏgs
@@ -75717,7 +75909,7 @@ TF_FIN
 d_tıFÏgs
  & TF_FIN
 
-258 && (
+286 && (
 check_time
  - 
 cxt
@@ -75725,13 +75917,13 @@ cxt
 Ï¡_pkt_time
 ) > 5) {
 
-259 
+287 
 cx¡©us
  = 
 CX_ENDED
 ;
 
-261 ià((
+289 ià((
 cxt
 ->
 s_tıFÏgs
@@ -75739,7 +75931,7 @@ s_tıFÏgs
 TF_RST
 
 
-262 || 
+290 || 
 cxt
 ->
 d_tıFÏgs
@@ -75747,7 +75939,7 @@ d_tıFÏgs
 TF_RST
 )
 
-263 && (
+291 && (
 check_time
  - 
 cxt
@@ -75755,13 +75947,13 @@ cxt
 Ï¡_pkt_time
 ) > 5) {
 
-264 
+292 
 cx¡©us
  = 
 CX_ENDED
 ;
 
-266 ià((
+294 ià((
 check_time
  - 
 cxt
@@ -75771,13 +75963,13 @@ cxt
 TCP_TIMEOUT
 ) {
 
-267 
+295 
 cx¡©us
  = 
 CX_EXPIRE
 ;
 
-271 ià(
+299 ià(
 cxt
 ->
 ´Ùo
@@ -75785,7 +75977,7 @@ cxt
 IP_PROTO_UDP
 
 
-272 && (
+300 && (
 check_time
  - 
 cxt
@@ -75793,13 +75985,13 @@ cxt
 Ï¡_pkt_time
 ) > 60) {
 
-273 
+301 
 cx¡©us
  = 
 CX_EXPIRE
 ;
 
-276 ià(
+304 ià(
 cxt
 ->
 ´Ùo
@@ -75807,7 +75999,7 @@ cxt
 IP_PROTO_ICMP
 
 
-277 || 
+305 || 
 cxt
 ->
 ´Ùo
@@ -75815,7 +76007,7 @@ cxt
 IP6_PROTO_ICMP
 ) {
 
-278 ià((
+306 ià((
 check_time
  - 
 cxt
@@ -75823,13 +76015,13 @@ cxt
 Ï¡_pkt_time
 ) > 60) {
 
-279 
+307 
 cx¡©us
  = 
 CX_EXPIRE
 ;
 
-283 ià((
+311 ià((
 check_time
  - 
 cxt
@@ -75839,13 +76031,13 @@ cxt
 TCP_TIMEOUT
 ) {
 
-284 
+312 
 cx¡©us
  = 
 CX_EXPIRE
 ;
 
-287 ià(
+315 ià(
 cx¡©us
  =ğ
 CX_ENDED
@@ -75853,13 +76045,13 @@ CX_ENDED
 CX_EXPIRE
 ) {
 
-289 ià(
+317 ià(
 cxt
 ->
 ´ev
 )
 
-290 
+318 
 cxt
 ->
 ´ev
@@ -75867,13 +76059,13 @@ cxt
 Ãxt
  = cxt->next;
 
-291 ià(
+319 ià(
 cxt
 ->
 Ãxt
 )
 
-292 
+320 
 cxt
 ->
 Ãxt
@@ -75881,7 +76073,7 @@ cxt
 ´ev
  = cxt->prev;
 
-293 
+321 
 cÚÃùiÚ
  *
 tmp
@@ -75889,7 +76081,7 @@ tmp
 cxt
 ;
 
-295 
+323 
 	`log_cÚÃùiÚ
 (
 cxt
@@ -75897,19 +76089,19 @@ cxt
 cx¡©us
 );
 
-296 
+324 
 cx¡©us
  = 
 CX_NONE
 ;
 
-298 
+326 
 cxt
  = cxt->
 Ãxt
 ;
 
-300 
+328 
 	`d–_cÚÃùiÚ
 (
 tmp
@@ -75919,13 +76111,13 @@ buck‘
 ™”
 ]);
 
-301 ià(
+329 ià(
 cxt
  =ğ
 NULL
 ) {
 
-302 
+330 
 buck‘
 [
 ™”
@@ -75933,31 +76125,31 @@ buck‘
 NULL
 ;
 
-305 
+333 
 cxt
  = cxt->
 Ãxt
 ;
 
-309 
+337 
 	}
 }
 
-311 
+339 
 	$log_cÚÃùiÚ_®l
 ()
 
-313 
+341 
 i
 ;
 
-314 
+342 
 cÚÃùiÚ
  *
 cxt
 ;
 
-315 if(! (
+343 if(! (
 cÚfig
 .
 cæags
@@ -75965,13 +76157,13 @@ cæags
 CONFIG_CXWRITE
 ))
 
-317 
+345 
 i
  = 0; i < 
 BUCKET_SIZE
 ; i++) {
 
-318 
+346 
 cxt
  = 
 buck‘
@@ -75979,11 +76171,11 @@ buck‘
 i
 ];
 
-319 
+347 
 cxt
 ) {
 
-320 
+348 
 	`log_cÚÃùiÚ
 (
 cxt
@@ -75991,17 +76183,17 @@ cxt
 CX_HUMAN
 );
 
-321 
+349 
 cxt
  = cxt->
 Ãxt
 ;
 
-324 
+352 
 	}
 }
 
-326 
+354 
 	$d–_cÚÃùiÚ
 (
 cÚÃùiÚ
@@ -76011,7 +76203,7 @@ cxt
 buck‘_±r
 )
 
-328 
+356 
 cÚÃùiÚ
  *
 ´ev
@@ -76019,7 +76211,7 @@ cÚÃùiÚ
 cxt
 ->prev;
 
-329 
+357 
 cÚÃùiÚ
  *
 Ãxt
@@ -76027,23 +76219,23 @@ cÚÃùiÚ
 cxt
 ->next;
 
-331 ià(
+359 ià(
 ´ev
  =ğ
 NULL
 ) {
 
-333 *
+361 *
 buck‘_±r
  = 
 Ãxt
 ;
 
-335 ià(
+363 ià(
 Ãxt
 )
 
-336 
+364 
 Ãxt
 ->
 ´ev
@@ -76051,13 +76243,13 @@ buck‘_±r
 NULL
 ;
 
-337 } ià(
+365 } ià(
 Ãxt
  =ğ
 NULL
 ) {
 
-339 
+367 
 ´ev
 ->
 Ãxt
@@ -76065,49 +76257,49 @@ NULL
 NULL
 ;
 
-342 
+370 
 ´ev
 ->
 Ãxt
  =‚ext;
 
-343 
+371 
 Ãxt
 ->
 ´ev
  =…rev;
 
-349 
+377 
 	`ä“
 (
 cxt
 );
 
-350 
+378 
 cxt
  = 
 NULL
 ;
 
-351 
+379 
 	}
 }
 
-353 
+381 
 	$’d_®l_£ssiÚs
 ()
 
-355 
+383 
 cÚÃùiÚ
  *
 cxt
 ;
 
-356 
+384 
 cxkey
 ;
 
-357 
+385 
 FILE
  *
 cxtFe
@@ -76115,7 +76307,7 @@ cxtFe
 NULL
 ;
 
-359 
+387 
 	`log_rÙ©e
 (
 	`time
@@ -76123,13 +76315,13 @@ NULL
 NULL
 ));
 
-360 
+388 
 cxkey
  = 0; cxkey < 
 BUCKET_SIZE
 ; cxkey++) {
 
-361 
+389 
 cxt
  = 
 buck‘
@@ -76137,13 +76329,13 @@ buck‘
 cxkey
 ];
 
-362 
+390 
 cxt
  !ğ
 NULL
 ) {
 
-363 
+391 
 cÚÃùiÚ
  *
 tmp
@@ -76151,7 +76343,7 @@ tmp
 cxt
 ;
 
-365 
+393 
 	`log_cÚÃùiÚ
 (
 cxt
@@ -76159,13 +76351,13 @@ cxt
 CX_ENDED
 );
 
-366 
+394 
 cxt
  = cxt->
 Ãxt
 ;
 
-367 
+395 
 	`d–_cÚÃùiÚ
 (
 tmp
@@ -76175,13 +76367,13 @@ buck‘
 cxkey
 ]);
 
-368 ià(
+396 ià(
 cxt
  =ğ
 NULL
 ) {
 
-369 
+397 
 buck‘
 [
 cxkey
@@ -76189,29 +76381,29 @@ cxkey
 NULL
 ;
 
-373 ià(
+401 ià(
 cxtFe
  !ğ
 NULL
 ) {
 
-374 
+402 
 	`fşo£
 (
 cxtFe
 );
 
-376 
+404 
 	}
 }
 
-378 
+406 
 	$cxt_log_buck‘s
 (
 dummy
 )
 
-380 
+408 
 cÚÃùiÚ
  *
 cxt
@@ -76219,7 +76411,7 @@ cxt
 NULL
 ;
 
-381 
+409 
 FILE
  *
 logfe
@@ -76227,39 +76419,39 @@ logfe
 NULL
 ;
 
-382 
+410 
 i
 ;
 
-383 
+411 
 Ën
 ;
 
-385 
+413 
 logfe
  = 
 	`fİ’
 ("/tmp/prads-buckets.log", "w");
 
-386 ià(!
+414 ià(!
 logfe
 )
 
-389 
+417 
 	`dlog
 ("Recieved SIGUSR1 - Dumping bucketlisto†ogfile\n");
 
-390 
+418 
 i
  = 0; i < 
 BUCKET_SIZE
 ; i++) {
 
-391 
+419 
 Ën
  = 0;
 
-392 
+420 
 cxt
  = 
 buck‘
@@ -76269,15 +76461,15 @@ i
 Ãxt
 )
 
-393 
+421 
 Ën
 ++;
 
-394 ià(
+422 ià(
 Ën
  > 0)
 
-395 
+423 
 	`årštf
 (
 logfe
@@ -76287,27 +76479,27 @@ logfe
 i
 );
 
-398 
+426 
 	`fæush
 (
 logfe
 );
 
-399 
+427 
 	`fşo£
 (
 logfe
 );
 
-400 
+428 
 	}
 }
 
-420 #ifdeà
+448 #ifdeà
 VECTOR_CXTRACKER
 
 
-422 
+450 
 	#VEC_FILL
 (
 vec
@@ -76321,7 +76513,7 @@ _pÜt¤c
 _pÜtd¡
 ) do {\
 
-423 
+451 
 vec
 .
 s
@@ -76329,7 +76521,7 @@ s
 _pÜt¤c
 ); \
 
-424 
+452 
 vec
 .
 s
@@ -76337,7 +76529,7 @@ s
 _pÜtd¡
 ); \
 
-425 
+453 
 vec
 .
 w
@@ -76345,7 +76537,7 @@ w
 _¤c
 ); \
 
-426 
+454 
 vec
 .
 w
@@ -76353,17 +76545,17 @@ w
 _d¡
 ); \
 
-427 
+455 
 vec
 .
 w
 [3] = 0; \
 
-428 } 0)
+456 } 0)
 
 	)
 
-430 
+458 
 šlše
  
 	$cx_Œack_simd_v4
@@ -76373,7 +76565,7 @@ w
 pi
 )
 
-432 
+460 
 cÚÃùiÚ
  *
 cxt
@@ -76381,7 +76573,7 @@ cxt
 NULL
 ;
 
-433 
+461 
 cÚÃùiÚ
  *
 h—d
@@ -76389,13 +76581,13 @@ h—d
 NULL
 ;
 
-434 
+462 
 ušt32_t
  
 hash
 ;
 
-437 
+465 
 hash
  = 
 	`make_hash
@@ -76403,13 +76595,13 @@ hash
 pi
 );
 
-438 
+466 
 	`±h»ad_mu‹x_lock
 (&
 CÚnEÁryLock
 );
 
-439 
+467 
 cxt
  = 
 buck‘
@@ -76417,31 +76609,31 @@ buck‘
 hash
 ];
 
-440 
+468 
 h—d
  = 
 cxt
 ;
 
-442 
+470 
 6v
  
 šcomšg
 ;
 
-443 
+471 
 6v
  
 com·»
 ;
 
-444 
+472 
 	`VEC_FILL
 (
 šcomšg
 ,
 
-445 
+473 
 pi
 ->
 _¤c
@@ -76451,7 +76643,7 @@ __u6_addr
 __u6_addr32
 [0],
 
-446 
+474 
 pi
 ->
 _d¡
@@ -76461,31 +76653,31 @@ __u6_addr
 __u6_addr32
 [0],
 
-447 
+475 
 pi
 ->
 s_pÜt
 ,
 
-448 
+476 
 pi
 ->
 d_pÜt
 );
 
-449 
+477 
 cxt
  !ğ
 NULL
 ) {
 
-450 
+478 
 	`VEC_FILL
 (
 com·»
 ,
 
-451 
+479 
 cxt
 ->
 s_
@@ -76495,7 +76687,7 @@ __u6_addr
 __u6_addr32
 [0],
 
-452 
+480 
 cxt
 ->
 d_
@@ -76505,19 +76697,19 @@ __u6_addr
 __u6_addr32
 [0],
 
-453 
+481 
 cxt
 ->
 s_pÜt
 ,
 
-454 
+482 
 cxt
 ->
 d_pÜt
 );
 
-457 
+485 
 com·»
 .
 v
@@ -76527,13 +76719,13 @@ v
 šcomšg
 .v,compare.v);
 
-462 if(!(
+490 if(!(
 com·»
 .
 i
 [0] & compare.i[1])){
 
-464 
+492 
 	`dlog
 ("[*] Upd©šg srøcÚÃùiÚ: %lu\n",
 cxt
@@ -76541,7 +76733,7 @@ cxt
 cxid
 );
 
-465 
+493 
 	`cxt_upd©e_¤c
 (
 cxt
@@ -76549,19 +76741,19 @@ cxt
 pi
 );
 
-466 
+494 
 	`±h»ad_mu‹x_uÆock
 (&
 CÚnEÁryLock
 );
 
-471 
+499 
 	`VEC_FILL
 (
 com·»
 ,
 
-472 
+500 
 cxt
 ->
 d_
@@ -76571,7 +76763,7 @@ __u6_addr
 __u6_addr32
 [0],
 
-473 
+501 
 cxt
 ->
 s_
@@ -76581,19 +76773,19 @@ __u6_addr
 __u6_addr32
 [0],
 
-474 
+502 
 cxt
 ->
 d_pÜt
 ,
 
-475 
+503 
 cxt
 ->
 s_pÜt
 );
 
-477 
+505 
 com·»
 .
 v
@@ -76603,13 +76795,13 @@ v
 šcomšg
 .v,compare.v);
 
-478 if(!(
+506 if(!(
 com·»
 .
 i
 [0] & compare.i[1])){
 
-479 
+507 
 	`dlog
 ("[*] Upd©šg d¡ cÚÃùiÚ: %lu\n",
 cxt
@@ -76617,7 +76809,7 @@ cxt
 cxid
 );
 
-480 
+508 
 	`cxt_upd©e_d¡
 (
 cxt
@@ -76625,25 +76817,25 @@ cxt
 pi
 );
 
-481 
+509 
 	`±h»ad_mu‹x_uÆock
 (&
 CÚnEÁryLock
 );
 
-484 
+512 
 cxt
  = cxt->
 Ãxt
 ;
 
-486 ià(
+514 ià(
 cxt
  =ğ
 NULL
 ) {
 
-487 
+515 
 cxt
  = (
 cÚÃùiÚ
@@ -76651,13 +76843,13 @@ cÚÃùiÚ
 	`cÚÃùiÚ_®loc
 ();
 
-489 ià(
+517 ià(
 h—d
  !ğ
 NULL
 ) {
 
-490 
+518 
 h—d
 ->
 ´ev
@@ -76665,7 +76857,7 @@ h—d
 cxt
 ;
 
-492 
+520 
 cxt
  = 
 	`cxt_Ãw
@@ -76673,7 +76865,7 @@ cxt
 pi
 );
 
-493 
+521 
 	`dlog
 ("[*] New cÚÃùiÚ: %lu\n",
 cxt
@@ -76681,7 +76873,7 @@ cxt
 cxid
 );
 
-494 
+522 
 cxt
 ->
 Ãxt
@@ -76689,7 +76881,7 @@ cxt
 h—d
 ;
 
-495 
+523 
 buck‘
 [
 hash
@@ -76697,27 +76889,27 @@ hash
 cxt
 ;
 
-496 
+524 
 	`±h»ad_mu‹x_uÆock
 (&
 CÚnEÁryLock
 );
 
-499 
+527 
 	`±h»ad_mu‹x_uÆock
 (&
 CÚnEÁryLock
 );
 
-500 
+528 
 	`´štf
 ("[*] Error in sessionracking...\n");
 
-501 
+529 
 	`ex™
  (1);
 
-502 
+530 
 	}
 }
 
@@ -81722,8 +81914,6 @@ CÚnEÁryLock
 151 
 h—d
  = 
-cÚfig
-.
 buck‘
 [
 hash
@@ -100660,6 +100850,14 @@ hash
 (*
 key
 );
+
+868 
+cÚÃùiÚ
+ *
+	gbuck‘
+[
+BUCKET_SIZE
+];
 
 	@/home/ubuntu/prads_extern/src/servicefp/servicefp.c
 

@@ -49,7 +49,7 @@ redis_client *create_cache(char *host, int port);
 void destroy_cache(redis_client *client);
 
 // create item, hash item and update local cache with the data 
-int create_item(void* key, size_t nkey, void *data,
+int create_item(void* key, size_t nkey, void **data,
 		  size_t size, uint32_t flags, time_t exp);
 
 int free_item(void* key, size_t nkey);

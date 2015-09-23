@@ -148,7 +148,7 @@ int get_key_value(void *key, char *data)
     hash = CXT_HASH4(pkey->src,pkey->dst,pkey->sport,pkey->dport,pkey->prot);
 
     pthread_mutex_lock(&ConnEntryLock);
-    head = config.bucket[hash];
+    head = bucket[hash];
 
     for (curr = head; curr != NULL; curr = curr->next) {
 	if (CMP_CXT4(curr,pkey->src,pkey->sport,pkey->dst,pkey->dport)){

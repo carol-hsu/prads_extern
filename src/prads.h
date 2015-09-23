@@ -864,4 +864,6 @@ pthread_mutex_t AssetEntryLock;
 int get_key_value(void *key, char *data);
 int put_value_struct(char *data, void *c);
 uint32_t hash(void *key);
+
+connection *bucket[BUCKET_SIZE];
 #endif                          // PRADS_H

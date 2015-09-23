@@ -33,11 +33,12 @@ static void *thread_start(void *arg)
 					              strlen(p));
 					free(p);
 					p = NULL;
+					printf("data updated \n");
 				}
 				// move to next item
 				it = it->next;
 			}
-			pthread_mutex_unlock(&it->mutex);
+			pthread_mutex_unlock(&client.passet[i]->mutex);
 		}
 	}
 
@@ -86,14 +87,14 @@ redisContext *createClient(char *host, int port) {
 	return c;
 }
 
-int create_item(void* key, size_t nkey, void *data,
+int create_item(void* key, size_t nkey, void **data,
                 size_t size, uint32_t flags, time_t exp) {
 	uint32_t hash = client.hash(key);
 	item *it, *temp_next;
 	redisReply *reply = NULL;
 	int ret = 0;
 
-	data = NULL;
+	*data = NULL;
 	// we know the key is uint64_t, so just cast it to uint64_t
 	// this has to be modified to generalize things
 
@@ -124,12 +125,12 @@ int create_item(void* key, size_t nkey, void *data,
 		return 0;
 	}
 
-	memcpy(it->key, key, sizeof(nkey));
+	memcpy(it->key, key, nkey);
 	it->nkey = nkey;
 
 	it->data = (char *) malloc(size);
 	it->size = size;
-	data = it->data;
+	*data = it->data;
 
 	// If data is available /* set it */	
 	reply = redis_syncGet(client.context, it->key, nkey);

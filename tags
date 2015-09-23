@@ -430,7 +430,7 @@ UNKNOWN	/home/ubuntu/prads_extern/src/prads.c	/^bstring UNKNOWN = & tUNKNOWN;$/;
 UU_DECODE_BYTE	/home/ubuntu/prads_extern/src/bstraux.c	491;"	d	file:
 UU_ENCODE_BYTE	/home/ubuntu/prads_extern/src/bstraux.c	711;"	d	file:
 UU_MAX_LINELEN	/home/ubuntu/prads_extern/src/bstraux.c	498;"	d	file:
-VEC_FILL	/home/ubuntu/prads_extern/src/cxt.c	422;"	d	file:
+VEC_FILL	/home/ubuntu/prads_extern/src/cxt.c	450;"	d	file:
 VERBOSE	/home/ubuntu/prads_extern/src/output-plugins/log.h	/^enum { VERBOSE = 0x01, FLAGS } log_flags;$/;"	e	enum:__anon9
 VERSION	/home/ubuntu/prads_extern/src/prads.h	37;"	d
 ZMALLOC_H	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/zmalloc.h	5;"	d
@@ -755,7 +755,7 @@ btoupper	/home/ubuntu/prads_extern/src/bstrlib.c	/^int btoupper (bstring b) {$/;
 btrimws	/home/ubuntu/prads_extern/src/bstrlib.c	/^int btrimws (bstring b) {$/;"	f
 btrunc	/home/ubuntu/prads_extern/src/bstrlib.c	/^int btrunc (bstring b, int n) {$/;"	f
 bucket	/home/ubuntu/prads_extern/src/config.h	/^    connection  *bucket[BUCKET_SIZE];   \/* Pointer to list of ongoing connections *\/$/;"	m	struct:_globalconfig
-bucket	/home/ubuntu/prads_extern/src/cxt.c	/^connection *bucket[BUCKET_SIZE];$/;"	v
+bucket	/home/ubuntu/prads_extern/src/prads.h	/^connection *bucket[BUCKET_SIZE];$/;"	v
 buf	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.h	/^    char *buf; \/* Read buffer *\/$/;"	m	struct:redisReader
 buf	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/sds.h	/^    char buf[];$/;"	m	struct:sdshdr
 buff	/home/ubuntu/prads_extern/src/bstraux.c	/^    bstring buff;    \/* Buffer for underwrites                   *\/$/;"	m	struct:bwriteStream	file:
@@ -847,7 +847,7 @@ createReplyObject	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^s
 createString	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createString)(const redisReadTask*, char*, size_t);$/;"	m	struct:redisReplyObjectFunctions
 createStringObject	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^static void *createStringObject(const redisReadTask *task, char *str, size_t len) {$/;"	f	file:
 create_cache	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.c	/^redis_client *create_cache(char *host, int port) {$/;"	f
-create_item	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.c	/^int create_item(void* key, size_t nkey, void *data,$/;"	f
+create_item	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.c	/^int create_item(void* key, size_t nkey, void **data,$/;"	f
 create_pid_file	/home/ubuntu/prads_extern/src/sys_func.c	/^int create_pid_file(const char *path)$/;"	f
 cstr2bstr	/home/ubuntu/prads_extern/src/bstrlib.h	40;"	d
 cstr2tbstr	/home/ubuntu/prads_extern/src/bstrlib.h	216;"	d
