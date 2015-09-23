@@ -21,9 +21,30 @@ connection *cxt_new(packetinfo *pi)
 {
     struct in6_addr ips;
     struct in6_addr ipd;
-    connection *cxt;
+    time_t exp;
+    uint32_t flags;
+    prads_key pkey;
+    connection *cxt = NULL;
+    int ret;
+
     cxtrackerid++;
-    cxt = (connection *) calloc(1, sizeof(connection));
+    if (STATE_EXTERN) {
+	pkey.src = pi->ip4->ip_src;
+	pkey.dst = pi->ip4->ip_dst;
+	pkey.sport = pi->s_port;
+	pkey.dport = pi->d_port;
+	pkey.prot = pi->proto;
+	ret = create_item((void *) &pkey, sizeof(prads_key), (void *) cxt, sizeof(connection), flags, exp);
+	if (ret && cxt) {
+		return cxt;
+	}
+	if (!cxt) {
+		cxt = (connection *) calloc(1, sizeof(connection));
+	}
+	
+    } else {
+    	cxt = (connection *) calloc(1, sizeof(connection));
+    }
     assert(cxt);
     cxt->cxid = cxtrackerid;
 

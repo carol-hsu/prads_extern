@@ -91,7 +91,9 @@ int create_item(void* key, size_t nkey, void *data,
 	uint32_t hash = client.hash(key);
 	item *it, *temp_next;
 	redisReply *reply = NULL;
+	int ret = 0;
 
+	data = NULL;
 	// we know the key is uint64_t, so just cast it to uint64_t
 	// this has to be modified to generalize things
 
@@ -133,13 +135,14 @@ int create_item(void* key, size_t nkey, void *data,
 	reply = redis_syncGet(client.context, it->key, nkey);
 	if (reply) {
 		client.put(reply->str, (void *) it->data);	
+		ret = 1;
+		freeReplyObject(reply);
 	}
-	freeReplyObject(reply);
 
 	// if the data is present in key-value store, update the cache.
 	
 	pthread_mutex_unlock(&client.passet[hash]->mutex);	
-	return 1;
+	return ret;
 }
 
 int free_item(void* key, size_t nkey) {

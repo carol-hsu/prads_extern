@@ -1,4 +1,4 @@
-cscope 15 $HOME/prads_extern               0000822275
+cscope 15 $HOME/prads_extern               0000824096
 	@/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/ae.h
 
 31 #i‚de‡
@@ -24559,6 +24559,10 @@ gë
 put_key_vÆ
  
 put
+, 
+key_hash
+ 
+hash
 ) {
 
 6 
@@ -24574,16 +24578,22 @@ put
  =Öut;
 
 8 
+˛õ¡
+.
+hash
+ = hash;
+
+9 
 	}
 }
 
-10 *
+11 *
 	$thªad_°¨t
 (*
 ¨g
 )
 
-12 
+13 
 thªad_öfo
  *
 töfo
@@ -24591,17 +24601,19 @@ töfo
 ¨g
 ;
 
-13 *
+14 *
 u¨gv
 , *
 p
+=
+NULL
 ;
 
-14 
+15 
 i
 ;
 
-15 
+16 
 ôem
  *
 ô
@@ -24609,21 +24621,21 @@ i
 NULL
 ;
 
-17 
+18 
 	`¶ìp
 (5);
 
-20 
+21 
 	`¶ìp
-(1);
+(5);
 
-22 
+23 
 i
 =0; i<
 BUCKET_SIZE
 ; i++) {
 
-23 
+24 
 ô
  = 
 ˛õ¡
@@ -24633,14 +24645,6 @@ BUCKET_SIZE
 i
 ];
 
-24 i‡((
-ô
-Ë&& (ô->
-key
- !
-NULL
-)) {
-
 25 
 	`±hªad_muãx_lock
 (&
@@ -24649,7 +24653,31 @@ NULL
 muãx
 );
 
-26 
+26 (
+ô
+Ë&& (ô->
+key
+ !
+NULL
+)) {
+
+27 
+˛õ¡
+.
+	`gë
+((*Ë
+ô
+->
+key
+, 
+p
+);
+
+28 i‡(
+p
+) {
+
+29 
 	`ªdis_syncSë
 (
 ˛õ¡
@@ -24657,31 +24685,47 @@ muãx
 c⁄ãxt
 ,
 
-27 
+30 
 ô
 ->
 key
 ,
 
-28 
+31 
 ô
 ->
 nkey
 ,
 
-29 
-ô
-->
-d©a
+32 
+p
 ,
 
-30 
-ô
-->
-size
+33 
+	`°æí
+(
+p
+));
+
+34 
+	`‰ì
+(
+p
 );
 
-31 
+35 
+p
+ = 
+NULL
+;
+
+38 
+ô
+ = it->
+√xt
+;
+
+40 
 	`±hªad_muãx_u∆ock
 (&
 ô
@@ -24689,11 +24733,11 @@ size
 muãx
 );
 
-36 
+44 
 	}
 }
 
-38 
+46 
 ªdis_˛õ¡
  *
 	$¸óã_ˇche
@@ -24703,11 +24747,11 @@ ho°
 p‹t
 ) {
 
-39 
+47 
 i
 ;
 
-41 
+49 
 ˛õ¡
 .
 c⁄ãxt
@@ -24719,7 +24763,7 @@ ho°
 p‹t
 );
 
-43 i‡(
+51 i‡(
 NULL
  =
 ˛õ¡
@@ -24727,21 +24771,21 @@ NULL
 c⁄ãxt
 ) {
 
-44 
+52 
 	`¥ötf
 ("No connectionÅo server \n");
 
-45  
+53  
 NULL
 ;
 
-48 
+56 
 i
 =0; i<
 BUCKET_SIZE
 ; i++) {
 
-49 
+57 
 ˛õ¡
 .
 ∑s£t
@@ -24753,7 +24797,7 @@ i
 ôem
 ));
 
-50 i‡(
+58 i‡(
 ˛õ¡
 .
 ∑s£t
@@ -24761,7 +24805,7 @@ i
 i
 ]) {
 
-51 
+59 
 	`mem£t
 (
 ˛õ¡
@@ -24773,7 +24817,7 @@ i
 ôem
 ));
 
-52 
+60 
 	`±hªad_muãx_öô
 (&
 ˛õ¡
@@ -24787,7 +24831,7 @@ muãx
 NULL
 );
 
-55 
+63 
 	`±hªad_¸óã
 (&
 thªad_id
@@ -24797,49 +24841,43 @@ NULL
 thªad_°¨t
 , NULL);
 
-56  &
+64  &
 ˛õ¡
 ;
 
-57 
+65 
 	}
 }
 
-59 
+68 
 ªdisC⁄ãxt
  *
 	$¸óãClõ¡
 (*
 ho°
 , 
-¥Ÿ
-, *
-key_ty≥
-, 
-size_t
- 
-key_size
+p‹t
 ) {
 
-60 
+69 
 ªdisC⁄ãxt
  *
 c
 ;
 
-61 
+70 
 timevÆ
  
 timeout
  = { 1, 500000 };
 
-63 i‡(
+72 i‡(
 ho°
  =
 NULL
 ) {
 
-67 
+76 
 c
  = 
 	`ªdisC⁄√˘WôhTimeout
@@ -24851,7 +24889,7 @@ p‹t
 timeout
 );
 
-68 i‡(
+77 i‡(
 c
  =
 NULL
@@ -24859,11 +24897,11 @@ NULL
 îr
 ) {
 
-69 i‡(
+78 i‡(
 c
 ) {
 
-70 
+79 
 	`¥ötf
 ("C⁄√˘i⁄Éº‹: %s\n", 
 c
@@ -24871,27 +24909,27 @@ c
 îr°r
 );
 
-71 
+80 
 	`ªdisFªe
 (
 c
 );
 
-73 
+82 
 	`¥ötf
 ("ConnectionÉrror: can'tállocateÑedis context\n");
 
-77  
+86  
 c
 ;
 
-78 
+87 
 	}
 }
 
-80 
+89 
 	$¸óã_ôem
-(c⁄° * 
+(* 
 key
 , 
 size_t
@@ -24901,7 +24939,7 @@ nkey
 d©a
 ,
 
-81 
+90 
 size_t
  
 size
@@ -24915,117 +24953,199 @@ time_t
 exp
 ) {
 
-82 
-uöt64_t
- *
+91 
+uöt32_t
+ 
 hash
- = (uöt64_à*Ë
+ = 
+˛õ¡
+.
+	`hash
+(
 key
-;
+);
 
-83 
+92 
 ôem
  *
 ô
+, *
+ãmp_√xt
 ;
 
-87 i‡(
-˛õ¡
-.
-∑s£t
-[()*
-hash
-]->
-key
-) {
+93 
+ªdisRïly
+ *
+ª∂y
+ = 
+NULL
+;
 
-88 
-	`¥ötf
-("hash contention \n");
-
-92 
+98 
 	`±hªad_muãx_lock
 (&
 ˛õ¡
 .
 ∑s£t
-[(Ë*
+[
 hash
 ]->
 muãx
 );
 
-94 
+100 i‡(
 ˛õ¡
 .
 ∑s£t
-[(Ë*
-hash
-]->
-key
- = (*Ë
-	`mÆloc
-((
-uöt64_t
-));
-
-96 i‡(!
-˛õ¡
-.
-∑s£t
-[(Ë*
+[
 hash
 ]->
 key
 ) {
 
-97 
-	`±hªad_muãx_u∆ock
-(&
-˛õ¡
-.
-∑s£t
-[(Ë*
-hash
-]->
-muãx
-);
+101 
+ô
+ = 
+	`mÆloc
+((
+ôem
+));
 
-98 
+102 i‡(!
+ô
+) {
+
+103 
 	`¥ötf
 ("no space for data\n");
 
-102 
-	`mem˝y
+106 
+	`mem£t
 (
-˛õ¡
-.
-∑s£t
-[(Ë*
-hash
-]->
-key
-, hash, (
-uöt64_t
+ô
+, 0 , (
+ôem
 ));
 
-103 
+107 
+	`±hªad_muãx_öô
+(&
+ô
+->
+muãx
+, 
+NULL
+);
+
+108 
+ô
+->
+¥ev
+ = 
 ˛õ¡
 .
 ∑s£t
-[(Ë*
+[
+hash
+];
+
+109 
+ãmp_√xt
+ = 
+˛õ¡
+.
+∑s£t
+[
 hash
 ]->
+√xt
+;
+
+110 
+˛õ¡
+.
+∑s£t
+[
+hash
+]->
+√xt
+ = 
+ô
+;
+
+111 
+ãmp_√xt
+->
+¥ev
+ = 
+ô
+;
+
+112 
+ô
+->
+√xt
+ = 
+ãmp_√xt
+;
+
+114 
+ô
+ = 
+˛õ¡
+.
+∑s£t
+[
+hash
+];
+
+117 
+ô
+->
+key
+ = (*Ë
+	`mÆloc
+((
+nkey
+));
+
+119 i‡(!
+ô
+->
+key
+) {
+
+120 
+	`±hªad_muãx_u∆ock
+(&
+ô
+->
+muãx
+);
+
+121 
+	`¥ötf
+("no space for data\n");
+
+125 
+	`mem˝y
+(
+ô
+->
+key
+, key, (
+nkey
+));
+
+126 
+ô
+->
 nkey
  =Çkey;
 
-105 
-˛õ¡
-.
-∑s£t
-[(Ë*
-hash
-]->
+128 
+ô
+->
 d©a
  = (*Ë
 	`mÆloc
@@ -25033,81 +25153,77 @@ d©a
 size
 );
 
-106 
-˛õ¡
-.
-∑s£t
-[(Ë*
-hash
-]->
+129 
+ô
+->
 size
  = size;
 
-107 
+130 
 d©a
  = 
-˛õ¡
-.
-∑s£t
-[(Ë*
-hash
-]->data;
+ô
+->data;
 
-110 
+133 
+ª∂y
+ = 
 	`ªdis_syncGë
 (
 ˛õ¡
 .
 c⁄ãxt
-, clõ¡.
-∑s£t
-[(Ë*
-hash
-]->
+, 
+ô
+->
 key
 , 
 nkey
-,
-
-111 
-˛õ¡
-.
-∑s£t
-[(Ë*
-hash
-]->
-d©a
-,
-
-112 &
-˛õ¡
-.
-∑s£t
-[(Ë*
-hash
-]->
-size
 );
 
-116 
+134 i‡(
+ª∂y
+) {
+
+135 
+˛õ¡
+.
+	`put
+(
+ª∂y
+->
+°r
+, (*Ë
+ô
+->
+d©a
+);
+
+137 
+	`‰ìRïlyObje˘
+(
+ª∂y
+);
+
+141 
 	`±hªad_muãx_u∆ock
 (&
 ˛õ¡
 .
 ∑s£t
-[(Ë*
+[
 hash
 ]->
 muãx
 );
 
-118 
+143 
 	}
 }
 
-120 
+145 
 	$‰ì_ôem
-(c⁄° * 
+(* 
 key
 , 
 size_t
@@ -25115,43 +25231,79 @@ size_t
 nkey
 ) {
 
-121 
-uöt64_t
- *
+146 
+uöt32_t
+ 
 hash
- = (uöt64_à*Ë
+ = 
+˛õ¡
+.
+	`hash
+(
 key
+);
+
+147 
+ôem
+ *
+ô
 ;
 
-123 
+149 
 	`±hªad_muãx_lock
 (&
 ˛õ¡
 .
 ∑s£t
-[(Ë*
+[
 hash
 ]->
 muãx
 );
 
-125 
+150 
+ô
+ = 
+˛õ¡
+.
+∑s£t
+[
+hash
+];
+
+152 i‡((
+ô
+Ë&& (ô->
+key
+)) {
+
+153 i‡(!
+	`memcmp
+(
+ô
+->
+key
+, key, 
+nkey
+)) {
+
+154 
 	`‰ì
 (
 ˛õ¡
 .
 ∑s£t
-[(Ë*
+[
 hash
 ]->
 key
 );
 
-126 
+155 
 ˛õ¡
 .
 ∑s£t
-[(Ë*
+[
 hash
 ]->
 key
@@ -25159,23 +25311,23 @@ key
 NULL
 ;
 
-128 
+157 
 	`‰ì
 (
 ˛õ¡
 .
 ∑s£t
-[(Ë*
+[
 hash
 ]->
 d©a
 );
 
-129 
+158 
 ˛õ¡
 .
 ∑s£t
-[(Ë*
+[
 hash
 ]->
 d©a
@@ -25183,23 +25335,103 @@ d©a
 NULL
 ;
 
-131 
+160 i‡(
+ô
+ !
+˛õ¡
+.
+∑s£t
+[
+hash
+]) {
+
+161 
+ô
+->
+¥ev
+->
+√xt
+ = it->next;
+
+162 i‡(
+ô
+->
+√xt
+) {
+
+163 
+ô
+->
+√xt
+->
+¥ev
+ = it->prev;
+
+165 
+	`‰ì
+(
+ô
+);
+
+168 
 	`±hªad_muãx_u∆ock
 (&
 ˛õ¡
 .
 ∑s£t
-[(Ë*
+[
 hash
 ]->
 muãx
 );
 
-133 
+169 
+	`ªdis_syncDñ
+(
+˛õ¡
+.
+c⁄ãxt
+, (*Ë
+key
+, 
+nkey
+);
+
+172 
+ô
+ = ià->
+√xt
+;
+
+177 
+	`ªdis_syncDñ
+(
+˛õ¡
+.
+c⁄ãxt
+, (*Ë
+key
+, 
+nkey
+);
+
+178 
+	`±hªad_muãx_u∆ock
+(&
+˛õ¡
+.
+∑s£t
+[
+hash
+]->
+muãx
+);
+
+180 
 	}
 }
 
-136 
+183 
 	$ªdis_syncSë
 (
 ªdisC⁄ãxt
@@ -25215,13 +25447,13 @@ vÆue
 vÆue_Àn
 ) {
 
-137 
+184 
 ªdisRïly
  *
 ª∂y
 ;
 
-139 i‡((!
+186 i‡((!
 key
 Ë|| (!
 key_Àn
@@ -25231,7 +25463,7 @@ vÆue
 vÆue_Àn
 )) {
 
-143 
+190 
 ª∂y
  = 
 	`ªdisComm™d
@@ -25249,7 +25481,7 @@ vÆue
 vÆue_Àn
 );
 
-144 
+191 
 	`¥ötf
 ("SET: %s\n", 
 ª∂y
@@ -25257,17 +25489,19 @@ vÆue_Àn
 °r
 );
 
-145 
+192 
 	`‰ìRïlyObje˘
 (
 ª∂y
 );
 
-148 
+195 
 	}
 }
 
-150 
+197 
+ªdisRïly
+* 
 	$ªdis_syncGë
 (
 ªdisC⁄ãxt
@@ -25279,29 +25513,25 @@ key
 size_t
  
 key_Àn
-, *
-vÆue
-, size_à*
-vÆue_Àn
 ) {
 
-151 
+198 
 ªdisRïly
  *
 ª∂y
 ;
 
-153 i‡((!
+200 i‡((!
 key
 Ë|| (!
 key_Àn
-Ë|| (!
-vÆue
-Ë|| (!
-vÆue_Àn
 )) {
 
-157 
+201  
+NULL
+;
+
+204 
 ª∂y
  = 
 	`ªdisComm™d
@@ -25315,7 +25545,7 @@ size_t
 key_Àn
 );
 
-158 i‡(
+205 i‡(
 ª∂y
 ->
 ty≥
@@ -25323,29 +25553,7 @@ ty≥
 REDIS_REPLY_NIL
 ) {
 
-159 
-	`°∫˝y
-(
-vÆue
-, 
-ª∂y
-->
-°r
-, *
-vÆue_Àn
-);
-
-160 *
-vÆue_Àn
- = 
-	`°æí
-(
-ª∂y
-->
-°r
-);
-
-161 
+208 
 	`¥ötf
 ("GŸ VÆue: %s\n", 
 ª∂y
@@ -25353,27 +25561,87 @@ vÆue_Àn
 °r
 );
 
-162 
-	`‰ìRïlyObje˘
-(
+210  
 ª∂y
-);
+;
 
-166 
+213 
 	`¥ötf
 ("No dataávailable for key\n");
 
-167 
+214 
 	`‰ìRïlyObje˘
 (
 ª∂y
 );
 
-170 
+216  
+NULL
+;
+
+217 
 	}
 }
 
-173 
+219 
+	$ªdis_syncDñ
+(
+ªdisC⁄ãxt
+ *
+c
+, *
+key
+, 
+size_t
+ 
+key_Àn
+) {
+
+220 
+ªdisRïly
+ *
+ª∂y
+;
+
+222 i‡((!
+key
+Ë|| (!
+key_Àn
+)) {
+
+226 
+ª∂y
+ = 
+	`ªdisComm™d
+(
+c
+,"DEL %b", 
+key
+, (
+size_t
+Ë
+key_Àn
+);
+
+227 
+	`¥ötf
+("DEL: %s\n", 
+ª∂y
+->
+°r
+);
+
+228 
+	`‰ìRïlyObje˘
+(
+ª∂y
+);
+
+231 
+	}
+}
+
+234 
 	$ªdis_asyncSë
 (*
 key
@@ -25385,11 +25653,11 @@ vÆue
 vÆue_Àn
 ) {
 
-175 
+236 
 	}
 }
 
-177 
+238 
 	$ªdis_asyncGë
 (*
 key
@@ -25401,11 +25669,11 @@ vÆue
 vÆue_Àn
 ) {
 
-179 
+240 
 	}
 }
 
-181 
+242 
 	$de°royClõ¡
 (
 ªdisC⁄ãxt
@@ -25413,7 +25681,7 @@ vÆue_Àn
 c⁄ãxt
 ) {
 
-183 
+244 
 	}
 }
 
@@ -25471,77 +25739,95 @@ BUCKET_SIZE
 
 14 (*
 	tgë_key_vÆ
-)(
-	tuöt64_t
-, *);
+)(*, *);
 
 15 (*
 	tput_key_vÆ
 ) (*, *);
 
-17 
+16 
+	$uöt32_t
+ (*
+	tkey_hash
+Ë(*
+	tkey
+);
+
+18 
 	sôem_t
  {
 
-18 
+19 
+ôem_t
+ *
+√xt
+;
+
+20 
+ôem_t
+ *
+¥ev
+;
+
+21 
 uöt64_t
  
 ˇs
 ;
 
-19 
-±hªad_muãx_t
- 
-muãx
-;
-
-20 * 
-key
-;
-
-21 
-size_t
- 
-nkey
-;
-
 22 * 
-d©a
+key
 ;
 
 23 
 size_t
  
+nkey
+;
+
+24 * 
+d©a
+;
+
+25 
+size_t
+ 
 size
 ;
 
-24 
+26 
 uöt32_t
  
 Êags
 ;
 
-25 
+27 
 time_t
  
 exp
 ;
 
-26 } 
+28 
+±hªad_muãx_t
+ 
+muãx
+;
+
+29 } 
 	tôem
 ;
 
-28 
+31 
 	sªdis_˛õ¡_t
  {
 
-29 
+32 
 ªdisC⁄ãxt
  *
 c⁄ãxt
 ;
 
-30 
+33 
 ôem
  *
 ∑s£t
@@ -25549,39 +25835,57 @@ c⁄ãxt
 BUCKET_SIZE
 ];
 
-31 *
+34 *
 key_ty≥
 ;
 
-32 
+35 
 size_t
  
 key_size
 ;
 
-33 
+36 
 gë_key_vÆ
  
 gë
 ;
 
-34 
+37 
 put_key_vÆ
  
 put
 ;
 
-36 } 
+38 
+key_hash
+ 
+hash
+;
+
+39 
+uöt32_t
+ 
+Êags
+;
+
+40 
+uöt32_t
+ 
+exp
+;
+
+42 } 
 	tªdis_˛õ¡
 ;
 
-38 
+44 
 ªdis_˛õ¡
  
 ˛õ¡
 ;
 
-41 
+47 
 ªdis_˛õ¡
  *
 	`¸óã_ˇche
@@ -25591,7 +25895,7 @@ ho°
 p‹t
 );
 
-43 
+49 
 	`de°roy_ˇche
 (
 ªdis_˛õ¡
@@ -25599,9 +25903,9 @@ p‹t
 ˛õ¡
 );
 
-46 
+52 
 	`¸óã_ôem
-(c⁄° * 
+(* 
 key
 , 
 size_t
@@ -25611,7 +25915,7 @@ nkey
 d©a
 ,
 
-47 
+53 
 size_t
  
 size
@@ -25625,9 +25929,9 @@ time_t
 exp
 );
 
-49 
+55 
 	`‰ì_ôem
-(c⁄° * 
+(* 
 key
 , 
 size_t
@@ -25635,7 +25939,7 @@ size_t
 nkey
 );
 
-52 
+58 
 ªdisC⁄ãxt
  *
 	`¸óãClõ¡
@@ -25645,7 +25949,7 @@ ho°
 p‹t
 );
 
-55 
+61 
 	`ªdis_syncSë
 (
 ªdisC⁄ãxt
@@ -25661,7 +25965,9 @@ vÆue
 vÆue_Àn
 );
 
-56 
+62 
+ªdisRïly
+* 
 	`ªdis_syncGë
 (
 ªdisC⁄ãxt
@@ -25673,13 +25979,9 @@ key
 size_t
  
 key_Àn
-, *
-vÆue
-, size_à*
-vÆue_Àn
 );
 
-59 
+65 
 	`ªdis_asyncSë
 (*
 key
@@ -25691,7 +25993,7 @@ vÆue
 vÆue_Àn
 );
 
-60 
+66 
 	`ªdis_asyncGë
 (*
 key
@@ -25703,7 +26005,7 @@ vÆue
 vÆue_Àn
 );
 
-62 
+68 
 	`de°royClõ¡
 (
 ªdisC⁄ãxt
@@ -25711,12 +26013,14 @@ vÆue_Àn
 c⁄ãxt
 );
 
-64 
+70 
 	`ªgi°î_ícode_decode
 (
 gë_key_vÆ
 , 
 put_key_vÆ
+, 
+key_hash
 );
 
 	@/home/ubuntu/prads_extern/src/assets.c
@@ -80393,7 +80697,11 @@ ts
 	~"c⁄fig.h
 "
 
-6 
+5 
+	~"cxt.h
+"
+
+7 
 	#SERIALIZE_PRINT
 (...Ë
 	`¥ötf
@@ -80403,31 +80711,31 @@ __VA_ARGS__
 
 	)
 
-9 
+10 
 globÆc⁄fig
  
 	gc⁄fig
 ;
 
-11 
+12 
 	govîÆl_p£rz_time
  = 0;
 
-12 
+13 
 	govîÆl_pde£rz_time
  = 0;
 
-13 
+14 
 	govîÆl_p°©e_size
  = 0;
 
-15 
+16 
 £r_åa_t
 * 
 	$£tup_£rülize_å™¶©‹s
 ()
 
-17 
+18 
 £r_åa_t
  *
 åa1
@@ -80439,13 +80747,13 @@ globÆc⁄fig
 åa4
 ;
 
-18 
+19 
 £r_fõld_t
  *
 fõld
 ;
 
-20 
+21 
 hód_åa
  = 
 	`£r_√w_åa
@@ -80455,7 +80763,7 @@ c⁄√˘i⁄
 NULL
 );
 
-21 
+22 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80467,7 +80775,7 @@ c⁄√˘i⁄
 °¨t_time
 ));
 
-22 
+23 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80479,7 +80787,7 @@ c⁄√˘i⁄
 œ°_pkt_time
 ));
 
-23 
+24 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80491,7 +80799,7 @@ c⁄√˘i⁄
 cxid
 ));
 
-24 
+25 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80503,7 +80811,7 @@ c⁄√˘i⁄
 ªvî£d
 ));
 
-25 
+26 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80515,7 +80823,7 @@ c⁄√˘i⁄
 af
 ));
 
-26 
+27 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80527,7 +80835,7 @@ c⁄√˘i⁄
 hw_¥Ÿo
 ));
 
-27 
+28 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80539,7 +80847,7 @@ c⁄√˘i⁄
 ¥Ÿo
 ));
 
-28 
+29 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80551,7 +80859,7 @@ c⁄√˘i⁄
 s_ù
 ));
 
-29 
+30 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80563,7 +80871,7 @@ c⁄√˘i⁄
 d_ù
 ));
 
-30 
+31 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80575,7 +80883,7 @@ c⁄√˘i⁄
 s_p‹t
 ));
 
-31 
+32 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80587,7 +80895,7 @@ c⁄√˘i⁄
 d_p‹t
 ));
 
-32 
+33 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80599,7 +80907,7 @@ c⁄√˘i⁄
 s_tŸÆ_pkts
 ));
 
-33 
+34 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80611,7 +80919,7 @@ c⁄√˘i⁄
 s_tŸÆ_byãs
 ));
 
-34 
+35 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80623,7 +80931,7 @@ c⁄√˘i⁄
 d_tŸÆ_pkts
 ));
 
-35 
+36 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80635,7 +80943,7 @@ c⁄√˘i⁄
 d_tŸÆ_byãs
 ));
 
-36 
+37 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80647,7 +80955,7 @@ c⁄√˘i⁄
 s_t˝Fœgs
 ));
 
-37 
+38 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80659,7 +80967,7 @@ c⁄√˘i⁄
 __∑d__
 ));
 
-38 
+39 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80671,7 +80979,7 @@ c⁄√˘i⁄
 d_t˝Fœgs
 ));
 
-39 
+40 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80683,7 +80991,7 @@ c⁄√˘i⁄
 check
 ));
 
-40 
+41 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80695,7 +81003,7 @@ c⁄√˘i⁄
 c_as£t
 ));
 
-41 
+42 
 	`£r_√w_fõld
 (
 hód_åa
@@ -80707,7 +81015,7 @@ c⁄√˘i⁄
 s_as£t
 ));
 
-44 
+45 
 åa0
  = 
 	`£r_√w_åa
@@ -80717,7 +81025,7 @@ as£t
 hód_åa
 );
 
-46 
+47 
 	`£r_√w_fõld
 (
 åa0
@@ -80729,7 +81037,7 @@ as£t
 fú°_£í
 ));
 
-47 
+48 
 	`£r_√w_fõld
 (
 åa0
@@ -80741,7 +81049,7 @@ as£t
 œ°_£í
 ));
 
-48 
+49 
 	`£r_√w_fõld
 (
 åa0
@@ -80753,7 +81061,7 @@ as£t
 i_©ãm±s
 ));
 
-49 
+50 
 	`£r_√w_fõld
 (
 åa0
@@ -80765,7 +81073,7 @@ as£t
 af
 ));
 
-50 
+51 
 	`£r_√w_fõld
 (
 åa0
@@ -80777,7 +81085,7 @@ as£t
 vœn
 ));
 
-51 
+52 
 	`£r_√w_fõld
 (
 åa0
@@ -80789,7 +81097,7 @@ as£t
 ù_addr
 ));
 
-52 
+53 
 	`£r_√w_fõld
 (
 åa0
@@ -80801,7 +81109,7 @@ as£t
 £rvi˚s
 ));
 
-53 
+54 
 	`£r_√w_fõld
 (
 åa0
@@ -80813,7 +81121,7 @@ as£t
 os
 ));
 
-56 
+57 
 åa1
  = 
 	`£r_√w_åa
@@ -80823,7 +81131,7 @@ os
 åa0
 );
 
-57 
+58 
 	`£r_√w_fõld
 (
 åa1
@@ -80835,7 +81143,7 @@ os
 mÀn
 ));
 
-58 
+59 
 	`£r_√w_fõld
 (
 åa1
@@ -80847,7 +81155,7 @@ mÀn
 ¶í
 ));
 
-59 
+60 
 	`£r_√w_fõld
 (
 åa1
@@ -80859,7 +81167,7 @@ mÀn
 d©a
 ));
 
-62 
+63 
 åa2
  = 
 	`£r_√w_åa
@@ -80869,7 +81177,7 @@ d©a
 åa1
 );
 
-63 
+64 
 	`£r_√w_fõld
 (
 åa2
@@ -80881,7 +81189,7 @@ d©a
 ¥ev
 ));
 
-64 
+65 
 	`£r_√w_fõld
 (
 åa2
@@ -80893,7 +81201,7 @@ d©a
 √xt
 ));
 
-65 
+66 
 	`£r_√w_fõld
 (
 åa2
@@ -80905,7 +81213,7 @@ d©a
 fú°_£í
 ));
 
-66 
+67 
 	`£r_√w_fõld
 (
 åa2
@@ -80917,7 +81225,7 @@ fú°_£í
 œ°_£í
 ));
 
-67 
+68 
 	`£r_√w_fõld
 (
 åa2
@@ -80929,7 +81237,7 @@ fú°_£í
 i_©ãm±s
 ));
 
-68 
+69 
 	`£r_√w_fõld
 (
 åa2
@@ -80941,7 +81249,7 @@ i_©ãm±s
 ¥Ÿo
 ));
 
-69 
+70 
 	`£r_√w_fõld
 (
 åa2
@@ -80953,7 +81261,7 @@ i_©ãm±s
 p‹t
 ));
 
-70 
+71 
 	`£r_√w_fõld
 (
 åa2
@@ -80965,7 +81273,7 @@ p‹t
 âl
 ));
 
-71 
+72 
 	`£r_√w_fõld
 (
 åa2
@@ -80977,7 +81285,7 @@ p‹t
 £rvi˚
 ));
 
-72 
+73 
 	`£r_√w_fõld
 (
 åa2
@@ -80989,7 +81297,7 @@ p‹t
 ≠∂iˇti⁄
 ));
 
-73 
+74 
 	`£r_√w_fõld
 (
 åa2
@@ -81001,7 +81309,7 @@ p‹t
 rﬁe
 ));
 
-74 
+75 
 	`£r_√w_fõld
 (
 åa2
@@ -81013,7 +81321,7 @@ rﬁe
 unknown
 ));
 
-77 
+78 
 åa3
  = 
 	`£r_√w_åa
@@ -81023,7 +81331,7 @@ os_as£t
 åa2
 );
 
-78 
+79 
 	`£r_√w_fõld
 (
 åa3
@@ -81035,7 +81343,7 @@ os_as£t
 ¥ev
 ));
 
-79 
+80 
 	`£r_√w_fõld
 (
 åa3
@@ -81047,7 +81355,7 @@ os_as£t
 √xt
 ));
 
-80 
+81 
 	`£r_√w_fõld
 (
 åa3
@@ -81059,7 +81367,7 @@ os_as£t
 fú°_£í
 ));
 
-81 
+82 
 	`£r_√w_fõld
 (
 åa3
@@ -81071,7 +81379,7 @@ os_as£t
 œ°_£í
 ));
 
-82 
+83 
 	`£r_√w_fõld
 (
 åa3
@@ -81083,7 +81391,7 @@ os_as£t
 i_©ãm±s
 ));
 
-83 
+84 
 	`£r_√w_fõld
 (
 åa3
@@ -81095,7 +81403,7 @@ os_as£t
 víd‹
 ));
 
-84 
+85 
 	`£r_√w_fõld
 (
 åa3
@@ -81107,7 +81415,7 @@ os_as£t
 os
 ));
 
-85 
+86 
 	`£r_√w_fõld
 (
 åa3
@@ -81119,7 +81427,7 @@ os_as£t
 dëe˘i⁄
 ));
 
-86 
+87 
 	`£r_√w_fõld
 (
 åa3
@@ -81131,7 +81439,7 @@ os_as£t
 øw_Â
 ));
 
-87 
+88 
 	`£r_√w_fõld
 (
 åa3
@@ -81143,7 +81451,7 @@ os_as£t
 m©ched_Â
 ));
 
-88 
+89 
 	`£r_√w_fõld
 (
 åa3
@@ -81155,7 +81463,7 @@ os_as£t
 m©ch_os
 ));
 
-89 
+90 
 	`£r_√w_fõld
 (
 åa3
@@ -81167,7 +81475,7 @@ os_as£t
 m©ch_desc
 ));
 
-90 
+91 
 	`£r_√w_fõld
 (
 åa3
@@ -81179,7 +81487,7 @@ os_as£t
 p‹t
 ));
 
-91 
+92 
 	`£r_√w_fõld
 (
 åa3
@@ -81191,7 +81499,7 @@ os_as£t
 mtu
 ));
 
-92 
+93 
 	`£r_√w_fõld
 (
 åa3
@@ -81203,7 +81511,7 @@ os_as£t
 âl
 ));
 
-93 
+94 
 	`£r_√w_fõld
 (
 åa3
@@ -81215,7 +81523,7 @@ os_as£t
 u±ime
 ));
 
-96 
+97 
 åa4
  = 
 	`£r_√w_åa
@@ -81225,7 +81533,7 @@ uöt8_t
 åa3
 );
 
-97 
+98 
 fõld
  = 
 	`£r_√w_fõld
@@ -81233,17 +81541,17 @@ fõld
 åa4
 , "uint8_t", 0, "value", 0);
 
-98 
+99 
 fõld
 ->
 ª≥©
  = 4;
 
-99 
+100 
 	}
 }
 
-101 * 
+102 * 
 	$£rülize_c⁄n_as£t
 (
 c⁄√˘i⁄
@@ -81251,7 +81559,7 @@ c⁄√˘i⁄
 c⁄n
 )
 
-103 
+104 
 as£t
  *
 c_as£t
@@ -81261,31 +81569,31 @@ NULL
 s_as£t
  = NULL;
 
-105 
+106 
 c_as£t
  = 
 c⁄n
 ->c_asset;
 
-106 
+107 
 s_as£t
  = 
 c⁄n
 ->s_asset;
 
-107 
+108 
 	`±hªad_muãx_lock
 (&
 As£tE¡ryLock
 );
 
-108 i‡(
+109 i‡(
 c_as£t
  !
 NULL
 )
 
-114 
+115 
 c⁄n
 ->
 c_as£t
@@ -81293,13 +81601,13 @@ c_as£t
 NULL
 ;
 
-119 i‡(
+120 i‡(
 s_as£t
  !
 NULL
 )
 
-125 
+126 
 c⁄n
 ->
 s_as£t
@@ -81307,7 +81615,7 @@ s_as£t
 NULL
 ;
 
-130 *
+131 *
 °©e
  = 
 	`£r_ülize
@@ -81319,83 +81627,141 @@ c⁄n
 NULL
 , 0);
 
-132 
+133 
 c⁄n
 ->
 c_as£t
  = c_asset;
 
-133 
+134 
 c⁄n
 ->
 s_as£t
  = s_asset;
 
-134 
+135 
 	`±hªad_muãx_u∆ock
 (&
 As£tE¡ryLock
 );
 
-135  
+136  
 °©e
 ;
 
-136 
+137 
 	}
 }
 
-139 
+140 
 	$gë_key_vÆue
-(
-uöt64_t
- 
+(*
 key
 , *
 d©a
 )
 
-141 
+142 
 cou¡
  = 0;
 
-142 
+143 
 c⁄√˘i⁄
  *
 cuº
  = 
 NULL
-;
+, *
+hód
+ = NULL;
 
 144 
+¥ads_key
+ *
+pkey
+ = (¥ads_key *Ë
+key
+;
+
+145 
+uöt32_t
+ 
+hash
+;
+
+147 
 d©a
  = 
 NULL
 ;
 
-145 
+148 
+hash
+ = 
+	`CXT_HASH4
+(
+pkey
+->
+§c
+,pkey->
+d°
+,pkey->
+•‹t
+,pkey->
+dp‹t
+,pkey->
+¥Ÿ
+);
+
+150 
 	`±hªad_muãx_lock
 (&
 C⁄nE¡ryLock
 );
 
-146 
-cuº
+151 
+hód
  = 
 c⁄fig
 .
 buckë
 [
-key
+hash
 ];
 
-148 i‡(
+153 
+cuº
+ = 
+hód
+; cuº !
+NULL
+; cuº = cuº->
+√xt
+) {
+
+154 i‡(
+	`CMP_CXT4
+(
+cuº
+,
+pkey
+->
+§c
+,pkey->
+•‹t
+,pkey->
+d°
+,pkey->
+dp‹t
+)){
+
+159 i‡(
 cuº
  !
 NULL
 )
 
-151 
+162 
 hashkey
  = 
 cuº
@@ -81403,7 +81769,7 @@ cuº
 cxid
 ;
 
-155 
+166 
 timevÆ
  
 °¨t_£rülize
@@ -81411,7 +81777,7 @@ timevÆ
 íd_£rülize
 ;
 
-156 
+167 
 	`gëtimeofday
 (&
 °¨t_£rülize
@@ -81419,7 +81785,7 @@ timevÆ
 NULL
 );
 
-158 
+169 
 d©a
  = (*)
 	`£rülize_c⁄n_as£t
@@ -81427,7 +81793,7 @@ d©a
 cuº
 );
 
-161 
+171 
 	`gëtimeofday
 (&
 íd_£rülize
@@ -81435,7 +81801,7 @@ cuº
 NULL
 );
 
-162 
+172 
 £c
  = 
 íd_£rülize
@@ -81445,7 +81811,7 @@ tv_£c
 °¨t_£rülize
 .tv_sec;
 
-163 
+173 
 u£c
  = 
 íd_£rülize
@@ -81455,7 +81821,7 @@ tv_u£c
 °¨t_£rülize
 .tv_usec;
 
-164 
+174 
 tŸÆ
  = (
 £c
@@ -81463,13 +81829,13 @@ tŸÆ
 u£c
 ;
 
-165 
+175 
 ovîÆl_p£rz_time
  +
 tŸÆ
 ;
 
-166 
+176 
 ovîÆl_p°©e_size
  +
 	`°æí
@@ -81477,7 +81843,7 @@ ovîÆl_p°©e_size
 d©a
 );
 
-167 
+177 
 	`¥ötf
 ("STATS: PERFLOW STATE SIZE CURRENT = %zu\n", 
 	`°æí
@@ -81485,61 +81851,61 @@ d©a
 d©a
 ));
 
-168 
+178 
 	`¥ötf
 ("STATS: PERFLOW STATE SIZE OVERALL = %zu\n", 
 ovîÆl_p°©e_size
 );
 
-169 
+179 
 	`¥ötf
 ("STATS: PERFLOW: TIME TO SERIALIZE CURRENT = %ldus\n", 
 tŸÆ
 );
 
-170 
+180 
 	`¥ötf
 ("STATS: PERFLOW: TIME TO SERIALIZE OVERALL = %ldus\n", 
 ovîÆl_p£rz_time
 );
 
-171 
+181 
 	`SERIALIZE_PRINT
 ("£rülizög c⁄√˘i⁄ såu˘ wôh mu…òÊow %s",
 d©a
 );
 
-173 i‡(
+183 i‡(
 NULL
  =
 d©a
 ) {
 
-174 
+184 
 	`±hªad_muãx_u∆ock
 (&
 C⁄nE¡ryLock
 );
 
-175  
+185  
 cou¡
 ;
 
-179 
+189 
 cou¡
 ++;
 
-181 
+191 
 	`±hªad_muãx_u∆ock
 (&
 C⁄nE¡ryLock
 );
 
-183 
+193 
 	}
 }
 
-185 
+195 
 	$put_vÆue_°ru˘
 (*
 d©a
@@ -81547,19 +81913,19 @@ d©a
 c
 )
 
-187 
+197 
 c⁄√˘i⁄
  *
 cuº
 ;
 
-189 i‡((!
+199 i‡((!
 d©a
 Ë|| (!
 c
 )) {
 
-193 
+203 
 cuº
  = (
 c⁄√˘i⁄
@@ -81567,7 +81933,7 @@ c⁄√˘i⁄
 c
 ;
 
-195 
+205 
 timevÆ
  
 °¨t_de£rülize
@@ -81575,7 +81941,7 @@ timevÆ
 íd_de£rülize
 ;
 
-196 
+206 
 	`gëtimeofday
 (&
 °¨t_de£rülize
@@ -81583,7 +81949,7 @@ timevÆ
 NULL
 );
 
-198 
+208 
 cuº
  = 
 	`£r_∑r£
@@ -81595,7 +81961,7 @@ d©a
 NULL
 );
 
-200 
+210 
 	`gëtimeofday
 (&
 íd_de£rülize
@@ -81603,7 +81969,7 @@ NULL
 NULL
 );
 
-201 
+211 
 £c
  = 
 íd_de£rülize
@@ -81613,7 +81979,7 @@ tv_£c
 °¨t_de£rülize
 .tv_sec;
 
-202 
+212 
 u£c
  = 
 íd_de£rülize
@@ -81623,7 +81989,7 @@ tv_u£c
 °¨t_de£rülize
 .tv_usec;
 
-203 
+213 
 tŸÆ
  = (
 £c
@@ -81631,25 +81997,25 @@ tŸÆ
 u£c
 ;
 
-204 
+214 
 ovîÆl_pde£rz_time
  +
 tŸÆ
 ;
 
-205 
+215 
 	`¥ötf
 ("STATS: PERFLOW: TIME TO DESERIALIZE CURRENT = %ldus\n", 
 tŸÆ
 );
 
-206 
+216 
 	`¥ötf
 ("STATS: PERFLOW: TIME TO DESERIALIZE OVERALL = %ldus\n", 
 ovîÆl_pde£rz_time
 );
 
-207 
+217 
 cuº
 ->
 c_as£t
@@ -81657,7 +82023,7 @@ c_as£t
 NULL
 ;
 
-208 
+218 
 cuº
 ->
 s_as£t
@@ -81665,7 +82031,59 @@ s_as£t
 NULL
 ;
 
-211 
+221 
+	}
+}
+
+223 
+uöt32_t
+ 
+	$hash
+(*
+key
+) {
+
+224 
+¥ads_key
+ *
+pkey
+ = (¥ads_key *Ë
+key
+;
+
+225 
+uöt32_t
+ 
+hash
+;
+
+227 i‡(!
+key
+) {
+
+231 
+hash
+ = 
+	`CXT_HASH4
+(
+pkey
+->
+§c
+,pkey->
+d°
+,pkey->
+•‹t
+,pkey->
+dp‹t
+,pkey->
+¥Ÿ
+);
+
+232  
+hash
+;
+
+233 
 	}
 }
 
@@ -95259,6 +95677,8 @@ NULL
 gë_key_vÆue
 , 
 put_vÆue_°ru˘
+, 
+hash
 );
 
 1336 
@@ -100167,34 +100587,78 @@ pi
 de°
 );
 
-853 
+853 
+	s¥ads_key_t
+ {
+
+854 
+uöt32_t
+ 
+	m§c
+;
+
+855 
+uöt32_t
+ 
+	md°
+;
+
+856 
+uöt16_t
+ 
+	m•‹t
+;
+
+857 
+uöt16_t
+ 
+	mdp‹t
+;
+
+858 
+uöt8_t
+ 
+	m¥Ÿ
+;
+
+859 } 
+	t¥ads_key
+;
+
+861 
 ±hªad_muãx_t
  
 	gC⁄nE¡ryLock
 ;
 
-854 
+862 
 ±hªad_muãx_t
  
 	gAs£tE¡ryLock
 ;
 
-856 
+864 
 gë_key_vÆue
-(
-uöt64_t
- 
+(*
 key
 , *
 d©a
 );
 
-857 
+865 
 put_vÆue_°ru˘
 (*
 d©a
 , *
 c
+);
+
+866 
+uöt32_t
+ 
+hash
+(*
+key
 );
 
 	@/home/ubuntu/prads_extern/src/servicefp/servicefp.c
