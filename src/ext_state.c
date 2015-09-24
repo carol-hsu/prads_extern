@@ -142,7 +142,7 @@ int get_key_value(void *key, char **data)
     int count = 0;
     connection *curr = NULL, *head = NULL;
     prads_key *pkey = (prads_key *) key;
-    uint32_t hash; 	
+    uint32_t hash;
 
     *data = NULL;
     hash = CXT_HASH4(pkey->src,pkey->dst,pkey->sport,pkey->dport,pkey->prot);

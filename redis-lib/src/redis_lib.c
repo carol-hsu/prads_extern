@@ -14,6 +14,7 @@ static void *thread_start(void *arg)
         char *uargv, *p=NULL;
 	int i;
 	item *it = NULL;
+	redisReply *reply;
 
 	sleep(5);
 
@@ -24,6 +25,15 @@ static void *thread_start(void *arg)
 			it = client.passet[i];
 			pthread_mutex_lock(&it->mutex);
 			while ((it) && (it->key != NULL)) {
+				reply = redis_syncGet(client.context,
+					              it->key,
+					              it->nkey);
+				if (reply) {
+					printf("Data Available \n");
+					freeReplyObject(reply);
+				} else {
+					printf("Data not Available \n");
+				}
 				client.get((void *) it->key, &p);
 				if (p) {
 					printf("size nkey %zu\n", it->nkey);
