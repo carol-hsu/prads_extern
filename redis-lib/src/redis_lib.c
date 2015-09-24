@@ -24,8 +24,9 @@ static void *thread_start(void *arg)
 			it = client.passet[i];
 			pthread_mutex_lock(&it->mutex);
 			while ((it) && (it->key != NULL)) {
-				client.get((void *) it->key, p);
+				client.get((void *) it->key, &p);
 				if (p) {
+					printf("size nkey %zu\n", it->nkey);
 					redis_syncSet(client.context,
 				        	      it->key,
 					      	      it->nkey,
@@ -50,7 +51,7 @@ redis_client *create_cache(char *host, int port) {
 	client.context = createClient(host, port);
 
 	if (NULL == client.context) {
-		printf("No connection to server \n");	
+		printf("No connection to server \n");
 		return NULL;
 	}
 
@@ -119,7 +120,7 @@ int create_item(void* key, size_t nkey, void **data,
 		it = client.passet[hash];
 	}
 
-	it->key = (char *) malloc(sizeof(nkey));
+	it->key = (char *) malloc(nkey);
 
 	if (!it->key) {
 		pthread_mutex_unlock(&it->mutex);
@@ -127,22 +128,20 @@ int create_item(void* key, size_t nkey, void **data,
 		return 0;
 	}
 
-	memcpy(it->key, key, nkey);
+	memcpy((char *) it->key, (char *) key, nkey);
 	it->nkey = nkey;
 
 	it->data = (char *) malloc(size);
 	it->size = size;
 	*data = it->data;
 
-	// If data is available /* set it */	
-	reply = redis_syncGet(client.context, it->key, nkey);
+	// if the data is present in key-value store, update the cache.
+	reply = redis_syncGet(client.context, (char *) it->key, nkey);
 	if (reply) {
 		client.put(reply->str, (void *) it->data);	
 		ret = 1;
 		freeReplyObject(reply);
 	}
-
-	// if the data is present in key-value store, update the cache.
 	
 	pthread_mutex_unlock(&client.passet[hash]->mutex);	
 	return ret;

@@ -11,7 +11,7 @@
 #define ASSET_HASH4(ip) ((ip) % BUCKET_SIZE)
 #define BUCKET_SIZE  31337
 
-typedef int (*get_key_val)(void *, char *);
+typedef int (*get_key_val)(void *, char **);
 typedef int (*put_key_val) (char *, void *);
 typedef uint32_t (*key_hash) (void *key);
 

@@ -137,14 +137,14 @@ char* serialize_conn_asset(connection *conn)
 }
 
 // The calling function should free "data" after using it.
-int get_key_value(void *key, char *data)
+int get_key_value(void *key, char **data)
 {
     int count = 0;
     connection *curr = NULL, *head = NULL;
     prads_key *pkey = (prads_key *) key;
     uint32_t hash; 	
 
-    data = NULL;
+    *data = NULL;
     hash = CXT_HASH4(pkey->src,pkey->dst,pkey->sport,pkey->dport,pkey->prot);
 
     pthread_mutex_lock(&ConnEntryLock);
@@ -166,7 +166,7 @@ int get_key_value(void *key, char *data)
 	    struct timeval start_serialize, end_serialize;
 	    gettimeofday(&start_serialize, NULL);
 
-	    data = (char *)serialize_conn_asset(curr); 
+	    *data = (char *)serialize_conn_asset(curr);
    			
    	    gettimeofday(&end_serialize, NULL);
 	    long sec = end_serialize.tv_sec - start_serialize.tv_sec;
