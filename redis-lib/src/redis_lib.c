@@ -111,8 +111,10 @@ int create_item(void* key, size_t nkey, void **data,
 		it->prev = client.passet[hash];
 		temp_next = client.passet[hash]->next;
 		client.passet[hash]->next = it;
-		temp_next->prev = it;
 		it->next = temp_next;
+		if (temp_next) {
+			temp_next->prev = it;
+		}
 	} else {
 		it = client.passet[hash];
 	}
