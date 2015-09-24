@@ -1,9 +1,11 @@
 # redis library Makefile
 
 # source files.
-SRC =   redis_lib.c	
+SRC =   redis_lib.c
+
+OBJ =   redis_lib.o
  
-OBJ = $(SRC:.c=.o)
+#OBJ = $(SRC:.c=.o)
  
 OUT = ../libredis.a
  
@@ -28,8 +30,8 @@ all: default
  
 default: dep $(OUT)
  
-.cpp.o:
-	$(CCC) $(INCLUDES) $(CCFLAGS) -c $< -o $@
+redis_lib.o : redis_lib.c
+	$(CCC) $(CCFLAGS) -c redis_lib.c
  
 $(OUT): $(OBJ)
 	ar rcs $(OUT) $(OBJ)
@@ -37,7 +39,7 @@ $(OUT): $(OBJ)
 depend: dep
  
 dep:
-	makedepend -- $(CFLAGS) -- $(INCLUDES) $(SRC)
+	makedepend -- $(CCFLAGS) -- $(INCLUDES) $(SRC)
  
 clean:
 	rm -f $(OBJ) $(OUT) Makefile.bak
