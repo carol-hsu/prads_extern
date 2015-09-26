@@ -430,7 +430,7 @@ UNKNOWN	/home/ubuntu/prads_extern/src/prads.c	/^bstring UNKNOWN = & tUNKNOWN;$/;
 UU_DECODE_BYTE	/home/ubuntu/prads_extern/src/bstraux.c	491;"	d	file:
 UU_ENCODE_BYTE	/home/ubuntu/prads_extern/src/bstraux.c	711;"	d	file:
 UU_MAX_LINELEN	/home/ubuntu/prads_extern/src/bstraux.c	498;"	d	file:
-VEC_FILL	/home/ubuntu/prads_extern/src/cxt.c	450;"	d	file:
+VEC_FILL	/home/ubuntu/prads_extern/src/cxt.c	454;"	d	file:
 VERBOSE	/home/ubuntu/prads_extern/src/output-plugins/log.h	/^enum { VERBOSE = 0x01, FLAGS } log_flags;$/;"	e	enum:__anon9
 VERSION	/home/ubuntu/prads_extern/src/prads.h	37;"	d
 ZMALLOC_H	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/zmalloc.h	5;"	d
@@ -846,7 +846,7 @@ createNilObject	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^sta
 createReplyObject	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^static redisReply *createReplyObject(int type) {$/;"	f	file:
 createString	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.h	/^    void *(*createString)(const redisReadTask*, char*, size_t);$/;"	m	struct:redisReplyObjectFunctions
 createStringObject	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^static void *createStringObject(const redisReadTask *task, char *str, size_t len) {$/;"	f	file:
-create_cache	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.c	/^redis_client *create_cache(char *host, int port) {$/;"	f
+create_cache	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.c	/^redis_client *create_cache(char *host, int port, uint32_t vnf_id) {$/;"	f
 create_item	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.c	/^int create_item(void* key, size_t nkey, void **data,$/;"	f
 create_pid_file	/home/ubuntu/prads_extern/src/sys_func.c	/^int create_pid_file(const char *path)$/;"	f
 cstr2bstr	/home/ubuntu/prads_extern/src/bstrlib.h	40;"	d
@@ -1140,8 +1140,8 @@ getCallback	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/examples/example-li
 getCallback	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/examples/example-libuv.c	/^void getCallback(redisAsyncContext *c, void *r, void *privdata) {$/;"	f
 get_app_name	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^bstring get_app_name(signature * sig,$/;"	f
 get_gid	/home/ubuntu/prads_extern/src/sys_func.c	/^long get_gid(const char *group_name)$/;"	f
-get_key_val	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^typedef int (*get_key_val)(void *, char *);$/;"	t
-get_key_value	/home/ubuntu/prads_extern/src/ext_state.c	/^int get_key_value(void *key, char *data)$/;"	f
+get_key_val	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^typedef int (*get_key_val)(void *, char **);$/;"	t
+get_key_value	/home/ubuntu/prads_extern/src/ext_state.c	/^int get_key_value(void *key, char **data)$/;"	f
 get_uid	/home/ubuntu/prads_extern/src/sys_func.c	/^long get_uid(const char *user_name, int *out_gid)$/;"	f
 giaddr	/home/ubuntu/prads_extern/src/dhcp.h	/^    uint32_t giaddr;             \/\/ relay agent IP (5)$/;"	m	struct:_dhcp_header
 globalconfig	/home/ubuntu/prads_extern/src/config.h	/^} globalconfig;$/;"	t	typeref:struct:_globalconfig
@@ -1296,6 +1296,7 @@ load_known_ports_file	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^void
 load_mac	/home/ubuntu/prads_extern/src/mac.c	/^int load_mac(const char *file, mac_entry **sigp[], int hashsize)$/;"	f
 load_servicefp_file	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^int load_servicefp_file(char *sigfile, signature **db, int len)$/;"	f
 load_sigs	/home/ubuntu/prads_extern/src/sig_tcp.c	/^int load_sigs(const char *file, fp_entry **sigp[], int hashsize)$/;"	f
+lock	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	uint64_t lock;$/;"	m	struct:meta_data_t
 log_asset_arp	/home/ubuntu/prads_extern/src/output-plugins/log_dispatch.c	/^void log_asset_arp (asset *masset)$/;"	f
 log_asset_os	/home/ubuntu/prads_extern/src/output-plugins/log_dispatch.c	/^void log_asset_os (asset *main, os_asset *os, connection *cxt)$/;"	f
 log_asset_service	/home/ubuntu/prads_extern/src/output-plugins/log_dispatch.c	/^void log_asset_service (asset *main, serv_asset *service, connection *cxt)$/;"	f
@@ -1348,6 +1349,9 @@ matched	/home/ubuntu/prads_extern/src/prads.h	/^        uint32_t    matched;    
 matched_fp	/home/ubuntu/prads_extern/src/prads.h	/^    bstring matched_fp;         \/* The FP that matched [*:*:*:*.*:*:---] *\/$/;"	m	struct:_os_asset
 maxBuffSz	/home/ubuntu/prads_extern/src/bstrlib.c	/^	int maxBuffSz;$/;"	m	struct:bStream	file:
 maxbuf	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.h	/^    size_t maxbuf; \/* Max length of unused buffer *\/$/;"	m	struct:redisReader
+mdata	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^  	meta_data*    mdata;$/;"	m	struct:item_t
+meta_data	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^} meta_data;$/;"	t	typeref:struct:meta_data_t
+meta_data_t	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^typedef struct meta_data_t {$/;"	s
 minBuffSz	/home/ubuntu/prads_extern/src/bstraux.c	/^    int minBuffSz;$/;"	m	struct:bwriteStream	file:
 misc	/home/ubuntu/prads_extern/src/prads.h	/^        bstring misc;           \/* Misc info *\/$/;"	m	struct:_signature::__anon15
 mlen	/home/ubuntu/prads_extern/src/bstrlib.h	/^	int mlen;$/;"	m	struct:tagbstring
@@ -2123,6 +2127,7 @@ vendor	/home/ubuntu/prads_extern/src/prads.h	/^    bstring vendor;             \
 vendor	/home/ubuntu/prads_extern/src/prads.h	/^  char *vendor;$/;"	m	struct:_mac_entry
 ver	/home/ubuntu/prads_extern/src/prads.h	/^        bstring ver;            \/* Version *\/$/;"	m	struct:_signature::__anon15
 verbose	/home/ubuntu/prads_extern/src/config.h	/^    uint8_t     verbose;                \/* Verbose or not *\/$/;"	m	struct:_globalconfig
+version	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	uint64_t version;$/;"	m	struct:meta_data_t
 version	/home/ubuntu/prads_extern/src/prads.h	/^    uint8_t version; \/**< GRE version *\/$/;"	m	struct:_gre_header
 vlan	/home/ubuntu/prads_extern/src/prads.h	/^    uint16_t        vlan;           \/* vlan tag *\/$/;"	m	struct:_packetinfo
 vlan	/home/ubuntu/prads_extern/src/prads.h	/^    uint16_t        vlan;       \/* vlan tag *\/$/;"	m	struct:_asset
@@ -2130,6 +2135,8 @@ vlan_recv	/home/ubuntu/prads_extern/src/prads.h	/^    uint32_t vlan_recv;     \/
 vlantag	/home/ubuntu/prads_extern/src/prads.h	/^    } vlantag;$/;"	m	struct:_ether_header	typeref:union:_ether_header::__anon10
 vlog	/home/ubuntu/prads_extern/src/sys_func.h	20;"	d
 vlog	/home/ubuntu/prads_extern/src/sys_func.h	34;"	d
+vnf_id	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	uint32_t vnf_id;$/;"	m	struct:redis_client_t
+vnf_id	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	uint64_t vnf_id;$/;"	m	struct:meta_data_t
 w	/home/ubuntu/prads_extern/src/prads.h	/^    uint32_t w[4];$/;"	m	union:_i4vector
 wev	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/libev.h	/^    ev_io rev, wev;$/;"	m	struct:redisLibevEvents
 wev	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/libevent.h	/^    struct event rev, wev;$/;"	m	struct:redisLibeventEvents	typeref:struct:redisLibeventEvents::

@@ -15,6 +15,12 @@ typedef int (*get_key_val)(void *, char **);
 typedef int (*put_key_val) (char *, void *);
 typedef uint32_t (*key_hash) (void *key);
 
+typedef struct meta_data_t {
+	uint64_t vnf_id;
+	uint64_t version;
+	uint64_t lock;
+} meta_data;
+
 typedef struct item_t {
   	struct item_t *next;
   	struct item_t *prev;
@@ -22,6 +28,7 @@ typedef struct item_t {
   	void*    key;
   	size_t   nkey;
   	void*    data;
+  	meta_data*    mdata;
   	size_t   size;
   	uint32_t flags;
   	time_t   exp;
@@ -38,13 +45,14 @@ typedef struct redis_client_t {
 	key_hash         hash;
 	uint32_t	 flags;
 	uint32_t	 exp;
+	uint32_t vnf_id;
 	// hash
 } redis_client;
 
 redis_client client;
 
 // Policy should be update with this cache
-redis_client *create_cache(char *host, int port);
+redis_client *create_cache(char *host, int port, uint32_t vnf_id);
 
 void destroy_cache(redis_client *client);
 

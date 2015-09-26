@@ -174,11 +174,11 @@ int get_key_value(void *key, char **data)
 	    long total = (sec * 1000 * 1000) + usec;
 			overall_pserz_time += total;
 			overall_pstate_size	+= strlen(data);
-  	    printf("STATS: PERFLOW STATE SIZE CURRENT = %zu\n", strlen(*data));
-	    printf("STATS: PERFLOW STATE SIZE OVERALL = %zu\n", overall_pstate_size);
-	    printf("STATS: PERFLOW: TIME TO SERIALIZE CURRENT = %ldus\n", total);
-	    printf("STATS: PERFLOW: TIME TO SERIALIZE OVERALL = %ldus\n", overall_pserz_time);
-            SERIALIZE_PRINT("serializing connection struct with multi flow %s",*data);
+  	    //printf("STATS: PERFLOW STATE SIZE CURRENT = %zu\n", strlen(*data));
+	    //printf("STATS: PERFLOW STATE SIZE OVERALL = %zu\n", overall_pstate_size);
+	    //printf("STATS: PERFLOW: TIME TO SERIALIZE CURRENT = %ldus\n", total);
+	    //printf("STATS: PERFLOW: TIME TO SERIALIZE OVERALL = %ldus\n", overall_pserz_time);
+            //SERIALIZE_PRINT("serializing connection struct with multi flow %s",*data);
  
             if (NULL == *data) {
 		pthread_mutex_unlock(&ConnEntryLock);

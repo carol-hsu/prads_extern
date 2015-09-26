@@ -49,7 +49,7 @@
 #define CONFDIR "/etc/prads/"
 #endif
 
-#define ARGS "C:c:b:d:Dg:hi:p:r:u:va:l:L:f:qtxs:OXFRMSAKUTIZtHPB"
+#define ARGS "C:c:b:d:Dg:hi:p:r:u:va:l:n:L:f:qtxs:OXFRMSAKUTIZtHPB"
 
 /*  G L O B A L S  *** (or candidates for refactoring, as we say)***********/
 globalconfig config;
@@ -1161,6 +1161,7 @@ static void usage()
     olog(" -q              Quiet - try harder not to produce output.\n");
     olog(" -L <dir>        log cxtracker type output to <dir> (will be owned by <uid>).\n");
     olog(" -O              Connection tracking [O]utput - per-packet!\n");
+    olog(" -n              VNF ID\n");
     olog(" -x              Conne[x]ion tracking output  - New, expired and ended.\n");
     olog(" -Z              Passive DNS (Experimental).\n");
     olog(" -H              DHCP fingerprinting (Expermiental).\n");
@@ -1333,11 +1334,11 @@ int prads_initialize(globalconfig *conf)
         pthread_mutex_init(&AssetEntryLock, NULL);
         setup_serialize_translators();    
 	register_encode_decode(get_key_value, put_value_struct, hash);
-    	conf->context = create_cache(REDIS_HOST, REDIS_PORT);
+    	conf->context = create_cache(REDIS_HOST, REDIS_PORT, conf->vnf_id);
     	if (NULL == conf->context) {
        		olog("[*] Unable to connect to redis server %s.  (%s)\n", "10.0.1.4", "6379");
     	} else {
-       		olog("[*] connected to redis server %s.  (%s)\n", "10.0.1.4", "6379");
+       		olog("[*] VNF%lu connected to redis server %s.  (%s)\n", conf->vnf_id, "10.0.1.4", "6379");
     	}
     }
 

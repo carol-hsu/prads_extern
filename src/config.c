@@ -124,6 +124,7 @@ void set_default_config_options(globalconfig *conf)
     conf->daemon_flag = 0;
     conf->cxtlogdir[0] = '\0';
     conf->cxtfname[0] = '\0';
+    conf->vnf_id = 0;
 }
 
 void parse_config_file(const char* fname)
@@ -461,6 +462,9 @@ int parse_args(globalconfig *conf, int argc, char *argv[], char *args)
             break;
         case 's':
             conf->payload = strtol(optarg, NULL, 0);
+            break;
+        case 'n':
+            conf->vnf_id = atoi(optarg);
             break;
         case 'q':
             conf->cflags |= CONFIG_QUIET;

@@ -11,10 +11,12 @@ int register_encode_decode(get_key_val get, put_key_val put, key_hash hash) {
 static void *thread_start(void *arg)
 {
 	struct thread_info *tinfo = arg;
-        char *uargv, *p=NULL;
+        char *p=NULL;
 	int i;
 	item *it = NULL;
 	redisReply *reply;
+	size_t total_size, p_size;
+	char m[24];
 
 	sleep(5);
 
@@ -30,18 +32,37 @@ static void *thread_start(void *arg)
 					              it->nkey);
 				if (reply) {
 					printf("Data Available \n");
+					total_size = reply->len;
+					p_size = total_size - sizeof(meta_data);
+					p = ((char *) reply->str) + p_size;
+						
+					printf(" Data %s\n", reply->str);
+					printf("get vnf_id %lld\n", (long long)*(p));
+					printf("get version %lld\n", (long long)*(p+8));
+					printf("get lock %lld\n", (long long)*(p+16));
+					printf("set total length %zu\n", total_size);
 					freeReplyObject(reply);
 				} else {
 					printf("Data not Available \n");
 				}
+				++it->mdata->version;
 				client.get((void *) it->key, &p);
 				if (p) {
-					printf("size nkey %zu\n", it->nkey);
+					p_size = strlen(p);
+					total_size = p_size + sizeof(meta_data);
+					p = (char *) realloc(p, total_size);
+					memcpy(m, (it->data + it->size), sizeof(meta_data));
+					memcpy(p+p_size, m, sizeof(meta_data));
+
+					printf("Set vnf_id %lld\n", (long long)*(p+p_size));
+					printf("Set version %lld\n", (long long)*(p+p_size+8));
+					printf("set lock %lld\n", (long long)*(p+p_size+16));
+					printf("set total length %zu\n", total_size);
 					redis_syncSet(client.context,
 				        	      it->key,
 					      	      it->nkey,
 					              p,
-					              strlen(p));
+					              total_size);
 					free(p);
 					p = NULL;
 					printf("data updated \n");
@@ -55,15 +76,17 @@ static void *thread_start(void *arg)
 
 }
 
-redis_client *create_cache(char *host, int port) {
+redis_client *create_cache(char *host, int port, uint32_t vnf_id) {
 	int i;
 
+	client.vnf_id  = vnf_id;
 	client.context = createClient(host, port);
 
 	if (NULL == client.context) {
 		printf("No connection to server \n");
 		return NULL;
 	}
+	printf("Size of metadata %lu", sizeof(meta_data));
 
 	for (i=0; i<BUCKET_SIZE; i++) {
 		client.passet[i] = malloc(sizeof(item));
@@ -104,6 +127,7 @@ int create_item(void* key, size_t nkey, void **data,
 	item *it, *temp_next;
 	redisReply *reply = NULL;
 	int ret = 0;
+	meta_data *mdata;
 
 	*data = NULL;
 	// we know the key is uint64_t, so just cast it to uint64_t
@@ -141,9 +165,15 @@ int create_item(void* key, size_t nkey, void **data,
 	memcpy((char *) it->key, (char *) key, nkey);
 	it->nkey = nkey;
 
-	it->data = (char *) malloc(size);
+	it->data = (char *) malloc(size + sizeof(meta_data));
+	it->mdata = (meta_data *) ((char *)it->data + size);
 	it->size = size;
 	*data = it->data;
+	mdata = it->mdata;
+
+	mdata->vnf_id = client.vnf_id;
+	mdata->version = 0;
+	mdata->lock = 0;
 
 	// if the data is present in key-value store, update the cache.
 	reply = redis_syncGet(client.context, (char *) it->key, nkey);
@@ -153,7 +183,7 @@ int create_item(void* key, size_t nkey, void **data,
 		freeReplyObject(reply);
 	}
 	
-	pthread_mutex_unlock(&client.passet[hash]->mutex);	
+	pthread_mutex_unlock(&client.passet[hash]->mutex);
 	return ret;
 }
 
@@ -220,7 +250,7 @@ redisReply* redis_syncGet(redisContext *c, char *key, size_t key_len) {
 	if (reply->type != REDIS_REPLY_NIL) {
 		//strncpy(value, reply->str, *value_len);
 		//*value_len = strlen(reply->str);
-		printf("Got Value: %s\n", reply->str);
+		printf("Got Value len: %zu\n", strlen(reply->str));
 		//freeReplyObject(reply);
 		return reply;
 	}
