@@ -17,6 +17,7 @@ static void *thread_start(void *arg)
 	redisReply *reply;
 	size_t total_size, p_size;
 	char m[24];
+	uint64_t vnf_id;
 
 	sleep(5);
 
@@ -35,12 +36,22 @@ static void *thread_start(void *arg)
 					total_size = reply->len;
 					p_size = total_size - sizeof(meta_data);
 					p = ((char *) reply->str) + p_size;
+
+					vnf_id = (uint64_t) *(p);
+
+					if (vnf_id != client.vnf_id) {
+						// We are not the owner. We should delete
+						// from our cache.
+						continue;
+					}
 						
-					printf(" Data %s\n", reply->str);
+					//printf(" Data %s\n", reply->str);
 					printf("get vnf_id %lld\n", (long long)*(p));
 					printf("get version %lld\n", (long long)*(p+8));
 					printf("get lock %lld\n", (long long)*(p+16));
 					printf("set total length %zu\n", total_size);
+
+					
 					freeReplyObject(reply);
 				} else {
 					printf("Data not Available \n");
