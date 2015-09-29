@@ -194,26 +194,30 @@ int get_key_value(void *key, char **data)
 
 int put_value_struct(char *data, void *c)
 {
-   connection *curr;
+   connection *curr, *curr_val;
 
    if ((!data) || (!c)) {
 	return 0;
    }
 
-   curr = (connection *) c;
+   printf("received value \n");
+
+   curr_val = (connection *) c;
 
    struct timeval start_deserialize, end_deserialize;
    gettimeofday(&start_deserialize, NULL);
 
    curr = ser_parse(head_tra, "connection", data, NULL);
+   *curr_val = *curr;
+   free(curr);
 	
    gettimeofday(&end_deserialize, NULL);
    long sec = end_deserialize.tv_sec - start_deserialize.tv_sec;
    long usec = end_deserialize.tv_usec - start_deserialize.tv_usec;
    long total = (sec * 1000 * 1000) + usec;
-   overall_pdeserz_time += total;
    printf("STATS: PERFLOW: TIME TO DESERIALIZE CURRENT = %ldus\n", total);
-   printf("STATS: PERFLOW: TIME TO DESERIALIZE OVERALL = %ldus\n", overall_pdeserz_time);
+   //printf("STATS: PERFLOW: TIME TO DESERIALIZE OVERALL = %ldus\n", overall_pdeserz_time);
+
    curr->c_asset = NULL;
    curr->s_asset = NULL;
 

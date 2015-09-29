@@ -246,10 +246,10 @@ IP_PROTO_UDP	/home/ubuntu/prads_extern/src/prads.h	70;"	d
 IP_RF	/home/ubuntu/prads_extern/src/prads.h	270;"	d
 IP_V	/home/ubuntu/prads_extern/src/prads.h	275;"	d
 ISSET_CLIENT_UNKNOWN	/home/ubuntu/prads_extern/src/prads.h	549;"	d
-ISSET_CONFIG_QUIET	/home/ubuntu/prads_extern/src/config.h	111;"	d
-ISSET_CONFIG_SYSLOG	/home/ubuntu/prads_extern/src/config.h	110;"	d
-ISSET_CONFIG_UPDATES	/home/ubuntu/prads_extern/src/config.h	109;"	d
-ISSET_CONFIG_VERBOSE	/home/ubuntu/prads_extern/src/config.h	108;"	d
+ISSET_CONFIG_QUIET	/home/ubuntu/prads_extern/src/config.h	112;"	d
+ISSET_CONFIG_SYSLOG	/home/ubuntu/prads_extern/src/config.h	111;"	d
+ISSET_CONFIG_UPDATES	/home/ubuntu/prads_extern/src/config.h	110;"	d
+ISSET_CONFIG_VERBOSE	/home/ubuntu/prads_extern/src/config.h	109;"	d
 ISSET_CXT_DONT_CHECK_CLIENT	/home/ubuntu/prads_extern/src/prads.h	544;"	d
 ISSET_CXT_DONT_CHECK_SERVER	/home/ubuntu/prads_extern/src/prads.h	545;"	d
 ISSET_DONT_CHECK_CLIENT	/home/ubuntu/prads_extern/src/prads.h	547;"	d
@@ -1291,7 +1291,7 @@ line	/home/ubuntu/prads_extern/src/prads.h	/^    uint32_t line;              \/*
 list_type_sizes	/home/ubuntu/prads_extern/src/cserialization-0.4/demo.c	/^void list_type_sizes()$/;"	f
 load_bpf	/home/ubuntu/prads_extern/src/prads.c	/^int load_bpf(globalconfig* conf, const char* file)$/;"	f
 load_dhcp_sigs	/home/ubuntu/prads_extern/src/dhcp.c	/^int load_dhcp_sigs(const char *file, dhcp_fp_entry **dhcpsp[], int hashsize)$/;"	f
-load_foo	/home/ubuntu/prads_extern/src/prads.c	1441;"	d	file:
+load_foo	/home/ubuntu/prads_extern/src/prads.c	1442;"	d	file:
 load_known_ports_file	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^void load_known_ports_file(char *filename, port_t *lports)$/;"	f
 load_mac	/home/ubuntu/prads_extern/src/mac.c	/^int load_mac(const char *file, mac_entry **sigp[], int hashsize)$/;"	f
 load_servicefp_file	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^int load_servicefp_file(char *sigfile, signature **db, int len)$/;"	f
@@ -2137,6 +2137,7 @@ vlog	/home/ubuntu/prads_extern/src/sys_func.h	20;"	d
 vlog	/home/ubuntu/prads_extern/src/sys_func.h	34;"	d
 vnf_id	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	uint32_t vnf_id;$/;"	m	struct:redis_client_t
 vnf_id	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	uint64_t vnf_id;$/;"	m	struct:meta_data_t
+vnf_id	/home/ubuntu/prads_extern/src/config.h	/^    uint32_t     *vnf_id;               \/* ID for this VNF *\/$/;"	m	struct:_globalconfig
 w	/home/ubuntu/prads_extern/src/prads.h	/^    uint32_t w[4];$/;"	m	union:_i4vector
 wev	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/libev.h	/^    ev_io rev, wev;$/;"	m	struct:redisLibevEvents
 wev	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/adapters/libevent.h	/^    struct event rev, wev;$/;"	m	struct:redisLibeventEvents	typeref:struct:redisLibeventEvents::

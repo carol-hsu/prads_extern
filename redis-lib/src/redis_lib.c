@@ -32,7 +32,7 @@ static void *thread_start(void *arg)
 					              it->key,
 					              it->nkey);
 				if (reply) {
-					printf("Data Available \n");
+					//printf("Data Available \n");
 					total_size = reply->len;
 					p_size = total_size - sizeof(meta_data);
 					p = ((char *) reply->str) + p_size;
@@ -46,15 +46,15 @@ static void *thread_start(void *arg)
 					}
 						
 					//printf(" Data %s\n", reply->str);
-					printf("get vnf_id %lld\n", (long long)*(p));
-					printf("get version %lld\n", (long long)*(p+8));
-					printf("get lock %lld\n", (long long)*(p+16));
-					printf("set total length %zu\n", total_size);
+					//printf("get vnf_id %lld\n", (long long)*(p));
+					//printf("get version %lld\n", (long long)*(p+8));
+					//printf("get lock %lld\n", (long long)*(p+16));
+					//printf("set total length %zu\n", total_size);
 
 					
 					freeReplyObject(reply);
 				} else {
-					printf("Data not Available \n");
+					//printf("Data not Available \n");
 				}
 				++it->mdata->version;
 				client.get((void *) it->key, &p);
@@ -65,10 +65,10 @@ static void *thread_start(void *arg)
 					memcpy(m, (it->data + it->size), sizeof(meta_data));
 					memcpy(p+p_size, m, sizeof(meta_data));
 
-					printf("Set vnf_id %lld\n", (long long)*(p+p_size));
-					printf("Set version %lld\n", (long long)*(p+p_size+8));
-					printf("set lock %lld\n", (long long)*(p+p_size+16));
-					printf("set total length %zu\n", total_size);
+					//printf("Set vnf_id %lld\n", (long long)*(p+p_size));
+					//printf("Set version %lld\n", (long long)*(p+p_size+8));
+					//printf("set lock %lld\n", (long long)*(p+p_size+16));
+					//printf("set total length %zu\n", total_size);
 					redis_syncSet(client.context,
 				        	      it->key,
 					      	      it->nkey,
@@ -76,7 +76,7 @@ static void *thread_start(void *arg)
 					              total_size);
 					free(p);
 					p = NULL;
-					printf("data updated \n");
+					//printf("data updated \n");
 				}
 				// move to next item
 				it = it->next;
@@ -190,8 +190,18 @@ int create_item(void* key, size_t nkey, void **data,
 	mdata->lock = 0;
 
 	// if the data is present in key-value store, update the cache.
+        struct timeval start_deserialize, end_deserialize;
+        gettimeofday(&start_deserialize, NULL);
+
 	reply = redis_syncGet(client.context, (char *) it->key, nkey);
+
 	if (reply) {
+   		gettimeofday(&end_deserialize, NULL);
+   		long sec = end_deserialize.tv_sec - start_deserialize.tv_sec;
+   		long usec = end_deserialize.tv_usec - start_deserialize.tv_usec;
+   		long total = (sec * 1000 * 1000) + usec;
+   		printf("STATS: PERFLOW: State Get Timestamp = %ldus\n", total);
+
                 total_size = reply->len;
                 p_size = total_size - sizeof(meta_data);
                 p = ((char *) reply->str) + p_size;
@@ -257,7 +267,7 @@ int redis_syncSet(redisContext *c, char *key, int key_len, char *value, int valu
 	}
 	
 	reply = redisCommand(c, "SET %b %b", key, (size_t) key_len, value, (size_t) value_len);
-	printf("SET: %s\n", reply->str);
+	//printf("SET: %s\n", reply->str);
 	freeReplyObject(reply);
 
 	return 1;
@@ -274,12 +284,12 @@ redisReply* redis_syncGet(redisContext *c, char *key, size_t key_len) {
 	if (reply->type != REDIS_REPLY_NIL) {
 		//strncpy(value, reply->str, *value_len);
 		//*value_len = strlen(reply->str);
-		printf("Got Value len: %zu\n", strlen(reply->str));
+		//printf("Got Value len: %zu\n", strlen(reply->str));
 		//freeReplyObject(reply);
 		return reply;
 	}
 
-	printf("No data available for key\n");
+	//printf("No data available for key\n");
 	freeReplyObject(reply);
 
 	return NULL;
