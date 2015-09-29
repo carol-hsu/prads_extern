@@ -139,6 +139,9 @@ int create_item(void* key, size_t nkey, void **data,
 	redisReply *reply = NULL;
 	int ret = 0;
 	meta_data *mdata;
+	uint64_t vnf_id, version, lock;
+	char *p;
+	size_t p_size, total_size;
 
 	*data = NULL;
 	// we know the key is uint64_t, so just cast it to uint64_t
@@ -189,9 +192,19 @@ int create_item(void* key, size_t nkey, void **data,
 	// if the data is present in key-value store, update the cache.
 	reply = redis_syncGet(client.context, (char *) it->key, nkey);
 	if (reply) {
-		client.put(reply->str, (void *) it->data);	
-		ret = 1;
+                total_size = reply->len;
+                p_size = total_size - sizeof(meta_data);
+                p = ((char *) reply->str) + p_size;
+
+                vnf_id = (uint64_t) *(p);
+                version = (uint64_t) *(p + 8);
+                lock = (uint64_t) *(p + 16);
+
+		*p = '\0';
+
+		client.put(reply->str, (void *) it->data);
 		freeReplyObject(reply);
+		ret = 1;
 	}
 	
 	pthread_mutex_unlock(&client.passet[hash]->mutex);
