@@ -19,79 +19,85 @@ static void *thread_start(void *arg)
 	char m[24];
 	uint64_t vnf_id;
 
-	sleep(5);
+	sleep(10);
 
 	while (1) {
-		sleep(5);
+		sleep(client.time);
 		
 		for (i=0; i<BUCKET_SIZE; i++) {
 			it = client.passet[i];
 			pthread_mutex_lock(&it->mutex);
 			while ((it) && (it->key != NULL)) {
-				reply = redis_syncGet(client.context,
-					              it->key,
-					              it->nkey);
-				if (reply) {
-					//printf("Data Available \n");
-					total_size = reply->len;
-					p_size = total_size - sizeof(meta_data);
-					p = ((char *) reply->str) + p_size;
+				if (client.flags & NO_CONSISTENCY) {
+					reply = redis_syncGet(client.context,
+						              it->key,
+					        	      it->nkey);
+					if (reply) {
+						//printf("Data Available \n");
+						total_size = reply->len;
+						p_size = total_size - sizeof(meta_data);
+						p = ((char *) reply->str) + p_size;
 
-					vnf_id = (uint64_t) *(p);
+						vnf_id = (uint64_t) *(p);
 
-					if (vnf_id != client.vnf_id) {
-						// We are not the owner. We should delete
-						// from our cache.
-						continue;
-					}
+						if (vnf_id != client.vnf_id) {
+							// We are not the owner. We should delete
+							// from our cache.
+							continue;
+						}
 						
-					//printf(" Data %s\n", reply->str);
-					//printf("get vnf_id %lld\n", (long long)*(p));
-					//printf("get version %lld\n", (long long)*(p+8));
-					//printf("get lock %lld\n", (long long)*(p+16));
-					//printf("set total length %zu\n", total_size);
+						//printf(" Data %s\n", reply->str);
+						//printf("get vnf_id %lld\n", (long long)*(p));
+						//printf("get version %lld\n", (long long)*(p+8));
+						//printf("get lock %lld\n", (long long)*(p+16));
+						//printf("set total length %zu\n", total_size);
 
 					
-					freeReplyObject(reply);
-				} else {
-					//printf("Data not Available \n");
-				}
-				++it->mdata->version;
-				client.get((void *) it->key, &p);
-				if (p) {
-					p_size = strlen(p);
-					total_size = p_size + sizeof(meta_data);
-					p = (char *) realloc(p, total_size);
-					memcpy(m, (it->data + it->size), sizeof(meta_data));
-					memcpy(p+p_size, m, sizeof(meta_data));
+						freeReplyObject(reply);
+					} else {
+						//printf("Data not Available \n");
+					}
+					++it->mdata->version;
+					client.get((void *) it->key, &p);
+					if (p) {
+						p_size = strlen(p);
+						total_size = p_size + sizeof(meta_data);
+						p = (char *) realloc(p, total_size);
+						memcpy(m, (it->data + it->size), sizeof(meta_data));
+						memcpy(p+p_size, m, sizeof(meta_data));
 
-					//printf("Set vnf_id %lld\n", (long long)*(p+p_size));
-					//printf("Set version %lld\n", (long long)*(p+p_size+8));
-					//printf("set lock %lld\n", (long long)*(p+p_size+16));
-					//printf("set total length %zu\n", total_size);
-					redis_syncSet(client.context,
-				        	      it->key,
-					      	      it->nkey,
-					              p,
-					              total_size);
-					free(p);
-					p = NULL;
-					//printf("data updated \n");
+						//printf("Set vnf_id %lld\n", (long long)*(p+p_size));
+						//printf("Set version %lld\n", (long long)*(p+p_size+8));
+						//printf("set lock %lld\n", (long long)*(p+p_size+16));
+						//printf("set total length %zu\n", total_size);
+						redis_syncSet(client.context,
+				        		      it->key,
+					      	      	      it->nkey,
+					              	      p,
+					              	      total_size);
+						free(p);
+						p = NULL;
+						//printf("data updated \n");
+					}
+					// move to next item
+					it = it->next;
+					pthread_mutex_unlock(&client.passet[i]->mutex);
+				} else if (client.flags & EVENTUAL_CONSISTENCY) {
+				} else if (client.flags & SEQUENTIAL_CONSISTENCY) {
 				}
-				// move to next item
-				it = it->next;
 			}
-			pthread_mutex_unlock(&client.passet[i]->mutex);
 		}
 	}
-
 }
 
-redis_client *create_cache(char *host, int port, uint32_t vnf_id) {
+redis_client *create_cache(char *host, int port, uint32_t vnf_id,
+			   consistency_type con, int time) {
 	int i;
 
 	client.vnf_id  = vnf_id;
 	client.context = createClient(host, port);
+	client.flags |= con;
+	client.time = time;  // time in seconds to sync state in background.
 
 	if (NULL == client.context) {
 		printf("No connection to server \n");
