@@ -12,13 +12,15 @@
 #define BUCKET_SIZE  31337
 
 typedef enum {
-	NO_CONSISTENCY = 0,
-	EVENTUAL_CONSISTENCY,
-	SEQUENTIAL_CONSISTENCY
+	NO_CONSISTENCY = 1,
+	EVENTUAL_CONSISTENCY = 2,
+	SEQUENTIAL_CONSISTENCY = 4,
+	ASYNC = 8
 }consistency_type;
 
 typedef int (*get_key_val)(void *, char **);
 typedef int (*put_key_val) (char *, void *);
+typedef int (*eventual_con) (void *);
 typedef uint32_t (*key_hash) (void *key);
 
 typedef struct meta_data_t {
@@ -49,6 +51,7 @@ typedef struct redis_client_t {
 	get_key_val	 get;
 	put_key_val	 put;
 	key_hash         hash;
+	eventual_con     ev_con;
 	uint32_t	 flags;
 	uint32_t	 time;
 	uint32_t 	 vnf_id;
@@ -81,6 +84,6 @@ int redis_asyncGet(char *key, int key_len, char *value, int *value_len);
 
 int destroyClient(redisContext *context);
 
-int register_encode_decode(get_key_val, put_key_val, key_hash);
+int register_encode_decode(get_key_val, put_key_val, key_hash, eventual_con);
 
 #endif

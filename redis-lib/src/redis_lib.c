@@ -2,10 +2,11 @@
 
 pthread_t thread_id;
 
-int register_encode_decode(get_key_val get, put_key_val put, key_hash hash) {
+int register_encode_decode(get_key_val get, put_key_val put, key_hash hash, eventual_con ev_con) {
 	client.get = get;
 	client.put = put;
 	client.hash = hash;
+	client.ev_con = ev_con;
 }
 
 static void *thread_start(void *arg)
@@ -17,7 +18,8 @@ static void *thread_start(void *arg)
 	redisReply *reply;
 	size_t total_size, p_size;
 	char m[24];
-	uint64_t vnf_id;
+	uint64_t vnf_id, version;
+	char temp[1024];
 
 	sleep(10);
 
@@ -28,10 +30,12 @@ static void *thread_start(void *arg)
 			it = client.passet[i];
 			pthread_mutex_lock(&it->mutex);
 			while ((it) && (it->key != NULL)) {
+
+				reply = redis_syncGet(client.context,
+					              it->key,
+				        	      it->nkey);
+
 				if (client.flags & NO_CONSISTENCY) {
-					reply = redis_syncGet(client.context,
-						              it->key,
-					        	      it->nkey);
 					if (reply) {
 						//printf("Data Available \n");
 						total_size = reply->len;
@@ -43,6 +47,7 @@ static void *thread_start(void *arg)
 						if (vnf_id != client.vnf_id) {
 							// We are not the owner. We should delete
 							// from our cache.
+							it = it->next;
 							continue;
 						}
 						
@@ -54,38 +59,68 @@ static void *thread_start(void *arg)
 
 					
 						freeReplyObject(reply);
-					} else {
-						//printf("Data not Available \n");
 					}
-					++it->mdata->version;
-					client.get((void *) it->key, &p);
-					if (p) {
-						p_size = strlen(p);
-						total_size = p_size + sizeof(meta_data);
-						p = (char *) realloc(p, total_size);
-						memcpy(m, (it->data + it->size), sizeof(meta_data));
-						memcpy(p+p_size, m, sizeof(meta_data));
-
-						//printf("Set vnf_id %lld\n", (long long)*(p+p_size));
-						//printf("Set version %lld\n", (long long)*(p+p_size+8));
-						//printf("set lock %lld\n", (long long)*(p+p_size+16));
-						//printf("set total length %zu\n", total_size);
-						redis_syncSet(client.context,
-				        		      it->key,
-					      	      	      it->nkey,
-					              	      p,
-					              	      total_size);
-						free(p);
-						p = NULL;
-						//printf("data updated \n");
-					}
-					// move to next item
-					it = it->next;
-					pthread_mutex_unlock(&client.passet[i]->mutex);
 				} else if (client.flags & EVENTUAL_CONSISTENCY) {
+					if (reply) {
+						// check the version here vs the version available in store.
+						// Use the information to just update the delta.
+                                                //printf("Data Available \n");
+                                                total_size = reply->len;
+                                                p_size = total_size - sizeof(meta_data);
+                                                p = ((char *) reply->str) + p_size;
+
+                                                vnf_id = (uint64_t) *(p);
+						version = (uint64_t) *(p + 8);
+
+                                                if (vnf_id != client.vnf_id) {
+							
+							// we might still be waiting for the updated version
+
+							if (version == it->mdata->version) {	
+                                                        	// We don't see any update. we will update our
+								// state later.
+								it = it->next;
+                                                        	continue;
+							} else if (version > it->mdata->version) {
+								// handle updating the delta of both versions.
+								// we need to let this fall through and update
+								// the new version to the store.
+
+								// This registered application procedure will 
+								// take care of eventual consistency.
+								client.put(reply->str, temp);
+								client.ev_con(temp);
+								freeReplyObject(reply);
+								it->mdata->version = version;
+								it->mdata->vnf_id  = client.vnf_id;
+							} // else should just fall through
+                                                }
+					}
 				} else if (client.flags & SEQUENTIAL_CONSISTENCY) {
 				}
+				// all pre-checks are done based on consistency. Now update the state.
+				++it->mdata->version;
+                                client.get((void *) it->key, &p);
+                                if (p) {
+                                	p_size = strlen(p);
+                                        total_size = p_size + sizeof(meta_data);
+                                        p = (char *) realloc(p, total_size);
+                                        memcpy(m, (it->data + it->size), sizeof(meta_data));
+                                        memcpy(p+p_size, m, sizeof(meta_data));
+
+                                        redis_syncSet(client.context,
+                                                      it->key,
+                                                      it->nkey,
+                                                      p,
+                                                      total_size);
+                                        free(p);
+                                        p = NULL;
+                                 }
+                                 // move to next item
+                                 it = it->next;
+
 			}
+			pthread_mutex_unlock(&client.passet[i]->mutex);
 		}
 	}
 }
