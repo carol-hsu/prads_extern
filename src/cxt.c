@@ -102,6 +102,16 @@ int cxt_update_client(connection *cxt, packetinfo *pi)
     cxt->s_total_bytes += pi->packet_bytes;
     cxt->s_total_pkts += 1;
 
+    if (cxt->s_tcpFlags & TF_FIN) {
+	printf("********************************************\n");
+	printf("FIN seen by Prads \n");
+	printf("Total Source Pkts seen %lld\n", cxt->s_total_pkts);
+	printf("Total Source bytes seen %lld\n", cxt->s_total_bytes);
+	printf("Total Dest Pkts seen %lld\n", cxt->d_total_pkts);
+	printf("Total Dest bytes seen %lld\n", cxt->d_total_bytes);
+	printf("********************************************\n");
+    }
+
     pi->cxt = cxt;
     pi->sc = SC_CLIENT;
     if(!cxt->c_asset)
