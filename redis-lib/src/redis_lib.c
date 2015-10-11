@@ -2,11 +2,12 @@
 
 pthread_t thread_id;
 
-int register_encode_decode(get_key_val get, put_key_val put, key_hash hash, eventual_con ev_con) {
+int register_encode_decode(get_key_val get, put_key_val put, key_hash hash, eventual_con ev_con, get_delta delta) {
 	client.get = get;
 	client.put = put;
 	client.hash = hash;
 	client.ev_con = ev_con;
+	client.delta = delta;
 }
 
 static void *thread_start(void *arg)
@@ -89,7 +90,8 @@ static void *thread_start(void *arg)
 								// This registered application procedure will 
 								// take care of eventual consistency.
 								client.put(reply->str, temp);
-								client.ev_con(temp);
+								client.delta(it->temp_data, temp);
+								client.ev_con(it->data, temp);
 								freeReplyObject(reply);
 								it->mdata->version = version;
 								it->mdata->vnf_id  = client.vnf_id;
@@ -254,6 +256,12 @@ int create_item(void* key, size_t nkey, void **data,
 		*p = '\0';
 
 		client.put(reply->str, (void *) it->data);
+		if (client.flags & EVENTUAL_CONSISTENCY) {
+			// copy the item and maintain the data
+			it->temp_data = (char *) malloc(size + sizeof(meta_data));
+			it->temp_mdata = (meta_data *) ((char *)it->temp_data + size);
+			memcpy(it->temp_data, it->data, (size + sizeof(meta_data)));
+		}
 		freeReplyObject(reply);
 		ret = 1;
 	}

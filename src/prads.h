@@ -863,6 +863,8 @@ pthread_mutex_t AssetEntryLock;
 
 int get_key_value(void *key, char **data);
 int put_value_struct(char *data, void *c);
+int eventual_cons(void *old, void *new);
+int get_conn_delta(void *old, void *new);
 uint32_t hash(void *key);
 
 connection *bucket[BUCKET_SIZE];

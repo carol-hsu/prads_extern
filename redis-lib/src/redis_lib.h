@@ -20,7 +20,8 @@ typedef enum {
 
 typedef int (*get_key_val)(void *, char **);
 typedef int (*put_key_val) (char *, void *);
-typedef int (*eventual_con) (void *);
+typedef int (*get_delta) (void *, void *);
+typedef int (*eventual_con) (void *, void *);
 typedef uint32_t (*key_hash) (void *key);
 
 typedef struct meta_data_t {
@@ -38,6 +39,8 @@ typedef struct item_t {
   	void*    data;
   	meta_data*    mdata;
   	size_t   size;
+	void*    temp_data;
+	meta_data* temp_mdata;
   	uint32_t flags;
   	time_t   exp;
   	pthread_mutex_t mutex;
@@ -52,6 +55,7 @@ typedef struct redis_client_t {
 	put_key_val	 put;
 	key_hash         hash;
 	eventual_con     ev_con;
+	get_delta        delta;
 	uint32_t	 flags;
 	uint32_t	 time;
 	uint32_t 	 vnf_id;
@@ -84,6 +88,6 @@ int redis_asyncGet(char *key, int key_len, char *value, int *value_len);
 
 int destroyClient(redisContext *context);
 
-int register_encode_decode(get_key_val, put_key_val, key_hash, eventual_con);
+int register_encode_decode(get_key_val, put_key_val, key_hash, eventual_con, get_delta);
 
 #endif

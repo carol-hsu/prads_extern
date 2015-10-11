@@ -136,6 +136,32 @@ char* serialize_conn_asset(connection *conn)
     return state;
 }
 
+int eventual_cons(void *old, void *new) {
+	connection *curr_data = (connection *) old;
+	connection *new_data = (connection *) new;
+
+    	pthread_mutex_lock(&AssetEntryLock);  
+	
+
+   	pthread_mutex_lock(&AssetEntryLock);  
+		
+	return 1;
+}
+
+int get_conn_delta(void *old, void *new) {
+	connection *curr_data = (connection *) old;
+	connection *new_data = (connection *) new;
+
+	if (curr_data->start_time < new_data->start_time) {
+		curr_data->start_time = new_data->start_time;
+	}
+
+	if (curr_data->last_pkt_time < new_data->last_pkt_time) {
+		new_data->last_pkt_time = curr_data->last_pkt_time;
+	}
+	return 1;
+}
+
 // The calling function should free "data" after using it.
 int get_key_value(void *key, char **data)
 {
@@ -235,3 +261,4 @@ uint32_t hash(void *key) {
    hash = CXT_HASH4(pkey->src,pkey->dst,pkey->sport,pkey->dport,pkey->prot);
    return hash;
 }
+

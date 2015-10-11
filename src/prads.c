@@ -1333,7 +1333,7 @@ int prads_initialize(globalconfig *conf)
         // Asset Table Lock
         pthread_mutex_init(&AssetEntryLock, NULL);
         setup_serialize_translators();    
-	register_encode_decode(get_key_value, put_value_struct, hash);
+	register_encode_decode(get_key_value, put_value_struct, hash, eventual_cons, get_conn_delta);
     	conf->context = create_cache(REDIS_HOST, REDIS_PORT, conf->vnf_id, NO_CONSISTENCY | ASYNC, 5);
     	if (NULL == conf->context) {
        		olog("[*] Unable to connect to redis server %s.  (%s)\n", "10.0.1.4", "6379");
