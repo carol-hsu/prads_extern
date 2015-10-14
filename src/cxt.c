@@ -37,6 +37,11 @@ connection *cxt_new(packetinfo *pi)
 		ret = create_item((void *) &pkey, sizeof(prads_key), (void *) &cxt, sizeof(connection), flags, exp);
 	}
 
+	if (ret == DATA_WAIT) {
+		cxt->__pad__ = DATA_WAIT;
+		return cxt;
+	}
+
 	if (ret && cxt) {
 		return cxt;
 	}
@@ -96,6 +101,13 @@ int connection_tracking(packetinfo *pi)
 
 int cxt_update_client(connection *cxt, packetinfo *pi)
 {
+    if (cxt->__pad__ == DATA_WAIT) {
+        // ASYNC mode, we received wait. add packet to queue.
+        pi->cxt = cxt;
+        add_to_packlist(pi);
+        return SC_CLIENT;
+    }
+
     cxt->last_pkt_time = pi->pheader->ts.tv_sec;
 
     if(pi->tcph) cxt->s_tcpFlags |= pi->tcph->t_flags;
@@ -213,8 +225,14 @@ int cx_track(packetinfo *pi) {
             }
         }
     }
-    // bucket turned upside down didn't yeild anything. new connection
+    // boucket turned upside down didn't yeild anything. new connection
     cxt = cxt_new(pi);
+    if (cxt->__pad__ == DATA_WAIT) {
+    	// ASYNC mode, we received wait. add packet to queue.
+	pi->cxt = cxt;
+	add_to_packlist(pi);
+	return 1;
+    }
     log_connection(cxt, CX_NEW);
 
     /* * New connections are pushed on to the head of bucket[s_hash] */

@@ -196,7 +196,7 @@ int create_item(void* key, size_t nkey, void **data,
 		it = malloc(sizeof(item));
 		if (!it) {
 			printf("no space for data\n");
-			return 0;	
+			return NO_DATA;	
 		}
 		memset(it, 0 , sizeof(item));
 		pthread_mutex_init(&it->mutex, NULL);
@@ -216,7 +216,7 @@ int create_item(void* key, size_t nkey, void **data,
 	if (!it->key) {
 		pthread_mutex_unlock(&it->mutex);
 		printf("no space for data\n");
-		return 0;
+		return NO_DATA;
 	}
 
 	memcpy((char *) it->key, (char *) key, nkey);
@@ -263,7 +263,7 @@ int create_item(void* key, size_t nkey, void **data,
 			memcpy(it->temp_data, it->data, (size + sizeof(meta_data)));
 		}
 		freeReplyObject(reply);
-		ret = 1;
+		ret = DATA_READY;
 	}
 	
 	pthread_mutex_unlock(&client.passet[hash]->mutex);

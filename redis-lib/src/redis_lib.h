@@ -8,6 +8,10 @@
 #include <stdlib.h>
 #include <pthread.h>
 
+#define NO_DATA    0
+#define DATA_READY 1
+#define DATA_WAIT  2
+
 #define ASSET_HASH4(ip) ((ip) % BUCKET_SIZE)
 #define BUCKET_SIZE  31337
 

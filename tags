@@ -14,7 +14,7 @@ ARPOP_REQUEST	/home/ubuntu/prads_extern/src/prads.h	60;"	d
 ARPOP_RREPLY	/home/ubuntu/prads_extern/src/prads.h	63;"	d
 ARPOP_RREQUEST	/home/ubuntu/prads_extern/src/prads.h	62;"	d
 ASSET_ARP	/home/ubuntu/prads_extern/src/prads.h	48;"	d
-ASSET_HASH4	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	11;"	d
+ASSET_HASH4	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	15;"	d
 ASSET_HASH4	/home/ubuntu/prads_extern/src/assets.h	1;"	d
 ASSET_HASH6	/home/ubuntu/prads_extern/src/assets.h	3;"	d
 ASSET_TIMEOUT	/home/ubuntu/prads_extern/src/prads.h	40;"	d
@@ -51,7 +51,7 @@ BSTR_BS_BUFF_LENGTH_GET	/home/ubuntu/prads_extern/src/bstrlib.h	34;"	d
 BSTR_ERR	/home/ubuntu/prads_extern/src/bstrlib.h	32;"	d
 BSTR_OK	/home/ubuntu/prads_extern/src/bstrlib.h	33;"	d
 BS_BUFF_SZ	/home/ubuntu/prads_extern/src/bstrlib.c	1752;"	d	file:
-BUCKET_SIZE	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	12;"	d
+BUCKET_SIZE	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	16;"	d
 BUCKET_SIZE	/home/ubuntu/prads_extern/src/prads.h	41;"	d
 BWS_BUFF_SZ	/home/ubuntu/prads_extern/src/bstraux.c	979;"	d	file:
 CFCLEN	/home/ubuntu/prads_extern/src/bstrlib.c	1273;"	d	file:
@@ -112,6 +112,8 @@ CX_HUMAN	/home/ubuntu/prads_extern/src/cxt.h	/^enum { CX_NONE, CX_HUMAN, CX_NEW,
 CX_NEW	/home/ubuntu/prads_extern/src/cxt.h	/^enum { CX_NONE, CX_HUMAN, CX_NEW, CX_ENDED, CX_EXPIRE, CX_EXCESSIVE };$/;"	e	enum:__anon8
 CX_NONE	/home/ubuntu/prads_extern/src/cxt.h	/^enum { CX_NONE, CX_HUMAN, CX_NEW, CX_ENDED, CX_EXPIRE, CX_EXCESSIVE };$/;"	e	enum:__anon8
 ConnEntryLock	/home/ubuntu/prads_extern/src/prads.h	/^pthread_mutex_t ConnEntryLock;$/;"	v
+DATA_READY	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	12;"	d
+DATA_WAIT	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	13;"	d
 DEBUG_ON	/home/ubuntu/prads_extern/src/sys_func.h	18;"	d
 DEBUG_ON	/home/ubuntu/prads_extern/src/sys_func.h	25;"	d
 DEFAULT_NETS	/home/ubuntu/prads_extern/src/config.h	14;"	d
@@ -257,8 +259,8 @@ ISSET_CXT_DONT_CHECK_SERVER	/home/ubuntu/prads_extern/src/prads.h	545;"	d
 ISSET_DONT_CHECK_CLIENT	/home/ubuntu/prads_extern/src/prads.h	547;"	d
 ISSET_DONT_CHECK_SERVICE	/home/ubuntu/prads_extern/src/prads.h	546;"	d
 ISSET_SERVICE_UNKNOWN	/home/ubuntu/prads_extern/src/prads.h	548;"	d
-IS_COSET	/home/ubuntu/prads_extern/src/prads.h	844;"	d
-IS_CSSET	/home/ubuntu/prads_extern/src/prads.h	845;"	d
+IS_COSET	/home/ubuntu/prads_extern/src/prads.h	850;"	d
+IS_CSSET	/home/ubuntu/prads_extern/src/prads.h	851;"	d
 LOGDIR	/home/ubuntu/prads_extern/src/prads.h	167;"	d
 LOG_FIFO	/home/ubuntu/prads_extern/src/output-plugins/log.h	/^enum { LOG_STDOUT, LOG_FILE, LOG_FIFO, LOG_UNIFIED, LOG_SGUIL, LOG_RINGBUFFER, LOG_MAX } log_types;$/;"	e	enum:__anon9
 LOG_FILE	/home/ubuntu/prads_extern/src/output-plugins/log.h	/^enum { LOG_STDOUT, LOG_FILE, LOG_FIFO, LOG_UNIFIED, LOG_SGUIL, LOG_RINGBUFFER, LOG_MAX } log_types;$/;"	e	enum:__anon9
@@ -302,20 +304,21 @@ MY_GET32	/home/ubuntu/prads_extern/src/dump_dns.c	91;"	d	file:
 MY_MAXDNS	/home/ubuntu/prads_extern/src/sig_tcp.c	906;"	d	file:
 NORESPONSE	/home/ubuntu/prads_extern/src/dhcp.h	55;"	d
 NO_CONSISTENCY	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	NO_CONSISTENCY = 1,$/;"	e	enum:__anon5
+NO_DATA	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	11;"	d
 NULL_CXT	/home/ubuntu/prads_extern/src/output-plugins/log_fifo.c	/^static connection NULL_CXT;$/;"	v	file:
 OS_DHCP	/home/ubuntu/prads_extern/src/dhcp.c	143;"	d	file:
 PACKET_BIG	/home/ubuntu/prads_extern/src/prads.h	143;"	d
 PAYLOAD_MIN	/home/ubuntu/prads_extern/src/servicefp/servicefp.h	26;"	d
-PI_ECN	/home/ubuntu/prads_extern/src/prads.h	667;"	d
-PI_IP4	/home/ubuntu/prads_extern/src/prads.h	669;"	d
-PI_IP4DST	/home/ubuntu/prads_extern/src/prads.h	671;"	d
-PI_IP4SRC	/home/ubuntu/prads_extern/src/prads.h	670;"	d
-PI_IP6	/home/ubuntu/prads_extern/src/prads.h	673;"	d
-PI_IP6DST	/home/ubuntu/prads_extern/src/prads.h	675;"	d
-PI_IP6SRC	/home/ubuntu/prads_extern/src/prads.h	674;"	d
-PI_TCP_DP	/home/ubuntu/prads_extern/src/prads.h	678;"	d
-PI_TCP_SP	/home/ubuntu/prads_extern/src/prads.h	677;"	d
-PI_TOS	/home/ubuntu/prads_extern/src/prads.h	666;"	d
+PI_ECN	/home/ubuntu/prads_extern/src/prads.h	673;"	d
+PI_IP4	/home/ubuntu/prads_extern/src/prads.h	675;"	d
+PI_IP4DST	/home/ubuntu/prads_extern/src/prads.h	677;"	d
+PI_IP4SRC	/home/ubuntu/prads_extern/src/prads.h	676;"	d
+PI_IP6	/home/ubuntu/prads_extern/src/prads.h	679;"	d
+PI_IP6DST	/home/ubuntu/prads_extern/src/prads.h	681;"	d
+PI_IP6SRC	/home/ubuntu/prads_extern/src/prads.h	680;"	d
+PI_TCP_DP	/home/ubuntu/prads_extern/src/prads.h	684;"	d
+PI_TCP_SP	/home/ubuntu/prads_extern/src/prads.h	683;"	d
+PI_TOS	/home/ubuntu/prads_extern/src/prads.h	672;"	d
 PKT_DLEN	/home/ubuntu/prads_extern/src/sig_tcp.c	59;"	d	file:
 PKT_MAXPAY	/home/ubuntu/prads_extern/src/dhcp.c	15;"	d	file:
 PKT_MAXPAY	/home/ubuntu/prads_extern/src/sig_tcp.c	60;"	d	file:
@@ -364,8 +367,8 @@ REDIS_SUBSCRIBED	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.h	77;"
 RELEASE	/home/ubuntu/prads_extern/src/prads.h	35;"	d
 RESETFLAG	/home/ubuntu/prads_extern/src/sys_func.h	40;"	d
 RINGBUFFER_ITEMS	/home/ubuntu/prads_extern/src/output-plugins/log_ringbuffer.h	22;"	d
-SC_CLIENT	/home/ubuntu/prads_extern/src/prads.h	681;"	d
-SC_SERVER	/home/ubuntu/prads_extern/src/prads.h	682;"	d
+SC_CLIENT	/home/ubuntu/prads_extern/src/prads.h	687;"	d
+SC_SERVER	/home/ubuntu/prads_extern/src/prads.h	688;"	d
 SDS_LLSTR_SIZE	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/sds.c	300;"	d	file:
 SDS_MAX_PREALLOC	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/sds.h	34;"	d
 SEQUENTIAL_CONSISTENCY	/home/ubuntu/prads_extern/redis-lib/src/redis_lib.h	/^	SEQUENTIAL_CONSISTENCY = 4,$/;"	e	enum:__anon5
@@ -434,7 +437,7 @@ UNKNOWN	/home/ubuntu/prads_extern/src/prads.c	/^bstring UNKNOWN = & tUNKNOWN;$/;
 UU_DECODE_BYTE	/home/ubuntu/prads_extern/src/bstraux.c	491;"	d	file:
 UU_ENCODE_BYTE	/home/ubuntu/prads_extern/src/bstraux.c	711;"	d	file:
 UU_MAX_LINELEN	/home/ubuntu/prads_extern/src/bstraux.c	498;"	d	file:
-VEC_FILL	/home/ubuntu/prads_extern/src/cxt.c	454;"	d	file:
+VEC_FILL	/home/ubuntu/prads_extern/src/cxt.c	473;"	d	file:
 VERBOSE	/home/ubuntu/prads_extern/src/output-plugins/log.h	/^enum { VERBOSE = 0x01, FLAGS } log_flags;$/;"	e	enum:__anon10
 VERSION	/home/ubuntu/prads_extern/src/prads.h	37;"	d
 ZMALLOC_H	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/zmalloc.h	5;"	d
@@ -512,6 +515,7 @@ _mac_entry	/home/ubuntu/prads_extern/src/prads.h	/^typedef struct _mac_entry {$/
 _os_asset	/home/ubuntu/prads_extern/src/prads.h	/^typedef struct _os_asset {$/;"	s
 _output_plugin	/home/ubuntu/prads_extern/src/output-plugins/log.h	/^typedef struct _output_plugin {$/;"	s
 _packetinfo	/home/ubuntu/prads_extern/src/prads.h	/^typedef struct _packetinfo {$/;"	s
+_packetqueue	/home/ubuntu/prads_extern/src/prads.h	/^typedef struct _packetqueue {$/;"	s
 _port_t	/home/ubuntu/prads_extern/src/prads.h	/^typedef struct _port_t {$/;"	s
 _prads_stat	/home/ubuntu/prads_extern/src/prads.h	/^typedef struct _prads_stat {$/;"	s
 _redisContextConnectTcp	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/net.c	/^static int _redisContextConnectTcp(redisContext *c, const char *addr, int port,$/;"	f	file:
@@ -532,6 +536,7 @@ addWrite	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/async.h	/^        void
 add_asset	/home/ubuntu/prads_extern/src/assets.c	/^void add_asset(packetinfo *pi)$/;"	f
 add_known_services	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^void add_known_services(uint8_t proto, uint16_t port, const char *service_name)$/;"	f
 add_service_sig	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^int add_service_sig(signature *sig, signature **db)$/;"	f
+add_to_packlist	/home/ubuntu/prads_extern/src/prads.c	/^void add_to_packlist(packetinfo *pi) {$/;"	f
 addr	/home/ubuntu/prads_extern/src/prads.h	/^            uint32_t addr;$/;"	m	struct:_icmp_header::__anon13::ra_addr
 addr	/home/ubuntu/prads_extern/src/prads.h	/^        struct in6_addr addr;$/;"	m	union:_fmask::__anon18	typeref:struct:_fmask::__anon18::in6_addr
 addr	/home/ubuntu/prads_extern/src/prads.h	/^    struct in6_addr addr;$/;"	m	struct:_fmask	typeref:struct:_fmask::in6_addr
@@ -1175,6 +1180,7 @@ hash_mac	/home/ubuntu/prads_extern/src/mac.h	/^static inline uint32_t hash_mac(c
 head	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/async.h	/^    redisCallback *head, *tail;$/;"	m	struct:redisCallbackList
 head	/home/ubuntu/prads_extern/src/cserialization-0.4/demo.h	/^  int *head, *tail;$/;"	m	struct:ring_buffer
 head	/home/ubuntu/prads_extern/src/output-plugins/log_ringbuffer.h	/^    unsigned int head;$/;"	m	struct:log_ringbuffer
+head	/home/ubuntu/prads_extern/src/prads.h	/^packetq    *head;$/;"	v
 head_tra	/home/ubuntu/prads_extern/src/prads.h	/^ser_tra_t *tra0,*head_tra;$/;"	v
 hex2mac	/home/ubuntu/prads_extern/src/sys_func.c	/^char *hex2mac(const uint8_t *mac)$/;"	f
 hex_digit_to_int	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/sds.c	/^int hex_digit_to_int(char c) {$/;"	f
@@ -1301,7 +1307,7 @@ line	/home/ubuntu/prads_extern/src/prads.h	/^    uint32_t line;              \/*
 list_type_sizes	/home/ubuntu/prads_extern/src/cserialization-0.4/demo.c	/^void list_type_sizes()$/;"	f
 load_bpf	/home/ubuntu/prads_extern/src/prads.c	/^int load_bpf(globalconfig* conf, const char* file)$/;"	f
 load_dhcp_sigs	/home/ubuntu/prads_extern/src/dhcp.c	/^int load_dhcp_sigs(const char *file, dhcp_fp_entry **dhcpsp[], int hashsize)$/;"	f
-load_foo	/home/ubuntu/prads_extern/src/prads.c	1442;"	d	file:
+load_foo	/home/ubuntu/prads_extern/src/prads.c	1443;"	d	file:
 load_known_ports_file	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^void load_known_ports_file(char *filename, port_t *lports)$/;"	f
 load_mac	/home/ubuntu/prads_extern/src/mac.c	/^int load_mac(const char *file, mac_entry **sigp[], int hashsize)$/;"	f
 load_servicefp_file	/home/ubuntu/prads_extern/src/servicefp/servicefp.c	/^int load_servicefp_file(char *sigfile, signature **db, int len)$/;"	f
@@ -1393,6 +1399,7 @@ next	/home/ubuntu/prads_extern/src/cserialization-0.4/example3.c	/^  node_t* nex
 next	/home/ubuntu/prads_extern/src/cserialization-0.4/serialize.h	/^  ser_field_t * next;$/;"	m	struct:ser_field_t
 next	/home/ubuntu/prads_extern/src/cserialization-0.4/serialize.h	/^  ser_subst_ptr_t * next;$/;"	m	struct:ser_subst_ptr_t
 next	/home/ubuntu/prads_extern/src/cserialization-0.4/serialize.h	/^  ser_tra_t * next;$/;"	m	struct:ser_tra_t
+next	/home/ubuntu/prads_extern/src/prads.h	/^	struct _packetqueue *next;$/;"	m	struct:_packetqueue	typeref:struct:_packetqueue::_packetqueue
 next	/home/ubuntu/prads_extern/src/prads.h	/^    struct   _connection *next;$/;"	m	struct:_connection	typeref:struct:_connection::_connection
 next	/home/ubuntu/prads_extern/src/prads.h	/^    struct _asset *next;        \/* Next ip_asset structure *\/$/;"	m	struct:_asset	typeref:struct:_asset::_asset
 next	/home/ubuntu/prads_extern/src/prads.h	/^    struct _dhcp_fp_entry *next;$/;"	m	struct:_dhcp_fp_entry	typeref:struct:_dhcp_fp_entry::_dhcp_fp_entry
@@ -1458,10 +1465,12 @@ p_ringbuffer	/home/ubuntu/prads_extern/src/output-plugins/log_ringbuffer.c	/^out
 p_sguil	/home/ubuntu/prads_extern/src/output-plugins/log_sguil.c	/^output_plugin p_sguil = {$/;"	v
 p_stdout	/home/ubuntu/prads_extern/src/output-plugins/log_stdout.c	/^output_plugin p_stdout = {$/;"	v
 p_str	/home/ubuntu/prads_extern/src/cserialization-0.4/serialize.h	/^  char * p_str;$/;"	m	struct:ser_job_t
+packet	/home/ubuntu/prads_extern/src/prads.h	/^	uint8_t *packet;$/;"	m	struct:_packetqueue
 packet	/home/ubuntu/prads_extern/src/prads.h	/^    const uint8_t *  packet;         \/* Unsigned char pointer to raw packet *\/$/;"	m	struct:_packetinfo
 packet_bytes	/home/ubuntu/prads_extern/src/prads.h	/^    uint16_t        packet_bytes;   \/* Lenght of IP payload in packet *\/$/;"	m	struct:_packetinfo
 packet_count	/home/ubuntu/prads_extern/src/sig_tcp.c	/^uint32_t packet_count;$/;"	v
 packetinfo	/home/ubuntu/prads_extern/src/prads.h	/^} packetinfo;$/;"	t	typeref:struct:_packetinfo
+packetq	/home/ubuntu/prads_extern/src/prads.h	/^} packetq;$/;"	t	typeref:struct:_packetqueue
 parent	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.h	/^    struct redisReadTask *parent; \/* parent task *\/$/;"	m	struct:redisReadTask	typeref:struct:redisReadTask::redisReadTask
 parm	/home/ubuntu/prads_extern/src/bstraux.c	/^    void * parm;     \/* The stream handle for core stream        *\/$/;"	m	struct:bwriteStream	file:
 parm	/home/ubuntu/prads_extern/src/bstrlib.c	/^	void * parm;		\/* The stream handle for core stream *\/$/;"	m	struct:bStream	file:
@@ -1500,6 +1509,7 @@ payload	/home/ubuntu/prads_extern/src/prads.h	/^    const uint8_t   *payload;   
 payload_dump	/home/ubuntu/prads_extern/src/sig_tcp.c	/^    full_dump, use_fuzzy, payload_dump;$/;"	v	file:
 pcap_file	/home/ubuntu/prads_extern/src/config.h	/^    char       *pcap_file;              \/* Filename to pcap too read *\/$/;"	m	struct:_globalconfig
 person_t	/home/ubuntu/prads_extern/src/cserialization-0.4/example2.c	/^} person_t;$/;"	t	typeref:struct:__anon7	file:
+pheader	/home/ubuntu/prads_extern/src/prads.h	/^	struct pcap_pkthdr *pheader;$/;"	m	struct:_packetqueue	typeref:struct:_packetqueue::pcap_pkthdr
 pheader	/home/ubuntu/prads_extern/src/prads.h	/^    const struct pcap_pkthdr *pheader; \/* Libpcap packet header struct pointer *\/$/;"	m	struct:_packetinfo	typeref:struct:_packetinfo::pcap_pkthdr
 pidfile	/home/ubuntu/prads_extern/src/config.h	/^    char        *pidfile;               \/* pidfile *\/$/;"	m	struct:_globalconfig
 plen	/home/ubuntu/prads_extern/src/prads.h	/^    uint32_t        plen;           \/* transport payload length *\/$/;"	m	struct:_packetinfo
@@ -1559,6 +1569,7 @@ processBulkItem	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^sta
 processItem	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^static int processItem(redisReader *r) {$/;"	f	file:
 processLineItem	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^static int processLineItem(redisReader *r) {$/;"	f	file:
 processMultiBulkItem	/home/ubuntu/prads_extern/redis-lib/deps/hiredis/hiredis.c	/^static int processMultiBulkItem(redisReader *r) {$/;"	f	file:
+process_pack_list	/home/ubuntu/prads_extern/src/prads.c	/^void process_pack_list() {$/;"	f
 prot	/home/ubuntu/prads_extern/src/prads.h	/^	uint8_t  prot;$/;"	m	struct:prads_key_t
 proto	/home/ubuntu/prads_extern/src/prads.h	/^    uint8_t         proto;          \/* IP protocoll type *\/    $/;"	m	struct:_packetinfo
 proto	/home/ubuntu/prads_extern/src/prads.h	/^    uint8_t     proto;          \/* Flags: TCP=0x01 UDP=0x02 *\/$/;"	m	struct:_servicelist

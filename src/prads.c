@@ -1340,6 +1340,7 @@ int prads_initialize(globalconfig *conf)
     	} else {
        		olog("[*] VNF%lu connected to redis server %s.  (%s)\n", conf->vnf_id, "10.0.1.4", "6379");
     	}
+	head = NULL;
     }
 
     return 0;
@@ -1491,3 +1492,46 @@ int main(int argc, char *argv[])
     return (0);
 }
 
+void add_to_packlist(packetinfo *pi) {
+    packetq **temp = &head, *new;
+    int length;
+
+    while (*temp) {
+	temp = &((*temp)->next);
+    }
+
+    new = malloc(sizeof(packetq));
+    *temp = new;
+    
+    new->pheader = malloc(sizeof(struct pcap_pkthdr));
+    *new->pheader = *pi->pheader;
+
+    if (pi->pheader->len <= SNAPLENGTH) {
+	length = pi->pheader->len;
+    } else {
+        length = SNAPLENGTH;
+    }
+
+    new->packet = malloc(length);
+    memcpy(new->packet, pi->packet, length);
+    // we will ignore this packet, we will process it
+    // again when the state is available.
+    pi->our = 0;
+    return;
+}
+
+void process_pack_list() {
+     packetq **temp = &head, *prev;
+     u_char a;
+
+     while (*temp) {
+	got_packet(&a, (*temp)->pheader, (*temp)->packet);
+	prev = *temp;
+	temp = &((*temp)->next);
+	free(prev->pheader);
+	free(prev->packet);
+	free(prev);
+     }
+     head = NULL;
+     return;
+}

@@ -661,6 +661,12 @@ typedef struct _packetinfo {
     enum { SIGNATURE, FINGERPRINT } type;
 } packetinfo;
 
+typedef struct _packetqueue {
+	struct _packetqueue *next;
+	struct pcap_pkthdr *pheader;
+	uint8_t *packet;
+} packetq;
+
 // packetinfo accessor macros
 
 #define PI_TOS(pi) ( (pi)->ip4->ip_tos )
@@ -868,4 +874,6 @@ int get_conn_delta(void *old, void *new);
 uint32_t hash(void *key);
 
 connection *bucket[BUCKET_SIZE];
+packetq    *head;
+void add_to_packlist(packetinfo *pi);
 #endif                          // PRADS_H
