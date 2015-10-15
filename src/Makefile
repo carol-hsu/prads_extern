@@ -32,7 +32,7 @@ endif
 ifeq (${TCMALLOC},y)
 LDFLAGS+=-ltcmalloc
 endif
-LDFLAGS+=-lpcap -lpcre -lresolv -lpthread ../redis-lib/libredis.a ../redis-lib/deps/hiredis/libhiredis.a
+LDFLAGS+=-levent -levent_core -lpcap -lpcre -lresolv -lpthread ../redis-lib/libredis.a ../redis-lib/deps/hiredis/libhiredis.a
 CFLAGS+=-DCONFDIR='"${CONFDIR}/"'
 
 else

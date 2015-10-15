@@ -3,13 +3,15 @@
 
 #include "../deps/hiredis/hiredis.h"
 #include "../deps/hiredis/async.h"
+#include "../deps/hiredis/adapters/libevent.h"
 #include <string.h>
+#include <signal.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <pthread.h>
 
-#define NO_DATA    0
+#define DATA_NO    0
 #define DATA_READY 1
 #define DATA_WAIT  2
 
@@ -69,6 +71,7 @@ typedef struct redis_client_t {
 	uint32_t	 flags;
 	uint32_t	 time;
 	uint32_t 	 vnf_id;
+	struct event_base *base;
 	// hash
 } redis_client;
 

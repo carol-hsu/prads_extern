@@ -27,7 +27,9 @@ static void *thread_start(void *arg)
 	sleep(10);
 
 	while (1) {
+		event_base_dispatch(client.base);
 		sleep(client.time);
+		event_base_dispatch(client.base);
 		
 		for (i=0; i<BUCKET_SIZE; i++) {
 			it = client.passet[i];
@@ -128,10 +130,27 @@ static void *thread_start(void *arg)
 	}
 }
 
+void connectCallback(const redisAsyncContext *c, int status) {
+    if (status != REDIS_OK) {
+        printf("Error: %s\n", c->errstr);
+        return;
+    }
+    printf("Connected...\n");
+}
+
+void disconnectCallback(const redisAsyncContext *c, int status) {
+    if (status != REDIS_OK) {
+        printf("Error: %s\n", c->errstr);
+        return;
+    }
+    printf("Disconnected...\n");
+}
+
 redis_client *create_cache(char *host, int port, uint32_t vnf_id,
 			   consistency_type con, int time) {
 	int i;
 
+        client.base = event_base_new();
 	client.vnf_id  = vnf_id;
 	client.context = createClient(host, port);
 	client.flags |= con;
@@ -143,11 +162,15 @@ redis_client *create_cache(char *host, int port, uint32_t vnf_id,
 	}
 
 	client.async_context = redisAsyncConnect(host, port);
+	signal(SIGPIPE, SIG_IGN);
 
 	if (NULL == client.async_context) {
 		printf("No connection to server \n");
 		return NULL;
 	}
+	redisLibeventAttach(client.async_context, client.base);
+    	redisAsyncSetConnectCallback(client.async_context, connectCallback);
+    	redisAsyncSetDisconnectCallback(client.async_context, disconnectCallback);
 
 	printf("Size of metadata %lu", sizeof(meta_data));
 
@@ -205,7 +228,7 @@ int create_item(void* key, size_t nkey, void **data,
 		it = malloc(sizeof(item));
 		if (!it) {
 			printf("no space for data\n");
-			return NO_DATA;	
+			return DATA_NO;	
 		}
 		memset(it, 0 , sizeof(item));
 		pthread_mutex_init(&it->mutex, NULL);
@@ -225,7 +248,7 @@ int create_item(void* key, size_t nkey, void **data,
 	if (!it->key) {
 		pthread_mutex_unlock(&it->mutex);
 		printf("no space for data\n");
-		return NO_DATA;
+		return DATA_NO;
 	}
 
 	memcpy((char *) it->key, (char *) key, nkey);
