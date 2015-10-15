@@ -866,14 +866,17 @@ typedef struct prads_key_t {
 
 pthread_mutex_t ConnEntryLock;
 pthread_mutex_t AssetEntryLock;
+pthread_mutex_t PacketLock;
 
 int get_key_value(void *key, char **data);
 int put_value_struct(char *data, void *c);
 int eventual_cons(void *old, void *new);
 int get_conn_delta(void *old, void *new);
 uint32_t hash(void *key);
+int async_app_handle(void *key);
 
 connection *bucket[BUCKET_SIZE];
 packetq    *head;
 void add_to_packlist(packetinfo *pi);
+void process_pack_list();
 #endif                          // PRADS_H

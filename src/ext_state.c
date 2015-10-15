@@ -184,6 +184,10 @@ int get_key_value(void *key, char **data)
 
     if (curr != NULL)
     {
+	    if (curr->__pad__ == DATA_WAIT) {
+		pthread_mutex_unlock(&ConnEntryLock);
+		return 1;
+	    }
 	    // Prepare to send perflow state
             int hashkey = curr->cxid;
 
@@ -262,3 +266,6 @@ uint32_t hash(void *key) {
    return hash;
 }
 
+int async_app_handle(void *key) {
+    process_pack_list();
+}

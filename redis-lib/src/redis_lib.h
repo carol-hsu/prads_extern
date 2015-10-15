@@ -2,6 +2,7 @@
 #define __REDIS_LIB_H
 
 #include "../deps/hiredis/hiredis.h"
+#include "../deps/hiredis/async.h"
 #include <string.h>
 #include <stdio.h>
 #include <stdint.h>
@@ -27,12 +28,15 @@ typedef int (*put_key_val) (char *, void *);
 typedef int (*get_delta) (void *, void *);
 typedef int (*eventual_con) (void *, void *);
 typedef uint32_t (*key_hash) (void *key);
+typedef int (*async_handle) (void *key);
 
 typedef struct meta_data_t {
 	uint64_t vnf_id;
 	uint64_t version;
 	uint64_t lock;
 } meta_data;
+
+struct timeval start_deserialize, end_deserialize;
 
 typedef struct item_t {
   	struct item_t *next;
@@ -52,6 +56,7 @@ typedef struct item_t {
 
 typedef struct redis_client_t {
 	redisContext 	*context;
+	redisAsyncContext	*async_context;
 	item 		*passet[BUCKET_SIZE];
 	char 		*key_type;
 	size_t		 key_size;
@@ -60,6 +65,7 @@ typedef struct redis_client_t {
 	key_hash         hash;
 	eventual_con     ev_con;
 	get_delta        delta;
+	async_handle     handle;
 	uint32_t	 flags;
 	uint32_t	 time;
 	uint32_t 	 vnf_id;
@@ -88,10 +94,10 @@ redisReply* redis_syncGet(redisContext *c, char *key, size_t key_len);
 
 // Syncronous Get and Set methods.
 int redis_asyncSet(char *key, int key_len, char *value, int value_len);
-int redis_asyncGet(char *key, int key_len, char *value, int *value_len);
+int redis_asyncGet(redisAsyncContext *c, char *key, int key_len, void *item);
 
 int destroyClient(redisContext *context);
 
-int register_encode_decode(get_key_val, put_key_val, key_hash, eventual_con, get_delta);
+int register_encode_decode(get_key_val, put_key_val, key_hash, eventual_con, get_delta, async_handle);
 
 #endif

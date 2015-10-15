@@ -103,6 +103,7 @@ inline int filter_packet(const int af, void *ip);
 void got_packet(u_char * useless, const struct pcap_pkthdr *pheader,
                 const u_char * packet)
 {
+    pthread_mutex_lock(&PacketLock);
     config.pr_s.got_packets++;
     packetinfo pstruct = {0};
     packetinfo *pi = &pstruct;
@@ -138,6 +139,7 @@ void got_packet(u_char * useless, const struct pcap_pkthdr *pheader,
     if (!pi->our) vlog(0x3, "Not our network packet. Tracked, but not logged.\n");
 #endif
     inpacket = 0;
+    pthread_mutex_unlock(&PacketLock);
     return;
 }
 
@@ -1332,8 +1334,9 @@ int prads_initialize(globalconfig *conf)
         pthread_mutex_init(&ConnEntryLock, NULL);
         // Asset Table Lock
         pthread_mutex_init(&AssetEntryLock, NULL);
+        pthread_mutex_init(&PacketLock, NULL);
         setup_serialize_translators();    
-	register_encode_decode(get_key_value, put_value_struct, hash, eventual_cons, get_conn_delta);
+	register_encode_decode(get_key_value, put_value_struct, hash, eventual_cons, get_conn_delta, async_app_handle);
     	conf->context = create_cache(REDIS_HOST, REDIS_PORT, conf->vnf_id, NO_CONSISTENCY | ASYNC, 5);
     	if (NULL == conf->context) {
        		olog("[*] Unable to connect to redis server %s.  (%s)\n", "10.0.1.4", "6379");

@@ -2,12 +2,14 @@
 
 pthread_t thread_id;
 
-int register_encode_decode(get_key_val get, put_key_val put, key_hash hash, eventual_con ev_con, get_delta delta) {
+int register_encode_decode(get_key_val get, put_key_val put, key_hash hash, 
+			   eventual_con ev_con, get_delta delta, async_handle handle) {
 	client.get = get;
 	client.put = put;
 	client.hash = hash;
 	client.ev_con = ev_con;
 	client.delta = delta;
+	client.handle = handle;
 }
 
 static void *thread_start(void *arg)
@@ -58,7 +60,6 @@ static void *thread_start(void *arg)
 						//printf("get lock %lld\n", (long long)*(p+16));
 						//printf("set total length %zu\n", total_size);
 
-					
 						freeReplyObject(reply);
 					}
 				} else if (client.flags & EVENTUAL_CONSISTENCY) {
@@ -140,6 +141,14 @@ redis_client *create_cache(char *host, int port, uint32_t vnf_id,
 		printf("No connection to server \n");
 		return NULL;
 	}
+
+	client.async_context = redisAsyncConnect(host, port);
+
+	if (NULL == client.async_context) {
+		printf("No connection to server \n");
+		return NULL;
+	}
+
 	printf("Size of metadata %lu", sizeof(meta_data));
 
 	for (i=0; i<BUCKET_SIZE; i++) {
@@ -233,10 +242,22 @@ int create_item(void* key, size_t nkey, void **data,
 	mdata->lock = 0;
 
 	// if the data is present in key-value store, update the cache.
-        struct timeval start_deserialize, end_deserialize;
         gettimeofday(&start_deserialize, NULL);
 
-	reply = redis_syncGet(client.context, (char *) it->key, nkey);
+	if (!(client.flags & ASYNC)) {
+		reply = redis_syncGet(client.context, (char *) it->key, nkey);
+	} else {
+		redis_asyncGet(client.async_context, (char *) it->key, nkey, it);
+
+   		gettimeofday(&end_deserialize, NULL);
+   		long sec = end_deserialize.tv_sec - start_deserialize.tv_sec;
+   		long usec = end_deserialize.tv_usec - start_deserialize.tv_usec;
+   		long total = (sec * 1000 * 1000) + usec;
+   		printf("STATS: PERFLOW: State Get Timestamp = %ldus\n", total);
+
+		pthread_mutex_unlock(&client.passet[hash]->mutex);
+		return DATA_WAIT;
+	}
 
 	if (reply) {
    		gettimeofday(&end_deserialize, NULL);
@@ -363,8 +384,50 @@ int redis_asyncSet(char *key, int key_len, char *value, int value_len) {
 	return 0;
 }
 
-int redis_asyncGet(char *key, int key_len, char *value, int *value_len) {
-	return 0;
+void state_getcb(redisAsyncContext *c, void *r, void *privdata) {
+	redisReply *reply = r;
+	uint64_t vnf_id, version, lock, p_size, total_size;
+	char *p;
+	item *it = (item *) privdata;
+	uint32_t hash = client.hash(it->key);
+
+    	if (reply == NULL) return;
+
+	if (reply->type != REDIS_REPLY_NIL) {
+   		gettimeofday(&end_deserialize, NULL);
+   		long sec = end_deserialize.tv_sec - start_deserialize.tv_sec;
+   		long usec = end_deserialize.tv_usec - start_deserialize.tv_usec;
+   		long total = (sec * 1000 * 1000) + usec;
+   		printf("STATS: PERFLOW: State Get Timestamp = %ldus\n", total);
+
+        	total_size = reply->len;
+        	p_size = total_size - sizeof(meta_data);
+        	p = ((char *) reply->str) + p_size;
+
+        	vnf_id = (uint64_t) *(p);
+        	version = (uint64_t) *(p + 8);
+        	lock = (uint64_t) *(p + 16);
+
+        	*p = '\0';
+
+		pthread_mutex_lock(&client.passet[hash]->mutex);
+        	client.put(reply->str, (void *) it->data);
+		pthread_mutex_unlock(&client.passet[hash]->mutex);
+	} else {
+		memset(it->data, 0, it->size);
+	}
+	freeReplyObject(reply);
+	client.handle(it->key);
+}
+
+int redis_asyncGet(redisAsyncContext *c, char *key, int key_len, void *item) {
+        if ((!key) || (!key_len)) {
+                return 0;
+        }
+
+        redisAsyncCommand(c, state_getcb, item, "GET %b", key, (size_t) key_len);
+
+	return 1;
 }
 
 int destroyClient(redisContext *context) {
