@@ -1,15 +1,24 @@
 #include "redis_lib.h"
 
-pthread_t thread_id;
+pthread_t thread_id1;
+pthread_t thread_id2;
 
-int register_encode_decode(get_key_val get, put_key_val put, key_hash hash, 
-			   eventual_con ev_con, get_delta delta, async_handle handle) {
+int register_encode_decode(get_key_val get, put_key_val put, key_hash hash,
+			   eventual_con ev_con, get_delta delta, async_handle handle,
+			   clear_waiting cwait) {
 	client.get = get;
 	client.put = put;
 	client.hash = hash;
 	client.ev_con = ev_con;
 	client.delta = delta;
 	client.handle = handle;
+	client.cwait = cwait;
+}
+
+static void *thread_event(void *arg) {
+	while (1) {
+		event_base_dispatch(client.base);
+	}
 }
 
 static void *thread_start(void *arg)
@@ -27,9 +36,7 @@ static void *thread_start(void *arg)
 	sleep(10);
 
 	while (1) {
-		event_base_dispatch(client.base);
 		sleep(client.time);
-		event_base_dispatch(client.base);
 		
 		for (i=0; i<BUCKET_SIZE; i++) {
 			it = client.passet[i];
@@ -181,7 +188,8 @@ redis_client *create_cache(char *host, int port, uint32_t vnf_id,
 			pthread_mutex_init(&client.passet[i]->mutex, NULL);
 		}
 	}
-	pthread_create(&thread_id, NULL, &thread_start, NULL);
+	pthread_create(&thread_id1, NULL, &thread_start, NULL);
+	pthread_create(&thread_id2, NULL, &thread_event, NULL);
 	return &client;
 }
 
@@ -437,7 +445,13 @@ void state_getcb(redisAsyncContext *c, void *r, void *privdata) {
         	client.put(reply->str, (void *) it->data);
 		pthread_mutex_unlock(&client.passet[hash]->mutex);
 	} else {
-		memset(it->data, 0, it->size);
+   		gettimeofday(&end_deserialize, NULL);
+   		long sec = end_deserialize.tv_sec - start_deserialize.tv_sec;
+   		long usec = end_deserialize.tv_usec - start_deserialize.tv_usec;
+   		long total = (sec * 1000 * 1000) + usec;
+   		printf("STATS: PERFLOW: State Get Timestamp = %ldus\n", total);
+		//memset(it->data, 0, it->size);
+		client.cwait(it->data);
 	}
 	freeReplyObject(reply);
 	client.handle(it->key);

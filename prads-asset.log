@@ -81,3 +81,9 @@
 10.0.1.4,0,80,6,CLIENT,[unknown:@www],0,1444765470
 10.0.1.4,0,55242,6,SYN,[S20:64:1:60:M1360,S,T,N,W7:.:unknown:unknown:link:(Google/AOL):uptime:132hrs],0,1444765669
 10.0.1.4,0,80,6,CLIENT,[unknown:@www],0,1444765669
+10.0.1.4,0,55584,6,SYN,[S20:64:1:60:M1360,S,T,N,W7:.:unknown:unknown:link:(Google/AOL):uptime:246hrs],0,1444929596
+10.0.1.4,0,55587,6,SYN,[S20:64:1:60:M1360,S,T,N,W7:.:unknown:unknown:link:(Google/AOL):uptime:246hrs],0,1444930283
+10.0.1.4,0,55589,6,SYN,[S20:64:1:60:M1360,S,T,N,W7:.:unknown:unknown:link:(Google/AOL):uptime:247hrs],0,1444931607
+10.0.1.4,0,55590,6,SYN,[S20:64:1:60:M1360,S,T,N,W7:.:unknown:unknown:link:(Google/AOL):uptime:247hrs],0,1444931670
+10.0.1.8,0,22,6,FIN,[313:64:1:52:N,N,T:ATFN:unknown:unknown:uptime:1331hrs],0,1444958981
+10.0.1.5,0,6379,6,SYNACK,[28960:64:1:60:M1460,S,T,N,W7:ZAT:unknown:unknown:link:ethernet/modem:uptime:2120hrs],0,1444959435

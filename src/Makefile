@@ -1,7 +1,7 @@
 #Makefile
 #CC=gcc
 UNAME := $(shell uname -s)
-CFLAGS+=-g -O3
+CFLAGS+=-g
 
 # for finding static libraries
 LIBDIR=/usr/lib/x86_64-linux-gnu
@@ -32,7 +32,7 @@ endif
 ifeq (${TCMALLOC},y)
 LDFLAGS+=-ltcmalloc
 endif
-LDFLAGS+=-levent -levent_core -lpcap -lpcre -lresolv -lpthread ../redis-lib/libredis.a ../redis-lib/deps/hiredis/libhiredis.a
+LDFLAGS+=-lpcap -lpcre -lresolv -lpthread ../redis-lib/libredis.a ../redis-lib/deps/hiredis/libhiredis.a ${LIBDIR}/libevent.a
 CFLAGS+=-DCONFDIR='"${CONFDIR}/"'
 
 else

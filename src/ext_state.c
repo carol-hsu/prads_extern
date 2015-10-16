@@ -269,3 +269,8 @@ uint32_t hash(void *key) {
 int async_app_handle(void *key) {
     process_pack_list();
 }
+
+int app_cwait (void *data) {
+	connection *curr = (connection *) data;
+	curr->__pad__ = 0;
+}

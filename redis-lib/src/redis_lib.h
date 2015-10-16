@@ -31,6 +31,7 @@ typedef int (*get_delta) (void *, void *);
 typedef int (*eventual_con) (void *, void *);
 typedef uint32_t (*key_hash) (void *key);
 typedef int (*async_handle) (void *key);
+typedef int (*clear_waiting) (void *data);
 
 typedef struct meta_data_t {
 	uint64_t vnf_id;
@@ -68,6 +69,7 @@ typedef struct redis_client_t {
 	eventual_con     ev_con;
 	get_delta        delta;
 	async_handle     handle;
+	clear_waiting    cwait;
 	uint32_t	 flags;
 	uint32_t	 time;
 	uint32_t 	 vnf_id;
@@ -101,6 +103,6 @@ int redis_asyncGet(redisAsyncContext *c, char *key, int key_len, void *item);
 
 int destroyClient(redisContext *context);
 
-int register_encode_decode(get_key_val, put_key_val, key_hash, eventual_con, get_delta, async_handle);
+int register_encode_decode(get_key_val, put_key_val, key_hash, eventual_con, get_delta, async_handle, clear_waiting);
 
 #endif

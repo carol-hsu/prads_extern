@@ -1336,8 +1336,8 @@ int prads_initialize(globalconfig *conf)
         pthread_mutex_init(&AssetEntryLock, NULL);
         pthread_mutex_init(&PacketLock, NULL);
         setup_serialize_translators();    
-	register_encode_decode(get_key_value, put_value_struct, hash, eventual_cons, get_conn_delta, async_app_handle);
-    	conf->context = create_cache(REDIS_HOST, REDIS_PORT, conf->vnf_id, NO_CONSISTENCY | ASYNC, 5);
+	register_encode_decode(get_key_value, put_value_struct, hash, eventual_cons, get_conn_delta, async_app_handle, app_cwait);
+    	conf->context = create_cache(REDIS_HOST, REDIS_PORT, conf->vnf_id, NO_CONSISTENCY, 5);
     	if (NULL == conf->context) {
        		olog("[*] Unable to connect to redis server %s.  (%s)\n", "10.0.1.4", "6379");
     	} else {
@@ -1507,6 +1507,7 @@ void add_to_packlist(packetinfo *pi) {
     *temp = new;
     
     new->pheader = malloc(sizeof(struct pcap_pkthdr));
+    new->next = NULL;
     *new->pheader = *pi->pheader;
 
     if (pi->pheader->len <= SNAPLENGTH) {
@@ -1520,6 +1521,7 @@ void add_to_packlist(packetinfo *pi) {
     // we will ignore this packet, we will process it
     // again when the state is available.
     pi->our = 0;
+    async_packet_count++;
     return;
 }
 

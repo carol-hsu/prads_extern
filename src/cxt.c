@@ -39,10 +39,9 @@ connection *cxt_new(packetinfo *pi)
 
 	if (ret == DATA_WAIT) {
 		cxt->__pad__ = DATA_WAIT;
-		return cxt;
 	}
 
-	if (ret && cxt) {
+	if ((ret == DATA_READY) && cxt) {
 		return cxt;
 	}
 
@@ -227,13 +226,9 @@ int cx_track(packetinfo *pi) {
     }
     // boucket turned upside down didn't yeild anything. new connection
     cxt = cxt_new(pi);
-    if (cxt->__pad__ == DATA_WAIT) {
-    	// ASYNC mode, we received wait. add packet to queue.
-	pi->cxt = cxt;
-	add_to_packlist(pi);
-	return 1;
+    if (cxt->__pad__ != DATA_WAIT) {
+    	log_connection(cxt, CX_NEW);
     }
-    log_connection(cxt, CX_NEW);
 
     /* * New connections are pushed on to the head of bucket[s_hash] */
     cxt->next = head;
@@ -243,6 +238,10 @@ int cx_track(packetinfo *pi) {
     }
     bucket[hash] = cxt;
     pi->cxt = cxt;
+    if (cxt->__pad__ == DATA_WAIT) {
+    	// ASYNC mode, we received wait. add packet to queue.
+	add_to_packlist(pi);
+    }
     pthread_mutex_unlock(&ConnEntryLock);
 
     /* * Return value should be 1, telling to do client service fingerprinting */

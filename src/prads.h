@@ -224,6 +224,8 @@ typedef struct _ether_header {
 
 } ether_header;
 
+static uint64_t async_packet_count;
+
 typedef struct _arphdr {
     uint16_t ar_hrd;            /* Format of hardware address.  */
     uint16_t ar_pro;            /* Format of protocol address.  */
@@ -874,6 +876,7 @@ int eventual_cons(void *old, void *new);
 int get_conn_delta(void *old, void *new);
 uint32_t hash(void *key);
 int async_app_handle(void *key);
+int app_cwait(void *data);
 
 connection *bucket[BUCKET_SIZE];
 packetq    *head;
