@@ -41,6 +41,8 @@ typedef struct meta_data_t {
 
 struct timeval start_deserialize, end_deserialize;
 
+#define ITEM_WAITING 1
+
 typedef struct item_t {
   	struct item_t *next;
   	struct item_t *prev;
@@ -74,6 +76,7 @@ typedef struct redis_client_t {
 	uint32_t	 time;
 	uint32_t 	 vnf_id;
 	struct event_base *base;
+	char             wait;
 	// hash
 } redis_client;
 
@@ -87,6 +90,8 @@ void destroy_cache(redis_client *client);
 // create item, hash item and update local cache with the data 
 int create_item(void* key, size_t nkey, void **data,
 		  size_t size, uint32_t flags, time_t exp);
+
+int unlock_and_update_item(void* key);
 
 int free_item(void* key, size_t nkey);
 

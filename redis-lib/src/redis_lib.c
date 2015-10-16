@@ -30,13 +30,14 @@ static void *thread_start(void *arg)
 	redisReply *reply;
 	size_t total_size, p_size;
 	char m[24];
-	uint64_t vnf_id, version;
+	uint64_t vnf_id, version, lock;
 	char temp[1024];
 
 	sleep(10);
 
 	while (1) {
-		sleep(client.time);
+		if (!client.wait)
+			sleep(client.time);
 		
 		for (i=0; i<BUCKET_SIZE; i++) {
 			it = client.passet[i];
@@ -109,9 +110,48 @@ static void *thread_start(void *arg)
                                                 }
 					}
 				} else if (client.flags & SEQUENTIAL_CONSISTENCY) {
+                                        if (reply) {
+                                                // check the version here vs the version available in store.
+                                                // Use the information to just update the delta.
+                                                //printf("Data Available \n");
+                                                total_size = reply->len;
+                                                p_size = total_size - sizeof(meta_data);
+                                                p = ((char *) reply->str) + p_size;
+
+                                                vnf_id = (uint64_t) *(p);
+                                                version = (uint64_t) *(p + 8);
+                                                lock = (uint64_t) *(p + 16);
+
+                                                if ((vnf_id != client.vnf_id) && (lock)) {
+
+							// we are not the owner and the data is locked.
+							// This cache entry should be deleted.
+							// In sequential, don't care about the version.
+                                                        it = it->next;
+                                                        continue;
+                                                }
+
+						if ((vnf_id != client.vnf_id) && (!lock)) {
+							if (it->flags & ITEM_WAITING) {
+								// lock released from the other node, update state
+								// and trigger application.
+								client.put(reply->str, (void *) it->data);
+								client.cwait(it->data);
+								client.handle(it->key);
+								client.wait = 0;
+								it->flags &= ~ITEM_WAITING;
+								// fall through and update the VNF
+							}
+						}
+                                        }
 				}
 				// all pre-checks are done based on consistency. Now update the state.
 				++it->mdata->version;
+				if (client.flags & SEQUENTIAL_CONSISTENCY) {
+					if (it->mdata->lock == 0) {
+						it->mdata->lock = 1;
+					}
+				}
                                 client.get((void *) it->key, &p);
                                 if (p) {
                                 	p_size = strlen(p);
@@ -162,6 +202,7 @@ redis_client *create_cache(char *host, int port, uint32_t vnf_id,
 	client.context = createClient(host, port);
 	client.flags |= con;
 	client.time = time;  // time in seconds to sync state in background.
+	client.wait = 0;
 
 	if (NULL == client.context) {
 		printf("No connection to server \n");
@@ -189,7 +230,9 @@ redis_client *create_cache(char *host, int port, uint32_t vnf_id,
 		}
 	}
 	pthread_create(&thread_id1, NULL, &thread_start, NULL);
-	pthread_create(&thread_id2, NULL, &thread_event, NULL);
+	if (client.flags & ASYNC) {
+		pthread_create(&thread_id2, NULL, &thread_event, NULL);
+	}
 	return &client;
 }
 
@@ -213,6 +256,47 @@ redisContext *createClient(char *host, int port) {
 		return 0;
 	}
 	return c;
+}
+
+int unlock_and_update_item(void* key) {
+	uint32_t hash = client.hash(key);
+	char *p=NULL;
+	size_t total_size, p_size;
+	char m[24];
+	item *it;
+
+	pthread_mutex_lock(&client.passet[hash]->mutex);
+	it = client.passet[hash];
+
+	if (it->key) {
+		client.get((void *) it->key, &p);
+                if (client.flags & SEQUENTIAL_CONSISTENCY) {
+	                if (it->mdata->lock == 1) {
+                        	it->mdata->lock = 0;
+                        } else {
+				return 0;
+			}
+                } else {
+			return 0;
+		}
+                client.get((void *) it->key, &p);
+                if (p) {
+                	p_size = strlen(p);
+                	total_size = p_size + sizeof(meta_data);
+                	p = (char *) realloc(p, total_size);
+                	memcpy(m, (it->data + it->size), sizeof(meta_data));
+                	memcpy(p+p_size, m, sizeof(meta_data));
+
+                	redis_syncSet(client.context,
+                	              it->key,
+                                      it->nkey,
+                                      p,
+                                      total_size);
+                        free(p);
+			return 1;
+                }
+	}
+	return 0;
 }
 
 int create_item(void* key, size_t nkey, void **data,
@@ -307,13 +391,26 @@ int create_item(void* key, size_t nkey, void **data,
 
 		*p = '\0';
 
+		if (client.flags & SEQUENTIAL_CONSISTENCY) {
+			if (lock) {
+				// Don't process the packets yet. Wait till the other
+				// VNF releases the lock.
+				it->flags |= ITEM_WAITING;
+		                freeReplyObject(reply);
+       			        ret = DATA_WAIT;
+				pthread_mutex_unlock(&client.passet[hash]->mutex);
+				client.wait = 1;
+				return ret;
+			}
+		}
+
 		client.put(reply->str, (void *) it->data);
 		if (client.flags & EVENTUAL_CONSISTENCY) {
 			// copy the item and maintain the data
 			it->temp_data = (char *) malloc(size + sizeof(meta_data));
 			it->temp_mdata = (meta_data *) ((char *)it->temp_data + size);
 			memcpy(it->temp_data, it->data, (size + sizeof(meta_data)));
-		}
+		} 
 		freeReplyObject(reply);
 		ret = DATA_READY;
 	}
