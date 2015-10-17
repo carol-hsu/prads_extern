@@ -48,6 +48,13 @@ static void *thread_event(void *arg) {
                                 	if (client.it->flags & ITEM_WAITING) {
                                         	// lock released from the other node, update state
                                                 // and trigger application.
+						printf("Got unlock event\n");	
+                				gettimeofday(&end_deserialize, NULL);
+                				long sec = end_deserialize.tv_sec - start_deserialize.tv_sec;
+                				long usec = end_deserialize.tv_usec - start_deserialize.tv_usec;
+                				long total = (sec * 1000 * 1000) + usec;
+                				printf("STATS: PERFLOW: State Get Timestamp = %ldus\n", total);
+
                                                 *p = '\0';
 						pthread_mutex_lock(&client.it->mutex);
                                                 client.put(reply->str, (void *) client.it->data);
@@ -62,7 +69,6 @@ static void *thread_event(void *arg) {
                         	}
 			}
 		}
-		
 	}
 }
 
@@ -180,6 +186,13 @@ static void *thread_start(void *arg)
 							if (it->flags & ITEM_WAITING) {
 								// lock released from the other node, update state
 								// and trigger application.
+                                                		printf("Got unlock event\n");
+                                                		gettimeofday(&end_deserialize, NULL);
+                                                		long sec = end_deserialize.tv_sec - start_deserialize.tv_sec;
+                                                		long usec = end_deserialize.tv_usec - start_deserialize.tv_usec;
+                                                		long total = (sec * 1000 * 1000) + usec;
+                                                		printf("STATS: PERFLOW: State Get Timestamp = %ldus\n", total);
+
 								*p = '\0';
 								client.put(reply->str, (void *) it->data);
 								client.cwait(it->data);
