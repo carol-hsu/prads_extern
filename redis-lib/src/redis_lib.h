@@ -77,6 +77,7 @@ typedef struct redis_client_t {
 	uint32_t 	 vnf_id;
 	struct event_base *base;
 	char             wait;
+	item 		 *it;
 	// hash
 } redis_client;
 

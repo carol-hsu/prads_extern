@@ -34,6 +34,7 @@ connection *cxt_new(packetinfo *pi)
 		pkey.sport = pi->s_port;
 		pkey.dport = pi->d_port;
 		pkey.prot = pi->proto;
+		prads_temp_key = pkey;
 		ret = create_item((void *) &pkey, sizeof(prads_key), (void *) &cxt, sizeof(connection), flags, exp);
 	}
 

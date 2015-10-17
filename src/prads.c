@@ -737,7 +737,11 @@ void prepare_udp (packetinfo *pi)
                     (IP_HL(pi->ip4) * 4) - pi->eth_hlen;
         pi->payload = (pi->packet + pi->eth_hlen +
                         (IP_HL(pi->ip4) * 4) + UDP_HEADER_LEN);
-
+	if (STATE_EXTERN) {
+    		unlock_and_update_item((void *) &prads_temp_key);
+   		pi->our = 0;
+		return;
+	}
     } else if (pi->af==AF_INET6) {
         vlog(0x3, "[*] IPv6 PROTOCOL TYPE UDP:\n");
         pi->udph = (udp_header *) (pi->packet + pi->eth_hlen + + IP6_HEADER_LEN);
@@ -1337,7 +1341,7 @@ int prads_initialize(globalconfig *conf)
         pthread_mutex_init(&PacketLock, NULL);
         setup_serialize_translators();    
 	register_encode_decode(get_key_value, put_value_struct, hash, eventual_cons, get_conn_delta, async_app_handle, app_cwait);
-    	conf->context = create_cache(REDIS_HOST, REDIS_PORT, conf->vnf_id, NO_CONSISTENCY, 5);
+    	conf->context = create_cache(REDIS_HOST, REDIS_PORT, conf->vnf_id, SEQUENTIAL_CONSISTENCY, 5);
     	if (NULL == conf->context) {
        		olog("[*] Unable to connect to redis server %s.  (%s)\n", "10.0.1.4", "6379");
     	} else {

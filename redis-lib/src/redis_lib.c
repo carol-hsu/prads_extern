@@ -16,8 +16,53 @@ int register_encode_decode(get_key_val get, put_key_val put, key_hash hash,
 }
 
 static void *thread_event(void *arg) {
+	redisReply *reply;
+        size_t total_size, p_size;
+	char *p = NULL;
+        uint64_t vnf_id, version, lock;
+
 	while (1) {
-		event_base_dispatch(client.base);
+		if ((client.flags & SEQUENTIAL_CONSISTENCY) && (!client.wait)) {
+			sleep(1);
+		}
+
+		if (client.flags | ASYNC) {
+			event_base_dispatch(client.base);
+		}
+
+		if ((client.flags & SEQUENTIAL_CONSISTENCY) && (client.wait)) {
+                	reply = redis_syncGet(client.context,
+                                              client.it->key,
+                                              client.it->nkey);
+
+			if (reply) {
+                        	total_size = reply->len;
+                        	p_size = total_size - sizeof(meta_data);
+                                p = ((char *) reply->str) + p_size;
+
+                                vnf_id = (uint64_t) *(p);
+                                version = (uint64_t) *(p + 8);
+                                lock = (uint64_t) *(p + 16);
+
+                                if ((vnf_id != client.vnf_id) && (!lock)) {
+                                	if (client.it->flags & ITEM_WAITING) {
+                                        	// lock released from the other node, update state
+                                                // and trigger application.
+                                                *p = '\0';
+						pthread_mutex_lock(&client.it->mutex);
+                                                client.put(reply->str, (void *) client.it->data);
+                                                client.cwait(client.it->data);
+                                                client.handle(client.it->key);
+                                                client.wait = 0;
+						client.it = NULL;
+                                                client.it->flags &= ~ITEM_WAITING;
+						pthread_mutex_unlock(&client.it->mutex);
+                                                // fall through and update the VNF
+                                        }
+                        	}
+			}
+		}
+		
 	}
 }
 
@@ -36,8 +81,7 @@ static void *thread_start(void *arg)
 	sleep(10);
 
 	while (1) {
-		if (!client.wait)
-			sleep(client.time);
+		sleep(client.time);
 		
 		for (i=0; i<BUCKET_SIZE; i++) {
 			it = client.passet[i];
@@ -100,6 +144,7 @@ static void *thread_start(void *arg)
 
 								// This registered application procedure will 
 								// take care of eventual consistency.
+								*p = '\0';
 								client.put(reply->str, temp);
 								client.delta(it->temp_data, temp);
 								client.ev_con(it->data, temp);
@@ -135,6 +180,7 @@ static void *thread_start(void *arg)
 							if (it->flags & ITEM_WAITING) {
 								// lock released from the other node, update state
 								// and trigger application.
+								*p = '\0';
 								client.put(reply->str, (void *) it->data);
 								client.cwait(it->data);
 								client.handle(it->key);
@@ -230,7 +276,7 @@ redis_client *create_cache(char *host, int port, uint32_t vnf_id,
 		}
 	}
 	pthread_create(&thread_id1, NULL, &thread_start, NULL);
-	if (client.flags & ASYNC) {
+	if ((client.flags & ASYNC) || (client.flags & SEQUENTIAL_CONSISTENCY)) {
 		pthread_create(&thread_id2, NULL, &thread_event, NULL);
 	}
 	return &client;
@@ -286,6 +332,8 @@ int unlock_and_update_item(void* key) {
                 	p = (char *) realloc(p, total_size);
                 	memcpy(m, (it->data + it->size), sizeof(meta_data));
                 	memcpy(p+p_size, m, sizeof(meta_data));
+
+			printf("Released Lock \n");
 
                 	redis_syncSet(client.context,
                 	              it->key,
@@ -395,6 +443,7 @@ int create_item(void* key, size_t nkey, void **data,
 			if (lock) {
 				// Don't process the packets yet. Wait till the other
 				// VNF releases the lock.
+				client.it = it;
 				it->flags |= ITEM_WAITING;
 		                freeReplyObject(reply);
        			        ret = DATA_WAIT;

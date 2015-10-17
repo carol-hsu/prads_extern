@@ -313,6 +313,7 @@ typedef struct _tcp_header {
     uint16_t t_urgp;            /* urgent pointer */
 } tcp_header;
 
+
 #define TCP_OFFSET(tcp_header)           (((tcp_header)->t_offx2 & 0xf0) >> 4)
 #define TCP_X2(tcp_header)               ((tcp_header)->t_offx2 & 0x0f)
 #define TCP_ISFLAGSET(tcp_header, flags) (((tcp_header)->t_flags & (flags)) == (flags))
@@ -865,6 +866,8 @@ typedef struct prads_key_t {
 	uint16_t dport;
 	uint8_t  prot;
 } prads_key;
+
+prads_key prads_temp_key;
 
 pthread_mutex_t ConnEntryLock;
 pthread_mutex_t AssetEntryLock;
