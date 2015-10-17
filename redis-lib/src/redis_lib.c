@@ -26,7 +26,7 @@ static void *thread_event(void *arg) {
 			sleep(1);
 		}
 
-		if (client.flags | ASYNC) {
+		if (client.flags & ASYNC) {
 			event_base_dispatch(client.base);
 		}
 
@@ -61,9 +61,9 @@ static void *thread_event(void *arg) {
                                                 client.cwait(client.it->data);
                                                 client.handle(client.it->key);
                                                 client.wait = 0;
-						client.it = NULL;
                                                 client.it->flags &= ~ITEM_WAITING;
 						pthread_mutex_unlock(&client.it->mutex);
+						client.it = NULL;
                                                 // fall through and update the VNF
                                         }
                         	}

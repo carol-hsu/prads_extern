@@ -1536,7 +1536,7 @@ void process_pack_list() {
      while (*temp) {
 	got_packet(&a, (*temp)->pheader, (*temp)->packet);
 	prev = *temp;
-	temp = &((*temp)->next);
+	head = head->next;
 	free(prev->pheader);
 	free(prev->packet);
 	free(prev);

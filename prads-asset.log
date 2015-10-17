@@ -52,3 +52,14 @@ asset,vlan,port,proto,service,[service-info],distance,discovered
 10.0.1.4,0,80,6,CLIENT,[unknown:@www],0,1445050887
 10.0.1.4,0,52872,6,SYN,[S20:64:1:60:M1360,S,T,N,W7:.:unknown:unknown:link:(Google/AOL):uptime:24hrs],0,1445051339
 10.0.1.4,0,80,6,CLIENT,[unknown:@www],0,1445051339
+10.0.1.4,0,80,6,CLIENT,[unknown:@www],0,1445096676
+10.0.1.4,0,52876,6,FIN,[1814:64:1:52:N,N,T:ATFN:unknown:unknown:uptime:56hrs],0,1445096681
+10.0.1.4,0,80,6,CLIENT,[unknown:@www],0,1445097105
+10.0.1.4,0,52878,6,FIN,[1637:64:1:52:N,N,T:ATFN:unknown:unknown:uptime:56hrs],0,1445097110
+10.0.1.4,0,80,6,CLIENT,[unknown:@www],0,1445097732
+10.0.1.4,0,52881,6,FIN,[1637:64:1:52:N,N,T:ATFN:unknown:unknown:uptime:57hrs],0,1445097736
+10.0.1.4,0,52883,6,SYN,[S20:64:1:60:M1360,S,T,N,W7:.:unknown:unknown:link:(Google/AOL):uptime:57hrs],0,1445098433
+10.0.1.4,0,80,6,CLIENT,[unknown:@www],1,1445098433
+10.0.1.4,0,52883,6,FIN,[1382:64:1:52:N,N,T:ATFN:unknown:unknown:uptime:57hrs],0,1445098442
+10.0.1.4,0,52890,6,FIN,[1637:64:1:52:N,N,T:ATFN:unknown:unknown:uptime:58hrs],0,1445100169
+10.0.1.4,0,52892,6,FIN,[1814:64:1:52:N,N,T:ATFN:unknown:unknown:uptime:58hrs],0,1445100491
