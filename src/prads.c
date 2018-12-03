@@ -148,7 +148,7 @@ void got_packet(u_char * useless, const struct pcap_pkthdr *pheader,
  * unfortunately pcap sends us packets in host order
  * Return value: boolean
  */
-inline int filter_packet(const int af, void *ipptr)
+int filter_packet(const int af, void *ipptr)
 //const struct in6_addr *ip_s)
 {
     ip6v ip_vec;

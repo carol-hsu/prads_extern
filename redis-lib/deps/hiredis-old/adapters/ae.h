@@ -28,81 +28,100 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef __HIREDIS_LIBEVENT_H__
-#define __HIREDIS_LIBEVENT_H__
-#include <event2/event.h>
+#ifndef __HIREDIS_AE_H__
+#define __HIREDIS_AE_H__
+#include <sys/types.h>
+#include <ae.h>
 #include "../hiredis.h"
 #include "../async.h"
 
-typedef struct redisLibeventEvents {
+typedef struct redisAeEvents {
     redisAsyncContext *context;
-    struct event *rev, *wev;
-} redisLibeventEvents;
+    aeEventLoop *loop;
+    int fd;
+    int reading, writing;
+} redisAeEvents;
 
-static void redisLibeventReadEvent(int fd, short event, void *arg) {
-    ((void)fd); ((void)event);
-    redisLibeventEvents *e = (redisLibeventEvents*)arg;
+static void redisAeReadEvent(aeEventLoop *el, int fd, void *privdata, int mask) {
+    ((void)el); ((void)fd); ((void)mask);
+
+    redisAeEvents *e = (redisAeEvents*)privdata;
     redisAsyncHandleRead(e->context);
 }
 
-static void redisLibeventWriteEvent(int fd, short event, void *arg) {
-    ((void)fd); ((void)event);
-    redisLibeventEvents *e = (redisLibeventEvents*)arg;
+static void redisAeWriteEvent(aeEventLoop *el, int fd, void *privdata, int mask) {
+    ((void)el); ((void)fd); ((void)mask);
+
+    redisAeEvents *e = (redisAeEvents*)privdata;
     redisAsyncHandleWrite(e->context);
 }
 
-static void redisLibeventAddRead(void *privdata) {
-    redisLibeventEvents *e = (redisLibeventEvents*)privdata;
-    event_add(e->rev,NULL);
+static void redisAeAddRead(void *privdata) {
+    redisAeEvents *e = (redisAeEvents*)privdata;
+    aeEventLoop *loop = e->loop;
+    if (!e->reading) {
+        e->reading = 1;
+        aeCreateFileEvent(loop,e->fd,AE_READABLE,redisAeReadEvent,e);
+    }
 }
 
-static void redisLibeventDelRead(void *privdata) {
-    redisLibeventEvents *e = (redisLibeventEvents*)privdata;
-    event_del(e->rev);
+static void redisAeDelRead(void *privdata) {
+    redisAeEvents *e = (redisAeEvents*)privdata;
+    aeEventLoop *loop = e->loop;
+    if (e->reading) {
+        e->reading = 0;
+        aeDeleteFileEvent(loop,e->fd,AE_READABLE);
+    }
 }
 
-static void redisLibeventAddWrite(void *privdata) {
-    redisLibeventEvents *e = (redisLibeventEvents*)privdata;
-    event_add(e->wev,NULL);
+static void redisAeAddWrite(void *privdata) {
+    redisAeEvents *e = (redisAeEvents*)privdata;
+    aeEventLoop *loop = e->loop;
+    if (!e->writing) {
+        e->writing = 1;
+        aeCreateFileEvent(loop,e->fd,AE_WRITABLE,redisAeWriteEvent,e);
+    }
 }
 
-static void redisLibeventDelWrite(void *privdata) {
-    redisLibeventEvents *e = (redisLibeventEvents*)privdata;
-    event_del(e->wev);
+static void redisAeDelWrite(void *privdata) {
+    redisAeEvents *e = (redisAeEvents*)privdata;
+    aeEventLoop *loop = e->loop;
+    if (e->writing) {
+        e->writing = 0;
+        aeDeleteFileEvent(loop,e->fd,AE_WRITABLE);
+    }
 }
 
-static void redisLibeventCleanup(void *privdata) {
-    redisLibeventEvents *e = (redisLibeventEvents*)privdata;
-    event_del(e->rev);
-    event_del(e->wev);
+static void redisAeCleanup(void *privdata) {
+    redisAeEvents *e = (redisAeEvents*)privdata;
+    redisAeDelRead(privdata);
+    redisAeDelWrite(privdata);
     free(e);
 }
 
-static int redisLibeventAttach(redisAsyncContext *ac, struct event_base *base) {
+static int redisAeAttach(aeEventLoop *loop, redisAsyncContext *ac) {
     redisContext *c = &(ac->c);
-    redisLibeventEvents *e;
+    redisAeEvents *e;
 
     /* Nothing should be attached when something is already attached */
     if (ac->ev.data != NULL)
         return REDIS_ERR;
 
     /* Create container for context and r/w events */
-    e = (redisLibeventEvents*)malloc(sizeof(*e));
+    e = (redisAeEvents*)malloc(sizeof(*e));
     e->context = ac;
+    e->loop = loop;
+    e->fd = c->fd;
+    e->reading = e->writing = 0;
 
     /* Register functions to start/stop listening for events */
-    ac->ev.addRead = redisLibeventAddRead;
-    ac->ev.delRead = redisLibeventDelRead;
-    ac->ev.addWrite = redisLibeventAddWrite;
-    ac->ev.delWrite = redisLibeventDelWrite;
-    ac->ev.cleanup = redisLibeventCleanup;
+    ac->ev.addRead = redisAeAddRead;
+    ac->ev.delRead = redisAeDelRead;
+    ac->ev.addWrite = redisAeAddWrite;
+    ac->ev.delWrite = redisAeDelWrite;
+    ac->ev.cleanup = redisAeCleanup;
     ac->ev.data = e;
 
-    /* Initialize and install read/write events */
-    e->rev = event_new(base, c->fd, EV_READ, redisLibeventReadEvent, e);
-    e->wev = event_new(base, c->fd, EV_WRITE, redisLibeventWriteEvent, e);
-    event_add(e->rev, NULL);
-    event_add(e->wev, NULL);
     return REDIS_OK;
 }
 #endif
