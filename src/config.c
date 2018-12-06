@@ -125,6 +125,8 @@ void set_default_config_options(globalconfig *conf)
     conf->cxtlogdir[0] = '\0';
     conf->cxtfname[0] = '\0';
     conf->vnf_id = 0;
+    conf->redis_ip = REDIS_HOST; 
+    conf->redis_port = REDIS_PORT;
 }
 
 void parse_config_file(const char* fname)
@@ -522,6 +524,12 @@ int parse_args(globalconfig *conf, int argc, char *argv[], char *args)
             break;
         case '?':
             elog("unrecognized argument: '%c'\n", optopt);
+            break;
+        case '1': // grab redis IP from input parameters
+            conf->redis_ip = strdup(optarg);
+            break;
+        case '2': // grab redis port from input parameters
+            conf->redis_port = strtol(optarg, NULL, 0);
             break;
         default:
             elog("Did not recognize argument '%c'\n", ch);

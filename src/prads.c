@@ -49,7 +49,7 @@
 #define CONFDIR "/etc/prads/"
 #endif
 
-#define ARGS "C:c:b:d:Dg:hi:p:r:u:va:l:n:L:f:qtxs:OXFRMSAKUTIZtHPB"
+#define ARGS "C:c:b:d:Dg:hi:p:r:u:va:l:n:L:f:1:2:qtxs:OXFRMSAKUTIZtHPB"
 
 /*  G L O B A L S  *** (or candidates for refactoring, as we say)***********/
 globalconfig config;
@@ -1171,6 +1171,8 @@ static void usage()
     olog(" -x              Conne[x]ion tracking output  - New, expired and ended.\n");
     olog(" -Z              Passive DNS (Experimental).\n");
     olog(" -H              DHCP fingerprinting (Expermiental).\n");
+    olog(" -1              The endpoint IP of Redis cluster\n");
+    olog(" -2              The endpoint port of Redis cluster (default: 6379)\n");
     olog(" -h              This help message.\n");
 }
 
@@ -1341,11 +1343,11 @@ int prads_initialize(globalconfig *conf)
         pthread_mutex_init(&PacketLock, NULL);
         setup_serialize_translators();    
 	register_encode_decode(get_key_value, put_value_struct, hash, eventual_cons, get_conn_delta, async_app_handle, app_cwait);
-    	conf->context = create_cache(REDIS_HOST, REDIS_PORT, conf->vnf_id, SEQUENTIAL_CONSISTENCY, 5);
+    	conf->context = create_cache(conf->redis_ip, conf->redis_port, conf->vnf_id, SEQUENTIAL_CONSISTENCY, 5);
     	if (NULL == conf->context) {
-       		olog("[*] Unable to connect to redis server %s.  (%s)\n", "10.0.1.4", "6379");
+       		olog("[*] Unable to connect to redis server %s.  (%d)\n", conf->redis_ip, conf->redis_port);
     	} else {
-       		olog("[*] VNF%lu connected to redis server %s.  (%s)\n", conf->vnf_id, "10.0.1.4", "6379");
+       		olog("[*] VNF%lu connected to redis server %s.  (%d)\n", conf->vnf_id, conf->redis_ip, conf->redis_port);
     	}
 	head = NULL;
     }

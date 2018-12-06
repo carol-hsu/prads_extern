@@ -9,7 +9,7 @@ ARG DEFAULT_WORKDIR=/kube-nfx
 
 # prerequisite installation
 RUN apt-get update && \
-    apt-get install -y gcc make git xutils-dev libevent-dev python-docutils libpcap0.8-dev libpcre3-dev
+    apt-get install -y gcc make git xutils-dev libevent-dev python-docutils libpcap0.8-dev libpcre3-dev iputils-ping
 
 RUN mkdir $DEFAULT_WORKDIR
 COPY ./ $DEFAULT_WORKDIR

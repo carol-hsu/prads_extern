@@ -105,6 +105,8 @@ typedef struct _globalconfig {
     char        *bpf_file;              /* filename of BPF file to load */
     redis_client *context;              /* redis context */
     uint32_t     *vnf_id;               /* ID for this VNF */
+    char         *redis_ip;             /* Endpoint IP of Redis cluster*/
+    int          redis_port;            /* Endpoint port of Redis cluster*/
 } globalconfig;
 #define ISSET_CONFIG_VERBOSE(config)    ((config).cflags & CONFIG_VERBOSE)
 #define ISSET_CONFIG_UPDATES(config)    ((config).cflags & CONFIG_UPDATES)
