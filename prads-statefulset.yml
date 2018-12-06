@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: prads
+  labels:
+    exp: migration
+spec:
+  serviceName: prads
+  replicas: 2
+  selector:
+    matchLabels:
+      exp: migration
+  template:
+    metadata:
+      labels:
+        exp: migration
+    spec:
+      containers:
+      - name: http-server
+        image: httpd
+        ports:
+        - containerPort: 80
+          name: http
+      - name: prads
+        image: granite:30500/kube-nfx:prads
+        command: 
+        - sh
+        - -c
+        - "prads -1 $(REDIS_CLUSTER_SERVICE_HOST) -n ${HOSTNAME##*-}"
+        readinessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - "ping localhost -c 1"
+          initialDelaySeconds: 5
+          timeoutSeconds: 5
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - -c
+            - "ping localhost -c 1"
+          initialDelaySeconds: 5
+          periodSeconds: 10
